@@ -17,6 +17,41 @@
     --dark-font-color: #D1D1D1;
 }
 
+/* Global Settings*/
+
+body {
+    margin: 0;
+}
+
+/*NavBar*/
+header {
+    background-color: var(--wild-color);
+    padding: 20px;
+}
+
+
+header>nav>ul {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 0;
+    padding: 10px;
+}
+
+
+header>nav>ul>button {
+    background: none;
+    color: var(--light-bg-color);
+    border: none;
+    font-family: var(--primary-font);
+    font-weight: bold;
+    font-size: 15px;
+}
+
+h1 {
+    display: none;
+}
+
 #filter-bar ul {
     list-style: none;
     display: grid;
@@ -36,18 +71,8 @@
     height: 5vh;
 }
 
-button {
+#filter-bar ul button {
     margin: 0;
     background-color: none;
     border: none;
 }
-
-body{
-    margin:0;
-}
-
-
-
-
-
-
