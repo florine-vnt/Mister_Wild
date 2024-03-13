@@ -1,0 +1,17 @@
+:root {
+    --wild-color: #F7146B;
+    --primary-font: arial;
+    --secondary-font: montserrat;
+
+    /* light mode variables*/
+    --light-bg-color: white;
+    --light-fg-color: #F5F5F5;
+    --light-icon-color: #6D6D6D;
+    --light-font-color: #1E1E1E;
+
+    /* dark mode variables*/
+    --dark-bg-color: #1E1E1E;
+    --dark-fg-color: #3F3F3F;
+    --dark-icon-color: white;
+    --dark-font-color: #D1D1D1;
+}
