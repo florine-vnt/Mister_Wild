@@ -8,6 +8,7 @@
     --light-fg-color: #F5F5F5;
     --light-icon-color: #6D6D6D;
     --light-font-color: #1E1E1E;
+    --light-filterbar-color: #EDEDED;
 
     /* dark mode variables*/
     --dark-bg-color: #1E1E1E;
@@ -16,8 +17,37 @@
     --dark-font-color: #D1D1D1;
 }
 
-#filterbar {
-    display: flex;
+#filter-bar ul {
+    list-style: none;
+    display: grid;
+    grid-template : 1fr / 1fr 1fr 1fr 1fr;
+
+    margin: 0;
+    border:0;
+    padding:0;
+    
+    height: 10vh;
     width: 100%;
-    background-color: var(--light-fg-color);
+    background-color: var(--light-filterbar-color);
+
 }
+
+#filter-bar ul button img {
+    height: 5vh;
+}
+
+button {
+    margin: 0;
+    background-color: none;
+    border: none;
+}
+
+body{
+    margin:0;
+}
+
+
+
+
+
+
