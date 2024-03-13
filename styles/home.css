@@ -15,3 +15,9 @@
     --dark-icon-color: white;
     --dark-font-color: #D1D1D1;
 }
+
+#filterbar {
+    display: flex;
+    width: 100%;
+    background-color: var(--light-fg-color);
+}
