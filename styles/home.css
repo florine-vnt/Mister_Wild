@@ -21,6 +21,7 @@
 
 body {
     margin: 0;
+    height: 200vh;
 }
 
 /*NavBar*/
@@ -52,19 +53,24 @@ h1 {
     display: none;
 }
 
+footer {
+    position:absolute;
+    position: sticky;
+    bottom: 0px;   
+}
+
 #filter-bar ul {
     list-style: none;
     display: grid;
-    grid-template : 1fr / 1fr 1fr 1fr 1fr;
+    grid-template: 1fr / 1fr 1fr 1fr 1fr;
 
     margin: 0;
-    border:0;
-    padding:0;
-    
+    border: 0;
+    padding: 0;
+
     height: 10vh;
     width: 100%;
     background-color: var(--light-filterbar-color);
-
 }
 
 #filter-bar ul button img {
