@@ -1,5 +1,3 @@
-
-
 const restaurantDataBase = [
     {
         name: 'Papill\'',
