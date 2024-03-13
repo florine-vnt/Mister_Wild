@@ -21,3 +21,31 @@
     width: 100%;
     background-color: var(--light-fg-color);
 }
+/* card  */
+.card {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 0px auto ;
+    background-color: #f5f5f5;
+    padding: 0rem;
+    width: 350px;
+    height: 80px;
+    
+}
+ .card a {
+    color:black;
+    text-decoration:none;
+ }
+  .card-image {
+    height: 50px;
+    position: relative;
+    overflow: hidden;
+}
+.restaurant-image {
+    width: 20%;
+}
+.card div place-name {
+    display: flex;
+    flex-direction: row;
+
+}
