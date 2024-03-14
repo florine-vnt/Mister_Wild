@@ -42,6 +42,13 @@ header>nav>ul {
     display: flex;
 }
 
+header>nav>ul>#cuisine-switch {
+    border: solid;
+    border-color: var(--light-bg-color);
+    border-radius: 5px;
+    padding: 10px;
+}
+
 header>nav>ul>button {
     background: none;
     color: var(--light-bg-color);
@@ -49,6 +56,7 @@ header>nav>ul>button {
     font-family: var(--primary-font);
     font-weight: bold;
     font-size: 15px;
+    padding: 10px;
 }
 
 #cuisine-switch.light-mode {
@@ -61,6 +69,7 @@ header>nav>ul>button {
 #cuisine-switch.dark-mode {
     color: var(--light-font-color);
     padding: 10px;
+    border: none;
 }
 
 #bar-switch.dark-mode {
