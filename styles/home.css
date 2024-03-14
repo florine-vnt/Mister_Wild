@@ -8,6 +8,7 @@
     --light-fg-color: #F5F5F5;
     --light-icon-color: #6D6D6D;
     --light-font-color: #1E1E1E;
+    --light-filterbar-color: #EDEDED;
 
     /* dark mode variables*/
     --dark-bg-color: #1E1E1E;
@@ -16,41 +17,163 @@
     --dark-font-color: #D1D1D1;
 }
 
-#filterbar {
-    display: flex;
-    width: 100%;
-    background-color: var(--light-fg-color);
+/* Global Settings*/
+
+body {
+    margin: 0;
+    height: 200vh;
 }
+
+/*NavBar*/
+header {
+    background-color: var(--wild-color);
+    padding: 20px;
+}
+
+
+header>nav>ul {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 0;
+    padding: 10px;
+}
+
+
+header>nav>ul>button {
+    background: none;
+    color: var(--light-bg-color);
+    border: none;
+    font-family: var(--primary-font);
+    font-weight: bold;
+    font-size: 15px;
+}
+
+h1 {
+    display: none;
+}
+
+footer {
+    position: sticky;
+    bottom: 0px;   
+}
+
+#filter-bar ul {
+    list-style: none;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr 1fr;
+
+    margin: 0;
+    border: 0;
+    padding: 0;
+
+    height: 10vh;
+    width: 100%;
+
+    background-color: var(--light-filterbar-color);
+}
+
+#filter-bar ul button img {
+    height: 5vh;
+}
+
+#filter-bar ul button {
+    margin: 0;
+    background-color: none;
+    border: none;
+}
+
+
+/* Part about the mini-menus */
+
+/* Making an overlaying div, containing all mini-menus */
+
+footer div {
+    /* Metre 4 colonnes, plus sticky avec marge  */
+    width: 100%;
+    height: 80vh;
+
+    position: sticky;
+    bottom: 10vh;   
+
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr 1fr;
+    justify-content: center;
+}
+
+#price-range-menu {
+    grid-column-start:4;
+
+}
+
+#distance-menu {
+    grid-column-start:3;
+}
+
+/* The little menus that pop up for both distance and budget */
+.toast-mini-menu {
+    background-color: var(--light-filterbar-color);
+    margin:0px;
+    margin-bottom: 0px;
+    padding:0;
+    max-width: 25vw;
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-end;
+    align-items: center;
+    /* Part about sizing and align it in the bottom */
+    height: 30vh;
+    align-self: flex-end;
+    border-radius: 10px 10px 0px 0px;
+
+}
+
+.toast-mini-menu button img {
+    max-width: 5vw;
+    margin-left: -1vw;
+}
+
+.toast-mini-menu button{
+    display :flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: transparent;
+    width: 100%;
+    height: 10vh;
+    border: none;
+
+
+
+}
+
 /* card  */
 .card {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    
+    padding: 0;
     background-color: #f5f5f5;
-    align-items:center;
-    padding: 0rem 2rem;
-  border-radius: 10px;
-
+    border-radius: 10px; 
 }
-/* coter  gauche de la boite card */
+/* coter  gauche& droite de la boite card */
 #places{
-    padding-left:0;
-
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 /* Image papilles rendre ronde */
-.papillronde{
+.place-pictures{
   border-radius: 50%;
  height: 100px;
-
+    padding-top: 20px;
+    padding-left: 19px;
 }
 
 .card div place-name {
 display: grid;
-grid-template-rows: left 1.5rem;
+grid-template-rows: left 1rem;
 
 }
-.mini-description {
+.mini-description{
 display:grid;
 }
 
