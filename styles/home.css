@@ -54,7 +54,6 @@ h1 {
 }
 
 footer {
-    position:absolute;
     position: sticky;
     bottom: 0px;   
 }
@@ -81,4 +80,67 @@ footer {
     margin: 0;
     background-color: none;
     border: none;
+}
+
+
+/* Part about the mini-menus */
+
+/* Making an overlaying div, containing all mini-menus */
+
+footer div {
+    /* Metre 4 colonnes, plus sticky avec marge  */
+    width: 100%;
+    height: 80vh;
+
+    position: sticky;
+    bottom: 10vh;   
+
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr 1fr;
+    justify-content: center;
+}
+
+#price-range-menu {
+    grid-column-start:4;
+
+}
+
+#distance-menu {
+    grid-column-start:3;
+}
+
+/* The little menus that pop up for both distance and budget */
+.toast-mini-menu {
+    background-color: var(--light-filterbar-color);
+    margin:0px;
+    margin-bottom: 0px;
+    padding:0;
+    max-width: 25vw;
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-end;
+    align-items: center;
+    /* Part about sizing and align it in the bottom */
+    height: 30vh;
+    align-self: flex-end;
+    border-radius: 10px 10px 0px 0px;
+
+}
+
+.toast-mini-menu button img {
+    max-width: 5vw;
+    margin-left: -1vw;
+}
+
+.toast-mini-menu button{
+    display :flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: transparent;
+    width: 100%;
+    height: 10vh;
+    border: none;
+
+
+
 }
