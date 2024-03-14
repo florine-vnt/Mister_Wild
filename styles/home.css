@@ -26,18 +26,18 @@ body {
 /*NavBar*/
 header {
     background-color: var(--wild-color);
-    padding: 20px;
-}
-
-
-header>nav>ul {
+    height: 10vh;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+header>nav>ul {
     gap: 40px;
     margin: 0;
     padding: 10px;
+    display: flex;
 }
-
 
 header>nav>ul>button {
     background: none;
@@ -48,19 +48,29 @@ header>nav>ul>button {
     font-size: 15px;
 }
 
-h1 {
-    display: none;
+.light-mode {
+    border: solid;
+    border-color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.dark-mode {
+    border: solid;
+    border-color: white;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 #filter-bar ul {
     list-style: none;
     display: grid;
-    grid-template : 1fr / 1fr 1fr 1fr 1fr;
+    grid-template: 1fr / 1fr 1fr 1fr 1fr;
 
     margin: 0;
-    border:0;
-    padding:0;
-    
+    border: 0;
+    padding: 0;
+
     height: 10vh;
     width: 100%;
     background-color: var(--light-filterbar-color);
