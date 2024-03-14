@@ -77,10 +77,12 @@ const BarDataBase = [
 /* JS NavBar */
 const cuisineSwitch = document.querySelector("#cuisine-switch");
 cuisineSwitch.addEventListener('click', function () {
+    cuisineSwitch.classList.remove("dark-mode");
     cuisineSwitch.classList.toggle("light-mode");
 })
 
 const barSwitch = document.querySelector("#bar-switch");
 barSwitch.addEventListener('click', function () {
+    cuisineSwitch.classList.remove("light-mode");
     barSwitch.classList.toggle("dark-mode");
 })

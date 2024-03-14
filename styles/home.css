@@ -1,7 +1,8 @@
 :root {
     --wild-color: #F7146B;
-    --primary-font: arial;
-    --secondary-font: montserrat;
+    --primary-font: "poppins";
+    --secondary-font: "noto sans";
+
 
     /* light mode variables*/
     --light-bg-color: white;
@@ -22,6 +23,7 @@
 body {
     margin: 0;
 }
+
 
 /*NavBar*/
 header {
