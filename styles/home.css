@@ -175,10 +175,20 @@ footer div {
     display: grid;
     grid-template-columns: 1fr 1fr;
 
-    background-color: #f5f5f5;
     align-items: center;
     padding: 0rem 2rem;
     border-radius: 10px;
+}
+
+/* classe dark-mode sur les cards */
+.card.dark-mode {
+    background-color: var(--dark-fg-color);
+}
+
+/* classe light-mode sur les cards */
+
+.card.light-mode {
+    background-color: var(--light-fg-color);
 }
 
 /* coter  gauche de la boite card */
@@ -189,8 +199,8 @@ footer div {
 
 /* Image papilles rendre ronde */
 .place-picture {
-  border-radius: 50%;
- height: 100px;
+    border-radius: 50%;
+    height: 100px;
 
 }
 

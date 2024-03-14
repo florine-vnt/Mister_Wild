@@ -73,27 +73,36 @@ const BarDataBase = [
 
 ]
 
-/* JS NavBar */
+/* JS switch dark-light mode */
 const cuisineSwitch = document.querySelector("#cuisine-switch");
 const barSwitch = document.querySelector("#bar-switch");
 const body = document.querySelector("#body");
 
+
 cuisineSwitch.addEventListener('click', function () {
+    const cardsDarkMode = document.querySelector(".card");
+
     barSwitch.classList.remove("dark-mode-nav");
     cuisineSwitch.classList.remove("dark-mode-button");
     barSwitch.classList.remove("dark-mode-button");
     body.classList.remove("dark-mode-body");
     cuisineSwitch.classList.toggle("light-mode-nav");
     body.classList.toggle("light-mode-body");
+    cardsDarkMode.classList.toggle("dark-mode");
+    cardsDarkMode.classList.toggle("light-mode");
 })
 
 barSwitch.addEventListener('click', function () {
+    const cardsDarkMode = document.querySelector(".card");
+
     cuisineSwitch.classList.remove("light-mode-nav");
     body.classList.remove("light-mode-body");
     barSwitch.classList.toggle("dark-mode-nav");
     cuisineSwitch.classList.toggle("dark-mode-button");
     barSwitch.classList.toggle("dark-mode-button");
     body.classList.toggle("dark-mode-body");
+    cardsDarkMode.classList.toggle("dark-mode");
+    cardsDarkMode.classList.toggle("light-mode");
 })
 
 
@@ -102,12 +111,14 @@ const placesList = document.getElementById("places")
 
 function displayPlaces(dataBase) {
     // clear the places list
-    placesList.innerHTML=""
+    placesList.innerHTML = ""
 
     dataBase.forEach(place => {
         //Create a card 
         let newCard = document.createElement("li");
         newCard.classList.add("card");
+        //TODO add an if to check if restaurant or bar
+        newCard.classList.add("light-mode");
 
         //create and add an image to the card
         let image = document.createElement("img");
