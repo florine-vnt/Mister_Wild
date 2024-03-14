@@ -180,15 +180,17 @@ footer div {
     border-radius: 10px;
 }
 
-/* classe dark-mode sur les cards */
+/* dark-mode sur les cards */
 .card.dark-mode {
     background-color: var(--dark-fg-color);
+    color: var(--dark-font-color);
 }
 
-/* classe light-mode sur les cards */
+/* light-mode sur les cards */
 
 .card.light-mode {
     background-color: var(--light-fg-color);
+    color: var(--light-font-color);
 }
 
 /* coter  gauche de la boite card */
