@@ -174,34 +174,32 @@ footer div {
 .card {
     display: grid;
     grid-template-columns: 1fr 1fr;
-
+    padding: 0;
     background-color: #f5f5f5;
-    align-items: center;
-    padding: 0rem 2rem;
-    border-radius: 10px;
+    border-radius: 10px; 
+    margin: 0 0 1rem;
+    font-family: poppins;
 }
-
-/* coter  gauche de la boite card */
-#places {
-    padding-left: 0;
-
+/* coter  gauche& droite de la boite card */
+#places{
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 /* Image papilles rendre ronde */
 .place-picture {
   border-radius: 50%;
  height: 100px;
-
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 19px;
 }
 
 .card div place-name {
-    display: grid;
-    grid-template-rows: left 1.5rem;
-
+display: grid;
+grid-template-rows: left 1rem;
 }
-
-.mini-description {
-    display: grid;
-
-
+.mini-description{
+display:grid;
+font-family:var(--secondary-font);
 }
