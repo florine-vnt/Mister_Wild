@@ -1,7 +1,8 @@
 :root {
     --wild-color: #F7146B;
-    --primary-font: arial;
-    --secondary-font: montserrat;
+    --primary-font: "poppins";
+    --secondary-font: "noto sans";
+
 
     /* light mode variables*/
     --light-bg-color: white;
@@ -24,21 +25,22 @@ body {
     height: 200vh;
 }
 
+
 /*NavBar*/
 header {
     background-color: var(--wild-color);
-    padding: 20px;
-}
-
-
-header>nav>ul {
+    height: 10vh;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+header>nav>ul {
     gap: 40px;
     margin: 0;
     padding: 10px;
+    display: flex;
 }
-
 
 header>nav>ul>button {
     background: none;
@@ -49,8 +51,27 @@ header>nav>ul>button {
     font-size: 15px;
 }
 
-h1 {
-    display: none;
+.light-mode-nav {
+    border: solid;
+    border-color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.light-mode-body {
+    background-color: var(--light-bg-color);
+}
+
+.dark-mode-nav {
+    border: solid;
+    border-color: var(--dark-bg-color);
+    color: var(--dark-bg-color);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.dark-mode-body {
+    background-color: var(--dark-bg-color);
 }
 
 footer {
@@ -179,5 +200,3 @@ display:grid;
 
 
 }
-
-
