@@ -121,7 +121,7 @@ displayPlaces(restaurantDataBase);
 
 
 
-
+//START OF MINI MENUS BEHAVIOUR
 /// Functions to display/hide the mini-menus
 const distanceMenuButton = document.getElementById("distance");
 const distanceMenu = document.getElementById("distance-menu");
@@ -177,3 +177,4 @@ menuContainer.addEventListener("click", function () {
     placesList.classList.add("to-front");
     placesList.classList.remove("to-back");
 })
+//END OF MINI MENUS BEHAVIOUR
