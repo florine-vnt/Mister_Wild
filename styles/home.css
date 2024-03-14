@@ -53,6 +53,9 @@ h1 {
     display: none;
 }
 
+
+
+/* FILTERBAR PART */
 footer {
     position: sticky;
     bottom: 0px;   
@@ -159,6 +162,9 @@ footer div {
 .hidden {
     display :none;
 }
+/* END OF FILTERBAR PART */
+
+
 
 /* card  */
 .card {
