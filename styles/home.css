@@ -50,18 +50,27 @@ header>nav>ul>button {
     font-size: 15px;
 }
 
-.light-mode {
+.light-mode-nav {
     border: solid;
     border-color: white;
     border-radius: 5px;
     padding: 10px;
 }
 
-.dark-mode {
+.light-mode-body {
+    background-color: var(--light-bg-color);
+}
+
+.dark-mode-nav {
     border: solid;
-    border-color: white;
+    border-color: var(--dark-bg-color);
+    color: var(--dark-bg-color);
     border-radius: 5px;
     padding: 10px;
+}
+
+.dark-mode-body {
+    background-color: var(--dark-bg-color);
 }
 
 #filter-bar ul {
