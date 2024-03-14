@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mister Wild project</title>
     <link rel="stylesheet" href="./styles/home.css">
+    <link rel="shortcut icon" type="image/ico" href="./assets/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,6 +14,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+
 </head>
 
 <body id="body">
@@ -30,16 +32,64 @@
         <section>
             <ul id="places">
                 <li class="card">
-                    <h2 class="place-name">PAPILL'</h2>
-                    <p class="mini-description">Plats mijotés, papillotes et brunch</p>
-                    <img class="restaurant-image" src="" alt="">
-                    <img class="distance-indicator" src="" alt="">
+                    <img class="papillronde" src="./assets/papill.jpg" alt="Logo du restaurant">
+                    <div><h2 class="place-name">PAPILL'</h2>
+                        <p class="mini-description">Plats mijotés, papillotes et brunch</p>
+                        <img class="distance-indicator" src="" alt="">
+                        </div> 
                 </li>
             </ul>
+            <p class="mini-description">Plats mijotés, papillotes et brunch</p>
+            <p class="mini-description">Plats mijotés, papillotes et brunch</p>
+            <p class="mini-description">Plats mijotés, papillotes et brunch</p>
+            <p class="mini-description">Plats mijotés, papillotes et brunch</p>
+            <p class="mini-description">Plats mijotés, papillotes et brunch</p>
+            <p class="mini-description">Plats mijotés, papillotes et brunch</p>
+            <p class="mini-description">Plats mijotés, papillotes et brunch</p>
+            <p class="mini-description">Plats mijotés, papillotes et brunch</p>
+            <p class="mini-description">Plats mijotés, papillotes et brunch</p>
+            <p class="mini-description">Plats mijotés, papillotes et brunch</p>
+            <p class="mini-description">Plats mijotés, papillotes et brunch</p>
+            <p class="mini-description">Plats mijotés, papillotes et brunch</p>
+            <p class="mini-description">Plats mijotés, papillotes et brunch</p>
+            <p class="mini-description">Plats mijotés, papillotes et brunch</p>
+            <p class="mini-description">Plats mijotés, papillotes et brunch</p>
+            <p class="mini-description">Plats mijotés, papillotes et brunch</p>
+            <p class="mini-description">Plats mijotés, papillotes et brunch</p>
         </section>
+        
     </main>
 
     <footer>
+        <div id="mini-menus-container">
+
+            <ul id="distance-menu" class="toast-mini-menu">
+                <button class="mini-menu-button" id="distance-high">
+                    <img src="./icons/footsteps_light.svg" />
+                    <img src="./icons/footsteps_light.svg" />
+                    <img src="./icons/footsteps_light.svg" />
+                </button>
+                <button class="mini-menu-button" id="distance-mid">
+                    <img src="./icons/footsteps_light.svg" />
+                    <img src="./icons/footsteps_light.svg" />
+                </button>
+                <button class="mini-menu-button" id="distance-low"> 
+                    <img src="./icons/footsteps_light.svg" />
+                </button>
+            </ul>
+
+            <ul id="price-range-menu" class="toast-mini-menu hidden">
+                <button id="price-range"><img src="./icons/price_icon.svg">
+                    <img src="./icons/price_icon.svg">
+                    <img src="./icons/price_icon.svg"></button>
+                <button id="price-range"><img src="./icons/price_icon.svg" />
+                    <img src="./icons/price_icon.svg">
+</button>
+                <button id="price-range"><img src="./icons/price_icon.svg" alt="filtrer par gamme de prix" /></button>
+            </ul>
+
+        </div>
+
         <nav id="filter-bar">
             <ul>
                 <button id="home"><img src="./icons/home_icon.svg" alt="Retour à l'acceuil" /></button>
@@ -48,7 +98,9 @@
                 <button id="distance"><img src="./icons/distance_icon.svg" alt="filtrer par distance" /></button>
                 <button id="price-range"><img src="./icons/price_icon.svg" alt="filtrer par gamme de prix" /></button>
             </ul>
+
         </nav>
+
     </footer>
     <script type="text/javascript" src="/scripts/home.js"></script>
 </body>

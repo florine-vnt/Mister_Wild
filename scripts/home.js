@@ -73,7 +73,6 @@ const BarDataBase = [
 
 ]
 
-
 /* JS NavBar */
 const cuisineSwitch = document.querySelector("#cuisine-switch");
 const barSwitch = document.querySelector("#bar-switch");
