@@ -64,8 +64,6 @@ header>nav>ul>button {
 
 .dark-mode-nav {
     border: solid;
-    border-color: var(--dark-bg-color);
-    color: var(--dark-bg-color);
     border-radius: 5px;
     padding: 10px;
 }
@@ -74,9 +72,14 @@ header>nav>ul>button {
     background-color: var(--dark-bg-color);
 }
 
+.dark-mode-button {
+    border-color: var(--dark-bg-color);
+    color: var(--dark-bg-color);
+}
+
 footer {
     position: sticky;
-    bottom: 0px;   
+    bottom: 0px;
 }
 
 #filter-bar ul {
@@ -115,7 +118,7 @@ footer div {
     height: 80vh;
 
     position: sticky;
-    bottom: 10vh;   
+    bottom: 10vh;
 
     display: grid;
     grid-template: 1fr / 1fr 1fr 1fr 1fr;
@@ -123,23 +126,23 @@ footer div {
 }
 
 #price-range-menu {
-    grid-column-start:4;
+    grid-column-start: 4;
 
 }
 
 #distance-menu {
-    grid-column-start:3;
+    grid-column-start: 3;
 }
 
 /* The little menus that pop up for both distance and budget */
 .toast-mini-menu {
     background-color: var(--light-filterbar-color);
-    margin:0px;
+    margin: 0px;
     margin-bottom: 0px;
-    padding:0;
+    padding: 0;
     max-width: 25vw;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     justify-content: flex-end;
     align-items: center;
     /* Part about sizing and align it in the bottom */
@@ -154,8 +157,8 @@ footer div {
     margin-left: -1vw;
 }
 
-.toast-mini-menu button{
-    display :flex;
+.toast-mini-menu button {
+    display: flex;
     flex-direction: row;
     justify-content: center;
     background-color: transparent;
@@ -198,6 +201,5 @@ grid-template-rows: left 1rem;
 }
 .mini-description{
 display:grid;
-font-family:"noto sans";
-
+font-family:var(--secondary-font);
 }

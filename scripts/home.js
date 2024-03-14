@@ -80,6 +80,8 @@ const body = document.querySelector("#body");
 
 cuisineSwitch.addEventListener('click', function () {
     barSwitch.classList.remove("dark-mode-nav");
+    cuisineSwitch.classList.remove("dark-mode-button");
+    barSwitch.classList.remove("dark-mode-button");
     body.classList.remove("dark-mode-body");
     cuisineSwitch.classList.toggle("light-mode-nav");
     body.classList.toggle("light-mode-body");
@@ -89,6 +91,8 @@ barSwitch.addEventListener('click', function () {
     cuisineSwitch.classList.remove("light-mode-nav");
     body.classList.remove("light-mode-body");
     barSwitch.classList.toggle("dark-mode-nav");
+    cuisineSwitch.classList.toggle("dark-mode-button");
+    barSwitch.classList.toggle("dark-mode-button");
     body.classList.toggle("dark-mode-body");
 })
 
