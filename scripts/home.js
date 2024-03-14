@@ -74,11 +74,11 @@ const BarDataBase = [
 
 
 /// Function to display all the places
-const placesList = document.getElementById("places")
+const placesList = document.getElementById("places");
 
 function displayPlaces(dataBase) {
     // clear the places list
-    placesList.innerHTML=""
+    placesList.innerHTML = ""
 
     dataBase.forEach(place => {
         //Create a card 
@@ -123,16 +123,57 @@ displayPlaces(restaurantDataBase);
 
 
 /// Functions to display/hide the mini-menus
-distanceMenuButton = document.getElementById("distance");
-distanceMenu = document.getElementById("distance-menu");
+const distanceMenuButton = document.getElementById("distance");
+const distanceMenu = document.getElementById("distance-menu");
+const priceMenuButton = document.getElementById("price-range");
+const priceMenu = document.getElementById("price-range-menu");
+const menuContainer = document.getElementById("mini-menus-container");
 
-distanceMenuButton.addEventListener("click",function(){
+
+// make distance menu appear
+distanceMenuButton.addEventListener("click", function () {
+
     distanceMenu.classList.toggle("hidden");
+
+    // check if another menu is already open
+    if (priceMenu.classList.contains("hidden")) {
+
+        // send the places list to the back
+        placesList.classList.toggle("to-front");
+        placesList.classList.toggle("to-back");
+
+        // bring the menu container to the front
+        menuContainer.classList.toggle("to-front");
+        menuContainer.classList.toggle("to-back");
+    }
 });
 
-priceMenuButton = document.getElementById("price-range");
-priceMenu = document.getElementById("price-range-menu");
 
-priceMenuButton.addEventListener("click",function(){
+// make price menu appear
+priceMenuButton.addEventListener("click", function () {
     priceMenu.classList.toggle("hidden");
+
+
+    // check if another menu is already open
+    if (distanceMenu.classList.contains("hidden")) {
+
+        // send the places list to the back
+        placesList.classList.toggle("to-front");
+        placesList.classList.toggle("to-back");
+
+        // bring the menu container to the front
+        menuContainer.classList.toggle("to-front");
+        menuContainer.classList.toggle("to-back");
+    }
+
 });
+
+//make all menus dissapear when clicking somewhere else
+menuContainer.addEventListener("click", function () {
+    priceMenu.classList.add("hidden");
+    distanceMenu.classList.add("hidden");
+    menuContainer.classList.add("to-back");
+    menuContainer.classList.remove("to-front");
+    placesList.classList.add("to-front");
+    placesList.classList.remove("to-back");
+})
