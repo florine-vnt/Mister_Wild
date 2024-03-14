@@ -1,3 +1,5 @@
+/* JS DataBase */
+
 const restaurantDataBase = [
     {
         name: 'Papill\'',
@@ -71,5 +73,21 @@ const BarDataBase = [
 
 ]
 
+/* JS NavBar */
+const cuisineSwitch = document.querySelector("#cuisine-switch");
+const barSwitch = document.querySelector("#bar-switch");
+const body = document.querySelector("#body");
 
+cuisineSwitch.addEventListener('click', function () {
+    barSwitch.classList.remove("dark-mode-nav");
+    body.classList.remove("dark-mode-body");
+    cuisineSwitch.classList.toggle("light-mode-nav");
+    body.classList.toggle("light-mode-body");
+})
 
+barSwitch.addEventListener('click', function () {
+    cuisineSwitch.classList.remove("light-mode-nav");
+    body.classList.remove("light-mode-body");
+    barSwitch.classList.toggle("dark-mode-nav");
+    body.classList.toggle("dark-mode-body");
+})
