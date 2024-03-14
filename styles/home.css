@@ -63,8 +63,7 @@ h1 {
     
     height: 10vh;
     width: 100%;
-    background-color: var(--light-filterbar-color);
-
+    background-color: var(--light-fg-color);
 }
 
 #filter-bar ul button img {
@@ -76,3 +75,39 @@ h1 {
     background-color: none;
     border: none;
 }
+
+
+/* card  */
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    background-color: #f5f5f5;
+    align-items:center;
+    padding: 0rem 2rem;
+  border-radius: 10px;
+}
+/* coter  gauche de la boite card */
+#places{
+    padding-left:0;
+
+}
+
+/* Image papilles rendre ronde */
+.papillronde{
+  border-radius: 50%;
+ height: 100px;
+
+}
+
+.card div place-name {
+display: grid;
+grid-template-rows: left 1.5rem;
+
+}
+.mini-description {
+display:grid;
+
+
+}
+
