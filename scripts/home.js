@@ -118,3 +118,21 @@ function displayPlaces(dataBase) {
 }
 
 displayPlaces(restaurantDataBase);
+
+
+
+
+/// Functions to display/hide the mini-menus
+distanceMenuButton = document.getElementById("distance");
+distanceMenu = document.getElementById("distance-menu");
+
+distanceMenuButton.addEventListener("click",function(){
+    distanceMenu.classList.toggle("hidden");
+});
+
+priceMenuButton = document.getElementById("price-range");
+priceMenu = document.getElementById("price-range-menu");
+
+priceMenuButton.addEventListener("click",function(){
+    priceMenu.classList.toggle("hidden");
+});
