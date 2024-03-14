@@ -30,6 +30,7 @@
     align-items:center;
     padding: 0rem 2rem;
   border-radius: 10px;
+
 }
 /* coter  gauche de la boite card */
 #places{
@@ -51,6 +52,5 @@ grid-template-rows: left 1.5rem;
 }
 .mini-description {
 display:grid;
-
-
 }
+
