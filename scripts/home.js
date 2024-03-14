@@ -10,7 +10,7 @@ const restaurantDataBase = [
         adress: ' 3 rue du truc',
         tel: '0244444444',
         linkToMaps: 'a',
-        image: 'a',
+        image: './assets/papill.jpg',
         description: 'Vous allez vous régaler les papilles, cuisine authentique, et le batron offre le digestif !!'
 
     },
@@ -24,7 +24,7 @@ const restaurantDataBase = [
         adress: '4 avennue des champs elysee',
         tel: '0275757575',
         linkToMaps: '',
-        image: '',
+        image: './assets/papill.jpg',
         description: 'Restaurant cosz, spécialisé dans les poissons. On retient spécialement leur spécialité, le fish n chips !!'
     },
 
@@ -37,7 +37,7 @@ const restaurantDataBase = [
         adress: ' 3 rue du truc',
         tel: '0211444444',
         linkToMaps: '',
-        image: '',
+        image: './assets/papill.jpg',
         description: 'Vous allez vous régaler les papilles, cuisine authentique, et le batron offre le digestif !!'
 
     },
@@ -51,7 +51,7 @@ const restaurantDataBase = [
         adress: '14 rue baron',
         tel: '0222757575',
         linkToMaps: '',
-        image: '',
+        image: './assets/papill.jpg',
         description: 'Ramen, un délice des papilles !!'
     }
 ]
@@ -95,3 +95,51 @@ barSwitch.addEventListener('click', function () {
     barSwitch.classList.toggle("dark-mode-button");
     body.classList.toggle("dark-mode-body");
 })
+
+
+/// Function to display all the places
+const placesList = document.getElementById("places")
+
+function displayPlaces(dataBase) {
+    // clear the places list
+    placesList.innerHTML=""
+
+    dataBase.forEach(place => {
+        //Create a card 
+        let newCard = document.createElement("li");
+        newCard.classList.add("card");
+
+        //create and add an image to the card
+        let image = document.createElement("img");
+        image.classList.add("place-picture");
+        image.src = place.image;
+        image.alt = "Logo du restaurant"
+        newCard.appendChild(image);
+
+        //create a div for the place name and mini-description
+        let container = document.createElement("div");
+
+        //create a name  
+        let placeName = document.createElement("h2");
+        placeName.classList.add("place-name");
+        placeName.innerText = place.name;
+        container.appendChild(placeName);
+
+        //create a mini-description
+        let miniDescription = document.createElement("p");
+        miniDescription.classList.add("mini-description");
+        miniDescription.innerText = place.name;
+        container.appendChild(miniDescription);
+
+        /// TODO : add the distance image.inside of a container.
+
+        //Append the div to the card
+        newCard.appendChild(container);
+        //Append the card to the Places list
+        placesList.appendChild(newCard);
+        console.log(place.name);
+    });
+}
+
+displayPlaces(restaurantDataBase);
+

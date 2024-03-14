@@ -188,9 +188,9 @@ footer div {
 }
 
 /* Image papilles rendre ronde */
-.papillronde {
-    border-radius: 50%;
-    height: 100px;
+.place-picture {
+  border-radius: 50%;
+ height: 100px;
 
 }
 
