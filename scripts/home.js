@@ -82,27 +82,39 @@ const body = document.querySelector("#body");
 cuisineSwitch.addEventListener('click', function () {
     const cardsDarkMode = document.querySelector(".card");
 
-    barSwitch.classList.remove("dark-mode-nav");
-    cuisineSwitch.classList.remove("dark-mode-button");
-    barSwitch.classList.remove("dark-mode-button");
-    body.classList.remove("dark-mode-body");
-    cuisineSwitch.classList.toggle("light-mode-nav");
-    body.classList.toggle("light-mode-body");
-    cardsDarkMode.classList.toggle("dark-mode");
+    /* barSwitch.classList.remove("dark-mode-nav");
+     cuisineSwitch.classList.remove("dark-mode-button");
+     barSwitch.classList.remove("dark-mode-button");
+     body.classList.remove("dark-mode-body");
+     cuisineSwitch.classList.toggle("light-mode-nav");
+     body.classList.toggle("light-mode-body");*/
+    cuisineSwitch.classList.toggle("light-mode");
+    cuisineSwitch.classList.remove("dark-mode");
+    barSwitch.classList.toggle("light-mode");
+    barSwitch.classList.remove("dark-mode");
+    body.classList.toggle("light-mode");
+    body.classList.remove("dark-mode");
+    cardsDarkMode.classList.remove("dark-mode");
     cardsDarkMode.classList.toggle("light-mode");
 })
 
 barSwitch.addEventListener('click', function () {
     const cardsDarkMode = document.querySelector(".card");
 
-    cuisineSwitch.classList.remove("light-mode-nav");
+    /*cuisineSwitch.classList.remove("light-mode-nav");
     body.classList.remove("light-mode-body");
     barSwitch.classList.toggle("dark-mode-nav");
     cuisineSwitch.classList.toggle("dark-mode-button");
     barSwitch.classList.toggle("dark-mode-button");
-    body.classList.toggle("dark-mode-body");
+    body.classList.toggle("dark-mode-body");*/
+    cuisineSwitch.classList.toggle("dark-mode");
+    cuisineSwitch.classList.remove("light-mode");
+    barSwitch.classList.toggle("dark-mode");
+    barSwitch.classList.remove("light-mode");
+    body.classList.toggle("dark-mode");
+    body.classList.remove("light-mode");
     cardsDarkMode.classList.toggle("dark-mode");
-    cardsDarkMode.classList.toggle("light-mode");
+    cardsDarkMode.classList.remove("light-mode");
 })
 
 

@@ -51,31 +51,40 @@ header>nav>ul>button {
     font-size: 15px;
 }
 
-.light-mode-nav {
+#cuisine-switch.light-mode {
     border: solid;
-    border-color: white;
+    border-color: var(--light-bg-color);
     border-radius: 5px;
     padding: 10px;
 }
 
-.light-mode-body {
+#cuisine-switch.dark-mode {
+    color: var(--light-font-color);
+    padding: 10px;
+}
+
+#bar-switch.dark-mode {
+    border: solid;
+    border-color: var(--light-font-color);
+    color: var(--light-font-color);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#bar-switch.light-mode {
+    color: var(--light-bg-color);
+    padding: 10px;
+}
+
+#body.light-mode {
     background-color: var(--light-bg-color);
 }
 
-.dark-mode-nav {
-    border: solid;
-    border-radius: 5px;
-    padding: 10px;
-}
-
-.dark-mode-body {
+#body.dark-mode {
     background-color: var(--dark-bg-color);
 }
 
-.dark-mode-button {
-    border-color: var(--dark-bg-color);
-    color: var(--dark-bg-color);
-}
+
 
 footer {
     position: sticky;
