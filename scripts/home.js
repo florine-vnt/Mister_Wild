@@ -58,6 +58,97 @@ const restaurantDataBase = [
 
 const BarDataBase = [
     {
+        name: 'Napoleone',
+        miniDescription: 'le QG des wilder, à boire et à manger',
+        specialities: ["Cocktails, vins,bières,tapas"],
+        distance: '85m',
+        priceRange: '€€-€€€',
+        adress: ' 1 rue baron',
+        tel: '02 53 78 40 61',
+        linkToMaps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.2721409788555!2d-1.5495075489104218!3d47.21125717905818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805eeb05311c6ab%3A0x1a10a632301380c9!2s1+Rue+Baron%2C+44000+Nantes!5e0!3m2!1sfr!2sfr!4v1564840539599!5m2!1sfr!2sfr',
+        image: "./asset/Databarimg/Napoleone.jpg"
+        description: 'Cocktails créations, vins et bières locales, Bar a tapas'
+
+    },
+    {
+        name: 'Coco bandit',
+        miniDescription: 'le QG des wilder, à boire et à manger',
+        specialities: ['Bar à cocktails'],
+        distance: '400m',
+        priceRange: '€',
+        adress: '15 Rue Crucy ',
+        tel: '0640784675',
+        linkToMaps: '',
+        image: './asset/Databarimg/cocobandit.jpg',
+        description: 'le qg des wilder et aussi des buveurs! Pour les amateur de soft, le cocktail papaye est un incontournable'
+
+    },
+    {
+        name: 'Lelovecraft',
+        miniDescription: 'le QG des wilder, à boire et à manger',
+        specialities: ['bieres artisanales,vins raffinés,cocktails maison'],
+        distance: '400m',
+        priceRange: '€',
+        adress: '32 bis Rue Fouré',
+        tel: '0228499855',
+        linkToMaps: '',
+        image: './asset/Databarimg/Lelovecraft.jpg',
+        description: 'le qg des wilder et aussi des buveurs! Pour les amateur de soft, le cocktail papaye est un incontournable'
+
+    },
+    {
+        name: 'Le lieu unique',
+        miniDescription: 'bar dans une ancienne biscuiterie',
+        specialities: ['bieres artisanales,vins raffinés,cocktails maison'],
+        distance: '400m',
+        priceRange: '€',
+        adress: '32 bis Rue Fouré',
+        tel: '0228499855',
+        linkToMaps: '',
+        image: './asset/Databarimg/barlu',
+        description: 'le qg des wilder et aussi des buveurs! Pour les amateur de soft, le cocktail papaye est un incontournable'
+
+    },
+    {
+        name: 'le bain rouge',
+        miniDescription: 'Lieu de spectacles et de tenue d’évènements',
+        specialities: ['bieres artisanales,vins raffinés,cocktails maison'],
+        distance: '400m',
+        priceRange: '€',
+        adress: '32 bis Rue Fouré',
+        tel: '0228499855',
+        linkToMaps: '',
+        image: './asset/Databarimg/bainrouge.jpg',
+        description: 'le qg des wilder et aussi des buveurs! Pour les amateur de soft, le cocktail papaye est un incontournable'
+
+    },
+    {
+        name: 'Delirium cafe',
+        miniDescription: 'sélection de bières pression et soirées musicales ou sportives.',
+        specialities: ['bieres artisanales,vins raffinés,cocktails maison'],
+        distance: '400m',
+        priceRange: '€',
+        adress: '32 bis Rue Fouré',
+        tel: '0228499855',
+        linkToMaps: '',
+        image: './asset/Databarimg/delirium-cafe',
+        description: 'le qg des wilder et aussi des buveurs! Pour les amateur de soft, le cocktail papaye est un incontournable'
+
+    },
+    {
+        name: 'nom du bar',
+        miniDescription: 'le QG des wilder, à boire et à manger',
+        specialities: ['Biére', 'vin', 'Soft'],
+        distance: '10m',
+        priceRange: '€',
+        adress: ' 5 rue baron',
+        tel: '0233444444',
+        linkToMaps: '',
+        image: '',
+        description: 'le qg des wilder et aussi des buveurs! Pour les amateur de soft, le cocktail papaye est un incontournable'
+
+    },
+    {
         name: 'nom du bar',
         miniDescription: 'le QG des wilder, à boire et à manger',
         specialities: ['Biére', 'vin', 'Soft'],
@@ -71,6 +162,8 @@ const BarDataBase = [
 
     }
 
+
+
 ]
 
 /* JS switch dark-light mode */
@@ -80,57 +173,61 @@ const body = document.querySelector("#body");
 const footer = document.querySelector("#ul-footer");
 
 cuisineSwitch.addEventListener('click', function () {
-    const cardsDarkMode = document.querySelector(".card");
-
+    // put elements in light mode
     cuisineSwitch.classList.toggle("light-mode");
     cuisineSwitch.classList.remove("dark-mode");
     barSwitch.classList.toggle("light-mode");
     barSwitch.classList.remove("dark-mode");
     body.classList.toggle("light-mode");
     body.classList.remove("dark-mode");
-    cardsDarkMode.classList.remove("dark-mode");
-    cardsDarkMode.classList.toggle("light-mode");
     footer.classList.toggle("light-mode");
     footer.classList.remove("dark-mode");
     distanceMenu.classList.toggle("light-mode");
     distanceMenu.classList.remove("dark-mode");
     priceMenu.classList.toggle("light-mode");
     priceMenu.classList.remove("dark-mode");
+    //display restaurants
+    displayPlaces(restaurantDataBase);
 })
 
 barSwitch.addEventListener('click', function () {
-    const cardsDarkMode = document.querySelector(".card");
-
+    // put elements in dark mode
     cuisineSwitch.classList.toggle("dark-mode");
     cuisineSwitch.classList.remove("light-mode");
     barSwitch.classList.toggle("dark-mode");
     barSwitch.classList.remove("light-mode");
     body.classList.toggle("dark-mode");
     body.classList.remove("light-mode");
-    cardsDarkMode.classList.toggle("dark-mode");
-    cardsDarkMode.classList.remove("light-mode");
     footer.classList.toggle("dark-mode");
     footer.classList.remove("light-mode");
     distanceMenu.classList.toggle("dark-mode");
     distanceMenu.classList.remove("light-mode");
     priceMenu.classList.toggle("dark-mode");
     priceMenu.classList.remove("light-mode");
+    //display bars
+    displayPlaces(BarDataBase);
 })
 
 
 /// Function to display all the places
 const placesList = document.getElementById("places");
 
+
 function displayPlaces(dataBase) {
     // clear the places list
     placesList.innerHTML = ""
+
+    //figure out if we are in light or dark mode. 
+    const lightMode = body.classList.contains("light-mode");
+
 
     dataBase.forEach(place => {
         //Create a card 
         let newCard = document.createElement("li");
         newCard.classList.add("card");
         //TODO add an if to check if restaurant or bar
-        newCard.classList.add("light-mode");
+        if (lightMode) { newCard.classList.add("light-mode"); } else { newCard.classList.add("dark-mode"); };
+
 
         //create and add an image to the card
         let image = document.createElement("img");
