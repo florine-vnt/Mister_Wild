@@ -69,6 +69,32 @@ const BarDataBase = [
         image: '',
         description: 'le qg des wilder et aussi des buveurs! Pour les amateur de soft, le cocktail papaye est un incontournable'
 
+    },
+    {
+        name: 'nom du bar',
+        miniDescription: 'le QG des wilder, à boire et à manger',
+        specialities: ['Biére', 'vin', 'Soft'],
+        distance: '10m',
+        priceRange: '€',
+        adress: ' 5 rue baron',
+        tel: '0233444444',
+        linkToMaps: '',
+        image: '',
+        description: 'le qg des wilder et aussi des buveurs! Pour les amateur de soft, le cocktail papaye est un incontournable'
+
+    },
+    {
+        name: 'nom du bar',
+        miniDescription: 'le QG des wilder, à boire et à manger',
+        specialities: ['Biére', 'vin', 'Soft'],
+        distance: '10m',
+        priceRange: '€',
+        adress: ' 5 rue baron',
+        tel: '0233444444',
+        linkToMaps: '',
+        image: '',
+        description: 'le qg des wilder et aussi des buveurs! Pour les amateur de soft, le cocktail papaye est un incontournable'
+
     }
 
 ]
@@ -80,45 +106,49 @@ const body = document.querySelector("#body");
 
 
 cuisineSwitch.addEventListener('click', function () {
-    const cardsDarkMode = document.querySelector(".card");
-
+    // put elements in light mode
     cuisineSwitch.classList.toggle("light-mode");
     cuisineSwitch.classList.remove("dark-mode");
     barSwitch.classList.toggle("light-mode");
     barSwitch.classList.remove("dark-mode");
     body.classList.toggle("light-mode");
     body.classList.remove("dark-mode");
-    cardsDarkMode.classList.remove("dark-mode");
-    cardsDarkMode.classList.toggle("light-mode");
+    //display restaurants
+    displayPlaces(restaurantDataBase);
 })
 
 barSwitch.addEventListener('click', function () {
-    const cardsDarkMode = document.querySelector(".card");
-
+    // put elements in dark mode
     cuisineSwitch.classList.toggle("dark-mode");
     cuisineSwitch.classList.remove("light-mode");
     barSwitch.classList.toggle("dark-mode");
     barSwitch.classList.remove("light-mode");
     body.classList.toggle("dark-mode");
     body.classList.remove("light-mode");
-    cardsDarkMode.classList.toggle("dark-mode");
-    cardsDarkMode.classList.remove("light-mode");
+    //display bars
+    displayPlaces(BarDataBase);
 })
 
 
 /// Function to display all the places
 const placesList = document.getElementById("places");
 
+
 function displayPlaces(dataBase) {
     // clear the places list
     placesList.innerHTML = ""
+
+    //figure out if we are in light or dark mode. 
+    const lightMode = body.classList.contains("light-mode");
+
 
     dataBase.forEach(place => {
         //Create a card 
         let newCard = document.createElement("li");
         newCard.classList.add("card");
         //TODO add an if to check if restaurant or bar
-        newCard.classList.add("light-mode");
+        if (lightMode) { newCard.classList.add("light-mode"); } else { newCard.classList.add("dark-mode"); };
+
 
         //create and add an image to the card
         let image = document.createElement("img");
