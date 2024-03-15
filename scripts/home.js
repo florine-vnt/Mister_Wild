@@ -29,7 +29,7 @@ const restaurantDataBase = [
     },
 
     {
-        name: 'la cantine fermière',
+        name: 'La cantine fermière',
         miniDescription: 'Sandwichs et salades de produits de saison et de fermes locales',
         specialities: ['chinois', 'Japonais', 'Thai'],
         distance: '50m',
@@ -43,7 +43,7 @@ const restaurantDataBase = [
     },
 
     {
-        name: 'ichigo',
+        name: 'Ichigo',
         miniDescription: 'Ramen, c\'est brûlant, mais c\'est délicieux.',
         specialities: ['ramen', 'trucVapeur', 'poisson'],
         distance: '150m',
@@ -128,7 +128,7 @@ function displayPlaces(dataBase) {
         //create a mini-description
         let miniDescription = document.createElement("p");
         miniDescription.classList.add("mini-description");
-        miniDescription.innerText = place.name;
+        miniDescription.innerText = place.miniDescription;
         container.appendChild(miniDescription);
 
         /// TODO : add the distance image.inside of a container.
@@ -153,19 +153,16 @@ const distanceMenu = document.getElementById("distance-menu");
 const priceMenuButton = document.getElementById("price-range");
 const priceMenu = document.getElementById("price-range-menu");
 const menuContainer = document.getElementById("mini-menus-container");
+const filterBar = document.getElementById("filter-bar");
 
 
 // make distance menu appear
 distanceMenuButton.addEventListener("click", function () {
 
-    distanceMenu.classList.toggle("hidden");
+    distanceMenu.classList.toggle("collapsed");
 
     // check if another menu is already open
-    if (priceMenu.classList.contains("hidden")) {
-
-        // send the places list to the back
-        placesList.classList.toggle("to-front");
-        placesList.classList.toggle("to-back");
+    if (priceMenu.classList.contains("collapsed")) {
 
         // bring the menu container to the front
         menuContainer.classList.toggle("to-front");
@@ -176,15 +173,11 @@ distanceMenuButton.addEventListener("click", function () {
 
 // make price menu appear
 priceMenuButton.addEventListener("click", function () {
-    priceMenu.classList.toggle("hidden");
+    priceMenu.classList.toggle("collapsed");
 
 
     // check if another menu is already open
-    if (distanceMenu.classList.contains("hidden")) {
-
-        // send the places list to the back
-        placesList.classList.toggle("to-front");
-        placesList.classList.toggle("to-back");
+    if (distanceMenu.classList.contains("collapsed")) {
 
         // bring the menu container to the front
         menuContainer.classList.toggle("to-front");
@@ -195,12 +188,10 @@ priceMenuButton.addEventListener("click", function () {
 
 //make all menus dissapear when clicking somewhere else
 menuContainer.addEventListener("click", function () {
-    priceMenu.classList.add("hidden");
-    distanceMenu.classList.add("hidden");
+    priceMenu.classList.add("collapsed");
+    distanceMenu.classList.add("collapsed");
     menuContainer.classList.add("to-back");
     menuContainer.classList.remove("to-front");
-    placesList.classList.add("to-front");
-    placesList.classList.remove("to-back");
 })
 //END OF MINI MENUS BEHAVIOUR
 
