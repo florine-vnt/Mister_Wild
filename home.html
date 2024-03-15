@@ -30,10 +30,11 @@
     <main>
         <div id="showcase"></div>
         <section>
-            <ul id="places">
+            <ul id="places" >
                 <li class="card">
                     <img class="place-picture" src="./assets/papill.jpg" alt="Logo du restaurant">
-                    <div><h2 class="place-name">PAPILL'</h2>
+                    <div>
+                        <h2 class="place-name">PAPILL'</h2>
                         <p class="mini-description">Plats mijotés, papillotes et brunch</p>
                         <img class="distance-indicator" src="" alt="">
                     </div>
@@ -44,9 +45,9 @@
     </main>
 
     <footer>
-        <div id="mini-menus-container">
+        <div id="mini-menus-container" class="to-back">
 
-            <ul id="distance-menu" class="toast-mini-menu">
+            <ul id="distance-menu" class="toast-mini-menu collapsed">
                 <button class="mini-menu-button" id="distance-high">
                     <img src="./icons/footsteps_light.svg" />
                     <img src="./icons/footsteps_light.svg" />
@@ -61,25 +62,26 @@
                 </button>
             </ul>
 
-            <ul id="price-range-menu" class="toast-mini-menu hidden">
-                <button id="price-range"><img src="./icons/price_icon.svg">
+            <ul id="price-range-menu" class="toast-mini-menu collapsed">
+                <button id="price-range-high"><img src="./icons/price_icon.svg">
                     <img src="./icons/price_icon.svg">
                     <img src="./icons/price_icon.svg"></button>
-                <button id="price-range"><img src="./icons/price_icon.svg" />
+                <button id="price-range-mid"><img src="./icons/price_icon.svg" />
                     <img src="./icons/price_icon.svg">
                 </button>
-                <button id="price-range"><img src="./icons/price_icon.svg" alt="filtrer par gamme de prix" /></button>
+                <button id="price-range-low"><img src="./icons/price_icon.svg" alt="filtrer par gamme de prix" /></button>
+
             </ul>
 
         </div>
 
-        <nav id="filter-bar">
+        <nav id="filter-bar" >
             <ul>
-                <button id="home"><img src="./icons/home_icon.svg" alt="Retour à l'acceuil" /></button>
-                <button id="primary-filter"><img src="./icons/cuisine_icon.svg"
+                <button id="home" ><img src="./icons/home_icon.svg" alt="Retour à l'acceuil" /></button>
+                <button id="primary-filter" ><img src="./icons/cuisine_icon.svg"
                         alt="filtrer par type de cuisine" /></button>
-                <button id="distance"><img src="./icons/distance_icon.svg" alt="filtrer par distance" /></button>
-                <button id="price-range"><img src="./icons/price_icon.svg" alt="filtrer par gamme de prix" /></button>
+                <button id="distance" ><img src="./icons/distance_icon.svg" alt="filtrer par distance" /></button>
+                <button id="price-range" ><img src="./icons/price_icon.svg" alt="filtrer par gamme de prix" /></button>
             </ul>
 
         </nav>

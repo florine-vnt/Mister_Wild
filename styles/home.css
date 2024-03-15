@@ -22,7 +22,6 @@
 
 body {
     margin: 0;
-    height: 200vh;
 }
 
 
@@ -33,6 +32,11 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    /* Making it sticky to the top */
+    position: sticky;
+    top: 0px;
+    z-index: 4;
 }
 
 header>nav>ul {
@@ -94,7 +98,7 @@ header>nav>ul>button {
 }
 
 
-
+/* FILTERBAR PART */
 footer {
     position: sticky;
     bottom: 0px;
@@ -104,6 +108,9 @@ footer {
     list-style: none;
     display: grid;
     grid-template: 1fr / 1fr 1fr 1fr 1fr;
+
+    position: sticky;
+    bottom: 0px;
 
     margin: 0;
     border: 0;
@@ -117,11 +124,12 @@ footer {
 
 #filter-bar ul button img {
     height: 5vh;
+
 }
 
 #filter-bar ul button {
     margin: 0;
-    background-color: none;
+    background-color: transparent;
     border: none;
 }
 
@@ -131,11 +139,11 @@ footer {
 /* Making an overlaying div, containing all mini-menus */
 
 footer div {
-    /* Metre 4 colonnes, plus sticky avec marge  */
     width: 100%;
     height: 80vh;
 
     position: sticky;
+
     bottom: 10vh;
 
     display: grid;
@@ -150,6 +158,12 @@ footer div {
 
 #distance-menu {
     grid-column-start: 3;
+}
+
+.collapsed {
+    transform: scale(0) translateY(30vh);
+    transition-property: transform;
+    transition-duration: .8s;
 }
 
 /* The little menus that pop up for both distance and budget */
@@ -168,6 +182,10 @@ footer div {
     align-self: flex-end;
     border-radius: 10px 10px 0px 0px;
 
+    /* part about making the animation, unrolling it*/
+    transition-property: transform;
+    transition-duration: .3s;
+
 }
 
 .toast-mini-menu button img {
@@ -183,20 +201,46 @@ footer div {
     width: 100%;
     height: 10vh;
     border: none;
-
-
-
 }
+
+.to-front {
+    z-index: 1;
+    /* set higher z-index value */
+}
+
+.to-back {
+    z-index: -1;
+    /* set lower z-index value */
+}
+
+/* FOR DEBUGGING make the mini menu container slightly opaque */
+/* #mini-menus-container{
+    background-color: #1E1E1E33;
+} */
+
+.hidden {
+    display: none;
+}
+
+#places {
+    position: relative;
+}
+
+/* END OF FILTERBAR PART */
+
+
 
 /* card  */
 .card {
     display: grid;
     grid-template-columns: 1fr 1fr;
-
-    align-items: center;
-    padding: 0rem 2rem;
-    border-radius: 10px;
+    padding: 0;
+    background-color: #f5f5f5;
+    border-radius: 10px; 
+    margin: 0 0 1rem;
+    font-family: poppins;
 }
+
 
 /* dark-mode sur les cards */
 .card.dark-mode {
@@ -211,27 +255,27 @@ footer div {
     color: var(--light-font-color);
 }
 
-/* coter  gauche de la boite card */
+/* coter  gauche& droite de la boite card */
 #places {
-    padding-left: 0;
-
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 /* Image papilles rendre ronde */
 .place-picture {
-    border-radius: 50%;
-    height: 100px;
-
+ border-radius: 50%;
+ height: 100px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 19px;
 }
 
 .card div place-name {
-    display: grid;
-    grid-template-rows: left 1.5rem;
-
+display: grid;
+grid-template-rows: left 1rem;
+}
+.mini-description{
+display:grid;
+font-family:var(--secondary-font);
 }
 
-.mini-description {
-    display: grid;
-
-
-}
