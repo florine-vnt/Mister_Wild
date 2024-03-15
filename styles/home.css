@@ -46,6 +46,13 @@ header>nav>ul {
     display: flex;
 }
 
+header>nav>ul>#cuisine-switch {
+    border: solid;
+    border-color: var(--light-bg-color);
+    border-radius: 5px;
+    padding: 10px;
+}
+
 header>nav>ul>button {
     background: none;
     color: var(--light-bg-color);
@@ -53,34 +60,42 @@ header>nav>ul>button {
     font-family: var(--primary-font);
     font-weight: bold;
     font-size: 15px;
+    padding: 10px;
 }
 
-.light-mode-nav {
+#cuisine-switch.light-mode {
     border: solid;
-    border-color: white;
+    border-color: var(--light-bg-color);
     border-radius: 5px;
     padding: 10px;
 }
 
-.light-mode-body {
+#cuisine-switch.dark-mode {
+    color: var(--light-font-color);
+    padding: 10px;
+    border: none;
+}
+
+#bar-switch.dark-mode {
+    border: solid;
+    border-color: var(--light-font-color);
+    color: var(--light-font-color);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#bar-switch.light-mode {
+    color: var(--light-bg-color);
+    padding: 10px;
+}
+
+#body.light-mode {
     background-color: var(--light-bg-color);
 }
 
-.dark-mode-nav {
-    border: solid;
-    border-radius: 5px;
-    padding: 10px;
-}
-
-.dark-mode-body {
+#body.dark-mode {
     background-color: var(--dark-bg-color);
 }
-
-.dark-mode-button {
-    border-color: var(--dark-bg-color);
-    color: var(--dark-bg-color);
-}
-
 
 
 /* FILTERBAR PART */
@@ -219,22 +234,36 @@ footer div {
 .card {
     display: grid;
     grid-template-columns: 1fr 1fr;
-
     padding: 0;
     background-color: #f5f5f5;
     border-radius: 10px; 
     margin: 0 0 1rem;
     font-family: poppins;
 }
+
+
+/* dark-mode sur les cards */
+.card.dark-mode {
+    background-color: var(--dark-fg-color);
+    color: var(--dark-font-color);
+}
+
+/* light-mode sur les cards */
+
+.card.light-mode {
+    background-color: var(--light-fg-color);
+    color: var(--light-font-color);
+}
+
 /* coter  gauche& droite de la boite card */
-#places{
+#places {
     padding-left: 20px;
     padding-right: 20px;
 }
 
 /* Image papilles rendre ronde */
 .place-picture {
-  border-radius: 50%;
+ border-radius: 50%;
  height: 100px;
     padding-top: 1rem;
     padding-bottom: 1rem;

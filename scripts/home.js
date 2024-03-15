@@ -73,27 +73,36 @@ const BarDataBase = [
 
 ]
 
-/* JS NavBar */
+/* JS switch dark-light mode */
 const cuisineSwitch = document.querySelector("#cuisine-switch");
 const barSwitch = document.querySelector("#bar-switch");
 const body = document.querySelector("#body");
 
+
 cuisineSwitch.addEventListener('click', function () {
-    barSwitch.classList.remove("dark-mode-nav");
-    cuisineSwitch.classList.remove("dark-mode-button");
-    barSwitch.classList.remove("dark-mode-button");
-    body.classList.remove("dark-mode-body");
-    cuisineSwitch.classList.toggle("light-mode-nav");
-    body.classList.toggle("light-mode-body");
+    const cardsDarkMode = document.querySelector(".card");
+
+    cuisineSwitch.classList.toggle("light-mode");
+    cuisineSwitch.classList.remove("dark-mode");
+    barSwitch.classList.toggle("light-mode");
+    barSwitch.classList.remove("dark-mode");
+    body.classList.toggle("light-mode");
+    body.classList.remove("dark-mode");
+    cardsDarkMode.classList.remove("dark-mode");
+    cardsDarkMode.classList.toggle("light-mode");
 })
 
 barSwitch.addEventListener('click', function () {
-    cuisineSwitch.classList.remove("light-mode-nav");
-    body.classList.remove("light-mode-body");
-    barSwitch.classList.toggle("dark-mode-nav");
-    cuisineSwitch.classList.toggle("dark-mode-button");
-    barSwitch.classList.toggle("dark-mode-button");
-    body.classList.toggle("dark-mode-body");
+    const cardsDarkMode = document.querySelector(".card");
+
+    cuisineSwitch.classList.toggle("dark-mode");
+    cuisineSwitch.classList.remove("light-mode");
+    barSwitch.classList.toggle("dark-mode");
+    barSwitch.classList.remove("light-mode");
+    body.classList.toggle("dark-mode");
+    body.classList.remove("light-mode");
+    cardsDarkMode.classList.toggle("dark-mode");
+    cardsDarkMode.classList.remove("light-mode");
 })
 
 
@@ -108,6 +117,8 @@ function displayPlaces(dataBase) {
         //Create a card 
         let newCard = document.createElement("li");
         newCard.classList.add("card");
+        //TODO add an if to check if restaurant or bar
+        newCard.classList.add("light-mode");
 
         //create and add an image to the card
         let image = document.createElement("img");
