@@ -213,6 +213,22 @@ footer div {
     border: none;
 }
 
+#distance-menu.dark-mode {
+    background-color: var(--dark-filterbar-color);
+}
+
+#distance-menu.light-mode {
+    background-color: var(--light-filterbar-color);
+}
+
+#price-range-menu.dark-mode {
+    background-color: var(--dark-filterbar-color);
+}
+
+#price-range-menu.light-mode {
+    background-color: var(--light-filterbar-color);
+}
+
 .to-front {
     z-index: 1;
     /* set higher z-index value */

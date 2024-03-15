@@ -79,7 +79,6 @@ const barSwitch = document.querySelector("#bar-switch");
 const body = document.querySelector("#body");
 const footer = document.querySelector("#ul-footer");
 
-
 cuisineSwitch.addEventListener('click', function () {
     const cardsDarkMode = document.querySelector(".card");
 
@@ -93,6 +92,10 @@ cuisineSwitch.addEventListener('click', function () {
     cardsDarkMode.classList.toggle("light-mode");
     footer.classList.toggle("light-mode");
     footer.classList.remove("dark-mode");
+    distanceMenu.classList.toggle("light-mode");
+    distanceMenu.classList.remove("dark-mode");
+    priceMenu.classList.toggle("light-mode");
+    priceMenu.classList.remove("dark-mode");
 })
 
 barSwitch.addEventListener('click', function () {
@@ -108,6 +111,10 @@ barSwitch.addEventListener('click', function () {
     cardsDarkMode.classList.remove("light-mode");
     footer.classList.toggle("dark-mode");
     footer.classList.remove("light-mode");
+    distanceMenu.classList.toggle("dark-mode");
+    distanceMenu.classList.remove("light-mode");
+    priceMenu.classList.toggle("dark-mode");
+    priceMenu.classList.remove("light-mode");
 })
 
 
