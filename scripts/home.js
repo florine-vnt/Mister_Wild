@@ -170,7 +170,7 @@ const BarDataBase = [
 const cuisineSwitch = document.querySelector("#cuisine-switch");
 const barSwitch = document.querySelector("#bar-switch");
 const body = document.querySelector("#body");
-
+const footer = document.querySelector("#ul-footer");
 
 cuisineSwitch.addEventListener('click', function () {
     // put elements in light mode
@@ -180,6 +180,12 @@ cuisineSwitch.addEventListener('click', function () {
     barSwitch.classList.remove("dark-mode");
     body.classList.toggle("light-mode");
     body.classList.remove("dark-mode");
+    footer.classList.toggle("light-mode");
+    footer.classList.remove("dark-mode");
+    distanceMenu.classList.toggle("light-mode");
+    distanceMenu.classList.remove("dark-mode");
+    priceMenu.classList.toggle("light-mode");
+    priceMenu.classList.remove("dark-mode");
     //display restaurants
     displayPlaces(restaurantDataBase);
 })
@@ -192,6 +198,12 @@ barSwitch.addEventListener('click', function () {
     barSwitch.classList.remove("light-mode");
     body.classList.toggle("dark-mode");
     body.classList.remove("light-mode");
+    footer.classList.toggle("dark-mode");
+    footer.classList.remove("light-mode");
+    distanceMenu.classList.toggle("dark-mode");
+    distanceMenu.classList.remove("light-mode");
+    priceMenu.classList.toggle("dark-mode");
+    priceMenu.classList.remove("light-mode");
     //display bars
     displayPlaces(BarDataBase);
 })
