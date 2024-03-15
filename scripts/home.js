@@ -10,48 +10,55 @@ const restaurantDataBase = [
         adress: ' 3 rue du truc',
         tel: '0244444444',
         linkToMaps: 'a',
-        image: './assets/papill.jpg',
+        image: "./assets/Restaurants/Papill.jpg",
         description: 'Vous allez vous régaler les papilles, cuisine authentique, et le batron offre le digestif !!'
-
     },
-
     {
         name: 'Morse',
-        miniDescription: 'j\'ai pas encore de descri de faite.',
+        miniDescription: 'petit bistro de la mer : sandwichs et salades aux crevettes, langoustines, crabe...',
         specialities: ['salade', 'sandwich', 'poisson'],
         distance: '750m',
         priceRange: '€€€€',
         adress: '4 avennue des champs elysee',
         tel: '0275757575',
         linkToMaps: '',
-        image: './assets/papill.jpg',
+        image: './assets/Restaurants/Morse.png',
         description: 'Restaurant cosz, spécialisé dans les poissons. On retient spécialement leur spécialité, le fish n chips !!'
     },
-
     {
         name: 'La cantine fermière',
-        miniDescription: 'Sandwichs et salades de produits de saison et de fermes locales',
+        miniDescription: 'Sandwichs, salades et des plats, cuisinés avec des produits de saison et de fermes locales',
         specialities: ['chinois', 'Japonais', 'Thai'],
         distance: '50m',
         priceRange: '€€',
         adress: ' 3 rue du truc',
         tel: '0211444444',
         linkToMaps: '',
-        image: './assets/papill.jpg',
+        image: './assets/Restaurants/la-cantine-fermiere.png',
         description: 'Vous allez vous régaler les papilles, cuisine authentique, et le batron offre le digestif !!'
-
     },
-
     {
         name: 'Ichigo',
-        miniDescription: 'Ramen, c\'est brûlant, mais c\'est délicieux.',
-        specialities: ['ramen', 'trucVapeur', 'poisson'],
+        miniDescription: 'Ramen comme au Japon, mais aussi de gyozas et edemame',
+        specialities: ['ramen', 'gyozas', 'edemame'],
         distance: '150m',
-        priceRange: '€',
-        adress: '14 rue baron',
-        tel: '0222757575',
+        priceRange: '€€',
+        adress: '31 rue Fouré, 44000, Nantes',
+        tel: '02 40 35 34 30',
         linkToMaps: '',
-        image: './assets/papill.jpg',
+        image: './assets/Restaurants/ichigo.png',
+        description: 'Ramen, un délice des papilles !!'
+    },
+    {
+        name: 'Les triplettes',
+        miniDescription: 'Petit plats cuisiné, pâtisseries et café de spécialité. Cuisine local et agriculture raisonnée.',
+        specialities: ['ramen', 'gyozas', 'edemame'],
+        distance: '150m',
+        priceRange: '€€',
+        adress: '4 BIS Rue Emile Masson, 44000 Nantes',
+        tel: '02 28 49 76 01',
+        linkToMaps: '',
+        image: './assets/Restaurants/Triplettes.jpg',
         description: 'Ramen, un délice des papilles !!'
     }
 ]
@@ -66,25 +73,12 @@ const BarDataBase = [
         adress: ' 1 rue baron',
         tel: '02 53 78 40 61',
         linkToMaps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.2721409788555!2d-1.5495075489104218!3d47.21125717905818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805eeb05311c6ab%3A0x1a10a632301380c9!2s1+Rue+Baron%2C+44000+Nantes!5e0!3m2!1sfr!2sfr!4v1564840539599!5m2!1sfr!2sfr',
-        image: "./asset/Databarimg/Napoleone.jpg"
+        image: "./assets/Bars/Napoleone.png",
         description: 'Cocktails créations, vins et bières locales, Bar a tapas'
 
     },
     {
-        name: 'Coco bandit',
-        miniDescription: 'le QG des wilder, à boire et à manger',
-        specialities: ['Bar à cocktails'],
-        distance: '400m',
-        priceRange: '€',
-        adress: '15 Rue Crucy ',
-        tel: '0640784675',
-        linkToMaps: '',
-        image: './asset/Databarimg/cocobandit.jpg',
-        description: 'le qg des wilder et aussi des buveurs! Pour les amateur de soft, le cocktail papaye est un incontournable'
-
-    },
-    {
-        name: 'Lelovecraft',
+        name: 'Le lovecraft',
         miniDescription: 'le QG des wilder, à boire et à manger',
         specialities: ['bieres artisanales,vins raffinés,cocktails maison'],
         distance: '400m',
@@ -92,7 +86,7 @@ const BarDataBase = [
         adress: '32 bis Rue Fouré',
         tel: '0228499855',
         linkToMaps: '',
-        image: './asset/Databarimg/Lelovecraft.jpg',
+        image: './assets/Bars/Lelovecraft.jpg',
         description: 'le qg des wilder et aussi des buveurs! Pour les amateur de soft, le cocktail papaye est un incontournable'
 
     },
@@ -105,7 +99,7 @@ const BarDataBase = [
         adress: '32 bis Rue Fouré',
         tel: '0228499855',
         linkToMaps: '',
-        image: './asset/Databarimg/barlu',
+        image: './assets/Bars/barlu.png',
         description: 'le qg des wilder et aussi des buveurs! Pour les amateur de soft, le cocktail papaye est un incontournable'
 
     },
@@ -118,7 +112,20 @@ const BarDataBase = [
         adress: '32 bis Rue Fouré',
         tel: '0228499855',
         linkToMaps: '',
-        image: './asset/Databarimg/bainrouge.jpg',
+        image: './assets/Bars/bainrouge.jpg',
+        description: 'le qg des wilder et aussi des buveurs! Pour les amateur de soft, le cocktail papaye est un incontournable'
+
+    },
+    {
+        name: 'Coco bandit',
+        miniDescription: 'le QG des wilder, à boire et à manger',
+        specialities: ['Bar à cocktails'],
+        distance: '400m',
+        priceRange: '€',
+        adress: '15 Rue Crucy ',
+        tel: '0640784675',
+        linkToMaps: '',
+        image: './assets/Bars/cocobandit.jpg',
         description: 'le qg des wilder et aussi des buveurs! Pour les amateur de soft, le cocktail papaye est un incontournable'
 
     },
@@ -131,39 +138,10 @@ const BarDataBase = [
         adress: '32 bis Rue Fouré',
         tel: '0228499855',
         linkToMaps: '',
-        image: './asset/Databarimg/delirium-cafe',
-        description: 'le qg des wilder et aussi des buveurs! Pour les amateur de soft, le cocktail papaye est un incontournable'
-
-    },
-    {
-        name: 'nom du bar',
-        miniDescription: 'le QG des wilder, à boire et à manger',
-        specialities: ['Biére', 'vin', 'Soft'],
-        distance: '10m',
-        priceRange: '€',
-        adress: ' 5 rue baron',
-        tel: '0233444444',
-        linkToMaps: '',
-        image: '',
-        description: 'le qg des wilder et aussi des buveurs! Pour les amateur de soft, le cocktail papaye est un incontournable'
-
-    },
-    {
-        name: 'nom du bar',
-        miniDescription: 'le QG des wilder, à boire et à manger',
-        specialities: ['Biére', 'vin', 'Soft'],
-        distance: '10m',
-        priceRange: '€',
-        adress: ' 5 rue baron',
-        tel: '0233444444',
-        linkToMaps: '',
-        image: '',
+        image: './assets/Bars/Delirium-Cafe.jpg',
         description: 'le qg des wilder et aussi des buveurs! Pour les amateur de soft, le cocktail papaye est un incontournable'
 
     }
-
-
-
 ]
 
 /* JS switch dark-light mode */
@@ -229,12 +207,15 @@ function displayPlaces(dataBase) {
         if (lightMode) { newCard.classList.add("light-mode"); } else { newCard.classList.add("dark-mode"); };
 
 
-        //create and add an image to the card
+        //create a frame and add an image to it, then append to the card
+        let imageFrame =document.createElement("div")
+        imageFrame.classList.add("picture-frame");
         let image = document.createElement("img");
         image.classList.add("place-picture");
         image.src = place.image;
         image.alt = "Logo du restaurant"
-        newCard.appendChild(image);
+        imageFrame.appendChild(image)
+        newCard.appendChild(imageFrame);
 
         //create a div for the place name and mini-description
         let container = document.createElement("div");
