@@ -265,6 +265,7 @@ footer div {
     border-radius: 10px;
     margin: 0 0 1rem;
     font-family: poppins;
+    padding: 2vh;
 }
 
 
@@ -289,11 +290,28 @@ footer div {
 
 /* Image papilles rendre ronde */
 .place-picture {
-    border-radius: 50%;
-    height: 100px;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 19px;
+    object-fit: fill;
+    max-width:15vh;
+    max-height:15vh;
+    align-self: center;
+    justify-self: center;
+}
+
+.picture-frame{
+    border-radius: 7.5vh;
+    height: 15vh;
+    width: 15vh;
+
+    overflow: hidden;
+    align-self: center;
+    justify-self: center;
+    background-color: none;
+
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+
 }
 
 .card div place-name {
