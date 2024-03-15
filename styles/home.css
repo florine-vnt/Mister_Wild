@@ -16,6 +16,7 @@
     --dark-fg-color: #3F3F3F;
     --dark-icon-color: white;
     --dark-font-color: #D1D1D1;
+    --dark-filterbar-color: #3F3F3F;
 }
 
 /* Global Settings*/
@@ -134,6 +135,15 @@ footer {
 }
 
 
+#ul-footer.dark-mode {
+    background-color: var(--dark-filterbar-color);
+}
+
+#ul-footer.light-mode {
+    background-color: var(--light-filterbar-color);
+}
+
+
 /* Part about the mini-menus */
 
 /* Making an overlaying div, containing all mini-menus */
@@ -236,7 +246,7 @@ footer div {
     grid-template-columns: 1fr 1fr;
     padding: 0;
     background-color: #f5f5f5;
-    border-radius: 10px; 
+    border-radius: 10px;
     margin: 0 0 1rem;
     font-family: poppins;
 }
@@ -263,19 +273,19 @@ footer div {
 
 /* Image papilles rendre ronde */
 .place-picture {
- border-radius: 50%;
- height: 100px;
+    border-radius: 50%;
+    height: 100px;
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding-left: 19px;
 }
 
 .card div place-name {
-display: grid;
-grid-template-rows: left 1rem;
-}
-.mini-description{
-display:grid;
-font-family:var(--secondary-font);
+    display: grid;
+    grid-template-rows: left 1rem;
 }
 
+.mini-description {
+    display: grid;
+    font-family: var(--secondary-font);
+}

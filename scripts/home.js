@@ -77,6 +77,7 @@ const BarDataBase = [
 const cuisineSwitch = document.querySelector("#cuisine-switch");
 const barSwitch = document.querySelector("#bar-switch");
 const body = document.querySelector("#body");
+const footer = document.querySelector("#ul-footer");
 
 
 cuisineSwitch.addEventListener('click', function () {
@@ -90,6 +91,8 @@ cuisineSwitch.addEventListener('click', function () {
     body.classList.remove("dark-mode");
     cardsDarkMode.classList.remove("dark-mode");
     cardsDarkMode.classList.toggle("light-mode");
+    footer.classList.toggle("light-mode");
+    footer.classList.remove("dark-mode");
 })
 
 barSwitch.addEventListener('click', function () {
@@ -103,6 +106,8 @@ barSwitch.addEventListener('click', function () {
     body.classList.remove("light-mode");
     cardsDarkMode.classList.toggle("dark-mode");
     cardsDarkMode.classList.remove("light-mode");
+    footer.classList.toggle("dark-mode");
+    footer.classList.remove("light-mode");
 })
 
 
