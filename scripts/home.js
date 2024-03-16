@@ -1,59 +1,74 @@
-/* JS DataBase */
-
 const restaurantDataBase = [
     {
         name: 'Papill\'',
         miniDescription: 'Plats mijotés, papillotes et brunch',
-        specialities: ['chinois', 'Japonais', 'Thai'],
-        distance: '70m',
-        priceRange: '€€',
-        adress: ' 3 rue du truc',
-        tel: '0244444444',
+        specialities: ['Plats cuisinées', 'Poisson', 'veggie'],
+        distance: '85m',
+        priceRange: '€',
+        adress: '8 rue de Saverne 44000 Nantes',
+        tel: '06 03 13 05 04',
         linkToMaps: 'a',
-        image: './assets/papill.jpg',
+        image: "./assets/Restaurants/Papill.jpg",
         description: 'Vous allez vous régaler les papilles, cuisine authentique, et le batron offre le digestif !!'
-
+        // plustot un resto de poisson, changer plats mijotés par poisson?
     },
 
     {
         name: 'Morse',
-        miniDescription: 'j\'ai pas encore de descri de faite.',
+        miniDescription: 'petit bistro de la mer : sandwichs et salades aux crevettes, langoustines, crabe...',
         specialities: ['salade', 'sandwich', 'poisson'],
-        distance: '750m',
+        distance: '400m',
         priceRange: '€€€€',
-        adress: '4 avennue des champs elysee',
-        tel: '0275757575',
+        adress: '1 allee de la maison rouge 44000 NANTES',
+        tel: '+33253786518',
         linkToMaps: '',
-        image: './assets/papill.jpg',
+        image: './assets/Restaurants/Morse.png',
         description: 'Restaurant cosz, spécialisé dans les poissons. On retient spécialement leur spécialité, le fish n chips !!'
+        // manque le prix
     },
 
     {
         name: 'La cantine fermière',
-        miniDescription: 'Sandwichs et salades de produits de saison et de fermes locales',
-        specialities: ['chinois', 'Japonais', 'Thai'],
-        distance: '50m',
-        priceRange: '€€',
-        adress: ' 3 rue du truc',
+        miniDescription: 'Sandwichs, salades et des plats, cuisinés avec des produits de saison et de fermes locales',
+        specialities: ['Sandwiches', 'street food', 'aaaaaa'],
+        distance: '240m',
+        priceRange: '€',
+        adress: '10 rue de Mayence, 44000 Nantes',
         tel: '0211444444',
         linkToMaps: '',
-        image: './assets/papill.jpg',
+        image: './assets/Restaurants/la-cantine-fermiere.png',
         description: 'Vous allez vous régaler les papilles, cuisine authentique, et le batron offre le digestif !!'
-
+        // manque les prix et les types de plat proposé
     },
 
     {
         name: 'Ichigo',
-        miniDescription: 'Ramen, c\'est brûlant, mais c\'est délicieux.',
-        specialities: ['ramen', 'trucVapeur', 'poisson'],
-        distance: '150m',
+        miniDescription: 'Ramen comme au Japon, mais aussi de gyozas et edemame',
+        specialities: ['ramen', 'gyozas', 'edemame'],
+        distance: '50m',
         priceRange: '€',
-        adress: '14 rue baron',
-        tel: '0222757575',
+        adress: '31 rue Fouré, 44000, Nantes',
+        tel: '+332 40 35 34 30',
         linkToMaps: '',
-        image: './assets/papill.jpg',
+        image: './assets/Restaurants/ichigo.png',
+        description: 'Ramen, un délice des papilles !!'
+    },
+
+    {
+        //pas encore fait
+        name: 'Les triplettes',
+        miniDescription: 'Petit plats cuisiné, pâtisseries et café de spécialité. Cuisine local et agriculture raisonnée.',
+        specialities: ['ramen', 'gyozas', 'edemame'],
+        distance: '150m',
+        priceRange: '€€',
+        adress: '4 BIS Rue Emile Masson, 44000 Nantes',
+        tel: '02 28 49 76 01',
+        linkToMaps: '',
+        image: './assets/Restaurants/Triplettes.jpg',
         description: 'Ramen, un délice des papilles !!'
     }
+
+
 ]
 
 const BarDataBase = [
@@ -66,7 +81,7 @@ const BarDataBase = [
         adress: ' 1 rue baron',
         tel: '02 53 78 40 61',
         linkToMaps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.2721409788555!2d-1.5495075489104218!3d47.21125717905818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805eeb05311c6ab%3A0x1a10a632301380c9!2s1+Rue+Baron%2C+44000+Nantes!5e0!3m2!1sfr!2sfr!4v1564840539599!5m2!1sfr!2sfr',
-        image: "./asset/Databarimg/Napoleone.jpg"
+        image: "./asset/Databarimg/Napoleone.jpg",
         description: 'Cocktails créations, vins et bières locales, Bar a tapas'
 
     },
