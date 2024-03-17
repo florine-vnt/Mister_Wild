@@ -149,6 +149,12 @@ const cuisineSwitch = document.querySelector("#cuisine-switch");
 const barSwitch = document.querySelector("#bar-switch");
 const body = document.querySelector("#body");
 const footer = document.querySelector("#ul-footer");
+const homeImg = document.querySelector("#home-img");
+const cuisineImg = document.querySelector("#primary-filter-img");
+const distanceImg = document.querySelector("#distance-img");
+const priceImg = document.querySelector("#price-range-img");
+const footstepImg = document.querySelector(".mini-menu-button > #footstep-img");
+
 
 cuisineSwitch.addEventListener('click', function () {
     // put elements in light mode
@@ -164,6 +170,10 @@ cuisineSwitch.addEventListener('click', function () {
     distanceMenu.classList.remove("dark-mode");
     priceMenu.classList.toggle("light-mode");
     priceMenu.classList.remove("dark-mode");
+    homeImg.src = "./icons/home_icon.svg";
+    cuisineImg.src = "./icons/cuisine_icon.svg";
+    distanceImg.src = "./icons/distance_icon.svg";
+    priceImg.src = "./icons/price_icon.svg";
     //display restaurants
     displayPlaces(restaurantDataBase);
 })
@@ -182,6 +192,11 @@ barSwitch.addEventListener('click', function () {
     distanceMenu.classList.remove("light-mode");
     priceMenu.classList.toggle("dark-mode");
     priceMenu.classList.remove("light-mode");
+    homeImg.src = "./icons/home_darkmode.svg";
+    // en attente de l'icone verre cuisineImg.src = "./icons/"
+    distanceImg.src = "./icons/distance_darkmode.svg";
+    priceImg.src = "./icons/price_darkmode.svg";
+    footstepImg.src = "./icons/footsteps_darkmode.svg";
     //display bars
     displayPlaces(BarDataBase);
 })
@@ -208,7 +223,7 @@ function displayPlaces(dataBase) {
 
 
         //create a frame and add an image to it, then append to the card
-        let imageFrame =document.createElement("div")
+        let imageFrame = document.createElement("div")
         imageFrame.classList.add("picture-frame");
         let image = document.createElement("img");
         image.classList.add("place-picture");
