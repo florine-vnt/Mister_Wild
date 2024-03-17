@@ -203,12 +203,14 @@ function displayPlaces(dataBase) {
         //Create a card 
         let newCard = document.createElement("li");
         newCard.classList.add("card");
-        //TODO add an if to check if restaurant or bar
+
+        //This determins if we're in light or dark mode and applies the correct class 
         if (lightMode) { newCard.classList.add("light-mode"); } else { newCard.classList.add("dark-mode"); };
 
 
         //create a frame and add an image to it, then append to the card
-        let imageFrame =document.createElement("div")
+        // the frame is used later in the CSS for cropping
+        let imageFrame = document.createElement("div")
         imageFrame.classList.add("picture-frame");
         let image = document.createElement("img");
         image.classList.add("place-picture");
@@ -311,18 +313,154 @@ const priceFilterButtonMid = document.getElementById("price-range-mid");
 const priceFilterButtonHigh = document.getElementById("price-range-high");
 
 priceFilterButtonLow.addEventListener("click", function () {
-    priceFilter = 1;
-    console.log('selected range price', priceFilter);
+
+    //figure out if we are in light or dark mode. 
+    const lightMode = body.classList.contains("light-mode");
+
+    // if filter wasn't already activated
+    if (priceFilter !== 1) {
+        priceFilter = 1;
+        console.log('selected range price', priceFilter);
+        // change the image(s) inside the button to make it/them pink
+        for (const image of priceFilterButtonLow.children) {
+            image.src = './icons/price_pink.svg';
+        }
+
+        // reset the colour of all other buttons, if any was selected (brute force and unefficient, but it'll work)
+            for (const image of priceFilterButtonMid.children) {
+                // reset the icon to its normal colour (light or dark)
+                if (lightMode) { image.src = './icons/price_icon.svg' }
+                else { image.src = './icons/price_darkmode.svg' };
+            }
+            for (const image of priceFilterButtonHigh.children) {
+                // reset the icon to its normal colour (light or dark)
+                if (lightMode) { image.src = './icons/price_icon.svg' }
+                else { image.src = './icons/price_darkmode.svg' };
+            }
+
+        // make the price menu icon appear pink
+        priceMenuButton.firstChild.src = './icons/price_pink.svg'
+
+    }
+    // if filter already was activated
+    else {
+        // set the price filter to none 
+        priceFilter = 0;
+        console.log('selected range price', priceFilter);
+
+        // change the image(s) inside the button to their normal colour (light or dark)
+        for (const image of priceFilterButtonLow.children) {
+            if (lightMode) { image.src = './icons/price_icon.svg' }
+            else { image.src = './icons/price_darkmode.svg' };
+        }
+
+        // reset the price menu icon to its normal colour (light or dark)
+        if (lightMode) { priceMenuButton.firstChild.src = './icons/price_icon.svg' }
+        else { priceMenuButton.firstChild.src = './icons/price_darkmode.svg' };
+    }
+
+
 });
 
+
 priceFilterButtonMid.addEventListener("click", function () {
-    priceFilter = 2;
-    console.log('selected range price', priceFilter);
+
+    //figure out if we are in light or dark mode. 
+    const lightMode = body.classList.contains("light-mode");
+
+    // if filter wasn't already activated
+    if (priceFilter !== 2) {
+        priceFilter = 2;
+        console.log('selected range price', priceFilter);
+        // change the image(s) inside the button to make it/them pink
+        for (const image of priceFilterButtonMid.children) {
+            image.src = './icons/price_pink.svg';
+        }
+
+        // reset the colour of all other buttons, if any was selected (brute force and unefficient, but it'll work)
+            for (const image of priceFilterButtonLow.children) {
+                // reset the icon to its normal colour (light or dark)
+                if (lightMode) { image.src = './icons/price_icon.svg' }
+                else { image.src = './icons/price_darkmode.svg' };
+            }
+            for (const image of priceFilterButtonHigh.children) {
+                // reset the icon to its normal colour (light or dark)
+                if (lightMode) { image.src = './icons/price_icon.svg' }
+                else { image.src = './icons/price_darkmode.svg' };
+            }
+
+        // make the price menu icon appear pink
+        priceMenuButton.firstChild.src = './icons/price_pink.svg'
+
+    }
+    // if filter already was activated
+    else {
+        // set the price filter to none 
+        priceFilter = 0;
+        console.log('selected range price', priceFilter);
+
+        // change the image(s) inside the button to their normal colour (light or dark)
+        for (const image of priceFilterButtonMid.children) {
+            if (lightMode) { image.src = './icons/price_icon.svg' }
+            else { image.src = './icons/price_darkmode.svg' };
+        }
+
+        // reset the price menu icon to its normal colour (light or dark)
+        if (lightMode) { priceMenuButton.firstChild.src = './icons/price_icon.svg' }
+        else { priceMenuButton.firstChild.src = './icons/price_darkmode.svg' };
+    }
+
+
 });
 
 priceFilterButtonHigh.addEventListener("click", function () {
-    priceFilter = 3;
-    console.log('selected range price', priceFilter);
+
+    //figure out if we are in light or dark mode. 
+    const lightMode = body.classList.contains("light-mode");
+
+    // if filter wasn't already activated
+    if (priceFilter !== 3) {
+        priceFilter = 3;
+        console.log('selected range price', priceFilter);
+        // change the image(s) inside the button to make it/them pink
+        for (const image of priceFilterButtonHigh.children) {
+            image.src = './icons/price_pink.svg';
+        }
+
+        // reset the colour of all other buttons, if any was selected (brute force and unefficient, but it'll work)
+            for (const image of priceFilterButtonLow.children) {
+                // reset the icon to its normal colour (light or dark)
+                if (lightMode) { image.src = './icons/price_icon.svg' }
+                else { image.src = './icons/price_darkmode.svg' };
+            }
+            for (const image of priceFilterButtonMid.children) {
+                // reset the icon to its normal colour (light or dark)
+                if (lightMode) { image.src = './icons/price_icon.svg' }
+                else { image.src = './icons/price_darkmode.svg' };
+            }
+
+        // make the price menu icon appear pink
+        priceMenuButton.firstChild.src = './icons/price_pink.svg'
+
+    }
+    // if filter already was activated
+    else {
+        // set the price filter to none 
+        priceFilter = 0;
+        console.log('selected range price', priceFilter);
+
+        // change the image(s) inside the button to their normal colour (light or dark)
+        for (const image of priceFilterButtonHigh.children) {
+            if (lightMode) { image.src = './icons/price_icon.svg' }
+            else { image.src = './icons/price_darkmode.svg' };
+        }
+
+        // reset the price menu icon to its normal colour (light or dark)
+        if (lightMode) { priceMenuButton.firstChild.src = './icons/price_icon.svg' }
+        else { priceMenuButton.firstChild.src = './icons/price_darkmode.svg' };
+    }
+
+
 });
 
 //END OF MINI MENUS BEHAVIOUR
