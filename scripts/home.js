@@ -294,5 +294,50 @@ menuContainer.addEventListener("click", function () {
     menuContainer.classList.add("to-back");
     menuContainer.classList.remove("to-front");
 })
+
+
+// price menu filtering
+
+// there are 3 buttons and 4 filter choices : 
+// "doesn't matter" : 0 
+// "low-range" :1
+// "mid-range":2
+// "high range":3
+// These choices will be set in a global variable that is initialized at 0
+let priceFilter = 0;
+
+const priceFilterButtonLow = document.getElementById("price-range-low");
+const priceFilterButtonMid = document.getElementById("price-range-mid");
+const priceFilterButtonHigh = document.getElementById("price-range-high");
+
+priceFilterButtonLow.addEventListener("click", function () {
+    priceFilter = 1;
+    console.log('selected range price', priceFilter);
+});
+
+priceFilterButtonMid.addEventListener("click", function () {
+    priceFilter = 2;
+    console.log('selected range price', priceFilter);
+});
+
+priceFilterButtonHigh.addEventListener("click", function () {
+    priceFilter = 3;
+    console.log('selected range price', priceFilter);
+});
+
 //END OF MINI MENUS BEHAVIOUR
+
+
+//START OF PRIMARY FILTER BEHAVIOUR
+const primaryFilterButton = document.getElementById("primary-filter");
+const primaryFilterMenu = document.getElementById("primary-filter-container");
+
+// make primary filter menu appear
+primaryFilterButton.addEventListener("click", function () {
+
+    primaryFilterMenu.classList.toggle("collapsed");
+
+});
+
+//END OF PRIMARY FILTER BEHAVIOUR
 
