@@ -1,12 +1,18 @@
 const restaurantDataBase = [
     {
+        // Database des restaurants
+
+        // vérifier si besoin de préciser 4400 dans l'adresse
+        // rendre le numero de tel cliquable pour envoie vers un appel
+        // rendre l'adresse cliquable
+
         name: 'Papill\'',
         miniDescription: 'Plats mijotés, papillotes et brunch',
         specialities: ['Plats cuisinées', 'Poisson', 'veggie'],
         distance: '85m',
         priceRange: '€',
         adress: '8 rue de Saverne 44000 Nantes',
-        tel: '06 03 13 05 04',
+        tel: '+336 03 13 05 04',
         linkToMaps: 'a',
         image: "./assets/Restaurants/Papill.jpg",
         description: 'Vous allez vous régaler les papilles, cuisine authentique, et le batron offre le digestif !!'
@@ -19,7 +25,7 @@ const restaurantDataBase = [
         specialities: ['salade', 'sandwich', 'poisson'],
         distance: '400m',
         priceRange: '€€€€',
-        adress: '1 allee de la maison rouge 44000 NANTES',
+        adress: '1 allee de la maison rouge 44000 Nantes',
         tel: '+33253786518',
         linkToMaps: '',
         image: './assets/Restaurants/Morse.png',
@@ -34,7 +40,7 @@ const restaurantDataBase = [
         distance: '240m',
         priceRange: '€',
         adress: '10 rue de Mayence, 44000 Nantes',
-        tel: '0211444444',
+        tel: '+33211444444',
         linkToMaps: '',
         image: './assets/Restaurants/la-cantine-fermiere.png',
         description: 'Vous allez vous régaler les papilles, cuisine authentique, et le batron offre le digestif !!'
@@ -55,21 +61,154 @@ const restaurantDataBase = [
     },
 
     {
-        //pas encore fait
+
         name: 'Les triplettes',
         miniDescription: 'Petit plats cuisiné, pâtisseries et café de spécialité. Cuisine local et agriculture raisonnée.',
-        specialities: ['ramen', 'gyozas', 'edemame'],
-        distance: '150m',
-        priceRange: '€€',
+        specialities: ['Plats cuisinées', 'Pâtisserie', 'café de spécialité'],
+        distance: '400m',
+        priceRange: '€€€',
         adress: '4 BIS Rue Emile Masson, 44000 Nantes',
-        tel: '02 28 49 76 01',
+        tel: '+332 28 49 76 01',
         linkToMaps: '',
         image: './assets/Restaurants/Triplettes.jpg',
-        description: 'Ramen, un délice des papilles !!'
+        description: 'La seul adresse du quartier pour déguster un café de spécialité !'
+    },
+
+    {
+        //mettre photo
+        name: 'Dakoo',
+        miniDescription: 'Restaurant coréen, plats traditionnel avec des plats vegan!. Livraison possible.',
+        specialities: ['coréen', 'Streetfood', 'poulet frit', 'veggies', 'livraison'],
+        distance: '750m',
+        priceRange: '€',
+        adress: '17 Rue Bon Secours, 44000 Nantes',
+        tel: '+332 72 02 15 96',
+        linkToMaps: '',
+        image: './assets/Restaurants/Triplettes.jpg',
+        description: 'Véritable restaurant coréen, avec toutes les spécialités de corée, notament le BIBIMBAP ou le DAK (poulet frit) . Livraison possible.'
+    },
+
+    {
+
+        name: 'Papa pasta',
+        miniDescription: '',
+        specialities: ['', '', ''],
+        distance: '400m',
+        priceRange: '€€€',
+        adress: '',
+        tel: '+33',
+        linkToMaps: '',
+        image: './assets/Restaurants/',
+        description: ''
+    },
+
+    {
+
+        name: 'Virginie\'s café',
+        miniDescription: '',
+        specialities: ['', '', ''],
+        distance: '400m',
+        priceRange: '€€€',
+        adress: '',
+        tel: '+33',
+        linkToMaps: '',
+        image: './assets/Restaurants/',
+        description: ''
+    },
+    {
+
+        name: 'La machine à crêpes',
+        miniDescription: '',
+        specialities: ['', '', ''],
+        distance: '400m',
+        priceRange: '€€€',
+        adress: '',
+        tel: '+33',
+        linkToMaps: '',
+        image: './assets/Restaurants/',
+        description: ''
+    },
+    {
+
+        name: 'MATA boulangerie',
+        miniDescription: '',
+        specialities: ['', '', ''],
+        distance: '400m',
+        priceRange: '€€€',
+        adress: '',
+        tel: '+33',
+        linkToMaps: '',
+        image: './assets/Restaurants/',
+        description: ''
+    },
+    {
+
+        name: 'boulangerie la fourmi',
+        miniDescription: '',
+        specialities: ['', '', ''],
+        distance: '400m',
+        priceRange: '€€€',
+        adress: '',
+        tel: '+33',
+        linkToMaps: '',
+        image: './assets/Restaurants/',
+        description: ''
+    },
+    {
+
+        name: 'la mangouste',
+        miniDescription: '',
+        specialities: ['', '', ''],
+        distance: '400m',
+        priceRange: '€€€',
+        adress: '',
+        tel: '+33',
+        linkToMaps: '',
+        image: './assets/Restaurants/',
+        description: ''
+    },
+    {
+
+        name: 'Guindaille',
+        miniDescription: '',
+        specialities: ['', '', ''],
+        distance: '400m',
+        priceRange: '€€€',
+        adress: '',
+        tel: '+33',
+        linkToMaps: '',
+        image: './assets/Restaurants/',
+        description: ''
+    },
+    {
+
+        name: '',
+        miniDescription: '',
+        specialities: ['', '', ''],
+        distance: '400m',
+        priceRange: '€€€',
+        adress: '',
+        tel: '+33',
+        linkToMaps: '',
+        image: './assets/Restaurants/',
+        description: ''
+    },
+    {
+
+        name: 'la mangouste',
+        miniDescription: '',
+        specialities: ['', '', ''],
+        distance: '400m',
+        priceRange: '€€€',
+        adress: '',
+        tel: '+33',
+        linkToMaps: '',
+        image: './assets/Restaurants/',
+        description: ''
     }
 
-
 ]
+// Database des Bars
 
 const BarDataBase = [
     {
