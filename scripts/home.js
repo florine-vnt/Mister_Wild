@@ -153,8 +153,9 @@ const homeImg = document.querySelector("#home-img");
 const cuisineImg = document.querySelector("#primary-filter-img");
 const distanceImg = document.querySelector("#distance-img");
 const priceImg = document.querySelector("#price-range-img");
-const footstepImg = document.querySelector(".mini-menu-button > #footstep-img");
-
+const footstepImg = document.querySelectorAll("#footstep-img");
+const priceFilterImg = document.querySelectorAll("#price-img");
+console.log("Hey", priceFilterImg);
 
 cuisineSwitch.addEventListener('click', function () {
     // put elements in light mode
@@ -174,6 +175,12 @@ cuisineSwitch.addEventListener('click', function () {
     cuisineImg.src = "./icons/cuisine_icon.svg";
     distanceImg.src = "./icons/distance_icon.svg";
     priceImg.src = "./icons/price_icon.svg";
+    for (let i = 0; i < footstepImg.length; i++) {
+        footstepImg[i].src = "./icons/footsteps_light.svg"
+    }
+    for (let i = 0; i < priceFilterImg.length; i++) {
+        priceFilterImg[i].src = "./icons/price_icon.svg"
+    }
     //display restaurants
     displayPlaces(restaurantDataBase);
 })
@@ -196,7 +203,12 @@ barSwitch.addEventListener('click', function () {
     cuisineImg.src = "./icons/drinks_icon.svg";
     distanceImg.src = "./icons/distance_darkmode.svg";
     priceImg.src = "./icons/price_darkmode.svg";
-    footstepImg.src = "./icons/footsteps_darkmode.svg";
+    for (let i = 0; i < footstepImg.length; i++) {
+        footstepImg[i].src = "./icons/footsteps_darkmode.svg"
+    }
+    for (let i = 0; i < priceFilterImg.length; i++) {
+        priceFilterImg[i].src = "./icons/price_darkmode.svg"
+    }
     //display bars
     displayPlaces(BarDataBase);
 })
