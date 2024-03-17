@@ -193,7 +193,7 @@ barSwitch.addEventListener('click', function () {
     priceMenu.classList.toggle("dark-mode");
     priceMenu.classList.remove("light-mode");
     homeImg.src = "./icons/home_darkmode.svg";
-    // en attente de l'icone verre cuisineImg.src = "./icons/"
+    cuisineImg.src = "./icons/drinks_icon.svg";
     distanceImg.src = "./icons/distance_darkmode.svg";
     priceImg.src = "./icons/price_darkmode.svg";
     footstepImg.src = "./icons/footsteps_darkmode.svg";
