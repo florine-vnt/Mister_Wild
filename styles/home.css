@@ -165,7 +165,7 @@ footer>div {
     bottom: 10vh;
 
     display: grid;
-    grid-template: 1fr / 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: center;
 
     /* this is used to hide anything that is visually out of the div */
@@ -189,7 +189,7 @@ footer>div {
     margin: 0px;
     margin-bottom: 0px;
     padding: 0;
-    max-width: 25vw;
+    width: 25vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -206,7 +206,7 @@ footer>div {
     transition-timing-function: ease-out;
 
     /* part about the overlays : if it's not present, primary filter menu won't overlay */
-    position: asbolute;
+    position: absolute;
 
 }
 
@@ -288,7 +288,6 @@ footer>div {
     height: 20vh;
     background-color: var(--light-filterbar-color);
     grid-column: span 4;
-    grid-row: span 2;
 
     /* position when open */
     align-self: flex-end;
