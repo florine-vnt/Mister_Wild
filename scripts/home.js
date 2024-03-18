@@ -158,59 +158,71 @@ const priceFilterImg = document.querySelectorAll("#price-img");
 console.log("Hey", priceFilterImg);
 
 cuisineSwitch.addEventListener('click', function () {
-    // put elements in light mode
-    cuisineSwitch.classList.toggle("light-mode");
-    cuisineSwitch.classList.remove("dark-mode");
-    barSwitch.classList.toggle("light-mode");
-    barSwitch.classList.remove("dark-mode");
-    body.classList.toggle("light-mode");
-    body.classList.remove("dark-mode");
-    footer.classList.toggle("light-mode");
-    footer.classList.remove("dark-mode");
-    distanceMenu.classList.toggle("light-mode");
-    distanceMenu.classList.remove("dark-mode");
-    priceMenu.classList.toggle("light-mode");
-    priceMenu.classList.remove("dark-mode");
-    homeImg.src = "./icons/home_icon.svg";
-    cuisineImg.src = "./icons/cuisine_icon.svg";
-    distanceImg.src = "./icons/distance_icon.svg";
-    priceImg.src = "./icons/price_icon.svg";
-    for (let i = 0; i < footstepImg.length; i++) {
-        footstepImg[i].src = "./icons/footsteps_light.svg"
+
+    const darkMode = body.classList.contains("dark-mode");
+    if (darkMode) {
+        // put elements in light mode
+        cuisineSwitch.classList.toggle("light-mode");
+        cuisineSwitch.classList.remove("dark-mode");
+        barSwitch.classList.toggle("light-mode");
+        barSwitch.classList.remove("dark-mode");
+        body.classList.toggle("light-mode");
+        body.classList.remove("dark-mode");
+        footer.classList.toggle("light-mode");
+        footer.classList.remove("dark-mode");
+        distanceMenu.classList.toggle("light-mode");
+        distanceMenu.classList.remove("dark-mode");
+        priceMenu.classList.toggle("light-mode");
+        priceMenu.classList.remove("dark-mode");
+        homeImg.src = "./icons/home_icon.svg";
+        cuisineImg.src = "./icons/cuisine_icon.svg";
+        distanceImg.src = "./icons/distance_icon.svg";
+        priceImg.src = "./icons/price_icon.svg";
+        for (let i = 0; i < footstepImg.length; i++) {
+            footstepImg[i].src = "./icons/footsteps_light.svg"
+        }
+        for (let i = 0; i < priceFilterImg.length; i++) {
+            priceFilterImg[i].src = "./icons/price_icon.svg"
+        }
+        //display restaurants
+        displayPlaces(restaurantDataBase);
+    } else {
+        // do nothing, we are already in light mode.
     }
-    for (let i = 0; i < priceFilterImg.length; i++) {
-        priceFilterImg[i].src = "./icons/price_icon.svg"
-    }
-    //display restaurants
-    displayPlaces(restaurantDataBase);
 })
 
 barSwitch.addEventListener('click', function () {
-    // put elements in dark mode
-    cuisineSwitch.classList.toggle("dark-mode");
-    cuisineSwitch.classList.remove("light-mode");
-    barSwitch.classList.toggle("dark-mode");
-    barSwitch.classList.remove("light-mode");
-    body.classList.toggle("dark-mode");
-    body.classList.remove("light-mode");
-    footer.classList.toggle("dark-mode");
-    footer.classList.remove("light-mode");
-    distanceMenu.classList.toggle("dark-mode");
-    distanceMenu.classList.remove("light-mode");
-    priceMenu.classList.toggle("dark-mode");
-    priceMenu.classList.remove("light-mode");
-    homeImg.src = "./icons/home_darkmode.svg";
-    cuisineImg.src = "./icons/drinks_icon.svg";
-    distanceImg.src = "./icons/distance_darkmode.svg";
-    priceImg.src = "./icons/price_darkmode.svg";
-    for (let i = 0; i < footstepImg.length; i++) {
-        footstepImg[i].src = "./icons/footsteps_darkmode.svg"
+
+    const lightMode = body.classList.contains("light-mode");
+    if (lightMode) {
+        // put elements in dark mode
+        cuisineSwitch.classList.toggle("dark-mode");
+        cuisineSwitch.classList.remove("light-mode");
+        barSwitch.classList.toggle("dark-mode");
+        barSwitch.classList.remove("light-mode");
+        body.classList.toggle("dark-mode");
+        body.classList.remove("light-mode");
+        footer.classList.toggle("dark-mode");
+        footer.classList.remove("light-mode");
+        distanceMenu.classList.toggle("dark-mode");
+        distanceMenu.classList.remove("light-mode");
+        priceMenu.classList.toggle("dark-mode");
+        priceMenu.classList.remove("light-mode");
+        homeImg.src = "./icons/home_darkmode.svg";
+        cuisineImg.src = "./icons/drinks_icon.svg";
+        distanceImg.src = "./icons/distance_darkmode.svg";
+        priceImg.src = "./icons/price_darkmode.svg";
+        for (let i = 0; i < footstepImg.length; i++) {
+            footstepImg[i].src = "./icons/footsteps_darkmode.svg"
+        }
+        for (let i = 0; i < priceFilterImg.length; i++) {
+            priceFilterImg[i].src = "./icons/price_darkmode.svg"
+        }
+        //display bars
+        displayPlaces(BarDataBase);
+    } else {
+        // do nothing, we are already in dark mode.
     }
-    for (let i = 0; i < priceFilterImg.length; i++) {
-        priceFilterImg[i].src = "./icons/price_darkmode.svg"
-    }
-    //display bars
-    displayPlaces(BarDataBase);
 })
 
 
