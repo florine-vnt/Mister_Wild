@@ -127,13 +127,15 @@ footer {
     height: 5vh;
 }
 
-#filter-bar ul button {
+
+
+#filter-bar ul button, #primary-filter-container ul button {
     margin: 0;
     background-color: transparent;
     border: none;
     z-index: 4;
     transition-property: transform;
-    ransition-duration: .3s;
+    transition-duration: .3s;
 }
 
 /* Animation for menu buttons to give click feedback */
@@ -285,7 +287,6 @@ footer>div {
 /* main filter part */
 #primary-filter-container {
     width: 100%;
-    height: 20vh;
     background-color: var(--light-filterbar-color);
     grid-column: span 4;
 
@@ -301,6 +302,13 @@ footer>div {
     /* part about the overlays : if it's not present, primary filter menu won't overlay */
     position: asbolute;
     z-index: 5;
+
+
+    /* part about justifying stuff, mostly the text */
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
 }
 
 #primary-filter-container.collapsed {
@@ -314,6 +322,28 @@ footer>div {
 #primary-filter-container.light-mode {
     background-color: var(--light-filterbar-color);
 }
+
+#primary-filter-container ul button img {
+    max-width: 5vh;
+    max-height: 5vh;
+    padding: 1.5vh;
+}
+
+#primary-filter-container>ul {
+    width: 100%;
+    display : grid;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#primary-filter-container>p{
+font-family: var(--secondary-font);
+padding-left: 5vw;
+color: #6D6D6D;
+}
+
 
 /* END OF FILTERBAR PART */
 

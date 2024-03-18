@@ -6,6 +6,8 @@ const restaurantDataBase = [
         // rendre le numero de tel cliquable pour envoie vers un appel
         // rendre l'adresse cliquable
 
+        //Salade, poisson, sandwitch, patisserie
+
         name: 'Papill\'',
         miniDescription: 'Plats mijotés, papillotes et brunch',
         specialities: ['Plats cuisinées', 'Poisson', 'veggie'],
@@ -301,7 +303,7 @@ const distanceImg = document.querySelector("#distance-img");
 const priceImg = document.querySelector("#price-range-img");
 const footstepImg = document.querySelectorAll("#footstep-img");
 const priceFilterImg = document.querySelectorAll("#price-img");
-console.log("Hey", priceFilterImg);
+
 
 cuisineSwitch.addEventListener('click', function () {
 
@@ -426,7 +428,7 @@ function displayPlaces(dataBase) {
         newCard.appendChild(container);
         //Append the card to the Places list
         placesList.appendChild(newCard);
-        console.log(place.name);
+
     });
 }
 
@@ -506,7 +508,7 @@ priceFilterButtonLow.addEventListener("click", function () {
     // if filter wasn't already activated
     if (priceFilter !== 1) {
         priceFilter = 1;
-        console.log('selected range price', priceFilter);
+
         // change the image(s) inside the button to make it/them pink
         for (const image of priceFilterButtonLow.children) {
             image.src = './icons/price_pink.svg';
@@ -536,7 +538,6 @@ priceFilterButtonLow.addEventListener("click", function () {
     else {
         // set the price filter to none 
         priceFilter = 0;
-        console.log('selected range price', priceFilter);
 
         // change the image(s) inside the button to their normal colour (light or dark)
         for (const image of priceFilterButtonLow.children) {
@@ -694,7 +695,7 @@ distanceFilterButtonHigh.addEventListener("click", function () {
     // if filter wasn't already activated
     if (distanceFilter !== 3) {
         distanceFilter = 3;
-        console.log('selected distance filter', distanceFilter);
+
         // change the image(s) inside the button to make it/them pink
         for (const image of distanceFilterButtonHigh.children) {
             image.src = footstepsIconPink;
@@ -718,7 +719,6 @@ distanceFilterButtonHigh.addEventListener("click", function () {
     else {
         // set the price filter to none 
         distanceFilter = 0;
-        console.log('selected distance range', priceFilter);
 
         // change the image(s) inside the button to their normal colour (light or dark)
         for (const image of distanceFilterButtonHigh.children) {
@@ -751,7 +751,7 @@ distanceFilterButtonMid.addEventListener("click", function () {
     // if filter wasn't already activated
     if (distanceFilter !== 2) {
         distanceFilter = 2;
-        console.log('selected distance filter', distanceFilter);
+
         // change the image(s) inside the button to make it/them pink
         for (const image of distanceFilterButtonMid.children) {
             image.src = footstepsIconPink;
@@ -775,7 +775,6 @@ distanceFilterButtonMid.addEventListener("click", function () {
     else {
         // set the price filter to none 
         distanceFilter = 0;
-        console.log('selected distance range', priceFilter);
 
         // change the image(s) inside the button to their normal colour (light or dark)
         for (const image of distanceFilterButtonMid.children) {
@@ -808,7 +807,7 @@ distanceFilterButtonLow.addEventListener("click", function () {
     // if filter wasn't already activated
     if (distanceFilter !== 1) {
         distanceFilter = 1;
-        console.log('selected distance filter', distanceFilter);
+
         // change the image(s) inside the button to make it/them pink
         for (const image of distanceFilterButtonLow.children) {
             image.src = footstepsIconPink;
@@ -832,7 +831,6 @@ distanceFilterButtonLow.addEventListener("click", function () {
     else {
         // set the price filter to none 
         distanceFilter = 0;
-        console.log('selected distance range', priceFilter);
 
         // change the image(s) inside the button to their normal colour (light or dark)
         for (const image of distanceFilterButtonLow.children) {
@@ -858,7 +856,114 @@ primaryFilterButton.addEventListener("click", function () {
 
     primaryFilterMenu.classList.toggle("collapsed");
 
+    if (priceMenu.classList.contains("collapsed") === false) {priceMenu.classList.add("collapsed")};
+    if (distanceMenu.classList.contains("collapsed") === false) {distanceMenu.classList.add("collapsed")};
+
 });
+
+primaryFoodFilters = [
+    {
+        name: 'italien',
+        icon: './icons/pizza.svg'
+    },
+    {
+        name: 'asiatique',
+        icon: './icons/ramen.svg'
+    },
+    {
+        name: 'burger',
+        icon: './icons/burger.svg'
+    },
+    {
+        name: 'dessert',
+        icon: './icons/cupcake.svg'
+    },
+    {
+        name: 'sandwich',
+        icon: './icons/sandwich.svg'
+    },
+    {
+        name: 'salade',
+        icon: './icons/salade.svg'
+    }
+];
+
+secondaryFoodFilters = [
+    {
+        name: 'végan',
+        icon: './icons/vegan.svg'
+    },
+    {
+        name: 'halal',
+        icon: './icons/burger.svg'
+    },
+    {
+        name: 'sans gluten',
+        icon: './icons/glutenfree.svg'
+    }
+];
+
+function displayPrimaryFilter () {
+
+    /// create the different "cuisines" section
+
+    let firstLabel = document.createElement("p");
+    firstLabel.innerText = "Catégories"
+    primaryFilterMenu.appendChild(firstLabel);
+
+    let mainFiltersList = document.createElement("ul");
+
+    // create one clickable button for each primary filter
+    primaryFoodFilters.forEach(filter => {
+        console.log(filter.name);
+
+        //create a button
+        filterButton = document.createElement("button");
+        
+        /// TODO : create id based on name
+
+        //create and append an image
+        buttonIcon = document.createElement("img");
+        buttonIcon.src = filter.icon;
+        buttonIcon.alt = filter.name;
+        filterButton.appendChild(buttonIcon);
+
+        //append the button to the ul
+        mainFiltersList.appendChild(filterButton);
+    });
+
+    primaryFilterMenu.appendChild(mainFiltersList);
+
+    /// create the "special menus" section
+    let secondLabel = document.createElement("p");
+    secondLabel.innerText = "Régimes alimentaires particuliers"
+    primaryFilterMenu.appendChild(secondLabel);
+
+    let secondaryFiltersList = document.createElement("ul");
+
+    // create one clickable button for each secondary filter
+    secondaryFoodFilters.forEach(filter => {
+        console.log(filter.name);
+
+        //create a button
+        filterButton = document.createElement("button");
+        
+        /// TODO : create id based on name
+
+        //create and append an image
+        buttonIcon = document.createElement("img");
+        buttonIcon.src = filter.icon;
+        buttonIcon.alt = filter.name;
+        filterButton.appendChild(buttonIcon);
+
+        //append the button to the ul
+        secondaryFiltersList.appendChild(filterButton);
+    });
+    primaryFilterMenu.appendChild(secondaryFiltersList);
+        
+}
+
+displayPrimaryFilter();
 
 //END OF PRIMARY FILTER BEHAVIOUR
 
