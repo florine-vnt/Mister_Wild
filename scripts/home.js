@@ -15,7 +15,7 @@ const restaurantDataBase = [
         tel: '+336 03 13 05 04',
         linkToMaps: 'a',
         image: "./assets/Restaurants/Papill.jpg",
-        description: 'Vous allez vous régaler les papilles, cuisine authentique, et le batron offre le digestif !!'
+        description: 'Vous allez vous régaler les papilles, cuisine authentique'
         // plustot un resto de poisson, changer plats mijotés par poisson?
     },
 
@@ -43,7 +43,7 @@ const restaurantDataBase = [
         tel: '+33211444444',
         linkToMaps: '',
         image: './assets/Restaurants/la-cantine-fermiere.png',
-        description: 'Vous allez vous régaler les papilles, cuisine authentique, et le batron offre le digestif !!'
+        description: 'Vous allez vous régaler les papilles, cuisine authentique'
         // manque les prix et les types de plat proposé
     },
 
@@ -84,7 +84,7 @@ const restaurantDataBase = [
         adress: '17 Rue Bon Secours, 44000 Nantes',
         tel: '+332 72 02 15 96',
         linkToMaps: '',
-        image: './assets/Restaurants/Triplettes.jpg',
+        image: './assets/Restaurants/dakoo.png',
         description: 'Véritable restaurant coréen, avec toutes les spécialités de corée, notament le BIBIMBAP ou le DAK (poulet frit) . Livraison possible.'
     },
 
@@ -182,7 +182,7 @@ const restaurantDataBase = [
     },
     {
 
-        name: '',
+        name: 'a',
         miniDescription: '',
         specialities: ['', '', ''],
         distance: '400m',
