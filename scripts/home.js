@@ -149,6 +149,13 @@ const cuisineSwitch = document.querySelector("#cuisine-switch");
 const barSwitch = document.querySelector("#bar-switch");
 const body = document.querySelector("#body");
 const footer = document.querySelector("#ul-footer");
+const homeImg = document.querySelector("#home-img");
+const cuisineImg = document.querySelector("#primary-filter-img");
+const distanceImg = document.querySelector("#distance-img");
+const priceImg = document.querySelector("#price-range-img");
+const footstepImg = document.querySelectorAll("#footstep-img");
+const priceFilterImg = document.querySelectorAll("#price-img");
+console.log("Hey", priceFilterImg);
 
 cuisineSwitch.addEventListener('click', function () {
     // put elements in light mode
@@ -164,6 +171,16 @@ cuisineSwitch.addEventListener('click', function () {
     distanceMenu.classList.remove("dark-mode");
     priceMenu.classList.toggle("light-mode");
     priceMenu.classList.remove("dark-mode");
+    homeImg.src = "./icons/home_icon.svg";
+    cuisineImg.src = "./icons/cuisine_icon.svg";
+    distanceImg.src = "./icons/distance_icon.svg";
+    priceImg.src = "./icons/price_icon.svg";
+    for (let i = 0; i < footstepImg.length; i++) {
+        footstepImg[i].src = "./icons/footsteps_light.svg"
+    }
+    for (let i = 0; i < priceFilterImg.length; i++) {
+        priceFilterImg[i].src = "./icons/price_icon.svg"
+    }
     //display restaurants
     displayPlaces(restaurantDataBase);
 })
@@ -182,6 +199,16 @@ barSwitch.addEventListener('click', function () {
     distanceMenu.classList.remove("light-mode");
     priceMenu.classList.toggle("dark-mode");
     priceMenu.classList.remove("light-mode");
+    homeImg.src = "./icons/home_darkmode.svg";
+    cuisineImg.src = "./icons/drinks_icon.svg";
+    distanceImg.src = "./icons/distance_darkmode.svg";
+    priceImg.src = "./icons/price_darkmode.svg";
+    for (let i = 0; i < footstepImg.length; i++) {
+        footstepImg[i].src = "./icons/footsteps_darkmode.svg"
+    }
+    for (let i = 0; i < priceFilterImg.length; i++) {
+        priceFilterImg[i].src = "./icons/price_darkmode.svg"
+    }
     //display bars
     displayPlaces(BarDataBase);
 })
@@ -210,6 +237,7 @@ function displayPlaces(dataBase) {
 
         //create a frame and add an image to it, then append to the card
         // the frame is used later in the CSS for cropping
+
         let imageFrame = document.createElement("div")
         imageFrame.classList.add("picture-frame");
         let image = document.createElement("img");
