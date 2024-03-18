@@ -1,22 +1,44 @@
-papill'
-morse (salade-sandwich poisson)
-la cantine fermière (sandwich)
-les triplettes (cantine, brunch)
-dakoo (coréen)
-ichigo ramen
-boulangerie la fourmi (flan)
-MATA boulangerie (cookie)
-la mangouste (restau, pizza)
-Papa pasta
-Virginie's café (cuisine locale et souvent végé)
-Guindaille
+//papill'
+//morse (salade-sandwich poisson)
+//la cantine fermière (sandwich)
+//les triplettes (cantine, brunch)
+//dakoo (coréen)
+//ichigo ramen
+
+/boulangerie la fourmi (flan)
+/MATA boulangerie (cookie)
+/la mangouste (restau, pizza)
+/Papa pasta
+/Virginie's café (cuisine locale et souvent végé)
+/Guindaille
 Gadjaks
-La machine à crêpes
+/La machine à crêpes
 Café la Madeleine
+
 Bar
-Napoleone
-Coco bandit
-LU
-le bain rouge
-Delirium
+
+//Napoleone
+//Coco bandit
+//Le lovecraft
+//Le lieu unique
+//le bain rouge
+//Delirium
+
 Ginguette belvédère
+
+-----------------------------------------------
+
+To DO 
+
+- dans home.js => DataBase => array => bar 
+mettre un espace sur le titre "Le lovecraft"
+mettre '' pour chaque item de specialite (et non sur l'ensemble des items)
+mettre le linktomap sur chaque array
+ajouter en array le bar "Ginguette belvédère"
+
+- dans home.js => DataBase => array => restaurant
+mettre le linktomap sur chaque array
+continuer la liste des restaurants
+rajouter "livraison" en filtre?
+
+[Michael]: je m'en occupe => extraire les mots clefs pour filtre (savoir quels sont les mots clefs)
