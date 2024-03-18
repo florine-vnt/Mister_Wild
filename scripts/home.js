@@ -527,6 +527,10 @@ priceFilterButtonLow.addEventListener("click", function () {
         // make the price menu icon appear pink
         priceMenuButton.firstChild.src = './icons/price_pink.svg'
 
+
+
+
+        // re-display la selection
     }
     // if filter already was activated
     else {

@@ -205,6 +205,9 @@ footer>div {
     transition-duration: .4s;
     transition-timing-function: ease-out;
 
+    /* part about the overlays : if it's not present, primary filter menu won't overlay */
+    position: asbolute;
+
 }
 
 .toast-mini-menu.collapsed {
@@ -296,6 +299,8 @@ footer>div {
     transition-duration: .4s;
     transition-timing-function: ease-out;
 
+    /* part about the overlays : if it's not present, primary filter menu won't overlay */
+    position: asbolute;
     z-index: 5;
 }
 
