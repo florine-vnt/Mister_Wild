@@ -22,8 +22,7 @@ const restaurantDataBase = [
     },
     {
         name: 'Morse',
-        miniDescription: 'petit bistro de la mer : sandwichs et salades aux crevettes, langoustines, crabe...',
-        miniDescription: 'petit bistro de la mer : sandwichs et salades aux crevettes, langoustines, crabe...',
+        miniDescription: 'Petit bistro de la mer : sandwichs et salades aux crevettes, langoustines, crabe...',
         specialities: ['salade', 'sandwich', 'poisson'],
         distance: '400m',
         priceRange: '€€€€',
@@ -398,7 +397,7 @@ function displayPlaces(dataBase) {
         //create a frame and add an image to it, then append to the card
         // the frame is used later in the CSS for cropping
 
-        let imageFrame = document.createElement("div")
+        let imageFrame = document.createElement("div");
         imageFrame.classList.add("picture-frame");
         let image = document.createElement("img");
         image.classList.add("place-picture");
@@ -422,38 +421,49 @@ function displayPlaces(dataBase) {
         miniDescription.innerText = place.miniDescription;
         container.appendChild(miniDescription);
 
+        //create a div for the pictos
+        let pictoContainer = document.createElement("div")
+        pictoContainer.classList.add("picto-container")
 
         //create speciality, maps, price, tel picto
         let specialityPicto = document.createElement("p");
         specialityPicto.innerText = place.specialities;
-        container.appendChild(specialityPicto);
+        pictoContainer.appendChild(specialityPicto);
 
         let mapsPicto = document.createElement("p");
         mapsPicto.innerText = place.linkToMaps;
-        container.appendChild(mapsPicto);
+        pictoContainer.appendChild(mapsPicto);
 
         let pricePicto = document.createElement("p");
         pricePicto.innerText = place.priceRange;
-        container.appendChild(pricePicto);
+        pictoContainer.appendChild(pricePicto);
 
         let telPicto = document.createElement("p");
         telPicto.innerText = place.tel;
-        container.appendChild(telPicto);
+        pictoContainer.appendChild(telPicto);
+
+        //create a div for full-description and adress
+        let moreinfoContainer = document.createElement("div")
+        moreinfoContainer.classList.add("more-info-container")
 
         // create a full-description
         let fullDescription = document.createElement("p");
         fullDescription.innerText = place.description;
-        container.appendChild(fullDescription);
+        moreinfoContainer.appendChild(fullDescription);
 
         // create address 
         let address = document.createElement("p");
         address.innerText = place.adress;
-        container.appendChild(address);
+        moreinfoContainer.appendChild(address);
 
         /// TODO : add the distance image.inside of a container.
 
-        //Append the div to the card
+        //Append the main info div to the card
         newCard.appendChild(container);
+        //Append the picto div to the card
+        newCard.appendChild(pictoContainer);
+        //Append the more info div to the card
+        newCard.appendChild(moreinfoContainer);
         //Append the card to the Places list
         placesList.appendChild(newCard);
 
@@ -463,9 +473,19 @@ function displayPlaces(dataBase) {
 displayPlaces(restaurantDataBase);
 
 // ZOOM ON A SELECTED CARD 
+// first card selected. TO DO : select all cards
 let selectedCard = document.querySelector(".card");
+// adding an EventListener when clicking the selected card and adding a new class
 selectedCard.addEventListener('click', function () {
     selectedCard.classList.add("card-selected");
+
+    // variables had to be re-called since they were declared in the fonction
+    let pictoContainer = document.querySelector(".picto-container");
+    let moreinfoContainer = document.querySelector(".more-info-container");
+
+    //display hidden container
+    pictoContainer.style.display = "block";
+    moreinfoContainer.style.display = "block";
 })
 
 

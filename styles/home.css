@@ -443,10 +443,14 @@ footer {
     font-family: var(--secondary-font);
 }
 
-#places li div p {
-    display: ;
+.picto-container {
+    display: none;
+}
+
+.more-info-container {
+    display: none;
 }
 
 .card-selected {
-    height: 72vh;
+    height: 72.5vh;
 }
