@@ -500,7 +500,7 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
 
-  
+
 // price menu filtering
 
 // there are 3 buttons and 4 filter choices : 
@@ -564,7 +564,8 @@ priceFilterButtonLow.addEventListener("click", function () {
         else { priceMenuButton.firstChild.src = './icons/price_darkmode.svg' };
     }
 
-
+    // close the menu after a little while
+    sleep(600).then(() => { priceMenu.classList.add("collapsed") });
 });
 
 
@@ -615,7 +616,8 @@ priceFilterButtonMid.addEventListener("click", function () {
         else { priceMenuButton.firstChild.src = './icons/price_darkmode.svg' };
     }
 
-
+    // close the menu after a little while
+    sleep(600).then(() => { priceMenu.classList.add("collapsed") });
 });
 
 priceFilterButtonHigh.addEventListener("click", function () {
@@ -664,7 +666,8 @@ priceFilterButtonHigh.addEventListener("click", function () {
         else { priceMenuButton.firstChild.src = './icons/price_darkmode.svg' };
     }
 
-
+    // close the menu after a little while
+    sleep(600).then(() => { priceMenu.classList.add("collapsed") });
 });
 
 
@@ -743,7 +746,8 @@ distanceFilterButtonHigh.addEventListener("click", function () {
         distanceMenuButton.firstChild.src = distanceIcon;
     }
 
-
+    // close the menu after a little while
+    sleep(600).then(() => { distanceMenu.classList.add("collapsed") });
 });
 
 
@@ -799,7 +803,8 @@ distanceFilterButtonMid.addEventListener("click", function () {
         distanceMenuButton.firstChild.src = distanceIcon;
     }
 
-
+    // close the menu after a little while
+    sleep(600).then(() => { distanceMenu.classList.add("collapsed") });
 });
 
 
@@ -855,7 +860,8 @@ distanceFilterButtonLow.addEventListener("click", function () {
         distanceMenuButton.firstChild.src = distanceIcon;
     }
 
-
+    // close the menu after a little while
+    sleep(600).then(() => { distanceMenu.classList.add("collapsed") });
 });
 
 //END OF MINI MENUS BEHAVIOUR
