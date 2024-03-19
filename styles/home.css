@@ -438,30 +438,6 @@ footer {
     font-family: var(--secondary-font);
 }
 
-.speciality-picto {
-    display: none;
-}
-
-.maps-picto {
-    display: none;
-}
-
-.price-picto {
-    display: none;
-}
-
-.tel-picto {
-    display: none;
-}
-
-.full-description {
-    display: none;
-}
-
-.address {
-    display: none;
-}
-
 .card-selected {
-    padding: 40px;
+    height: 100vh;
 }

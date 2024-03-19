@@ -424,34 +424,28 @@ function displayPlaces(dataBase) {
 
         //create speciality, maps, price, tel picto
         let specialityPicto = document.createElement("p");
-        specialityPicto.classList.add("speciality-picto");
         specialityPicto.innerText = place.specialities;
         container.appendChild(specialityPicto);
 
         let mapsPicto = document.createElement("p");
-        mapsPicto.classList.add("maps-picto");
         mapsPicto.innerText = place.linkToMaps;
         container.appendChild(mapsPicto);
 
         let pricePicto = document.createElement("p");
-        pricePicto.classList.add("price-picto");
         pricePicto.innerText = place.priceRange;
         container.appendChild(pricePicto);
 
         let telPicto = document.createElement("p");
-        telPicto.classList.add("tel-picto");
         telPicto.innerText = place.tel;
         container.appendChild(telPicto);
 
         // create a full-description
         let fullDescription = document.createElement("p");
-        fullDescription.classList.add("full-description");
         fullDescription.innerText = place.description;
         container.appendChild(fullDescription);
 
         // create address 
         let address = document.createElement("p");
-        address.classList.add("address");
         address.innerText = place.adress;
         container.appendChild(address);
 
