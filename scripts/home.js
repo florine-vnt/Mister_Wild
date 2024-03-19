@@ -319,6 +319,8 @@ cuisineSwitch.addEventListener('click', function () {
         body.classList.remove("dark-mode");
         placesList.classList.add("light-mode");
         placesList.classList.remove("dark-mode");
+        primaryFilterMenu.classList.add("light-mode");
+        primaryFilterMenu.classList.remove("dark-mode");
         footer.classList.toggle("light-mode");
         footer.classList.remove("dark-mode");
         distanceMenu.classList.toggle("light-mode");
@@ -357,6 +359,8 @@ barSwitch.addEventListener('click', function () {
         body.classList.remove("light-mode");
         placesList.classList.remove("light-mode");
         placesList.classList.add("dark-mode");
+        primaryFilterMenu.classList.remove("light-mode");
+        primaryFilterMenu.classList.add("dark-mode");
         footer.classList.toggle("dark-mode");
         footer.classList.remove("light-mode");
         distanceMenu.classList.toggle("dark-mode");
@@ -1097,4 +1101,31 @@ function displayPrimaryFoodFilter() {
 displayPrimaryFoodFilter();
 
 //END OF PRIMARY FILTER BEHAVIOUR
+
+/// 
+
+function blink(element) {
+        element.style.transform = 'scale(2)'
+        sleep(310).then(() => {
+            element.style.transform = 'scale(1)'
+            sleep(310).then(() => {
+                element.style.transform = 'scale(2)'
+                sleep(310).then(() => {
+                    element.style.transform = 'scale(1)'
+                });
+            });
+        });
+}
+
+sleep(1500).then(() => {
+    blink(primaryFilterButton);
+});
+// sleep(2800).then(() => {
+//     blink(distanceMenuButton);
+// });
+// sleep(3200).then(() => {
+//     blink(priceMenuButton);
+// });
+
+
 
