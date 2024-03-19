@@ -340,7 +340,7 @@ cuisineSwitch.addEventListener('click', function () {
         //display restaurants
         displayPlaces(restaurantDataBase);
         //display food filters
-        displayPrimaryFoodFilter();
+        displayFoodFilter();
     } else {
         // do nothing, we are already in light mode.
     }
@@ -379,6 +379,9 @@ barSwitch.addEventListener('click', function () {
         }
         //display bars
         displayPlaces(BarDataBase);
+
+        // display drink filters
+        displayDrinkFilter();
     } else {
         // do nothing, we are already in dark mode.
     }
@@ -984,9 +987,37 @@ secondaryFoodFilters = [
     }
 ];
 
+primaryDrinkFilters = [
+    {
+        name: 'biere',
+        icon: './icons/beer.svg',
+        iconPink: './icons/beer_pink.svg',
+        active: false
+    },
+    {
+        name: 'cafe',
+        icon: './icons/coffee.svg',
+        iconPink: './icons/coffee_pink.svg',
+        active: false
+    },
+    {
+        name: 'vin',
+        icon: './icons/wine.svg',
+        iconPink: './icons/wine_pink.svg',
+        active: false
+    },
+    {
+        name: 'cocktails',
+        icon: './icons/cocktail.svg',
+        iconPink: './icons/cocktail_pink.svg',
+        active: false
+    }
+
+];
+
 ///// FILTERS NEED TO ALL BE RESET TO FALSE WHEN SWITCHING MODES !!!!!
 
-function displayPrimaryFoodFilter() {
+function displayFoodFilter() {
     primaryFilterMenu.innerHTML = "";
 
     /// create the different "cuisines" section
@@ -1023,6 +1054,13 @@ function displayPrimaryFoodFilter() {
                 primaryFoodFilters[targetIndex].active = false;
                 targetButton.firstChild.src = primaryFoodFilters[targetIndex].icon
             }
+
+            //impact on the primary filter icon
+            if (isPrimaryFilterActive()) {
+                primaryFilterButton.firstChild.src = './icons/cuisine_pink.svg'
+            } else {
+                primaryFilterButton.firstChild.src = './icons/cuisine_icon.svg'
+            };
         });
 
         //create and append an image
@@ -1074,9 +1112,14 @@ function displayPrimaryFoodFilter() {
                 secondaryFoodFilters[targetIndex].active = false;
                 targetButton.firstChild.src = secondaryFoodFilters[targetIndex].icon
             }
-        });
 
-        /// TODO : create id based on name
+            //impact on the primary filter icon
+            if (isPrimaryFilterActive()) {
+                primaryFilterButton.firstChild.src = './icons/cuisine_pink.svg'
+            } else {
+                primaryFilterButton.firstChild.src = './icons/cuisine_icon.svg'
+            };
+        });
 
         //create and append an image
         buttonIcon = document.createElement("img");
@@ -1097,24 +1140,108 @@ function displayPrimaryFoodFilter() {
 
 }
 
+function displayDrinkFilter() {
+    primaryFilterMenu.innerHTML = "";
+
+    /// create the different "cuisines" section
+
+    let firstLabel = document.createElement("p");
+    firstLabel.innerText = "Catégories"
+    primaryFilterMenu.appendChild(firstLabel);
+
+    let mainFiltersList = document.createElement("ul");
+
+    // create one clickable button for each primary filter
+    primaryDrinkFilters.forEach((filter, index) => {
+ 
+        //create a button
+        filterButton = document.createElement("button");
+        filterButton.setAttribute("id", filter.name);
+
+        //add the behaviour to the button.
+        filterButton.addEventListener("click", function () {
+            //maybe these two variables are useless, i can't decide. 
+            let targetFilter = filter.name;
+            let targetIndex = index;
+            // this one sure isn't : removing it prevents the function form target the right button.
+            let targetButton = document.getElementById(targetFilter);
+
+            //toggle primary filter
+            if (primaryDrinkFilters[targetIndex].active == false) { 
+                primaryDrinkFilters[targetIndex].active = true;
+                targetButton.firstChild.src = primaryDrinkFilters[targetIndex].iconPink
+
+            } else {
+                console.log("le filtre etait inactif")
+                primaryDrinkFilters[targetIndex].active = false;
+                targetButton.firstChild.src = primaryDrinkFilters[targetIndex].icon
+            }
+
+            //impact on the primary filter icon
+            if (isPrimaryFilterActive()) {
+                primaryFilterButton.firstChild.src = './icons/drinks_pink.svg'
+            } else {
+                primaryFilterButton.firstChild.src = './icons/drinks_icon.svg'
+            };
+        });
+
+        //create and append an image
+        buttonIcon = document.createElement("img");
+        if (filter.active == true) {
+            buttonIcon.src = filter.iconPink;
+        } else {
+            buttonIcon.src = filter.icon;
+        }
+        buttonIcon.alt = filter.name;
+        filterButton.appendChild(buttonIcon);
+
+        //append the button to the ul
+        mainFiltersList.appendChild(filterButton);
+    });
+
+    primaryFilterMenu.appendChild(mainFiltersList);
+
+}
+
+function isPrimaryFilterActive() {
+
+    let atLeastOneFilterIsActive = false;
+
+    const lightMode = body.classList.contains("light-mode");
+    if (lightMode) {
+        primaryFoodFilters.forEach((filter) => {
+            if (filter.active) { atLeastOneFilterIsActive = true };
+        });
+        secondaryFoodFilters.forEach((filter) => {
+            if (filter.active) { atLeastOneFilterIsActive = true };
+        });
+    } else {
+        primaryDrinkFilters.forEach((filter) => {
+            if (filter.active) { atLeastOneFilterIsActive = true };
+        });
+    }
+
+    return atLeastOneFilterIsActive;
+}
+
 //init with a food filter
-displayPrimaryFoodFilter();
+displayFoodFilter();
 
 //END OF PRIMARY FILTER BEHAVIOUR
 
-/// 
+/// A little animation, a little after the page loads the primary filter button will blink. 
 
 function blink(element) {
-        element.style.transform = 'scale(2)'
+    element.style.transform = 'scale(2)'
+    sleep(310).then(() => {
+        element.style.transform = 'scale(1)'
         sleep(310).then(() => {
-            element.style.transform = 'scale(1)'
+            element.style.transform = 'scale(2)'
             sleep(310).then(() => {
-                element.style.transform = 'scale(2)'
-                sleep(310).then(() => {
-                    element.style.transform = 'scale(1)'
-                });
+                element.style.transform = 'scale(1)'
             });
         });
+    });
 }
 
 sleep(1500).then(() => {
