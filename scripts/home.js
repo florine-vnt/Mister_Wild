@@ -422,6 +422,39 @@ function displayPlaces(dataBase) {
         miniDescription.innerText = place.miniDescription;
         container.appendChild(miniDescription);
 
+        //create speciality, maps, price, tel picto
+        let specialityPicto = document.createElement("p");
+        specialityPicto.classList.add("speciality-picto");
+        specialityPicto.innerText = place.specialities;
+        container.appendChild(specialityPicto);
+
+        let mapsPicto = document.createElement("p");
+        mapsPicto.classList.add("maps-picto");
+        mapsPicto.innerText = place.linkToMaps;
+        container.appendChild(mapsPicto);
+
+        let pricePicto = document.createElement("p");
+        pricePicto.classList.add("price-picto");
+        pricePicto.innerText = place.priceRange;
+        container.appendChild(pricePicto);
+
+        let telPicto = document.createElement("p");
+        telPicto.classList.add("tel-picto");
+        telPicto.innerText = place.tel;
+        container.appendChild(telPicto);
+
+        // create a full-description
+        let fullDescription = document.createElement("p");
+        fullDescription.classList.add("full-description");
+        fullDescription.innerText = place.description;
+        container.appendChild(fullDescription);
+
+        // create address 
+        let address = document.createElement("p");
+        address.classList.add("address");
+        address.innerText = place.adress;
+        container.appendChild(address);
+
         /// TODO : add the distance image.inside of a container.
 
         //Append the div to the card
@@ -434,7 +467,11 @@ function displayPlaces(dataBase) {
 
 displayPlaces(restaurantDataBase);
 
-
+// ZOOM ON A SELECTED CARD 
+let selectedCard = document.querySelector(".card");
+selectedCard.addEventListener('click', function () {
+    selectedCard.classList.add("card-selected");
+})
 
 
 //START OF MINI MENUS BEHAVIOUR
@@ -454,8 +491,8 @@ distanceMenuButton.addEventListener("click", function () {
     distanceMenu.classList.toggle("collapsed");
 
     ///FUNCTION menusOnTop // function placesOnTop
-    menuContainer.style.zIndex=3;
-    
+    menuContainer.style.zIndex = 3;
+
     console.log("tu débugge le bon truc");
     // check if another menu is already open
     if (priceMenu.classList.contains("collapsed")) {
@@ -470,7 +507,7 @@ distanceMenuButton.addEventListener("click", function () {
 priceMenuButton.addEventListener("click", function () {
     priceMenu.classList.toggle("collapsed");
 
-    menuContainer.style.zIndex=3;
+    menuContainer.style.zIndex = 3;
     // check if another menu is already open
     if (distanceMenu.classList.contains("collapsed")) {
 
@@ -485,7 +522,7 @@ menuContainer.addEventListener("click", function () {
     priceMenu.classList.add("collapsed");
     distanceMenu.classList.add("collapsed");
     primaryFilterMenu.classList.add("collapsed");
-    menuContainer.style.zIndex=0;
+    menuContainer.style.zIndex = 0;
 })
 
 
@@ -857,12 +894,12 @@ const primaryFilterMenu = document.getElementById("primary-filter-container");
 // make primary filter menu appear
 primaryFilterButton.addEventListener("click", function () {
 
-    menuContainer.style.zIndex=3;
+    menuContainer.style.zIndex = 3;
 
     primaryFilterMenu.classList.toggle("collapsed");
 
-    if (priceMenu.classList.contains("collapsed") === false) {priceMenu.classList.add("collapsed")};
-    if (distanceMenu.classList.contains("collapsed") === false) {distanceMenu.classList.add("collapsed")};
+    if (priceMenu.classList.contains("collapsed") === false) { priceMenu.classList.add("collapsed") };
+    if (distanceMenu.classList.contains("collapsed") === false) { distanceMenu.classList.add("collapsed") };
 
 });
 
@@ -908,7 +945,7 @@ secondaryFoodFilters = [
     }
 ];
 
-function displayPrimaryFilter () {
+function displayPrimaryFilter() {
 
 
     /// create the different "cuisines" section
@@ -925,7 +962,7 @@ function displayPrimaryFilter () {
 
         //create a button
         filterButton = document.createElement("button");
-        
+
         /// TODO : create id based on name
 
         //create and append an image
@@ -953,7 +990,7 @@ function displayPrimaryFilter () {
 
         //create a button
         filterButton = document.createElement("button");
-        
+
         /// TODO : create id based on name
 
         //create and append an image
@@ -966,7 +1003,7 @@ function displayPrimaryFilter () {
         secondaryFiltersList.appendChild(filterButton);
     });
     primaryFilterMenu.appendChild(secondaryFiltersList);
-        
+
 }
 
 displayPrimaryFilter();
