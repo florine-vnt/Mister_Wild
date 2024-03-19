@@ -210,11 +210,12 @@ footer {
 
     /* part about the overlays : if it's not present, primary filter menu won't overlay */
     position: absolute;
+    z-index :5;
 
 }
 
 .toast-mini-menu.collapsed {
-    z-index: -1;
+    z-index: 3;
     transform: translateY(40vh);
 }
 

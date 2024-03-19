@@ -452,10 +452,11 @@ const filterBar = document.getElementById("filter-bar");
 distanceMenuButton.addEventListener("click", function () {
 
     distanceMenu.classList.toggle("collapsed");
+    primaryFilterMenu.classList.add("collapsed");
 
     ///FUNCTION menusOnTop // function placesOnTop
-    menuContainer.style.zIndex=3;
-    
+    menuContainer.style.zIndex = 3;
+
     console.log("tu débugge le bon truc");
     // check if another menu is already open
     if (priceMenu.classList.contains("collapsed")) {
@@ -469,8 +470,9 @@ distanceMenuButton.addEventListener("click", function () {
 // make price menu appear
 priceMenuButton.addEventListener("click", function () {
     priceMenu.classList.toggle("collapsed");
+    primaryFilterMenu.classList.add("collapsed");
 
-    menuContainer.style.zIndex=3;
+    menuContainer.style.zIndex = 3;
     // check if another menu is already open
     if (distanceMenu.classList.contains("collapsed")) {
 
@@ -481,14 +483,24 @@ priceMenuButton.addEventListener("click", function () {
 });
 
 //make all menus dissapear when clicking somewhere else
-menuContainer.addEventListener("click", function () {
-    priceMenu.classList.add("collapsed");
-    distanceMenu.classList.add("collapsed");
-    primaryFilterMenu.classList.add("collapsed");
-    menuContainer.style.zIndex=0;
+menuContainer.addEventListener("click", function (event) {
+
+    //if either menu is clicked, do nothing.
+    if (distanceMenu.contains(event.target) || priceMenu.contains(event.target) || primaryFilterMenu.contains(event.target)) {
+        console.log("clic sur un menu");
+    } else {
+        priceMenu.classList.add("collapsed");
+        distanceMenu.classList.add("collapsed");
+        primaryFilterMenu.classList.add("collapsed");
+        sleep(300).then(() => { menuContainer.style.zIndex = 0;; });
+    }
 })
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
 
+  
 // price menu filtering
 
 // there are 3 buttons and 4 filter choices : 
@@ -504,7 +516,6 @@ const priceFilterButtonMid = document.getElementById("price-range-mid");
 const priceFilterButtonHigh = document.getElementById("price-range-high");
 
 priceFilterButtonLow.addEventListener("click", function () {
-
     //figure out if we are in light or dark mode. 
     const lightMode = body.classList.contains("light-mode");
 
@@ -857,12 +868,12 @@ const primaryFilterMenu = document.getElementById("primary-filter-container");
 // make primary filter menu appear
 primaryFilterButton.addEventListener("click", function () {
 
-    menuContainer.style.zIndex=3;
+    menuContainer.style.zIndex = 3;
 
     primaryFilterMenu.classList.toggle("collapsed");
 
-    if (priceMenu.classList.contains("collapsed") === false) {priceMenu.classList.add("collapsed")};
-    if (distanceMenu.classList.contains("collapsed") === false) {distanceMenu.classList.add("collapsed")};
+    if (priceMenu.classList.contains("collapsed") === false) { priceMenu.classList.add("collapsed") };
+    if (distanceMenu.classList.contains("collapsed") === false) { distanceMenu.classList.add("collapsed") };
 
 });
 
@@ -908,7 +919,7 @@ secondaryFoodFilters = [
     }
 ];
 
-function displayPrimaryFilter () {
+function displayPrimaryFilter() {
 
 
     /// create the different "cuisines" section
@@ -925,7 +936,7 @@ function displayPrimaryFilter () {
 
         //create a button
         filterButton = document.createElement("button");
-        
+
         /// TODO : create id based on name
 
         //create and append an image
@@ -953,7 +964,7 @@ function displayPrimaryFilter () {
 
         //create a button
         filterButton = document.createElement("button");
-        
+
         /// TODO : create id based on name
 
         //create and append an image
@@ -966,7 +977,7 @@ function displayPrimaryFilter () {
         secondaryFiltersList.appendChild(filterButton);
     });
     primaryFilterMenu.appendChild(secondaryFiltersList);
-        
+
 }
 
 displayPrimaryFilter();
