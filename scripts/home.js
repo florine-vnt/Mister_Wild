@@ -444,6 +444,7 @@ const distanceMenu = document.getElementById("distance-menu");
 const priceMenuButton = document.getElementById("price-range");
 const priceMenu = document.getElementById("price-range-menu");
 const menuContainer = document.getElementById("mini-menus-container");
+const placesContainer = document.getElementById("places-container");
 const filterBar = document.getElementById("filter-bar");
 
 
@@ -452,12 +453,15 @@ distanceMenuButton.addEventListener("click", function () {
 
     distanceMenu.classList.toggle("collapsed");
 
+    ///FUNCTION menusOnTop // function placesOnTop
+    menuContainer.style.zIndex=3;
+    
+    console.log("tu débugge le bon truc");
     // check if another menu is already open
     if (priceMenu.classList.contains("collapsed")) {
 
         // bring the menu container to the front
-        menuContainer.classList.toggle("to-front");
-        menuContainer.classList.toggle("to-back");
+
     }
 });
 
@@ -466,13 +470,12 @@ distanceMenuButton.addEventListener("click", function () {
 priceMenuButton.addEventListener("click", function () {
     priceMenu.classList.toggle("collapsed");
 
-
+    menuContainer.style.zIndex=3;
     // check if another menu is already open
     if (distanceMenu.classList.contains("collapsed")) {
 
         // bring the menu container to the front
-        menuContainer.classList.toggle("to-front");
-        menuContainer.classList.toggle("to-back");
+
     }
 
 });
@@ -481,8 +484,8 @@ priceMenuButton.addEventListener("click", function () {
 menuContainer.addEventListener("click", function () {
     priceMenu.classList.add("collapsed");
     distanceMenu.classList.add("collapsed");
-    menuContainer.classList.add("to-back");
-    menuContainer.classList.remove("to-front");
+    primaryFilterMenu.classList.add("collapsed");
+    menuContainer.style.zIndex=0;
 })
 
 
@@ -854,6 +857,8 @@ const primaryFilterMenu = document.getElementById("primary-filter-container");
 // make primary filter menu appear
 primaryFilterButton.addEventListener("click", function () {
 
+    menuContainer.style.zIndex=3;
+
     primaryFilterMenu.classList.toggle("collapsed");
 
     if (priceMenu.classList.contains("collapsed") === false) {priceMenu.classList.add("collapsed")};
@@ -904,6 +909,7 @@ secondaryFoodFilters = [
 ];
 
 function displayPrimaryFilter () {
+
 
     /// create the different "cuisines" section
 

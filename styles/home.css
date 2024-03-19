@@ -103,6 +103,7 @@ header>nav>ul>button {
 footer {
     position: sticky;
     bottom: 0px;
+    z-index: 5;
 }
 
 #filter-bar ul {
@@ -158,7 +159,7 @@ footer {
 /* Part about the mini-menus */
 
 /* Making an overlaying div, containing all mini-menus */
-footer>div {
+#mini-menus-container {
     width: 100%;
     height: 80vh;
 
@@ -260,15 +261,35 @@ footer>div {
     background-color: var(--light-filterbar-color);
 }
 
-.to-front {
-    z-index: 1;
-    /* set higher z-index value */
+.layer0 {
+    position:relative;
+    z-index: 0;
 }
 
-.to-back {
-    z-index: -1;
-    /* set lower z-index value */
+.layer1 {
+    z-index: 1;
 }
+
+.layer2 {
+    position:relative;
+    z-index: 2;
+}
+
+.layer3 {
+    position:relative;
+    z-index: 3;
+}
+
+.layer4 {
+    position:relative;
+    z-index: 4;
+}
+
+.layer5 {
+    position:relative;
+    z-index: 5;
+}
+
 
 /* FOR DEBUGGING make the mini menu container slightly opaque */
 /* #mini-menus-container{
@@ -301,8 +322,6 @@ footer>div {
 
     /* part about the overlays : if it's not present, primary filter menu won't overlay */
     position: asbolute;
-    z-index: 5;
-
 
     /* part about justifying stuff, mostly the text */
     display:flex;
