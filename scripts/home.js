@@ -76,7 +76,7 @@ const restaurantDataBase = [
     },
 
     {
-        //mettre photo
+
         name: 'Dakoo',
         miniDescription: 'Restaurant coréen, plats traditionnel avec des plats vegan!. Livraison possible.',
         specialities: ['coréen', 'Streetfood', 'poulet frit', 'veggies', 'livraison'],
@@ -90,70 +90,70 @@ const restaurantDataBase = [
     },
 
     {
-
+        // a completer
         name: 'Papa pasta',
-        miniDescription: '',
-        specialities: ['', '', ''],
-        distance: '400m',
-        priceRange: '€€€',
-        adress: '',
-        tel: '+33',
+        miniDescription: 'Des pâtes maison, fait uniquement avec des produits locaux, avec des portion généreuse !',
+        specialities: ['', 'pâtes', 'veggie'],
+        distance: '90m',
+        priceRange: '€',
+        adress: '27 rue Fouré, 44000 Nantes',
+        tel: '+339 81 30 85 44',
         linkToMaps: '',
         image: './assets/Restaurants/',
-        description: ''
+        description: 'Des pâtes maison, fait uniquement avec des produits locaux, avec des portion généreuse !'
     },
 
     {
-
+        // a completer
         name: 'Virginie\'s café',
-        miniDescription: '',
+        miniDescription: 'Cuisine vivante. Cuisine bio. Cantine végétarienne. ',
         specialities: ['', '', ''],
-        distance: '400m',
+        distance: '85m',
         priceRange: '€€€',
-        adress: '',
-        tel: '+33',
+        adress: '6 rue de Saverne, 44000 Nantes',
+        tel: '+336 24 20 43 05',
         linkToMaps: '',
-        image: './assets/Restaurants/',
+        image: './assets/Restaurants/virgines.net',
         description: ''
     },
     {
 
         name: 'La machine à crêpes',
-        miniDescription: '',
-        specialities: ['', '', ''],
-        distance: '400m',
-        priceRange: '€€€',
-        adress: '',
-        tel: '+33',
+        miniDescription: 'Des crêpes et des galettes! Prix abordable et que du fait maison! Une galette veggie est proposée',
+        specialities: ['galettes', 'crepes', 'veggie'],
+        distance: '450m',
+        priceRange: '€',
+        adress: '11 chaussée de la Madeleine, 44000 Nantes',
+        tel: '+332 51 82 71 39',
         linkToMaps: '',
-        image: './assets/Restaurants/',
-        description: ''
+        image: './assets/Restaurants/la-machine-a-crepes.png',
+        description: 'Des crêpes et des galettes! Prix abordable et que du fait maison! Une galette veggie est proposée'
     },
     {
 
         name: 'MATA boulangerie',
-        miniDescription: '',
-        specialities: ['', '', ''],
+        miniDescription: 'Boulangerie de quartier, leurs cookies aux chocolat avec une pointe de gros sel est une tuerie!',
+        specialities: ['sandwich', 'cookies', 'Pâtisserie', 'pains'],
         distance: '400m',
-        priceRange: '€€€',
-        adress: '',
-        tel: '+33',
+        priceRange: '€€',
+        adress: '6 rue de Rieux, 44000 Nantes',
+        tel: '+339 70 66 95 83',
         linkToMaps: '',
-        image: './assets/Restaurants/',
-        description: ''
+        image: './assets/Restaurants/mataboulangerie.png',
+        description: 'Boulangerie de quartier, leurs cookies aux chocolat avec une pointe de gros sel est une tuerie!'
     },
     {
 
         name: 'boulangerie la fourmi',
-        miniDescription: '',
-        specialities: ['', '', ''],
-        distance: '400m',
-        priceRange: '€€€',
-        adress: '',
-        tel: '+33',
+        miniDescription: 'Blé ancien moulu avec une meule en pierre, viennoiserie XXL, sandwich au mètre, une boulangerie à découvrir!',
+        specialities: ['sandwich', 'Pâtisserie', 'pains'],
+        distance: '550m',
+        priceRange: '€',
+        adress: '1 chaussée de la Madeleine, 44000 Nantes',
+        tel: '+339 86 64 69 43',
         linkToMaps: '',
-        image: './assets/Restaurants/',
-        description: ''
+        image: './assets/Restaurants/boulangerie-la-fourmi.net',
+        description: 'Véritable institution nantaise, le café la Fourmi a pris un nouveau départ pour devenir une boulangerie! Les viennoiseries XXL sont un petit déjeuner à elle seul! Pour le midi, vous pouvez choisir votre Jambon-beurre au mètre!'
     },
     {
 
