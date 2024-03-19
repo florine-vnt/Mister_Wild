@@ -305,6 +305,7 @@ const footstepImg = document.querySelectorAll("#footstep-img");
 const priceFilterImg = document.querySelectorAll("#price-img");
 
 
+
 cuisineSwitch.addEventListener('click', function () {
 
     const darkMode = body.classList.contains("dark-mode");
@@ -316,6 +317,10 @@ cuisineSwitch.addEventListener('click', function () {
         barSwitch.classList.remove("dark-mode");
         body.classList.toggle("light-mode");
         body.classList.remove("dark-mode");
+        placesList.classList.add("light-mode");
+        placesList.classList.remove("dark-mode");
+        primaryFilterMenu.classList.add("light-mode");
+        primaryFilterMenu.classList.remove("dark-mode");
         footer.classList.toggle("light-mode");
         footer.classList.remove("dark-mode");
         distanceMenu.classList.toggle("light-mode");
@@ -334,6 +339,8 @@ cuisineSwitch.addEventListener('click', function () {
         }
         //display restaurants
         displayPlaces(restaurantDataBase);
+        //display food filters
+        displayFoodFilter();
     } else {
         // do nothing, we are already in light mode.
     }
@@ -350,6 +357,10 @@ barSwitch.addEventListener('click', function () {
         barSwitch.classList.remove("light-mode");
         body.classList.toggle("dark-mode");
         body.classList.remove("light-mode");
+        placesList.classList.remove("light-mode");
+        placesList.classList.add("dark-mode");
+        primaryFilterMenu.classList.remove("light-mode");
+        primaryFilterMenu.classList.add("dark-mode");
         footer.classList.toggle("dark-mode");
         footer.classList.remove("light-mode");
         distanceMenu.classList.toggle("dark-mode");
@@ -368,6 +379,9 @@ barSwitch.addEventListener('click', function () {
         }
         //display bars
         displayPlaces(BarDataBase);
+
+        // display drink filters
+        displayDrinkFilter();
     } else {
         // do nothing, we are already in dark mode.
     }
@@ -446,47 +460,95 @@ const priceMenu = document.getElementById("price-range-menu");
 const menuContainer = document.getElementById("mini-menus-container");
 const placesContainer = document.getElementById("places-container");
 const filterBar = document.getElementById("filter-bar");
+const primaryFilterButton = document.getElementById("primary-filter");
+const primaryFilterMenu = document.getElementById("primary-filter-container");
 
+// make primary filter menu appear
+primaryFilterButton.addEventListener("click", function () {
+
+    menuContainer.style.zIndex = 3;
+    menuContainer.classList.remove("hidden");
+    sleep(10).then(() => {
+
+        primaryFilterMenu.classList.toggle("collapsed");
+
+        if (priceMenu.classList.contains("collapsed") === false) { priceMenu.classList.add("collapsed") };
+        if (distanceMenu.classList.contains("collapsed") === false) { distanceMenu.classList.add("collapsed") };
+
+        //if all menus are collapsed, put the container to the background
+        if (distanceMenu.classList.contains("collapsed") && priceMenu.classList.contains("collapsed") && primaryFilterMenu.classList.contains("collapsed")) {
+            // bring the menu container to the front
+            sleep(300).then(() => {
+                menuContainer.style.zIndex = 0;
+                menuContainer.classList.add("hidden")
+            });
+        }
+    });
+});
 
 // make distance menu appear
 distanceMenuButton.addEventListener("click", function () {
 
-    distanceMenu.classList.toggle("collapsed");
+    menuContainer.classList.remove("hidden");
+    sleep(10).then(() => {
+        distanceMenu.classList.toggle("collapsed");
+        primaryFilterMenu.classList.add("collapsed");
 
-    ///FUNCTION menusOnTop // function placesOnTop
-    menuContainer.style.zIndex=3;
-    
-    console.log("tu débugge le bon truc");
-    // check if another menu is already open
-    if (priceMenu.classList.contains("collapsed")) {
+        menuContainer.style.zIndex = 3;
 
-        // bring the menu container to the front
-
-    }
+        console.log("tu débugge le bon truc");
+        //if all menus are collapsed, put the container to the background
+        if (distanceMenu.classList.contains("collapsed") && priceMenu.classList.contains("collapsed") && primaryFilterMenu.classList.contains("collapsed")) {
+            // bring the menu container to the front
+            sleep(300).then(() => {
+                menuContainer.style.zIndex = 0;
+                menuContainer.classList.add("hidden")
+            });
+        }
+    });
 });
-
 
 // make price menu appear
 priceMenuButton.addEventListener("click", function () {
-    priceMenu.classList.toggle("collapsed");
 
-    menuContainer.style.zIndex=3;
-    // check if another menu is already open
-    if (distanceMenu.classList.contains("collapsed")) {
+    menuContainer.classList.remove("hidden");
+    sleep(10).then(() => {
+        priceMenu.classList.toggle("collapsed");
+        primaryFilterMenu.classList.add("collapsed");
 
-        // bring the menu container to the front
-
-    }
-
+        menuContainer.style.zIndex = 3;
+        //if all menus are collapsed, put the container to the background
+        if (distanceMenu.classList.contains("collapsed") && priceMenu.classList.contains("collapsed") && primaryFilterMenu.classList.contains("collapsed")) {
+            // bring the menu container to the front
+            sleep(300).then(() => {
+                menuContainer.style.zIndex = 0;
+                menuContainer.classList.add("hidden")
+            });
+        }
+    });
 });
 
 //make all menus dissapear when clicking somewhere else
-menuContainer.addEventListener("click", function () {
-    priceMenu.classList.add("collapsed");
-    distanceMenu.classList.add("collapsed");
-    primaryFilterMenu.classList.add("collapsed");
-    menuContainer.style.zIndex=0;
+menuContainer.addEventListener("click", function (event) {
+
+    //if either menu is clicked, do nothing.
+    // the event.target makes us able to knwo wether the user clicked on a menu or somewhere else, it is AMAZING.
+    if (distanceMenu.contains(event.target) || priceMenu.contains(event.target) || primaryFilterMenu.contains(event.target)) {
+        console.log("clic sur un menu");
+    } else {
+        priceMenu.classList.add("collapsed");
+        distanceMenu.classList.add("collapsed");
+        primaryFilterMenu.classList.add("collapsed");
+        sleep(300).then(() => {
+            menuContainer.style.zIndex = 0;;
+            menuContainer.classList.add("hidden")
+        });
+    }
 })
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 
 // price menu filtering
@@ -504,7 +566,6 @@ const priceFilterButtonMid = document.getElementById("price-range-mid");
 const priceFilterButtonHigh = document.getElementById("price-range-high");
 
 priceFilterButtonLow.addEventListener("click", function () {
-
     //figure out if we are in light or dark mode. 
     const lightMode = body.classList.contains("light-mode");
 
@@ -553,7 +614,9 @@ priceFilterButtonLow.addEventListener("click", function () {
         else { priceMenuButton.firstChild.src = './icons/price_darkmode.svg' };
     }
 
-
+    // close the menu after a little while
+    sleep(600).then(() => { priceMenu.classList.add("collapsed") });
+    sleep(900).then(() => { menuContainer.style.zIndex = 0; });
 });
 
 
@@ -604,6 +667,9 @@ priceFilterButtonMid.addEventListener("click", function () {
         else { priceMenuButton.firstChild.src = './icons/price_darkmode.svg' };
     }
 
+    // close the menu after a little while
+    sleep(600).then(() => { priceMenu.classList.add("collapsed") });
+    sleep(900).then(() => { menuContainer.style.zIndex = 0; });
 
 });
 
@@ -653,7 +719,9 @@ priceFilterButtonHigh.addEventListener("click", function () {
         else { priceMenuButton.firstChild.src = './icons/price_darkmode.svg' };
     }
 
-
+    // close the menu after a little while
+    sleep(600).then(() => { priceMenu.classList.add("collapsed") });
+    sleep(900).then(() => { menuContainer.style.zIndex = 0; });
 });
 
 
@@ -732,7 +800,9 @@ distanceFilterButtonHigh.addEventListener("click", function () {
         distanceMenuButton.firstChild.src = distanceIcon;
     }
 
-
+    // close the menu after a little while
+    sleep(600).then(() => { distanceMenu.classList.add("collapsed") });
+    sleep(900).then(() => { menuContainer.style.zIndex = 0; });
 });
 
 
@@ -788,7 +858,9 @@ distanceFilterButtonMid.addEventListener("click", function () {
         distanceMenuButton.firstChild.src = distanceIcon;
     }
 
-
+    // close the menu after a little while
+    sleep(600).then(() => { distanceMenu.classList.add("collapsed") });
+    sleep(900).then(() => { menuContainer.style.zIndex = 0; });
 });
 
 
@@ -844,72 +916,109 @@ distanceFilterButtonLow.addEventListener("click", function () {
         distanceMenuButton.firstChild.src = distanceIcon;
     }
 
-
+    // close the menu after a little while
+    sleep(600).then(() => { distanceMenu.classList.add("collapsed") });
+    sleep(900).then(() => { menuContainer.style.zIndex = 0; });
 });
 
 //END OF MINI MENUS BEHAVIOUR
 
 
 //START OF PRIMARY FILTER BEHAVIOUR
-const primaryFilterButton = document.getElementById("primary-filter");
-const primaryFilterMenu = document.getElementById("primary-filter-container");
 
-// make primary filter menu appear
-primaryFilterButton.addEventListener("click", function () {
-
-    menuContainer.style.zIndex=3;
-
-    primaryFilterMenu.classList.toggle("collapsed");
-
-    if (priceMenu.classList.contains("collapsed") === false) {priceMenu.classList.add("collapsed")};
-    if (distanceMenu.classList.contains("collapsed") === false) {distanceMenu.classList.add("collapsed")};
-
-});
 
 primaryFoodFilters = [
     {
         name: 'italien',
-        icon: './icons/pizza.svg'
-    },
-    {
-        name: 'asiatique',
-        icon: './icons/ramen.svg'
-    },
-    {
-        name: 'burger',
-        icon: './icons/burger.svg'
-    },
-    {
-        name: 'dessert',
-        icon: './icons/cupcake.svg'
+        icon: './icons/pizza.svg',
+        iconPink: './icons/pizza_pink.svg',
+        active: false
     },
     {
         name: 'sandwich',
-        icon: './icons/sandwich.svg'
+        icon: './icons/sandwich.svg',
+        iconPink: './icons/sandwich_pink.svg',
+        active: false
+    },
+    {
+        name: 'asiatique',
+        icon: './icons/ramen.svg',
+        iconPink: './icons/ramen_pink.svg',
+        active: false
+    },
+    {
+        name: 'burger',
+        icon: './icons/burger.svg',
+        iconPink: './icons/burger_pink.svg',
+        active: false
+    },
+    {
+        name: 'dessert',
+        icon: './icons/cupcake.svg',
+        iconPink: './icons/cupcake_pink.svg',
+        active: false
     },
     {
         name: 'salade',
-        icon: './icons/salade.svg'
+        icon: './icons/salade.svg',
+        iconPink: './icons/salade_pink.svg',
+        active: false
     }
 ];
 
 secondaryFoodFilters = [
     {
-        name: 'végan',
-        icon: './icons/vegan.svg'
+        name: 'vegan',
+        icon: './icons/vegan.svg',
+        iconPink: './icons/vegan_pink.svg',
+        active: false
     },
     {
         name: 'halal',
-        icon: './icons/burger.svg'
+        icon: './icons/halal.svg',
+        iconPink: './icons/halal_pink.svg',
+        active: false
     },
     {
         name: 'sans gluten',
-        icon: './icons/glutenfree.svg'
+        icon: './icons/glutenfree.svg',
+        iconPink: './icons/glutenfree_pink.svg',
+        active: false
     }
 ];
 
-function displayPrimaryFilter () {
+primaryDrinkFilters = [
+    {
+        name: 'biere',
+        icon: './icons/beer.svg',
+        iconPink: './icons/beer_pink.svg',
+        active: false
+    },
+    {
+        name: 'cafe',
+        icon: './icons/coffee.svg',
+        iconPink: './icons/coffee_pink.svg',
+        active: false
+    },
+    {
+        name: 'vin',
+        icon: './icons/wine.svg',
+        iconPink: './icons/wine_pink.svg',
+        active: false
+    },
+    {
+        name: 'cocktails',
+        icon: './icons/cocktail.svg',
+        iconPink: './icons/cocktail_pink.svg',
+        active: false
+    }
 
+];
+
+///// FILTERS NEED TO ALL BE RESET TO FALSE WHEN SWITCHING MODES !!!!!
+
+function displayFoodFilter() {
+    primaryFilterMenu.innerHTML = "";
 
     /// create the different "cuisines" section
 
@@ -920,17 +1029,47 @@ function displayPrimaryFilter () {
     let mainFiltersList = document.createElement("ul");
 
     // create one clickable button for each primary filter
-    primaryFoodFilters.forEach(filter => {
-        console.log(filter.name);
-
+    primaryFoodFilters.forEach((filter, index) => {
+        console.log(index)
+        console.log(primaryFoodFilters[index])
         //create a button
         filterButton = document.createElement("button");
-        
-        /// TODO : create id based on name
+        filterButton.setAttribute("id", filter.name);
+
+        //add the behaviour to the button.
+        filterButton.addEventListener("click", function () {
+            //maybe these two variables are useless, i can't decide. 
+            let targetFilter = filter.name;
+            let targetIndex = index;
+            // this one sure isn't : removing it prevents the function form target the right button.
+            let targetButton = document.getElementById(targetFilter);
+
+            //toggle primary filter
+            if (primaryFoodFilters[targetIndex].active == false) {
+                primaryFoodFilters[targetIndex].active = true;
+                targetButton.firstChild.src = primaryFoodFilters[targetIndex].iconPink
+
+            } else {
+                console.log("le filtre etait inactif")
+                primaryFoodFilters[targetIndex].active = false;
+                targetButton.firstChild.src = primaryFoodFilters[targetIndex].icon
+            }
+
+            //impact on the primary filter icon
+            if (isPrimaryFilterActive()) {
+                primaryFilterButton.firstChild.src = './icons/cuisine_pink.svg'
+            } else {
+                primaryFilterButton.firstChild.src = './icons/cuisine_icon.svg'
+            };
+        });
 
         //create and append an image
         buttonIcon = document.createElement("img");
-        buttonIcon.src = filter.icon;
+        if (filter.active == true) {
+            buttonIcon.src = filter.iconPink;
+        } else {
+            buttonIcon.src = filter.icon;
+        }
         buttonIcon.alt = filter.name;
         filterButton.appendChild(buttonIcon);
 
@@ -948,17 +1087,49 @@ function displayPrimaryFilter () {
     let secondaryFiltersList = document.createElement("ul");
 
     // create one clickable button for each secondary filter
-    secondaryFoodFilters.forEach(filter => {
+    secondaryFoodFilters.forEach((filter, index) => {
         console.log(filter.name);
 
         //create a button
         filterButton = document.createElement("button");
-        
-        /// TODO : create id based on name
+        filterButton.setAttribute("id", filter.name);
+
+        //add the behaviour to the button.
+        filterButton.addEventListener("click", function () {
+            //maybe these two variables are useless, i can't decide. 
+            let targetFilter = filter.name;
+            let targetIndex = index;
+            // this one sure isn't : removing it prevents the function form target the right button.
+            let targetButton = document.getElementById(targetFilter);
+
+            //toggle primary filter
+            if (secondaryFoodFilters[targetIndex].active == false) {
+                secondaryFoodFilters[targetIndex].active = true;
+                targetButton.firstChild.src = secondaryFoodFilters[targetIndex].iconPink
+
+            } else {
+                console.log("le filtre etait inactif")
+                secondaryFoodFilters[targetIndex].active = false;
+                targetButton.firstChild.src = secondaryFoodFilters[targetIndex].icon
+            }
+
+            //impact on the primary filter icon
+            if (isPrimaryFilterActive()) {
+                primaryFilterButton.firstChild.src = './icons/cuisine_pink.svg'
+            } else {
+                primaryFilterButton.firstChild.src = './icons/cuisine_icon.svg'
+            };
+        });
 
         //create and append an image
         buttonIcon = document.createElement("img");
-        buttonIcon.src = filter.icon;
+        //create and append an image
+        buttonIcon = document.createElement("img");
+        if (filter.active == true) {
+            buttonIcon.src = filter.iconPink;
+        } else {
+            buttonIcon.src = filter.icon;
+        }
         buttonIcon.alt = filter.name;
         filterButton.appendChild(buttonIcon);
 
@@ -966,10 +1137,122 @@ function displayPrimaryFilter () {
         secondaryFiltersList.appendChild(filterButton);
     });
     primaryFilterMenu.appendChild(secondaryFiltersList);
-        
+
 }
 
-displayPrimaryFilter();
+function displayDrinkFilter() {
+    primaryFilterMenu.innerHTML = "";
+
+    /// create the different "cuisines" section
+
+    let firstLabel = document.createElement("p");
+    firstLabel.innerText = "Catégories"
+    primaryFilterMenu.appendChild(firstLabel);
+
+    let mainFiltersList = document.createElement("ul");
+
+    // create one clickable button for each primary filter
+    primaryDrinkFilters.forEach((filter, index) => {
+ 
+        //create a button
+        filterButton = document.createElement("button");
+        filterButton.setAttribute("id", filter.name);
+
+        //add the behaviour to the button.
+        filterButton.addEventListener("click", function () {
+            //maybe these two variables are useless, i can't decide. 
+            let targetFilter = filter.name;
+            let targetIndex = index;
+            // this one sure isn't : removing it prevents the function form target the right button.
+            let targetButton = document.getElementById(targetFilter);
+
+            //toggle primary filter
+            if (primaryDrinkFilters[targetIndex].active == false) { 
+                primaryDrinkFilters[targetIndex].active = true;
+                targetButton.firstChild.src = primaryDrinkFilters[targetIndex].iconPink
+
+            } else {
+                console.log("le filtre etait inactif")
+                primaryDrinkFilters[targetIndex].active = false;
+                targetButton.firstChild.src = primaryDrinkFilters[targetIndex].icon
+            }
+
+            //impact on the primary filter icon
+            if (isPrimaryFilterActive()) {
+                primaryFilterButton.firstChild.src = './icons/drinks_pink.svg'
+            } else {
+                primaryFilterButton.firstChild.src = './icons/drinks_icon.svg'
+            };
+        });
+
+        //create and append an image
+        buttonIcon = document.createElement("img");
+        if (filter.active == true) {
+            buttonIcon.src = filter.iconPink;
+        } else {
+            buttonIcon.src = filter.icon;
+        }
+        buttonIcon.alt = filter.name;
+        filterButton.appendChild(buttonIcon);
+
+        //append the button to the ul
+        mainFiltersList.appendChild(filterButton);
+    });
+
+    primaryFilterMenu.appendChild(mainFiltersList);
+
+}
+
+function isPrimaryFilterActive() {
+
+    let atLeastOneFilterIsActive = false;
+
+    const lightMode = body.classList.contains("light-mode");
+    if (lightMode) {
+        primaryFoodFilters.forEach((filter) => {
+            if (filter.active) { atLeastOneFilterIsActive = true };
+        });
+        secondaryFoodFilters.forEach((filter) => {
+            if (filter.active) { atLeastOneFilterIsActive = true };
+        });
+    } else {
+        primaryDrinkFilters.forEach((filter) => {
+            if (filter.active) { atLeastOneFilterIsActive = true };
+        });
+    }
+
+    return atLeastOneFilterIsActive;
+}
+
+//init with a food filter
+displayFoodFilter();
 
 //END OF PRIMARY FILTER BEHAVIOUR
+
+/// A little animation, a little after the page loads the primary filter button will blink. 
+
+function blink(element) {
+    element.style.transform = 'scale(2)'
+    sleep(310).then(() => {
+        element.style.transform = 'scale(1)'
+        sleep(310).then(() => {
+            element.style.transform = 'scale(2)'
+            sleep(310).then(() => {
+                element.style.transform = 'scale(1)'
+            });
+        });
+    });
+}
+
+sleep(1500).then(() => {
+    blink(primaryFilterButton);
+});
+// sleep(2800).then(() => {
+//     blink(distanceMenuButton);
+// });
+// sleep(3200).then(() => {
+//     blink(priceMenuButton);
+// });
+
+
 
