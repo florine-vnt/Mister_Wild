@@ -925,6 +925,8 @@ secondaryFoodFilters = [
     }
 ];
 
+
+
 function displayPrimaryFilter() {
 
 
@@ -942,6 +944,9 @@ function displayPrimaryFilter() {
 
         //create a button
         filterButton = document.createElement("button");
+        filterButton.setAttribute("id", filter.name);
+        filterButton.addEventListener("click",function(){console.log("vous m'avez cliqué dessus monsieur.")})
+
 
         /// TODO : create id based on name
 
