@@ -98,6 +98,11 @@ header>nav>ul>button {
     background-color: var(--dark-bg-color);
 }
 
+#mode-switch ul button:active {
+    transform: scale(1.5);
+    transition-property: transform;
+    transition-duration: .3s;
+}
 
 /* FILTERBAR PART */
 footer {
@@ -438,6 +443,10 @@ footer {
     font-family: var(--secondary-font);
 }
 
+#places li div p {
+    display: ;
+}
+
 .card-selected {
-    height: 100vh;
+    height: 72vh;
 }

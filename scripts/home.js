@@ -422,6 +422,7 @@ function displayPlaces(dataBase) {
         miniDescription.innerText = place.miniDescription;
         container.appendChild(miniDescription);
 
+
         //create speciality, maps, price, tel picto
         let specialityPicto = document.createElement("p");
         specialityPicto.innerText = place.specialities;
