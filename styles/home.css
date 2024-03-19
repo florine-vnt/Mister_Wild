@@ -214,6 +214,8 @@ footer {
 
 }
 
+
+
 .toast-mini-menu.collapsed {
     z-index: 3;
     transform: translateY(40vh);
@@ -235,14 +237,14 @@ footer {
     border: none;
     /* animating the button for haptic feedback */
     transition-property: transform;
-    transition-duration: .3s;
+    transition-duration: .5s;
 }
 
 .toast-mini-menu button:active {
     /* animating the button for haptic feedback */
-    transform: scale(1.5);
+    transform: scale(3);
     transition-property: transform;
-    transition-duration: .3s;
+    transition-duration: .5s;
 }
 
 
@@ -276,33 +278,14 @@ footer {
     z-index: 2;
 }
 
-.layer3 {
-    position:relative;
-    z-index: 3;
-}
-
-.layer4 {
-    position:relative;
-    z-index: 4;
-}
-
-.layer5 {
-    position:relative;
-    z-index: 5;
-}
-
 
 /* FOR DEBUGGING make the mini menu container slightly opaque */
-/* #mini-menus-container{
+#mini-menus-container{
     background-color: #1E1E1E33;
-} */
-
-.hidden {
-    display: none;
 }
 
-#places {
-    position: relative;
+#mini-menus-container.hidden {
+    display: none;
 }
 
 
@@ -397,9 +380,27 @@ color: #6D6D6D;
 
 /* coter  gauche& droite de la boite card */
 #places {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left:1rem;
+    padding-right:1rem;
+    padding-top :1rem;
+    padding-bottom:1px;
+    margin: 0;
+    position: relative;
+    background-color: var(--light-bg-color);
 }
+
+#places.dark-mode {
+    background-color: var(--dark-bg-color);
+}
+
+#places.light-mode {
+    background-color: var(--light-bg-color);
+}
+
+#places-container {
+    position: relative;
+}
+
 
 /* Image papilles rendre ronde */
 .place-picture {
