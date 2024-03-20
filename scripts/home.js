@@ -215,7 +215,7 @@ const BarDataBase = [
     {
         name: 'Napoleone',
         miniDescription: 'le QG des wilder, à boire et à manger',
-        specialities: ["Cocktails, vins,bières,tapas"],
+        specialities: 'cocktail vin biere tapas',
         distance: '85m',
         priceRange: '€€-€€€',
         adress: ' 1 rue baron',
@@ -228,7 +228,7 @@ const BarDataBase = [
     {
         name: 'Le lovecraft',
         miniDescription: 'le QG des wilder, à boire et à manger',
-        specialities: ['bieres artisanales,vins raffinés,cocktails maison'],
+        specialities: 'biere artisanales vin cocktails',
         distance: '400m',
         priceRange: '€',
         adress: '32 bis Rue Fouré',
@@ -241,7 +241,7 @@ const BarDataBase = [
     {
         name: 'Le lieu unique',
         miniDescription: 'bar dans une ancienne biscuiterie',
-        specialities: ['bieres artisanales,vins raffinés,cocktails maison'],
+        specialities: 'bieres artisanales vins raffinés cocktails maison',
         distance: '400m',
         priceRange: '€',
         adress: '32 bis Rue Fouré',
@@ -254,7 +254,7 @@ const BarDataBase = [
     {
         name: 'le bain rouge',
         miniDescription: 'Lieu de spectacles et de tenue d’évènements',
-        specialities: ['bieres artisanales,vins raffinés,cocktails maison'],
+        specialities: 'bieres artisanales vins raffinés cocktails maison',
         distance: '400m',
         priceRange: '€',
         adress: '32 bis Rue Fouré',
@@ -267,7 +267,7 @@ const BarDataBase = [
     {
         name: 'Coco bandit',
         miniDescription: 'le QG des wilder, à boire et à manger',
-        specialities: ['Bar à cocktails'],
+        specialities: 'cocktail',
         distance: '400m',
         priceRange: '€',
         adress: '15 Rue Crucy ',
@@ -280,7 +280,7 @@ const BarDataBase = [
     {
         name: 'Delirium cafe',
         miniDescription: 'sélection de bières pression et soirées musicales ou sportives.',
-        specialities: ['bieres artisanales,vins raffinés,cocktails maison'],
+        specialities: 'bieres artisanales vins raffinés cocktails maison',
         distance: '400m',
         priceRange: '€',
         adress: '32 bis Rue Fouré',
@@ -1304,12 +1304,16 @@ sleep(1500).then(() => {
 
 //// FILTERING "INTELLIGENCE"
 
-function filterByPrimary(orginalDataBase, filteringArray) {
+function filterByPrimary(originalDataBase, filteringArray) {
+
+    //Make sure there is at least one primary filter activated, otherwise retrun the original DB
+    if (filteringArray.some(filter => filter.active)==false) {return originalDataBase};
+
     //filter the original database
-    return filteredDataBase = orginalDataBase.filter((place) => {
+    return filteredDataBase = originalDataBase.filter((place) => {
 
         let atLeastOneMatch = false;
-        // if any 
+        // check all of the filters one by one. SUB-OPTIMAL, but it works.
         filteringArray.forEach(filter => {
 
             // only for active filters
@@ -1328,9 +1332,14 @@ function filterByPrimary(orginalDataBase, filteringArray) {
 }
 
 function applyFilters() {
-    filteredDataBase = [];
+    let filteredDataBase = [];
     /// if lightmode
+    const lightMode = body.classList.contains("light-mode");
+    if (lightMode) {
     filteredDataBase = filterByPrimary(restaurantDataBase, primaryFoodFilters);
+    } else {
+    filteredDataBase = filterByPrimary(BarDataBase, primaryDrinkFilters);    
+    }
     /// if darkmode
 
     ///then price and all 

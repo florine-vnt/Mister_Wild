@@ -282,7 +282,7 @@ function applyFilters() {
     ///then price and all 
 
     // check wether empty or not, if so, put an object to inform the user.
-
+    console.log(filteredDataBase);
     return filteredDataBase;
 }
 
