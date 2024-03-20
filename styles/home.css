@@ -218,7 +218,7 @@ footer {
 
     /* part about the overlays : if it's not present, primary filter menu won't overlay */
     position: absolute;
-    z-index :5;
+    z-index: 5;
 
 }
 
@@ -288,12 +288,12 @@ footer {
 
 
 /* FOR DEBUGGING make the mini menu container slightly opaque */
-#mini-menus-container{
+#mini-menus-container {
     background-color: #1E1E1E33;
 }
 
 #mini-menus-container.hidden {
-    display:none;
+    display: none;
 
 }
 
@@ -389,10 +389,10 @@ footer {
 
 /* coter  gauche& droite de la boite card */
 #places {
-    padding-left:1rem;
-    padding-right:1rem;
-    padding-top :1rem;
-    padding-bottom:1px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1px;
     margin: 0;
     position: relative;
     background-color: var(--light-bg-color);
@@ -508,13 +508,7 @@ footer {
     row-gap: 20px;
 }
 
-.card-selected .info-iframe {
-    width: 40vw;
-    height: 20vh;
-}
-
-
-.google-map {
-    height: 30vh;
-    width: 30vh;
+.card-selected .google-map {
+    width: 80vw;
+    height: 40vw;
 }
