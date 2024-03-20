@@ -11,9 +11,10 @@ const restaurantDataBase = [
         name: 'Papill\'',
         miniDescription: 'Plats mijotés, papillotes et brunch',
         specialities: ['Plats cuisinées', 'Poisson', 'veggie'],
-        distance: '85m',
+        distance: '85 m',
         priceRange: '€',
         adress: '8 rue de Saverne 44000 Nantes',
+        shortAddress: '8 rue de Saverne',
         tel: '+336 03 13 05 04',
         linkToMaps: 'a',
         image: "./assets/Restaurants/Papill.jpg",
@@ -24,7 +25,7 @@ const restaurantDataBase = [
         name: 'Morse',
         miniDescription: 'Petit bistro de la mer : sandwichs et salades aux crevettes, langoustines, crabe...',
         specialities: ['salade', 'sandwich', 'poisson'],
-        distance: '400m',
+        distance: '400 m',
         priceRange: '€€€€',
         adress: '1 allee de la maison rouge 44000 Nantes',
         tel: '+33253786518',
@@ -38,7 +39,7 @@ const restaurantDataBase = [
         name: 'La cantine fermière',
         miniDescription: 'Sandwichs, salades et des plats, cuisinés avec des produits de saison et de fermes locales',
         specialities: ['Sandwiches', 'street food', 'aaaaaa'],
-        distance: '240m',
+        distance: '240 m',
         priceRange: '€',
         adress: '10 rue de Mayence, 44000 Nantes',
         tel: '+33211444444',
@@ -51,7 +52,7 @@ const restaurantDataBase = [
         name: 'Ichigo',
         miniDescription: 'Ramen comme au Japon, mais aussi de gyozas et edemame',
         specialities: ['ramen', 'gyozas', 'edemame'],
-        distance: '50m',
+        distance: '50 m',
         priceRange: '€',
         adress: '31 rue Fouré, 44000, Nantes',
         tel: '+332 40 35 34 30',
@@ -65,7 +66,7 @@ const restaurantDataBase = [
         name: 'Les triplettes',
         miniDescription: 'Petit plats cuisiné, pâtisseries et café de spécialité. Cuisine local et agriculture raisonnée.',
         specialities: ['Plats cuisinées', 'Pâtisserie', 'café de spécialité'],
-        distance: '400m',
+        distance: '400 m',
         priceRange: '€€€',
         adress: '4 BIS Rue Emile Masson, 44000 Nantes',
         tel: '+332 28 49 76 01',
@@ -79,7 +80,7 @@ const restaurantDataBase = [
         name: 'Dakoo',
         miniDescription: 'Restaurant coréen, plats traditionnel avec des plats vegan!. Livraison possible.',
         specialities: ['coréen', 'Streetfood', 'poulet frit', 'veggies', 'livraison'],
-        distance: '750m',
+        distance: '750 m',
         priceRange: '€',
         adress: '17 Rue Bon Secours, 44000 Nantes',
         tel: '+332 72 02 15 96',
@@ -93,7 +94,7 @@ const restaurantDataBase = [
         name: 'Papa pasta',
         miniDescription: '',
         specialities: ['', '', ''],
-        distance: '400m',
+        distance: '400 m',
         priceRange: '€€€',
         adress: '',
         tel: '+33',
@@ -107,7 +108,7 @@ const restaurantDataBase = [
         name: 'Virginie\'s café',
         miniDescription: '',
         specialities: ['', '', ''],
-        distance: '400m',
+        distance: '400 m',
         priceRange: '€€€',
         adress: '',
         tel: '+33',
@@ -120,7 +121,7 @@ const restaurantDataBase = [
         name: 'La machine à crêpes',
         miniDescription: '',
         specialities: ['', '', ''],
-        distance: '400m',
+        distance: '400 m',
         priceRange: '€€€',
         adress: '',
         tel: '+33',
@@ -133,7 +134,7 @@ const restaurantDataBase = [
         name: 'MATA boulangerie',
         miniDescription: '',
         specialities: ['', '', ''],
-        distance: '400m',
+        distance: '400 m',
         priceRange: '€€€',
         adress: '',
         tel: '+33',
@@ -146,7 +147,7 @@ const restaurantDataBase = [
         name: 'boulangerie la fourmi',
         miniDescription: '',
         specialities: ['', '', ''],
-        distance: '400m',
+        distance: '400 m',
         priceRange: '€€€',
         adress: '',
         tel: '+33',
@@ -159,7 +160,7 @@ const restaurantDataBase = [
         name: 'la mangouste',
         miniDescription: '',
         specialities: ['', '', ''],
-        distance: '400m',
+        distance: '400 m',
         priceRange: '€€€',
         adress: '',
         tel: '+33',
@@ -172,7 +173,7 @@ const restaurantDataBase = [
         name: 'Guindaille',
         miniDescription: '',
         specialities: ['', '', ''],
-        distance: '400m',
+        distance: '400 m',
         priceRange: '€€€',
         adress: '',
         tel: '+33',
@@ -185,7 +186,7 @@ const restaurantDataBase = [
         name: 'a',
         miniDescription: '',
         specialities: ['', '', ''],
-        distance: '400m',
+        distance: '400 m',
         priceRange: '€€€',
         adress: '',
         tel: '+33',
@@ -198,7 +199,7 @@ const restaurantDataBase = [
         name: 'la mangouste',
         miniDescription: '',
         specialities: ['', '', ''],
-        distance: '400m',
+        distance: '400 m',
         priceRange: '€€€',
         adress: '',
         tel: '+33',
@@ -406,7 +407,7 @@ function displayPlaces(dataBase) {
         imageFrame.appendChild(image)
         newCard.appendChild(imageFrame);
 
-        //create a div for the place name and mini-description
+        //create a div for the place name, distance and mini-description
         let container = document.createElement("div");
 
         //create a name  
@@ -414,6 +415,12 @@ function displayPlaces(dataBase) {
         placeName.classList.add("place-name");
         placeName.innerText = place.name;
         container.appendChild(placeName);
+
+        //create a distance
+        let placeDistance = document.createElement("p");
+        placeDistance.classList.add("place-distance");
+        placeDistance.innerText = place.distance;
+        container.appendChild(placeDistance);
 
         //create a mini-description
         let miniDescription = document.createElement("p");
@@ -426,21 +433,30 @@ function displayPlaces(dataBase) {
         pictoContainer.classList.add("picto-container")
 
         //create speciality, maps, price, tel picto
-        let specialityPicto = document.createElement("p");
-        specialityPicto.innerText = place.specialities;
+        let specialityPicto = document.createElement("img");
+        specialityPicto.src = "./icons/cupcake.svg";
         pictoContainer.appendChild(specialityPicto);
 
-        let mapsPicto = document.createElement("p");
-        mapsPicto.innerText = place.linkToMaps;
-        pictoContainer.appendChild(mapsPicto);
+        // let specialityPicto = document.createElement("p");
+        // specialityPicto.innerText = place.specialities;
+        // pictoContainer.appendChild(specialityPicto);
 
-        let pricePicto = document.createElement("p");
-        pricePicto.innerText = place.priceRange;
+        let pricePicto = document.createElement("img");
+        pricePicto.src = "./icons/price_icon.svg";
         pictoContainer.appendChild(pricePicto);
 
-        let telPicto = document.createElement("p");
-        telPicto.innerText = place.tel;
+        // let pricePicto = document.createElement("p");
+        // pricePicto.innerText = place.priceRange;
+        // pictoContainer.appendChild(pricePicto);
+
+        let telPicto = document.createElement("img");
+        telPicto.src = "./icons/tel_icon.png"
         pictoContainer.appendChild(telPicto);
+
+        // let telPicto = document.createElement("p");
+        // telPicto.innerText = place.tel;
+        // pictoContainer.appendChild(telPicto);
+
 
         //create a div for full-description and adress
         let moreinfoContainer = document.createElement("div")
@@ -453,8 +469,10 @@ function displayPlaces(dataBase) {
 
         // create address 
         let address = document.createElement("p");
-        address.innerText = place.adress;
+        address.innerText = place.shortAddress;
         moreinfoContainer.appendChild(address);
+
+        // TODO : add Gmaps at the bottom of selected card 
 
         /// TODO : add the distance image.inside of a container.
 
@@ -464,6 +482,8 @@ function displayPlaces(dataBase) {
         newCard.appendChild(pictoContainer);
         //Append the more info div to the card
         newCard.appendChild(moreinfoContainer);
+        //Append the Gmaps div to the card
+
         //Append the card to the Places list
         placesList.appendChild(newCard);
 

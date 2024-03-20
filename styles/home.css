@@ -435,27 +435,30 @@ footer {
 
 }
 
-.card div place-name {
+
+.card div .place-name {
     display: grid;
     grid-template-rows: left 1rem;
+}
+
+.place-distance {
+    color: var(--wild-color);
+    margin: 0;
+    font-weight: 500;
 }
 
 .mini-description {
     display: grid;
     font-family: var(--secondary-font);
+    margin-top: 0;
 }
 
 .picto-container {
     display: none;
 }
 
-
 .more-info-container {
     display: none;
-}
-
-.card-selected {
-    /* height: calc(80vh-(40px)); */
 }
 
 .card-selected>div {
@@ -465,4 +468,16 @@ footer {
 
 .card-selected .picto-container {
     background-color: aqua;
+}
+
+.card-selected .place-distance {
+    display: none;
+}
+
+.card-selected .mini-description {
+    display: none;
+}
+
+.card-selected .picto-container img {
+    height: 4vh;
 }
