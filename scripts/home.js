@@ -12,7 +12,7 @@ const restaurantDataBase = [
         miniDescription: 'Plats mijotés, papillotes et brunch',
         specialities: ['Plats cuisinées', 'Poisson', 'veggie'],
         distance: '85 m',
-        priceRange: '€',
+        priceRange: '€€',
         adress: '8 rue de Saverne 44000 Nantes',
         shortAddress: '8 rue de Saverne',
         tel: '+336 03 13 05 04',
@@ -28,8 +28,9 @@ const restaurantDataBase = [
         distance: '400 m',
         priceRange: '€€€€',
         adress: '1 allee de la maison rouge 44000 Nantes',
+        shortAddress: '1 allee de la maison rouge',
         tel: '+33253786518',
-        linkToMaps: '',
+        linkToMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.1923636143792!2d-1.5531711242047563!3d47.2128182711564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805ef428e1c806d%3A0x218171b273c48dba!2sLE%20MORSE%20-%20Bistrot%20Restaurant%20Nantes%20-%20HUITRES%20-%20LANGOUSTINES%20-%20SEAFOOD%20-%20LOBSTERROLL!5e0!3m2!1sfr!2sfr!4v1710971070643!5m2!1sfr!2sfr",
         image: './assets/Restaurants/Morse.png',
         image: './assets/Restaurants/Morse.png',
         description: 'Restaurant cosz, spécialisé dans les poissons. On retient spécialement leur spécialité, le fish n chips !!'
@@ -42,8 +43,9 @@ const restaurantDataBase = [
         distance: '240 m',
         priceRange: '€',
         adress: '10 rue de Mayence, 44000 Nantes',
+        shortAddress: '10 rue de Mayence',
         tel: '+33211444444',
-        linkToMaps: '',
+        linkToMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.25636076282!2d-1.5493553242048284!3d47.21156597115623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805ef5362ab2627%3A0x44ed9f94968615bd!2zTMOAIENhbnRpbmUgZmVybWnDqHJl!5e0!3m2!1sfr!2sfr!4v1710971027161!5m2!1sfr!2sfr",
         image: './assets/Restaurants/la-cantine-fermiere.png',
         description: 'Vous allez vous régaler les papilles, cuisine authentique'
         // manque les prix et les types de plat proposé
@@ -55,8 +57,9 @@ const restaurantDataBase = [
         distance: '50 m',
         priceRange: '€',
         adress: '31 rue Fouré, 44000, Nantes',
+        shortAddress: '31 rue Fouré',
         tel: '+332 40 35 34 30',
-        linkToMaps: '',
+        linkToMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.25636076282!2d-1.5493553242048284!3d47.21156597115623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805ef76986fd60f%3A0x4345ef7eb4e55a65!2sIchi-go%20Ichi-e%20Ramen!5e0!3m2!1sfr!2sfr!4v1710970974319!5m2!1sfr!2sfr",
         image: './assets/Restaurants/ichigo.png',
         description: 'Ramen, un délice des papilles !!'
     },
@@ -69,8 +72,9 @@ const restaurantDataBase = [
         distance: '400 m',
         priceRange: '€€€',
         adress: '4 BIS Rue Emile Masson, 44000 Nantes',
+        shortAddress: '4 BIS Rue Emile Masson',
         tel: '+332 28 49 76 01',
-        linkToMaps: '',
+        linkToMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.130828442781!2d-1.5492309242047029!3d47.214022371156545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805ef250c8711ad%3A0xb4a4b31811085b0a!2sLes%20Triplettes!5e0!3m2!1sfr!2sfr!4v1710970935984!5m2!1sfr!2sfr",
         image: './assets/Restaurants/Triplettes.jpg',
         description: 'La seul adresse du quartier pour déguster un café de spécialité !'
     },
@@ -83,8 +87,9 @@ const restaurantDataBase = [
         distance: '750 m',
         priceRange: '€',
         adress: '17 Rue Bon Secours, 44000 Nantes',
+        shortAddress: '17 Rue Bon Secours',
         tel: '+332 72 02 15 96',
-        linkToMaps: '',
+        linkToMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.1607963895162!2d-1.5559148242046967!3d47.2134359711564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805ef5441f247af%3A0x5ceda98305f1d96d!2sDakoo!5e0!3m2!1sfr!2sfr!4v1710970892668!5m2!1sfr!2sfr",
         image: './assets/Restaurants/dakoo.png',
         description: 'Véritable restaurant coréen, avec toutes les spécialités de corée, notament le BIBIMBAP ou le DAK (poulet frit) . Livraison possible.'
     },
@@ -97,8 +102,9 @@ const restaurantDataBase = [
         distance: '90 m',
         priceRange: '€',
         adress: '27 rue Fouré, 44000 Nantes',
+        shortAddress: '27 rue Fouré',
         tel: '+339 81 30 85 44',
-        linkToMaps: '',
+        linkToMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.2452151415787!2d-1.5492575242048436!3d47.21178407115636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805efa3f385f89f%3A0x20f92c9a224db500!2sPap%C3%A0%20Pasta!5e0!3m2!1sfr!2sfr!4v1710970840826!5m2!1sfr!2sfr",
         image: './assets/Restaurants/',
         description: 'Des pâtes maison, fait uniquement avec des produits locaux, avec des portion généreuse !'
     },
@@ -111,8 +117,9 @@ const restaurantDataBase = [
         distance: '85 m',
         priceRange: '€€€',
         adress: '6 rue de Saverne, 44000 Nantes',
+        shortAddress: '6 rue de Saverne',
         tel: '+336 24 20 43 05',
-        linkToMaps: '',
+        linkToMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.2562534461495!2d-1.548899224204885!3d47.21156807115642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671dee021b9a5%3A0x220890b6796361bf!2sVirginie&#39;s%20caf%C3%A9!5e0!3m2!1sfr!2sfr!4v1710970696894!5m2!1sfr!2sfr",
         image: './assets/Restaurants/virgines.net',
         description: ''
     },
@@ -124,8 +131,9 @@ const restaurantDataBase = [
         distance: '450 m',
         priceRange: '€',
         adress: '11 chaussée de la Madeleine, 44000 Nantes',
+        shortAddress: '11 chaussée de la Madeleine',
         tel: '+332 51 82 71 39',
-        linkToMaps: '',
+        linkToMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.25978467342!2d-1.5543319242048474!3d47.21149897115633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805eeafaee42f0b%3A0x4d62d78b740f3d97!2sCr%C3%AAperie%20%C3%A0%20emporter%20Nantes%20-%20La%20Machine%20%C3%A0%20Cr%C3%AApes!5e0!3m2!1sfr!2sfr!4v1710970649419!5m2!1sfr!2sfr",
         image: './assets/Restaurants/la-machine-a-crepes.png',
         description: 'Des crêpes et des galettes! Prix abordable et que du fait maison! Une galette veggie est proposée'
     },
@@ -134,52 +142,42 @@ const restaurantDataBase = [
         name: 'MATA boulangerie',
         miniDescription: 'Boulangerie de quartier, leurs cookies aux chocolat avec une pointe de gros sel est une tuerie!',
         specialities: 'sandwich cookies Pâtisserie pains',
-        distance: '400 m',
+        distance: '260 m',
         priceRange: '€€',
         adress: '6 rue de Rieux, 44000 Nantes',
+        shortAddress: '6 rue de Rieux',
         tel: '+339 70 66 95 83',
-        linkToMaps: '',
+        linkToMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.2806857786895!2d-1.5478410242048788!3d47.21108997115634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805ef0606bdccdd%3A0xe0b213f66c3a603!2sMATA%20Boulangerie!5e0!3m2!1sfr!2sfr!4v1710970611472!5m2!1sfr!2sfr",
         image: './assets/Restaurants/mataboulangerie.png',
         description: 'Boulangerie de quartier, leurs cookies aux chocolat avec une pointe de gros sel est une tuerie!'
     },
     {
 
-        name: 'boulangerie la fourmi',
+        name: 'Boulangerie la Fourmi',
         miniDescription: 'Blé ancien moulu avec une meule en pierre, viennoiserie XXL, sandwich au mètre, une boulangerie à découvrir!',
         specialities: 'sandwich Pâtisserie pains',
         distance: '550 m',
         priceRange: '€',
         adress: '1 chaussée de la Madeleine, 44000 Nantes',
+        shortAddress: '1 chaussée de la Madeleine',
         tel: '+339 86 64 69 43',
-        linkToMaps: '',
+        linkToMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.214067495746!2d-1.555133424204747!3d47.21239357115636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805ef8151adda07%3A0x717b51b38b78a482!2sBoulangerie%20La%20Fourmi!5e0!3m2!1sfr!2sfr!4v1710970536218!5m2!1sfr!2sfr",
         image: './assets/Restaurants/boulangerie-la-fourmi.net',
         description: 'Véritable institution nantaise, le café la Fourmi a pris un nouveau départ pour devenir une boulangerie! Les viennoiseries XXL sont un petit déjeuner à elle seul! Pour le midi, vous pouvez choisir votre Jambon-beurre au mètre!'
     },
     {
 
-        name: 'la mangouste',
-        miniDescription: '',
-        specialities: "",
-        distance: '400 m',
-        priceRange: '€€€',
-        adress: '',
-        tel: '+33',
-        linkToMaps: '',
-        image: './assets/Restaurants/',
-        description: ''
-    },
-    {
-
         name: 'Guindaille',
-        miniDescription: '',
+        miniDescription: 'Bar à manger',
         specialities: "",
-        distance: '400 m',
+        distance: '90 m',
         priceRange: '€€€',
-        adress: '',
-        tel: '+33',
-        linkToMaps: '',
+        adress: '36 Rue Fouré, 44000 Nantes',
+        shortAddress: '36 Rue Fouré',
+        tel: '0240755305',
+        linkToMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.2450465005163!2d-1.5495317242048032!3d47.21178737115633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805efbed73c5e01%3A0x187a55601f6097ac!2sGuindaille!5e0!3m2!1sfr!2sfr!4v1710970323186!5m2!1sfr!2sfr",
         image: './assets/Restaurants/',
-        description: ''
+        description: 'Un style bistro hyper quali le midi. Le soir, des assiettes généreuses à partager.'
     },
     {
 
@@ -189,6 +187,7 @@ const restaurantDataBase = [
         distance: '400 m',
         priceRange: '€€€',
         adress: '',
+        shortAddress: '',
         tel: '+33',
         linkToMaps: '',
         image: './assets/Restaurants/',
@@ -196,16 +195,17 @@ const restaurantDataBase = [
     },
     {
 
-        name: 'la mangouste',
-        miniDescription: '',
+        name: 'La Mangouste',
+        miniDescription: 'Restaurant, bar à cocktails et vins naturels',
         specialities: "",
-        distance: '400 m',
+        distance: '140 m',
         priceRange: '€€€',
-        adress: '',
-        tel: '+33',
-        linkToMaps: '',
+        adress: '30 Rue Fouré, 44000 Nantes',
+        shortAddress: '30 Rue Fouré',
+        tel: '0251723181',
+        linkToMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.223802765004!2d-1.5495078242048335!3d47.21220307115638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805eff0bc571423%3A0x8bc6e8e73d07dae7!2sLa%20Mangouste!5e0!3m2!1sfr!2sfr!4v1710970160455!5m2!1sfr!2sfr",
         image: './assets/Restaurants/',
-        description: ''
+        description: 'Cuisine délicate et savoureuse, accompagnée de vins sélectionnés avec passion et de cocktails parfumés.'
     }
 
 ]
@@ -219,6 +219,7 @@ const BarDataBase = [
         distance: '85 m',
         priceRange: '€€-€€€',
         adress: ' 1 rue baron',
+        shortAddress: ' 1 rue baron',
         tel: '02 53 78 40 61',
         linkToMaps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.2721409788555!2d-1.5495075489104218!3d47.21125717905818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805eeb05311c6ab%3A0x1a10a632301380c9!2s1+Rue+Baron%2C+44000+Nantes!5e0!3m2!1sfr!2sfr!4v1564840539599!5m2!1sfr!2sfr',
         image: "./assets/Bars/Napoleone.png",
@@ -229,11 +230,12 @@ const BarDataBase = [
         name: 'Le lovecraft',
         miniDescription: 'le QG des wilder, à boire et à manger',
         specialities: 'biere artisanales vin cocktails',
-        distance: '400 m',
+        distance: '120 m',
         priceRange: '€',
         adress: '32 bis Rue Fouré',
+        shortAddress: '32 bis Rue Fouré',
         tel: '0228499855',
-        linkToMaps: '',
+        linkToMaps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.2317902627647!2d-1.5494068242048158!3d47.21204677115631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805ef704711943f%3A0x2dda1953527242c9!2sLe%20Lovecraft!5e0!3m2!1sfr!2sfr!4v1710969970907!5m2!1sfr!2sfr',
         image: './assets/Bars/Lelovecraft.jpg',
         description: 'le qg des wilder et aussi des buveurs! Pour les amateur de soft, le cocktail papaye est un incontournable'
 
@@ -242,24 +244,26 @@ const BarDataBase = [
         name: 'Le lieu unique',
         miniDescription: 'bar dans une ancienne biscuiterie',
         specialities: 'bieres artisanales vins raffinés cocktails maison',
-        distance: '400 m',
+        distance: '750 m',
         priceRange: '€',
-        adress: '32 bis Rue Fouré',
+        adress: 'Rue de la Biscuiterie, 44000 Nantes',
+        shortAddress: 'Rue de la Biscuiterie',
         tel: '0228499855',
-        linkToMaps: '',
+        linkToMaps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5420.131940339935!2d-1.5481929242046188!3d47.215291471156554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805eeba3859f48d%3A0xf0c18b7c67ccd561!2sLe%20Lieu%20Unique%2C%20Rue%20de%20la%20Biscuiterie%2C%2044000%20Nantes!5e0!3m2!1sfr!2sfr!4v1710969907138!5m2!1sfr!2sfr',
         image: './assets/Bars/barlu.png',
         description: 'le qg des wilder et aussi des buveurs! Pour les amateur de soft, le cocktail papaye est un incontournable'
 
     },
     {
-        name: 'le bain rouge',
+        name: 'Le bain rouge',
         miniDescription: 'Lieu de spectacles et de tenue d’évènements',
         specialities: 'bieres artisanales vins raffinés cocktails maison',
-        distance: '400 m',
+        distance: '450 m',
         priceRange: '€',
-        adress: '32 bis Rue Fouré',
-        tel: '0228499855',
-        linkToMaps: '',
+        adress: '7 All. de la Maison Rouge, 44000 Nantes',
+        shortAddress: '7 All. de la Maison Rouge',
+        tel: '0986774418',
+        linkToMaps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.2017923261346!2d-1.554120424204762!3d47.21263377115634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805ef40828c1e0f%3A0x62f8d83844e834d5!2sLe%20Bain%20Rouge!5e0!3m2!1sfr!2sfr!4v1710969792441!5m2!1sfr!2sfr',
         image: './assets/Bars/bainrouge.jpg',
         description: 'le qg des wilder et aussi des buveurs! Pour les amateur de soft, le cocktail papaye est un incontournable'
 
@@ -271,8 +275,9 @@ const BarDataBase = [
         distance: '400 m',
         priceRange: '€',
         adress: '15 Rue Crucy ',
+        shortAddress: '15 Rue Crucy',
         tel: '0640784675',
-        linkToMaps: '',
+        linkToMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.1339458583834!2d-1.550784424204726!3d47.21396137115651!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805ef5f977ceedd%3A0xad8f7c4835e4824a!2sCoco%20Bandit!5e0!3m2!1sfr!2sfr!4v1710969625041!5m2!1sfr!2sfr",
         image: './assets/Bars/cocobandit.jpg',
         description: 'le qg des wilder et aussi des buveurs! Pour les amateur de soft, le cocktail papaye est un incontournable'
 
@@ -281,11 +286,12 @@ const BarDataBase = [
         name: 'Delirium cafe',
         miniDescription: 'sélection de bières pression et soirées musicales ou sportives.',
         specialities: 'bieres artisanales vins raffinés cocktails maison',
-        distance: '400 m',
+        distance: '450 m',
         priceRange: '€',
-        adress: '32 bis Rue Fouré',
-        tel: '0228499855',
-        linkToMaps: '',
+        adress: '19 allée Baco 44000 Nantes',
+        shortAddress: '19 allée Baco 44000 Nantes'
+        tel: '0240089077',
+        linkToMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.1663259148286!2d-1.5529110242047228!3d47.213327771156436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805eeaff7048cb1%3A0xc13327c40bf626a1!2sDelirium%20cafe!5e0!3m2!1sfr!2sfr!4v1710969470725!5m2!1sfr!2sfr",
         image: './assets/Bars/Delirium-Cafe.jpg',
         description: 'le qg des wilder et aussi des buveurs! Pour les amateur de soft, le cocktail papaye est un incontournable'
 
