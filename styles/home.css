@@ -62,6 +62,8 @@ header>nav>ul>button {
     font-weight: bold;
     font-size: 15px;
     padding: 10px;
+    transition-property: transform;
+    transition-duration: .3s;
 }
 
 #cuisine-switch.light-mode {
@@ -98,6 +100,11 @@ header>nav>ul>button {
     background-color: var(--dark-bg-color);
 }
 
+#mode-switch ul button:active {
+    transform: scale(1.5);
+    transition-property: transform;
+    transition-duration: .3s;
+}
 
 /* FILTERBAR PART */
 footer {
@@ -130,7 +137,8 @@ footer {
 
 
 
-#filter-bar ul button, #primary-filter-container ul button {
+#filter-bar ul button,
+#primary-filter-container ul button {
     margin: 0;
     background-color: transparent;
     border: none;
@@ -265,7 +273,7 @@ footer {
 }
 
 .layer0 {
-    position:relative;
+    position: relative;
     z-index: 0;
 }
 
@@ -274,7 +282,7 @@ footer {
 }
 
 .layer2 {
-    position:relative;
+    position: relative;
     z-index: 2;
 }
 
@@ -309,7 +317,7 @@ footer {
     position: asbolute;
 
     /* part about justifying stuff, mostly the text */
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
@@ -335,17 +343,17 @@ footer {
 
 #primary-filter-container>ul {
     width: 100%;
-    display : grid;
+    display: grid;
     list-style: none;
     padding: 0;
     margin: 0;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-#primary-filter-container>p{
-font-family: var(--secondary-font);
-padding-left: 5vw;
-color: #6D6D6D;
+#primary-filter-container>p {
+    font-family: var(--secondary-font);
+    padding-left: 5vw;
+    color: #6D6D6D;
 }
 
 
@@ -431,12 +439,82 @@ color: #6D6D6D;
 
 }
 
-.card div place-name {
+
+.card div .place-name {
     display: grid;
     grid-template-rows: left 1rem;
+}
+
+.place-distance {
+    color: var(--wild-color);
+    margin: 0;
+    font-weight: 500;
 }
 
 .mini-description {
     display: grid;
     font-family: var(--secondary-font);
+    margin-top: 0;
+}
+
+/* Hiding some div on the main menu */
+
+.picto-container {
+    display: none;
+}
+
+.more-info-container {
+    display: none;
+}
+
+/* Showing these div to the selected card */
+
+.card-selected>div {
+    display: block;
+}
+
+/* Hiding short info to the selected card */
+.card-selected .place-distance {
+    display: none;
+}
+
+.card-selected .mini-description {
+    display: none;
+}
+
+/* Style of the selected card*/
+.card-selected .picto-container {
+    display: flex;
+    justify-content: space-around;
+    grid-column: span 2;
+}
+
+.card-selected .more-info-container {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-selected .picto-container img {
+    height: 5vh;
+}
+
+.card-selected {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 20px;
+}
+
+.card-selected .info-iframe {
+    width: 40vw;
+    height: 20vh;
+}
+
+
+.google-map {
+    height: 30vh;
+    width: 30vh;
 }

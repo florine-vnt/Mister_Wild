@@ -11,21 +11,21 @@ const restaurantDataBase = [
         name: 'Papill\'',
         miniDescription: 'Plats mijotés, papillotes et brunch',
         specialities: ['Plats cuisinées', 'Poisson', 'veggie'],
-        distance: '85m',
+        distance: '85 m',
         priceRange: '€',
         adress: '8 rue de Saverne 44000 Nantes',
+        shortAddress: '8 rue de Saverne',
         tel: '+336 03 13 05 04',
-        linkToMaps: 'a',
+        linkToMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5420.51167607285!2d-1.5464413!3d47.211576199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805eeb0fd4e831d%3A0xdd6e96d193d8b1c0!2sPapill&#39;!5e0!3m2!1sfr!2sfr!4v1710946394348!5m2!1sfr!2sfr",
         image: "./assets/Restaurants/Papill.jpg",
         description: 'Vous allez vous régaler les papilles, cuisine authentique'
         // plustot un resto de poisson, changer plats mijotés par poisson?
     },
     {
         name: 'Morse',
-        miniDescription: 'petit bistro de la mer : sandwichs et salades aux crevettes, langoustines, crabe...',
-        miniDescription: 'petit bistro de la mer : sandwichs et salades aux crevettes, langoustines, crabe...',
+        miniDescription: 'Petit bistro de la mer : sandwichs et salades aux crevettes, langoustines, crabe...',
         specialities: ['salade', 'sandwich', 'poisson'],
-        distance: '400m',
+        distance: '400 m',
         priceRange: '€€€€',
         adress: '1 allee de la maison rouge 44000 Nantes',
         tel: '+33253786518',
@@ -39,7 +39,7 @@ const restaurantDataBase = [
         name: 'La cantine fermière',
         miniDescription: 'Sandwichs, salades et des plats, cuisinés avec des produits de saison et de fermes locales',
         specialities: 'sandwich street food',
-        distance: '240m',
+        distance: '240 m',
         priceRange: '€',
         adress: '10 rue de Mayence, 44000 Nantes',
         tel: '+33211444444',
@@ -52,7 +52,7 @@ const restaurantDataBase = [
         name: 'Ichigo',
         miniDescription: 'Ramen comme au Japon, mais aussi de gyozas et edemame',
         specialities: 'asiatique ramen gyozas edemame',
-        distance: '50m',
+        distance: '50 m',
         priceRange: '€',
         adress: '31 rue Fouré, 44000, Nantes',
         tel: '+332 40 35 34 30',
@@ -66,7 +66,7 @@ const restaurantDataBase = [
         name: 'Les triplettes',
         miniDescription: 'Petit plats cuisiné, pâtisseries et café de spécialité. Cuisine local et agriculture raisonnée.',
         specialities: 'Plats cuisinées Pâtisserie café de spécialité',
-        distance: '400m',
+        distance: '400 m',
         priceRange: '€€€',
         adress: '4 BIS Rue Emile Masson, 44000 Nantes',
         tel: '+332 28 49 76 01',
@@ -80,7 +80,7 @@ const restaurantDataBase = [
         name: 'Dakoo',
         miniDescription: 'Restaurant coréen, plats traditionnel avec des plats vegan!. Livraison possible.',
         specialities: 'coréen Streetfood poulet frit veggies livraison',
-        distance: '750m',
+        distance: '750 m',
         priceRange: '€',
         adress: '17 Rue Bon Secours, 44000 Nantes',
         tel: '+332 72 02 15 96',
@@ -94,7 +94,7 @@ const restaurantDataBase = [
         name: 'Papa pasta',
         miniDescription: 'Des pâtes maison, fait uniquement avec des produits locaux, avec des portion généreuse !',
         specialities: 'italien',
-        distance: '90m',
+        distance: '90 m',
         priceRange: '€',
         adress: '27 rue Fouré, 44000 Nantes',
         tel: '+339 81 30 85 44',
@@ -108,7 +108,7 @@ const restaurantDataBase = [
         name: 'Virginie\'s café',
         miniDescription: 'Cuisine vivante. Cuisine bio. Cantine végétarienne. ',
         specialities: 'pizza',
-        distance: '85m',
+        distance: '85 m',
         priceRange: '€€€',
         adress: '6 rue de Saverne, 44000 Nantes',
         tel: '+336 24 20 43 05',
@@ -121,7 +121,7 @@ const restaurantDataBase = [
         name: 'La machine à crêpes',
         miniDescription: 'Des crêpes et des galettes! Prix abordable et que du fait maison! Une galette veggie est proposée',
         specialities: 'galettes crepes veggie',
-        distance: '450m',
+        distance: '450 m',
         priceRange: '€',
         adress: '11 chaussée de la Madeleine, 44000 Nantes',
         tel: '+332 51 82 71 39',
@@ -134,7 +134,7 @@ const restaurantDataBase = [
         name: 'MATA boulangerie',
         miniDescription: 'Boulangerie de quartier, leurs cookies aux chocolat avec une pointe de gros sel est une tuerie!',
         specialities: 'sandwich cookies Pâtisserie pains',
-        distance: '400m',
+        distance: '400 m',
         priceRange: '€€',
         adress: '6 rue de Rieux, 44000 Nantes',
         tel: '+339 70 66 95 83',
@@ -147,7 +147,7 @@ const restaurantDataBase = [
         name: 'boulangerie la fourmi',
         miniDescription: 'Blé ancien moulu avec une meule en pierre, viennoiserie XXL, sandwich au mètre, une boulangerie à découvrir!',
         specialities: 'sandwich Pâtisserie pains',
-        distance: '550m',
+        distance: '550 m',
         priceRange: '€',
         adress: '1 chaussée de la Madeleine, 44000 Nantes',
         tel: '+339 86 64 69 43',
@@ -160,7 +160,7 @@ const restaurantDataBase = [
         name: 'la mangouste',
         miniDescription: '',
         specialities: "",
-        distance: '400m',
+        distance: '400 m',
         priceRange: '€€€',
         adress: '',
         tel: '+33',
@@ -173,7 +173,7 @@ const restaurantDataBase = [
         name: 'Guindaille',
         miniDescription: '',
         specialities: "",
-        distance: '400m',
+        distance: '400 m',
         priceRange: '€€€',
         adress: '',
         tel: '+33',
@@ -186,7 +186,7 @@ const restaurantDataBase = [
         name: 'a',
         miniDescription: '',
         specialities: "",
-        distance: '400m',
+        distance: '400 m',
         priceRange: '€€€',
         adress: '',
         tel: '+33',
@@ -199,7 +199,7 @@ const restaurantDataBase = [
         name: 'la mangouste',
         miniDescription: '',
         specialities: "",
-        distance: '400m',
+        distance: '400 m',
         priceRange: '€€€',
         adress: '',
         tel: '+33',
@@ -216,7 +216,7 @@ const BarDataBase = [
         name: 'Napoleone',
         miniDescription: 'le QG des wilder, à boire et à manger',
         specialities: 'cocktail vin biere tapas',
-        distance: '85m',
+        distance: '85 m',
         priceRange: '€€-€€€',
         adress: ' 1 rue baron',
         tel: '02 53 78 40 61',
@@ -229,7 +229,7 @@ const BarDataBase = [
         name: 'Le lovecraft',
         miniDescription: 'le QG des wilder, à boire et à manger',
         specialities: 'biere artisanales vin cocktails',
-        distance: '400m',
+        distance: '400 m',
         priceRange: '€',
         adress: '32 bis Rue Fouré',
         tel: '0228499855',
@@ -242,7 +242,7 @@ const BarDataBase = [
         name: 'Le lieu unique',
         miniDescription: 'bar dans une ancienne biscuiterie',
         specialities: 'bieres artisanales vins raffinés cocktails maison',
-        distance: '400m',
+        distance: '400 m',
         priceRange: '€',
         adress: '32 bis Rue Fouré',
         tel: '0228499855',
@@ -255,7 +255,7 @@ const BarDataBase = [
         name: 'le bain rouge',
         miniDescription: 'Lieu de spectacles et de tenue d’évènements',
         specialities: 'bieres artisanales vins raffinés cocktails maison',
-        distance: '400m',
+        distance: '400 m',
         priceRange: '€',
         adress: '32 bis Rue Fouré',
         tel: '0228499855',
@@ -268,7 +268,7 @@ const BarDataBase = [
         name: 'Coco bandit',
         miniDescription: 'le QG des wilder, à boire et à manger',
         specialities: 'cocktail',
-        distance: '400m',
+        distance: '400 m',
         priceRange: '€',
         adress: '15 Rue Crucy ',
         tel: '0640784675',
@@ -281,7 +281,7 @@ const BarDataBase = [
         name: 'Delirium cafe',
         miniDescription: 'sélection de bières pression et soirées musicales ou sportives.',
         specialities: 'bieres artisanales vins raffinés cocktails maison',
-        distance: '400m',
+        distance: '400 m',
         priceRange: '€',
         adress: '32 bis Rue Fouré',
         tel: '0228499855',
@@ -412,7 +412,7 @@ function displayPlaces(dataBase) {
         //create a frame and add an image to it, then append to the card
         // the frame is used later in the CSS for cropping
 
-        let imageFrame = document.createElement("div")
+        let imageFrame = document.createElement("div");
         imageFrame.classList.add("picture-frame");
         let image = document.createElement("img");
         image.classList.add("place-picture");
@@ -421,7 +421,7 @@ function displayPlaces(dataBase) {
         imageFrame.appendChild(image)
         newCard.appendChild(imageFrame);
 
-        //create a div for the place name and mini-description
+        //create a div for the place name, distance and mini-description
         let container = document.createElement("div");
 
         //create a name  
@@ -430,16 +430,91 @@ function displayPlaces(dataBase) {
         placeName.innerText = place.name;
         container.appendChild(placeName);
 
+        //create a distance
+        let placeDistance = document.createElement("p");
+        placeDistance.classList.add("place-distance");
+        placeDistance.innerText = place.distance;
+        container.appendChild(placeDistance);
+
         //create a mini-description
         let miniDescription = document.createElement("p");
         miniDescription.classList.add("mini-description");
         miniDescription.innerText = place.miniDescription;
         container.appendChild(miniDescription);
 
+        //create a div for the pictos
+        let pictoContainer = document.createElement("div")
+        pictoContainer.classList.add("picto-container")
+
+        //create speciality, maps, price, tel picto
+        let specialityPicto = document.createElement("img");
+        specialityPicto.src = "./icons/cupcake.svg";
+        pictoContainer.appendChild(specialityPicto);
+
+        // let specialityPicto = document.createElement("p");
+        // specialityPicto.innerText = place.specialities;
+        // pictoContainer.appendChild(specialityPicto);
+
+        let pricePicto = document.createElement("img");
+        pricePicto.src = "./icons/price_icon.svg";
+        pictoContainer.appendChild(pricePicto);
+
+        // let pricePicto = document.createElement("p");
+        // pricePicto.innerText = place.priceRange;
+        // pictoContainer.appendChild(pricePicto);
+
+        //create a clickable tel picto
+        let linkableTel = document.createElement('a');
+        linkableTel.href = `"tel:${place.tel}"`
+
+        let telPicto = document.createElement("img");
+        telPicto.src = "./icons/tel_icon.png"
+        linkableTel.appendChild(telPicto);
+        pictoContainer.appendChild(linkableTel);
+
+        // let telPicto = document.createElement("p");
+        // telPicto.innerText = place.tel;
+        // pictoContainer.appendChild(telPicto);
+
+
+        //create a div for full-description and address
+        let moreinfoContainer = document.createElement("div")
+        moreinfoContainer.classList.add("more-info-container")
+
+        // create a full-description
+        let fullDescription = document.createElement("p");
+        fullDescription.innerText = place.description;
+        moreinfoContainer.appendChild(fullDescription);
+
+        // create a short address 
+        let shortAddress = document.createElement("p");
+        shortAddress.innerText = place.shortAddress;
+        moreinfoContainer.appendChild(shortAddress);
+
+        // TODO : add Gmaps at the bottom of selected card 
+        let googleMap = document.createElement("div");
+        googleMap.innerHTML = `<iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5420.51167607285!2d-1.5464413!3d47.211576199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805eeb0fd4e831d%3A0xdd6e96d193d8b1c0!2sPapill&#39;!5e0!3m2!1sfr!2sfr!4v1710946394348!5m2!1sfr!2sfr" 
+        width="100%" 
+        height="100%" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+        </iframe>`
+        googleMap.classList.add("google-map");
+        moreinfoContainer.appendChild(googleMap);
+
         /// TODO : add the distance image.inside of a container.
 
-        //Append the div to the card
+        //Append the main info div to the card
         newCard.appendChild(container);
+        //Append the picto div to the card
+        newCard.appendChild(pictoContainer);
+        //Append the more info div to the card
+        newCard.appendChild(moreinfoContainer);
+        //Append the Gmaps div to the card
+
         //Append the card to the Places list
         placesList.appendChild(newCard);
 
@@ -448,7 +523,21 @@ function displayPlaces(dataBase) {
 
 displayPlaces(restaurantDataBase);
 
+// ZOOM ON A SELECTED CARD 
+// first card selected. TO DO : select all cards
+let selectedCard = document.querySelector(".card");
+// adding an EventListener when clicking the selected card and adding a new class
+selectedCard.addEventListener('click', function () {
+    selectedCard.classList.toggle("card-selected");
 
+    // // variables had to be re-called since they were declared in the fonction
+    // let pictoContainer = document.querySelector(".picto-container");
+    // let moreinfoContainer = document.querySelector(".more-info-container");
+
+    // //display hidden container
+    // pictoContainer.style.display = "block";
+    // moreinfoContainer.style.display = "block";
+})
 
 
 //START OF MINI MENUS BEHAVIOUR
@@ -470,7 +559,17 @@ primaryFilterButton.addEventListener("click", function () {
     menuContainer.classList.remove("hidden");
     sleep(10).then(() => {
 
-        primaryFilterMenu.classList.toggle("collapsed");
+
+    ///FUNCTION menusOnTop // function placesOnTop
+    menuContainer.style.zIndex = 3;
+
+    console.log("tu débugge le bon truc");
+    // check if another menu is already open
+    if (priceMenu.classList.contains("collapsed")) {
+      
+        //conflict
+        //primaryFilterMenu.classList.toggle("collapsed");
+
 
         if (priceMenu.classList.contains("collapsed") === false) { priceMenu.classList.add("collapsed") };
         if (distanceMenu.classList.contains("collapsed") === false) { distanceMenu.classList.add("collapsed") };
@@ -511,6 +610,17 @@ distanceMenuButton.addEventListener("click", function () {
 // make price menu appear
 priceMenuButton.addEventListener("click", function () {
 
+    priceMenu.classList.toggle("collapsed");
+
+    menuContainer.style.zIndex = 3;
+    // check if another menu is already open
+    if (distanceMenu.classList.contains("collapsed")) {
+
+        // bring the menu container to the front
+
+    }
+
+
     menuContainer.classList.remove("hidden");
     sleep(10).then(() => {
         priceMenu.classList.toggle("collapsed");
@@ -529,6 +639,7 @@ priceMenuButton.addEventListener("click", function () {
 });
 
 //make all menus dissapear when clicking somewhere else
+
 menuContainer.addEventListener("click", function (event) {
 
     //if either menu is clicked, do nothing.
@@ -544,6 +655,7 @@ menuContainer.addEventListener("click", function (event) {
             menuContainer.classList.add("hidden")
         });
     }
+
 })
 
 function sleep(ms) {
@@ -945,6 +1057,7 @@ distanceFilterButtonLow.addEventListener("click", function () {
 //START OF PRIMARY FILTER BEHAVIOUR
 
 
+
 primaryFoodFilters = [
     {
         name: 'italien',
@@ -1005,6 +1118,7 @@ secondaryFoodFilters = [
     }
 ];
 
+
 primaryDrinkFilters = [
     {
         name: 'biere',
@@ -1052,6 +1166,7 @@ function displayFoodFilter() {
         console.log(primaryFoodFilters[index])
         //create a button
         filterButton = document.createElement("button");
+
         filterButton.setAttribute("id", filter.name);
 
         //add the behaviour to the button.
@@ -1094,6 +1209,7 @@ function displayFoodFilter() {
             applyFilters();
         });
 
+
         //create and append an image
         buttonIcon = document.createElement("img");
         if (filter.active == true) {
@@ -1123,6 +1239,7 @@ function displayFoodFilter() {
 
         //create a button
         filterButton = document.createElement("button");
+
         filterButton.setAttribute("id", filter.name);
 
         //add the behaviour to the button.
@@ -1154,6 +1271,7 @@ function displayFoodFilter() {
             //apply all filters
             applyFilters();
         });
+
 
         //create and append an image
         buttonIcon = document.createElement("img");
