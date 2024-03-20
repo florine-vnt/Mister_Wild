@@ -95,10 +95,6 @@ menuContainer.addEventListener("click", function (event) {
 
     } else {
         collapseAllMenus();
-        sleep(300).then(() => {
-            menuContainer.style.zIndex = 0;;
-            menuContainer.classList.add("hidden")
-        });
     }
 
 })
@@ -126,6 +122,10 @@ export function collapseAllMenus(){
     priceMenu.classList.add("collapsed");
     distanceMenu.classList.add("collapsed");
     primaryFilterMenu.classList.add("collapsed");
+    sleep(300).then(() => {
+        menuContainer.style.zIndex = 0;;
+        menuContainer.classList.add("hidden")
+    });
 }
 
 export function sleep(ms) {

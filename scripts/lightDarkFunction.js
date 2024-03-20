@@ -115,45 +115,7 @@ export function displayFoodFilter() {
         filterButton.setAttribute("id", filter.name);
 
         //add the behaviour to the button.
-        filterButton.addEventListener("click", function () {
-            //maybe these two variables are useless, i can't decide. 
-            let targetFilter = filter.name;
-            let targetIndex = index;
-            // this one sure isn't : removing it prevents the function form target the right button.
-            let targetButton = document.getElementById(targetFilter);
-
-            //toggle primary filter
-            if (primaryFoodFilters[targetIndex].active == false) {
-
-                //deactivate all other primary filters  -> BUG : how to target all of the buttons ? 
-                primaryFoodFilters.forEach(filter => {
-                    filter.active = false;
-                    let targetButton = document.getElementById(filter.name);
-                    targetButton.firstChild.src = filter.icon;
-
-                })
-
-                // activate the one that was clicked
-                primaryFoodFilters[targetIndex].active = true;
-                targetButton.firstChild.src = primaryFoodFilters[targetIndex].iconPink
-
-            } else {
-                console.log("le filtre etait inactif")
-                primaryFoodFilters[targetIndex].active = false;
-                targetButton.firstChild.src = primaryFoodFilters[targetIndex].icon
-            }
-
-            //impact on the primary filter icon
-            if (isPrimaryFilterActive()) {
-                primaryFilterButton.firstChild.src = './icons/cuisine_pink.svg'
-            } else {
-                primaryFilterButton.firstChild.src = './icons/cuisine_icon.svg'
-            };
-
-            //apply all filters
-            applyFilters();
-        });
-
+        filterButton.addEventListener("click", handleButtonBehaviour(primaryFoodFilters,filter,index));
 
         //create and append an image
         const buttonIcon = document.createElement("img");
@@ -255,43 +217,7 @@ export function displayDrinkFilter() {
         filterButton.setAttribute("id", filter.name);
 
         //add the behaviour to the button.
-        filterButton.addEventListener("click", function () {
-            //maybe these two variables are useless, i can't decide. 
-            let targetFilter = filter.name;
-            let targetIndex = index;
-            // this one sure isn't : removing it prevents the function form target the right button.
-            let targetButton = document.getElementById(targetFilter);
-
-            //toggle primary filter
-            if (primaryDrinkFilters[targetIndex].active == false) {
-
-                //deactivate all other primary filters  -> BUG : how to target all of the buttons ? 
-                primaryDrinkFilters.forEach(filter => {
-                    filter.active = false;
-                    let targetButton = document.getElementById(filter.name);
-                    targetButton.firstChild.src = filter.icon;
-
-                })
-
-                primaryDrinkFilters[targetIndex].active = true;
-                targetButton.firstChild.src = primaryDrinkFilters[targetIndex].iconPink
-
-            } else {
-                console.log("le filtre etait inactif")
-                primaryDrinkFilters[targetIndex].active = false;
-                targetButton.firstChild.src = primaryDrinkFilters[targetIndex].icon
-            }
-
-            //impact on the primary filter icon
-            if (isPrimaryFilterActive()) {
-                primaryFilterButton.firstChild.src = './icons/drinks_pink.svg'
-            } else {
-                primaryFilterButton.firstChild.src = './icons/drinks_icon.svg'
-            };
-
-            //apply all filters
-            applyFilters();
-        });
+        filterButton.addEventListener("click", handleButtonBehaviour(primaryDrinkFilters,filter,index));
 
         //create and append an image
         const buttonIcon = document.createElement("img");
@@ -330,4 +256,51 @@ function isPrimaryFilterActive() {
     }
 
     return atLeastOneFilterIsActive;
+}
+
+
+function handleButtonBehaviour(filters,filter,index){
+
+    //filter is the filter associated with the button
+    //filters is the array that contain all "filter" elements
+    //index is self-explanatory, right ? 
+
+    return function () {
+
+            //maybe these two variables are useless, i can't decide. 
+            let targetFilter = filter.name;
+            let targetIndex = index;
+            // this one sure isn't : removing it prevents the function form target the right button.
+            let targetButton = document.getElementById(targetFilter);
+
+            //toggle primary filter
+            if (filters[targetIndex].active == false) {
+
+                //deactivate all other primary filters  
+                filters.forEach(filter => {
+                    filter.active = false;
+                    let targetButton = document.getElementById(filter.name);
+                    targetButton.firstChild.src = filter.icon;
+
+                })
+
+                filters[targetIndex].active = true;
+                targetButton.firstChild.src = filters[targetIndex].iconPink
+
+            } else {
+                console.log("le filtre etait inactif")
+                filters[targetIndex].active = false;
+                targetButton.firstChild.src = filters[targetIndex].icon
+            }
+
+            //impact on the primary filter icon
+            if (isPrimaryFilterActive()) {
+                primaryFilterButton.firstChild.src = './icons/drinks_pink.svg'
+            } else {
+                primaryFilterButton.firstChild.src = './icons/drinks_icon.svg'
+            };
+
+            //apply all filters
+            applyFilters();
+    }
 }
