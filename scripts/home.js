@@ -26,8 +26,8 @@ cuisineSwitch.addEventListener('click', switchToLightMode);
 homeButton.addEventListener('click', () => {
     switchToLightMode();
     collapseAllMenus();
-    // RESET ALL FILTERS
-    // Remove all of the zoomed in classes from the cards
+    // TODO RESET ALL FILTERS
+    // TODO Remove all of the zoomed in classes from the cards
 });
 
 // populate the places list with restaurants at init

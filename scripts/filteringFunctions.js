@@ -15,9 +15,11 @@ export function applyFilters() {
     /// if lightmode
     const lightMode = body.classList.contains("light-mode");
     if (lightMode) {
-        filteredDataBase = filterByPrimary(restaurantDataBase, primaryFoodFilters);
+        filteredDataBase = filterByArray(restaurantDataBase, primaryFoodFilters);
+        filteredDataBase = filterByArray(restaurantDataBase, secondaryFoodFilters);
+
     } else {
-        filteredDataBase = filterByPrimary(BarDataBase, primaryDrinkFilters);
+        filteredDataBase = filterByArray(BarDataBase, primaryDrinkFilters);
     }
     /// if darkmode
 
@@ -50,7 +52,7 @@ export function applyFilters() {
 
 
 
-function filterByPrimary(originalDataBase, filteringArray) {
+function filterByArray(originalDataBase, filteringArray) {
 
     //Make sure there is at least one primary filter activated, otherwise retrun the original DB
     if (filteringArray.some(filter => filter.active) == false) { return originalDataBase };

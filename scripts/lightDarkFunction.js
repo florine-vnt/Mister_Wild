@@ -115,7 +115,7 @@ export function displayFoodFilter() {
         filterButton.setAttribute("id", filter.name);
 
         //add the behaviour to the button.
-        filterButton.addEventListener("click", handleButtonBehaviour(primaryFoodFilters,filter,index));
+        filterButton.addEventListener("click", handleButtonBehaviour(primaryFoodFilters, filter, index));
 
         //create and append an image
         const buttonIcon = document.createElement("img");
@@ -217,7 +217,7 @@ export function displayDrinkFilter() {
         filterButton.setAttribute("id", filter.name);
 
         //add the behaviour to the button.
-        filterButton.addEventListener("click", handleButtonBehaviour(primaryDrinkFilters,filter,index));
+        filterButton.addEventListener("click", handleButtonBehaviour(primaryDrinkFilters, filter, index));
 
         //create and append an image
         const buttonIcon = document.createElement("img");
@@ -259,7 +259,7 @@ function isPrimaryFilterActive() {
 }
 
 
-function handleButtonBehaviour(filters,filter,index){
+function handleButtonBehaviour(filters, filter, index) {
 
     //filter is the filter associated with the button
     //filters is the array that contain all "filter" elements
@@ -267,40 +267,54 @@ function handleButtonBehaviour(filters,filter,index){
 
     return function () {
 
-            //maybe these two variables are useless, i can't decide. 
-            let targetFilter = filter.name;
-            let targetIndex = index;
-            // this one sure isn't : removing it prevents the function form target the right button.
-            let targetButton = document.getElementById(targetFilter);
+        //maybe these two variables are useless, i can't decide. 
+        let targetFilter = filter.name;
+        let targetIndex = index;
+        // this one sure isn't : removing it prevents the function form target the right button.
+        let targetButton = document.getElementById(targetFilter);
 
-            //toggle primary filter
-            if (filters[targetIndex].active == false) {
+        //toggle primary filter
+        if (filters[targetIndex].active == false) {
 
-                //deactivate all other primary filters  
-                filters.forEach(filter => {
-                    filter.active = false;
-                    let targetButton = document.getElementById(filter.name);
-                    targetButton.firstChild.src = filter.icon;
+            //deactivate all other primary filters  
+            filters.forEach(filter => {
+                filter.active = false;
+                let targetButton = document.getElementById(filter.name);
+                targetButton.firstChild.src = filter.icon;
 
-                })
+            })
 
-                filters[targetIndex].active = true;
-                targetButton.firstChild.src = filters[targetIndex].iconPink
+            filters[targetIndex].active = true;
+            targetButton.firstChild.src = filters[targetIndex].iconPink
 
-            } else {
-                console.log("le filtre etait inactif")
-                filters[targetIndex].active = false;
-                targetButton.firstChild.src = filters[targetIndex].icon
-            }
+        } else {
+            console.log("le filtre etait inactif")
+            filters[targetIndex].active = false;
+            targetButton.firstChild.src = filters[targetIndex].icon
+        }
 
+        
+
+        //need to know wether we're in light or dark mode 
+        const lightMode = body.classList.contains("light-mode");
+
+        if (lightMode) {
             //impact on the primary filter icon
+            if (isPrimaryFilterActive()) {
+                primaryFilterButton.firstChild.src = './icons/cuisine_pink.svg'
+            } else {
+                primaryFilterButton.firstChild.src = './icons/cuisine_icon.svg'
+            };
+        }
+        else {
             if (isPrimaryFilterActive()) {
                 primaryFilterButton.firstChild.src = './icons/drinks_pink.svg'
             } else {
                 primaryFilterButton.firstChild.src = './icons/drinks_icon.svg'
             };
+        }
 
-            //apply all filters
-            applyFilters();
+        //apply all filters
+        applyFilters();
     }
 }
