@@ -5,9 +5,11 @@ import { displayFoodFilter } from './lightDarkFunction.js'
 import { restaurantDataBase } from './restaurants.js';
 
 
+
 /* JS switch dark-light mode */
 const cuisineSwitch = document.querySelector("#cuisine-switch");
 const barSwitch = document.querySelector("#bar-switch");
+
 const distanceMenuButton = document.getElementById("distance");
 export const distanceMenu = document.getElementById("distance-menu");
 const priceMenuButton = document.getElementById("price-range");
@@ -29,6 +31,7 @@ homeButton.addEventListener('click', () => {
     // TODO RESET ALL FILTERS
     // TODO Remove all of the zoomed in classes from the cards
 });
+
 
 // populate the places list with restaurants at init
 displayPlaces(restaurantDataBase);
