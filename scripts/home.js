@@ -17,9 +17,18 @@ export const primaryFilterButton = document.getElementById("primary-filter");
 export const primaryFilterMenu = document.getElementById("primary-filter-container");
 const homeButton = document.getElementById("home");
 
+
+// Buttons in the header that enable the user to swithch from light to dark and vice-versa
 barSwitch.addEventListener('click', switchToDarkMode);
 cuisineSwitch.addEventListener('click', switchToLightMode);
-homeButton.addEventListener('click', switchToLightMode);
+
+// Reset the app with the home button
+homeButton.addEventListener('click', () => {
+    switchToLightMode();
+    collapseAllMenus();
+    // RESET ALL FILTERS
+    // Remove all of the zoomed in classes from the cards
+});
 
 // populate the places list with restaurants at init
 displayPlaces(restaurantDataBase);
@@ -71,49 +80,13 @@ primaryFilterButton.addEventListener("click", function () {
     });
 });
 
-// make distance menu appear
-distanceMenuButton.addEventListener("click", function () {
+// make distance menu appear/dissapear
+distanceMenuButton.addEventListener("click", toggleMenu(distanceMenu));
 
-    menuContainer.classList.remove("hidden");
-    sleep(10).then(() => {
-        distanceMenu.classList.toggle("collapsed");
-        primaryFilterMenu.classList.add("collapsed");
-
-        menuContainer.style.zIndex = 3;
-
-        //if all menus are collapsed, put the container to the background
-        if (distanceMenu.classList.contains("collapsed") && priceMenu.classList.contains("collapsed") && primaryFilterMenu.classList.contains("collapsed")) {
-            // bring the menu container to the front
-            sleep(300).then(() => {
-                menuContainer.style.zIndex = 0;
-                menuContainer.classList.add("hidden")
-            });
-        }
-    });
-});
-
-// make price menu appear
-priceMenuButton.addEventListener("click", function () {
-
-    menuContainer.classList.remove("hidden");
-    sleep(10).then(() => {
-        priceMenu.classList.toggle("collapsed");
-        primaryFilterMenu.classList.add("collapsed");
-
-        menuContainer.style.zIndex = 3;
-        //if all menus are collapsed, put the container to the background
-        if (distanceMenu.classList.contains("collapsed") && priceMenu.classList.contains("collapsed") && primaryFilterMenu.classList.contains("collapsed")) {
-            // bring the menu container to the front
-            sleep(300).then(() => {
-                menuContainer.style.zIndex = 0;
-                menuContainer.classList.add("hidden")
-            });
-        }
-    });
-});
+// make price menu appear/dissapear
+priceMenuButton.addEventListener("click", toggleMenu(priceMenu));
 
 //make all menus dissapear when clicking somewhere else
-
 menuContainer.addEventListener("click", function (event) {
 
     //if either menu is clicked, do nothing.
@@ -121,9 +94,7 @@ menuContainer.addEventListener("click", function (event) {
     if (distanceMenu.contains(event.target) || priceMenu.contains(event.target) || primaryFilterMenu.contains(event.target)) {
 
     } else {
-        priceMenu.classList.add("collapsed");
-        distanceMenu.classList.add("collapsed");
-        primaryFilterMenu.classList.add("collapsed");
+        collapseAllMenus();
         sleep(300).then(() => {
             menuContainer.style.zIndex = 0;;
             menuContainer.classList.add("hidden")
@@ -131,6 +102,31 @@ menuContainer.addEventListener("click", function (event) {
     }
 
 })
+
+function toggleMenu(menu){
+    return function () {
+        menuContainer.classList.remove("hidden");
+        sleep(10).then(() => {
+            menu.classList.toggle("collapsed");
+            primaryFilterMenu.classList.add("collapsed");
+            menuContainer.style.zIndex = 3;
+            //if all menus are collapsed, put the container to the background
+            if (distanceMenu.classList.contains("collapsed") && priceMenu.classList.contains("collapsed") && primaryFilterMenu.classList.contains("collapsed")) {
+                // bring the menu container to the front
+                sleep(300).then(() => {
+                    menu.style.zIndex = 0;
+                    menu.classList.add("hidden")
+                });
+            }
+        });
+    }
+}
+
+export function collapseAllMenus(){
+    priceMenu.classList.add("collapsed");
+    distanceMenu.classList.add("collapsed");
+    primaryFilterMenu.classList.add("collapsed");
+}
 
 export function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));

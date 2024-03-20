@@ -40,7 +40,7 @@ export const primaryFoodFilters = [
 
 export const secondaryFoodFilters = [
     {
-        name: 'vegan',
+        name: 'veggie',
         icon: './icons/vegan.svg',
         iconPink: './icons/vegan_pink.svg',
         active: false

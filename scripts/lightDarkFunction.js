@@ -1,7 +1,8 @@
-import { primaryFilterMenu } from './home.js';
 import { primaryFilterButton } from './home.js';
+import { primaryFilterMenu } from './home.js';
 import { distanceMenu } from './home.js';
 import { priceMenu } from './home.js';
+import { collapseAllMenus } from './home.js';
 import { applyFilters } from './filteringFunctions.js';
 import { primaryDrinkFilters } from './filters.js';
 import { primaryFoodFilters } from './filters.js';
@@ -62,6 +63,8 @@ function switchMode() {
     toggleDisplayMode(priceMenu);
     toggleDisplayMode(distanceMenu);
     toggleDisplayMode(footer);
+    //collapse all menus that may be open
+    collapseAllMenus();
     //apply current filters and display matching places
     applyFilters();
     //display primary filter
