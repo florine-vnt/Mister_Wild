@@ -559,16 +559,7 @@ primaryFilterButton.addEventListener("click", function () {
     menuContainer.classList.remove("hidden");
     sleep(10).then(() => {
 
-
-    ///FUNCTION menusOnTop // function placesOnTop
-    menuContainer.style.zIndex = 3;
-
-    console.log("tu débugge le bon truc");
-    // check if another menu is already open
-    if (priceMenu.classList.contains("collapsed")) {
-      
-        //conflict
-        //primaryFilterMenu.classList.toggle("collapsed");
+        primaryFilterMenu.classList.toggle("collapsed");
 
 
         if (priceMenu.classList.contains("collapsed") === false) { priceMenu.classList.add("collapsed") };
