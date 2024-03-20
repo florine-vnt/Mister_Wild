@@ -482,6 +482,11 @@ footer {
 .card-selected .picto-container {
     display: flex;
     justify-content: space-around;
+    grid-column: span 2;
+}
+
+.card-selected .more-info-container {
+    grid-column: span 2;
 }
 
 .card-selected .picto-container img {
@@ -489,7 +494,14 @@ footer {
 }
 
 .card-selected {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     flex-direction: column;
     text-align: center;
+    row-gap: 20px;
+}
+
+.card-selected .info-iframe {
+    width: 40vw;
+    height: 20vh;
 }

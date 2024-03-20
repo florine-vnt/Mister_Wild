@@ -16,7 +16,7 @@ const restaurantDataBase = [
         adress: '8 rue de Saverne 44000 Nantes',
         shortAddress: '8 rue de Saverne',
         tel: '+336 03 13 05 04',
-        linkToMaps: 'a',
+        linkToMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5420.51167607285!2d-1.5464413!3d47.211576199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805eeb0fd4e831d%3A0xdd6e96d193d8b1c0!2sPapill&#39;!5e0!3m2!1sfr!2sfr!4v1710946394348!5m2!1sfr!2sfr",
         image: "./assets/Restaurants/Papill.jpg",
         description: 'Vous allez vous régaler les papilles, cuisine authentique'
         // plustot un resto de poisson, changer plats mijotés par poisson?
@@ -503,6 +503,20 @@ let selectedCard = document.querySelector(".card");
 // adding an EventListener when clicking the selected card and adding a new class
 selectedCard.addEventListener('click', function () {
     selectedCard.classList.toggle("card-selected");
+
+
+    // //create an iframe for Gmaps
+    // let placeMaps = document.innerHTML = `<iframe 
+    // src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5420.51167607285!2d-1.5464413!3d47.211576199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805eeb0fd4e831d%3A0xdd6e96d193d8b1c0!2sPapill&#39;!5e0!3m2!1sfr!2sfr!4v1710946394348!5m2!1sfr!2sfr" 
+    // width="400" 
+    // height="300" 
+    // style="border:0;" 
+    // allowfullscreen="" 
+    // loading="lazy" 
+    // referrerpolicy="no-referrer-when-downgrade">
+    // </iframe>`
+    // selectedCard.appendChild
+    //     (placeMaps);
 
     // // variables had to be re-called since they were declared in the fonction
     // let pictoContainer = document.querySelector(".picto-container");
