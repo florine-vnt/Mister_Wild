@@ -113,7 +113,7 @@ const restaurantDataBase = [
         adress: '6 rue de Saverne, 44000 Nantes',
         tel: '+336 24 20 43 05',
         linkToMaps: '',
-        image: './assets/Restaurants/virgines.net',
+        image: './assets/Restaurants/virgines.jpg',
         description: ''
     },
     {
@@ -152,7 +152,7 @@ const restaurantDataBase = [
         adress: '1 chaussée de la Madeleine, 44000 Nantes',
         tel: '+339 86 64 69 43',
         linkToMaps: '',
-        image: './assets/Restaurants/boulangerie-la-fourmi.net',
+        image: './assets/Restaurants/boulangerie-la-fourmi.jpg',
         description: 'Véritable institution nantaise, le café la Fourmi a pris un nouveau départ pour devenir une boulangerie! Les viennoiseries XXL sont un petit déjeuner à elle seul! Pour le midi, vous pouvez choisir votre Jambon-beurre au mètre!'
     },
     {
@@ -304,11 +304,58 @@ const priceImg = document.querySelector("#price-range-img");
 const footstepImg = document.querySelectorAll("#footstep-img");
 const priceFilterImg = document.querySelectorAll("#price-img");
 
-
-
-cuisineSwitch.addEventListener('click', function () {
-
+const homeButton = document.querySelector("#home"); 
+homeButton.addEventListener('click', function (lightMode)
+{
+    primaryFilterMenu.classList.add("collapsed");
     const darkMode = body.classList.contains("dark-mode");
+    if (darkMode) {
+        // put elements in light mode
+        cuisineSwitch.classList.toggle("light-mode");
+        cuisineSwitch.classList.remove("dark-mode");
+        barSwitch.classList.toggle("light-mode");
+        barSwitch.classList.remove("dark-mode");
+        body.classList.toggle("light-mode");
+        body.classList.remove("dark-mode");
+        placesList.classList.add("light-mode");
+        placesList.classList.remove("dark-mode");
+        primaryFilterMenu.classList.add("light-mode");
+        primaryFilterMenu.classList.remove("dark-mode");
+        footer.classList.toggle("light-mode");
+        footer.classList.remove("dark-mode");
+        distanceMenu.classList.toggle("light-mode");
+        distanceMenu.classList.remove("dark-mode");
+        priceMenu.classList.toggle("light-mode");
+        priceMenu.classList.remove("dark-mode");
+        homeImg.src = "./icons/home_icon.svg";
+        cuisineImg.src = "./icons/cuisine_icon.svg";
+        distanceImg.src = "./icons/distance_icon.svg";
+        priceImg.src = "./icons/price_icon.svg";
+
+
+
+        for (let i = 0; i < footstepImg.length; i++) {
+            footstepImg[i].src = "./icons/footsteps_light.svg"
+        }
+        for (let i = 0; i < priceFilterImg.length; i++) {
+            priceFilterImg[i].src = "./icons/price_icon.svg"
+        }
+        //display restaurants
+        displayPlaces(restaurantDataBase);
+        //display food filters
+        displayFoodFilter();
+    } else {
+        // do nothing, we are already in light mode.
+}
+})
+
+
+
+
+function switchMode() {
+    console.log("toto");
+    const darkMode = body.classList.contains("dark-mode");
+    primaryFilterMenu.classList.add("collapsed");
     if (darkMode) {
         // put elements in light mode
         cuisineSwitch.classList.toggle("light-mode");
@@ -344,7 +391,9 @@ cuisineSwitch.addEventListener('click', function () {
     } else {
         // do nothing, we are already in light mode.
     }
-})
+}
+
+cuisineSwitch.addEventListener('click', switchMode)
 
 barSwitch.addEventListener('click', function () {
 
@@ -461,7 +510,10 @@ const menuContainer = document.getElementById("mini-menus-container");
 const placesContainer = document.getElementById("places-container");
 const filterBar = document.getElementById("filter-bar");
 const primaryFilterButton = document.getElementById("primary-filter");
+
 const primaryFilterMenu = document.getElementById("primary-filter-container");
+const collapseElementList = document.querySelectorAll('.collapse')
+const collapseList = [...collapseElementList].map(collapseEl => new bootstrap.Collapse(collapseEl))
 
 // make primary filter menu appear
 primaryFilterButton.addEventListener("click", function () {
@@ -469,9 +521,9 @@ primaryFilterButton.addEventListener("click", function () {
     menuContainer.style.zIndex = 3;
     menuContainer.classList.remove("hidden");
     sleep(10).then(() => {
-
+        
         primaryFilterMenu.classList.toggle("collapsed");
-
+      
         if (priceMenu.classList.contains("collapsed") === false) { priceMenu.classList.add("collapsed") };
         if (distanceMenu.classList.contains("collapsed") === false) { distanceMenu.classList.add("collapsed") };
 
@@ -495,8 +547,6 @@ distanceMenuButton.addEventListener("click", function () {
         primaryFilterMenu.classList.add("collapsed");
 
         menuContainer.style.zIndex = 3;
-
-        console.log("tu débugge le bon truc");
         //if all menus are collapsed, put the container to the background
         if (distanceMenu.classList.contains("collapsed") && priceMenu.classList.contains("collapsed") && primaryFilterMenu.classList.contains("collapsed")) {
             // bring the menu container to the front
