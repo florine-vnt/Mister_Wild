@@ -38,7 +38,7 @@ const restaurantDataBase = [
     {
         name: 'La cantine fermière',
         miniDescription: 'Sandwichs, salades et des plats, cuisinés avec des produits de saison et de fermes locales',
-        specialities: ['Sandwiches', 'street food', 'aaaaaa'],
+        specialities: 'sandwich street food',
         distance: '240m',
         priceRange: '€',
         adress: '10 rue de Mayence, 44000 Nantes',
@@ -51,7 +51,7 @@ const restaurantDataBase = [
     {
         name: 'Ichigo',
         miniDescription: 'Ramen comme au Japon, mais aussi de gyozas et edemame',
-        specialities: ['ramen', 'gyozas', 'edemame'],
+        specialities: 'asiatique ramen gyozas edemame',
         distance: '50m',
         priceRange: '€',
         adress: '31 rue Fouré, 44000, Nantes',
@@ -65,7 +65,7 @@ const restaurantDataBase = [
 
         name: 'Les triplettes',
         miniDescription: 'Petit plats cuisiné, pâtisseries et café de spécialité. Cuisine local et agriculture raisonnée.',
-        specialities: ['Plats cuisinées', 'Pâtisserie', 'café de spécialité'],
+        specialities: 'Plats cuisinées Pâtisserie café de spécialité',
         distance: '400m',
         priceRange: '€€€',
         adress: '4 BIS Rue Emile Masson, 44000 Nantes',
@@ -79,7 +79,7 @@ const restaurantDataBase = [
 
         name: 'Dakoo',
         miniDescription: 'Restaurant coréen, plats traditionnel avec des plats vegan!. Livraison possible.',
-        specialities: ['coréen', 'Streetfood', 'poulet frit', 'veggies', 'livraison'],
+        specialities: 'coréen Streetfood poulet frit veggies livraison',
         distance: '750m',
         priceRange: '€',
         adress: '17 Rue Bon Secours, 44000 Nantes',
@@ -93,7 +93,7 @@ const restaurantDataBase = [
         // a completer
         name: 'Papa pasta',
         miniDescription: 'Des pâtes maison, fait uniquement avec des produits locaux, avec des portion généreuse !',
-        specialities: ['', 'pâtes', 'veggie'],
+        specialities: 'italien',
         distance: '90m',
         priceRange: '€',
         adress: '27 rue Fouré, 44000 Nantes',
@@ -107,7 +107,7 @@ const restaurantDataBase = [
         // a completer
         name: 'Virginie\'s café',
         miniDescription: 'Cuisine vivante. Cuisine bio. Cantine végétarienne. ',
-        specialities: ['', '', ''],
+        specialities: 'pizza',
         distance: '85m',
         priceRange: '€€€',
         adress: '6 rue de Saverne, 44000 Nantes',
@@ -120,7 +120,7 @@ const restaurantDataBase = [
 
         name: 'La machine à crêpes',
         miniDescription: 'Des crêpes et des galettes! Prix abordable et que du fait maison! Une galette veggie est proposée',
-        specialities: ['galettes', 'crepes', 'veggie'],
+        specialities: 'galettes crepes veggie',
         distance: '450m',
         priceRange: '€',
         adress: '11 chaussée de la Madeleine, 44000 Nantes',
@@ -133,7 +133,7 @@ const restaurantDataBase = [
 
         name: 'MATA boulangerie',
         miniDescription: 'Boulangerie de quartier, leurs cookies aux chocolat avec une pointe de gros sel est une tuerie!',
-        specialities: ['sandwich', 'cookies', 'Pâtisserie', 'pains'],
+        specialities: 'sandwich cookies Pâtisserie pains',
         distance: '400m',
         priceRange: '€€',
         adress: '6 rue de Rieux, 44000 Nantes',
@@ -146,7 +146,7 @@ const restaurantDataBase = [
 
         name: 'boulangerie la fourmi',
         miniDescription: 'Blé ancien moulu avec une meule en pierre, viennoiserie XXL, sandwich au mètre, une boulangerie à découvrir!',
-        specialities: ['sandwich', 'Pâtisserie', 'pains'],
+        specialities: 'sandwich Pâtisserie pains',
         distance: '550m',
         priceRange: '€',
         adress: '1 chaussée de la Madeleine, 44000 Nantes',
@@ -159,7 +159,7 @@ const restaurantDataBase = [
 
         name: 'la mangouste',
         miniDescription: '',
-        specialities: ['', '', ''],
+        specialities: "",
         distance: '400m',
         priceRange: '€€€',
         adress: '',
@@ -172,7 +172,7 @@ const restaurantDataBase = [
 
         name: 'Guindaille',
         miniDescription: '',
-        specialities: ['', '', ''],
+        specialities: "",
         distance: '400m',
         priceRange: '€€€',
         adress: '',
@@ -185,7 +185,7 @@ const restaurantDataBase = [
 
         name: 'a',
         miniDescription: '',
-        specialities: ['', '', ''],
+        specialities: "",
         distance: '400m',
         priceRange: '€€€',
         adress: '',
@@ -198,7 +198,7 @@ const restaurantDataBase = [
 
         name: 'la mangouste',
         miniDescription: '',
-        specialities: ['', '', ''],
+        specialities: "",
         distance: '400m',
         priceRange: '€€€',
         adress: '',
@@ -215,7 +215,7 @@ const BarDataBase = [
     {
         name: 'Napoleone',
         miniDescription: 'le QG des wilder, à boire et à manger',
-        specialities: ["Cocktails, vins,bières,tapas"],
+        specialities: 'cocktail vin biere tapas',
         distance: '85m',
         priceRange: '€€-€€€',
         adress: ' 1 rue baron',
@@ -228,7 +228,7 @@ const BarDataBase = [
     {
         name: 'Le lovecraft',
         miniDescription: 'le QG des wilder, à boire et à manger',
-        specialities: ['bieres artisanales,vins raffinés,cocktails maison'],
+        specialities: 'biere artisanales vin cocktails',
         distance: '400m',
         priceRange: '€',
         adress: '32 bis Rue Fouré',
@@ -241,7 +241,7 @@ const BarDataBase = [
     {
         name: 'Le lieu unique',
         miniDescription: 'bar dans une ancienne biscuiterie',
-        specialities: ['bieres artisanales,vins raffinés,cocktails maison'],
+        specialities: 'bieres artisanales vins raffinés cocktails maison',
         distance: '400m',
         priceRange: '€',
         adress: '32 bis Rue Fouré',
@@ -254,7 +254,7 @@ const BarDataBase = [
     {
         name: 'le bain rouge',
         miniDescription: 'Lieu de spectacles et de tenue d’évènements',
-        specialities: ['bieres artisanales,vins raffinés,cocktails maison'],
+        specialities: 'bieres artisanales vins raffinés cocktails maison',
         distance: '400m',
         priceRange: '€',
         adress: '32 bis Rue Fouré',
@@ -267,7 +267,7 @@ const BarDataBase = [
     {
         name: 'Coco bandit',
         miniDescription: 'le QG des wilder, à boire et à manger',
-        specialities: ['Bar à cocktails'],
+        specialities: 'cocktail',
         distance: '400m',
         priceRange: '€',
         adress: '15 Rue Crucy ',
@@ -280,7 +280,7 @@ const BarDataBase = [
     {
         name: 'Delirium cafe',
         miniDescription: 'sélection de bières pression et soirées musicales ou sportives.',
-        specialities: ['bieres artisanales,vins raffinés,cocktails maison'],
+        specialities: 'bieres artisanales vins raffinés cocktails maison',
         distance: '400m',
         priceRange: '€',
         adress: '32 bis Rue Fouré',
@@ -614,6 +614,9 @@ priceFilterButtonLow.addEventListener("click", function () {
         else { priceMenuButton.firstChild.src = './icons/price_darkmode.svg' };
     }
 
+    //apply all filters
+    applyFilters();
+
     // close the menu after a little while
     sleep(600).then(() => { priceMenu.classList.add("collapsed") });
     sleep(900).then(() => { menuContainer.style.zIndex = 0; });
@@ -667,6 +670,9 @@ priceFilterButtonMid.addEventListener("click", function () {
         else { priceMenuButton.firstChild.src = './icons/price_darkmode.svg' };
     }
 
+    //apply all filters
+    applyFilters();
+
     // close the menu after a little while
     sleep(600).then(() => { priceMenu.classList.add("collapsed") });
     sleep(900).then(() => { menuContainer.style.zIndex = 0; });
@@ -718,6 +724,9 @@ priceFilterButtonHigh.addEventListener("click", function () {
         if (lightMode) { priceMenuButton.firstChild.src = './icons/price_icon.svg' }
         else { priceMenuButton.firstChild.src = './icons/price_darkmode.svg' };
     }
+
+    //apply all filters
+    applyFilters();
 
     // close the menu after a little while
     sleep(600).then(() => { priceMenu.classList.add("collapsed") });
@@ -800,6 +809,9 @@ distanceFilterButtonHigh.addEventListener("click", function () {
         distanceMenuButton.firstChild.src = distanceIcon;
     }
 
+    //apply all filters
+    applyFilters();
+
     // close the menu after a little while
     sleep(600).then(() => { distanceMenu.classList.add("collapsed") });
     sleep(900).then(() => { menuContainer.style.zIndex = 0; });
@@ -858,6 +870,9 @@ distanceFilterButtonMid.addEventListener("click", function () {
         distanceMenuButton.firstChild.src = distanceIcon;
     }
 
+    //apply all filters
+    applyFilters();
+
     // close the menu after a little while
     sleep(600).then(() => { distanceMenu.classList.add("collapsed") });
     sleep(900).then(() => { menuContainer.style.zIndex = 0; });
@@ -915,6 +930,9 @@ distanceFilterButtonLow.addEventListener("click", function () {
         // reset the price menu icon to its normal colour (light or dark)
         distanceMenuButton.firstChild.src = distanceIcon;
     }
+
+    //apply all filters
+    applyFilters();
 
     // close the menu after a little while
     sleep(600).then(() => { distanceMenu.classList.add("collapsed") });
@@ -1046,6 +1064,16 @@ function displayFoodFilter() {
 
             //toggle primary filter
             if (primaryFoodFilters[targetIndex].active == false) {
+
+                //deactivate all other primary filters  -> BUG : how to target all of the buttons ? 
+                primaryFoodFilters.forEach(filter => {
+                    filter.active = false;
+                    let targetButton = document.getElementById(filter.name);
+                    targetButton.firstChild.src = filter.icon;
+
+                })
+
+                // activate the one that was clicked
                 primaryFoodFilters[targetIndex].active = true;
                 targetButton.firstChild.src = primaryFoodFilters[targetIndex].iconPink
 
@@ -1061,6 +1089,9 @@ function displayFoodFilter() {
             } else {
                 primaryFilterButton.firstChild.src = './icons/cuisine_icon.svg'
             };
+
+            //apply all filters
+            applyFilters();
         });
 
         //create and append an image
@@ -1119,6 +1150,9 @@ function displayFoodFilter() {
             } else {
                 primaryFilterButton.firstChild.src = './icons/cuisine_icon.svg'
             };
+
+            //apply all filters
+            applyFilters();
         });
 
         //create and append an image
@@ -1143,7 +1177,7 @@ function displayFoodFilter() {
 function displayDrinkFilter() {
     primaryFilterMenu.innerHTML = "";
 
-    /// create the different "cuisines" section
+    /// create the different "drinks" section
 
     let firstLabel = document.createElement("p");
     firstLabel.innerText = "Catégories"
@@ -1153,7 +1187,7 @@ function displayDrinkFilter() {
 
     // create one clickable button for each primary filter
     primaryDrinkFilters.forEach((filter, index) => {
- 
+
         //create a button
         filterButton = document.createElement("button");
         filterButton.setAttribute("id", filter.name);
@@ -1167,7 +1201,16 @@ function displayDrinkFilter() {
             let targetButton = document.getElementById(targetFilter);
 
             //toggle primary filter
-            if (primaryDrinkFilters[targetIndex].active == false) { 
+            if (primaryDrinkFilters[targetIndex].active == false) {
+
+                //deactivate all other primary filters  -> BUG : how to target all of the buttons ? 
+                primaryDrinkFilters.forEach(filter => {
+                    filter.active = false;
+                    let targetButton = document.getElementById(filter.name);
+                    targetButton.firstChild.src = filter.icon;
+
+                })
+
                 primaryDrinkFilters[targetIndex].active = true;
                 targetButton.firstChild.src = primaryDrinkFilters[targetIndex].iconPink
 
@@ -1183,6 +1226,9 @@ function displayDrinkFilter() {
             } else {
                 primaryFilterButton.firstChild.src = './icons/drinks_icon.svg'
             };
+
+            //apply all filters
+            applyFilters();
         });
 
         //create and append an image
@@ -1256,3 +1302,64 @@ sleep(1500).then(() => {
 
 
 
+//// FILTERING "INTELLIGENCE"
+
+function filterByPrimary(originalDataBase, filteringArray) {
+
+    //Make sure there is at least one primary filter activated, otherwise retrun the original DB
+    if (filteringArray.some(filter => filter.active)==false) {return originalDataBase};
+
+    //filter the original database
+    return filteredDataBase = originalDataBase.filter((place) => {
+
+        let atLeastOneMatch = false;
+        // check all of the filters one by one. SUB-OPTIMAL, but it works.
+        filteringArray.forEach(filter => {
+
+            // only for active filters
+            if (filter.active) {
+
+                if (place.specialities.includes(filter.name)) {
+                    atLeastOneMatch = true;
+                };
+
+            }
+        });
+
+        return atLeastOneMatch;
+
+    });
+}
+
+function applyFilters() {
+    let filteredDataBase = [];
+    /// if lightmode
+    const lightMode = body.classList.contains("light-mode");
+    if (lightMode) {
+    filteredDataBase = filterByPrimary(restaurantDataBase, primaryFoodFilters);
+    } else {
+    filteredDataBase = filterByPrimary(BarDataBase, primaryDrinkFilters);    
+    }
+    /// if darkmode
+
+    ///then price and all 
+
+    // check wether empty or not, if so, put an object to inform the user.
+    if (filteredDataBase.length === 0) {
+        filteredDataBase = [{
+            name: 'Pas de résultat',
+            miniDescription: 'Soyez moins exigeant. La vie vous le rendra.',
+            specialities: ['salade', 'sandwich', 'poisson'],
+            distance: '',
+            priceRange: '',
+            adress: '',
+            tel: '',
+            linkToMaps: '',
+            image: './assets/noResult.png',
+            description: ''
+            // manque le prix
+        }]
+    }
+    // adjust display
+    displayPlaces(filteredDataBase);
+}
