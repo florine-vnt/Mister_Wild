@@ -1342,7 +1342,9 @@ function applyFilters() {
     }
     /// if darkmode
 
-    ///then price and all 
+    ///then filter by price and by distance
+    filteredDataBase = filterByPrice(filteredDataBase, priceFilter)
+    //filteredDataBase = filterByDistance(filteredDataBase, distanceFilter)
 
     // check wether empty or not, if so, put an object to inform the user.
     if (filteredDataBase.length === 0) {
@@ -1366,10 +1368,9 @@ function applyFilters() {
 
 // Filter the restaurant database by price
 function filterByPrice(dataBase, priceFilter) {
+    if (priceFilter == 0) { return dataBase; };
     return dataBase.filter(restaurant => {
-        console.log(restaurant.priceRange, " es ce que c est pareil ", priceFilter);
-        //restaurant.priceRange == priceFilter
+        return restaurant.priceRange.length <= priceFilter
     });
 }
 
-console.log(filterByPrice(restaurantDataBase, priceFilter));
