@@ -388,6 +388,7 @@ color: #6D6D6D;
     margin: 0;
     position: relative;
     background-color: var(--light-bg-color);
+    min-height: 80vh;
 }
 
 #places.dark-mode {
