@@ -12,7 +12,7 @@ const restaurantDataBase = [
         miniDescription: 'Plats mijotés, papillotes et brunch',
         specialities: ['Plats cuisinées', 'Poisson', 'veggie'],
         distance: '85 m',
-        priceRange: '€',
+        priceRange: '€€',
         adress: '8 rue de Saverne 44000 Nantes',
         shortAddress: '8 rue de Saverne',
         tel: '+336 03 13 05 04',
