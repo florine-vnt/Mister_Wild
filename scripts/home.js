@@ -289,7 +289,7 @@ const BarDataBase = [
         distance: '450 m',
         priceRange: '€',
         adress: '19 allée Baco 44000 Nantes',
-        shortAddress: '19 allée Baco 44000 Nantes'
+        shortAddress: '19 allée Baco 44000 Nantes',
         tel: '0240089077',
         linkToMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.1663259148286!2d-1.5529110242047228!3d47.213327771156436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805eeaff7048cb1%3A0xc13327c40bf626a1!2sDelirium%20cafe!5e0!3m2!1sfr!2sfr!4v1710969470725!5m2!1sfr!2sfr",
         image: './assets/Bars/Delirium-Cafe.jpg',
