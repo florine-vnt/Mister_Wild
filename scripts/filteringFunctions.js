@@ -1,13 +1,17 @@
 import { displayPlaces } from './placesFunctions.js';
 import { sleep } from './home.js';
 import { distanceMenu } from './home.js';
-import { priceMenu } from './home.js';
+//import { priceMenu } from './home.js';
+const priceMenu = document.getElementById("price-range-menu");
 import { menuContainer } from './home.js';
 import { restaurantDataBase } from './restaurants.js';
 import { BarDataBase } from './bars.js';
 import { primaryDrinkFilters } from './filters.js';
 import { primaryFoodFilters } from './filters.js';
 import { secondaryFoodFilters } from './filters.js';
+
+
+
 
 
 export function applyFilters() {
@@ -58,7 +62,7 @@ function filterByArray(originalDataBase, filteringArray) {
     if (filteringArray.some(filter => filter.active) == false) { return originalDataBase };
 
     //filter the original database
-    let filteredDataBase=[];
+    let filteredDataBase = [];
     return filteredDataBase = originalDataBase.filter((place) => {
 
         let atLeastOneMatch = false;
@@ -165,6 +169,8 @@ priceFilterButtonLow.addEventListener("click", function () {
 });
 
 
+
+priceFilterButtonMid.addEventListener("click", handleToastMenuButton(priceMenuButton, priceMenu, priceFilterButtonMid, 2));
 priceFilterButtonMid.addEventListener("click", function () {
 
     //figure out if we are in light or dark mode. 
@@ -421,7 +427,6 @@ distanceFilterButtonMid.addEventListener("click", function () {
     sleep(900).then(() => { menuContainer.style.zIndex = 0; });
 });
 
-
 distanceFilterButtonLow.addEventListener("click", function () {
 
     //figure out if we are in light or dark mode and fetch the correct icons
@@ -481,3 +486,67 @@ distanceFilterButtonLow.addEventListener("click", function () {
     sleep(600).then(() => { distanceMenu.classList.add("collapsed") });
     sleep(900).then(() => { menuContainer.style.zIndex = 0; });
 });
+
+
+
+/// FACTORISATION A TERMINER
+
+// sleep(10).then(() => {
+//     priceFilterButtonLow.addEventListener("click", handleToastMenuButton(priceMenuButton, priceMenu, priceFilterButtonLow, 1))
+//     priceFilterButtonMid.addEventListener("click", handleToastMenuButton(priceMenuButton, priceMenu, priceFilterButtonMid, 2))
+//     priceFilterButtonHigh.addEventListener("click", handleToastMenuButton(priceMenuButton, priceMenu, priceFilterButtonHigh, 3));
+// });
+
+function handleToastMenuButton(menuButton, menu, filterButton, filteringValue) {
+    return function () {
+        //figure out if we are in light or dark mode. 
+        const lightMode = body.classList.contains("light-mode");
+
+        // if filter wasn't already activated
+        if (priceFilter !== filteringValue) {
+            priceFilter = filteringValue;
+
+            // reset the colour of all filterButtons, if any was selected (brute force and unefficient, but it'll work)
+            console.log('voici ton log maggle ', menu.children)
+            console.log('voila les enfants du bouton',filterButton.children)
+            for (let i = 0; i < menu.children.length; i++) {
+                for (const image of menu.children[i]) {
+                    // reset the icon to its normal colour (light or dark)
+                    if (lightMode) { image.src = './icons/price_icon.svg' }
+                    else { image.src = './icons/price_darkmode.svg' };
+                }
+            }
+
+            // change the image(s) inside the filterButton to make it/them pink
+            for (const image of filterButton.children) {
+                image.src = './icons/price_pink.svg';
+            }
+
+            // make the price menu icon appear pink
+            menuButton.firstChild.src = './icons/price_pink.svg'
+
+        }
+        // if filter already was activated
+        else {
+            // set the filter to none 
+            priceFilter = 0;
+
+            // change the image(s) inside the button to their normal colour (light or dark)
+            for (const image of filterButton.children) {
+                if (lightMode) { image.src = './icons/price_icon.svg' }
+                else { image.src = './icons/price_darkmode.svg' };
+            }
+
+            // reset the price menu icon to its normal colour (light or dark)
+            if (lightMode) { menuButton.firstChild.src = './icons/price_icon.svg' }
+            else { menuButton.firstChild.src = './icons/price_darkmode.svg' };
+        }
+
+        //apply all filters
+        applyFilters();
+
+        // close the menu after a little while
+        sleep(600).then(() => { menu.classList.add("collapsed") });
+        sleep(900).then(() => { menuContainer.style.zIndex = 0; });
+    };
+};
