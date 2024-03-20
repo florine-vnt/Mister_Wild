@@ -487,6 +487,8 @@ footer {
 
 .card-selected .more-info-container {
     grid-column: span 2;
+    display: flex;
+    flex-direction: column;
 }
 
 .card-selected .picto-container img {
@@ -504,4 +506,9 @@ footer {
 .card-selected .info-iframe {
     width: 40vw;
     height: 20vh;
+}
+
+.google-map {
+    height: 30vh;
+    width: 30vh;
 }

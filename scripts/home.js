@@ -478,6 +478,18 @@ function displayPlaces(dataBase) {
         moreinfoContainer.appendChild(shortAddress);
 
         // TODO : add Gmaps at the bottom of selected card 
+        let googleMap = document.createElement("div");
+        googleMap.innerHTML = `<iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5420.51167607285!2d-1.5464413!3d47.211576199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805eeb0fd4e831d%3A0xdd6e96d193d8b1c0!2sPapill&#39;!5e0!3m2!1sfr!2sfr!4v1710946394348!5m2!1sfr!2sfr" 
+        width="100%" 
+        height="100%" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+        </iframe>`
+        googleMap.classList.add("google-map");
+        moreinfoContainer.appendChild(googleMap);
 
         /// TODO : add the distance image.inside of a container.
 
@@ -503,20 +515,6 @@ let selectedCard = document.querySelector(".card");
 // adding an EventListener when clicking the selected card and adding a new class
 selectedCard.addEventListener('click', function () {
     selectedCard.classList.toggle("card-selected");
-
-
-    // //create an iframe for Gmaps
-    // let placeMaps = document.innerHTML = `<iframe 
-    // src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5420.51167607285!2d-1.5464413!3d47.211576199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805eeb0fd4e831d%3A0xdd6e96d193d8b1c0!2sPapill&#39;!5e0!3m2!1sfr!2sfr!4v1710946394348!5m2!1sfr!2sfr" 
-    // width="400" 
-    // height="300" 
-    // style="border:0;" 
-    // allowfullscreen="" 
-    // loading="lazy" 
-    // referrerpolicy="no-referrer-when-downgrade">
-    // </iframe>`
-    // selectedCard.appendChild
-    //     (placeMaps);
 
     // // variables had to be re-called since they were declared in the fonction
     // let pictoContainer = document.querySelector(".picto-container");
