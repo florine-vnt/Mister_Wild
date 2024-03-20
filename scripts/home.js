@@ -1307,7 +1307,7 @@ sleep(1500).then(() => {
 function filterByPrimary(originalDataBase, filteringArray) {
 
     //Make sure there is at least one primary filter activated, otherwise retrun the original DB
-    if (filteringArray.some(filter => filter.active)==false) {return originalDataBase};
+    if (filteringArray.some(filter => filter.active) == false) { return originalDataBase };
 
     //filter the original database
     return filteredDataBase = originalDataBase.filter((place) => {
@@ -1336,9 +1336,9 @@ function applyFilters() {
     /// if lightmode
     const lightMode = body.classList.contains("light-mode");
     if (lightMode) {
-    filteredDataBase = filterByPrimary(restaurantDataBase, primaryFoodFilters);
+        filteredDataBase = filterByPrimary(restaurantDataBase, primaryFoodFilters);
     } else {
-    filteredDataBase = filterByPrimary(BarDataBase, primaryDrinkFilters);    
+        filteredDataBase = filterByPrimary(BarDataBase, primaryDrinkFilters);
     }
     /// if darkmode
 
@@ -1363,3 +1363,13 @@ function applyFilters() {
     // adjust display
     displayPlaces(filteredDataBase);
 }
+
+// Filter the restaurant database by price
+function filterByPrice(dataBase, priceFilter) {
+    return dataBase.filter(restaurant => {
+        console.log(restaurant.priceRange, " es ce que c est pareil ", priceFilter);
+        //restaurant.priceRange == priceFilter
+    });
+}
+
+console.log(filterByPrice(restaurantDataBase, priceFilter));
