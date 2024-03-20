@@ -38,7 +38,7 @@ const restaurantDataBase = [
     {
         name: 'La cantine fermière',
         miniDescription: 'Sandwichs, salades et des plats, cuisinés avec des produits de saison et de fermes locales',
-        specialities: ['Sandwiches', 'street food', 'aaaaaa'],
+        specialities: 'sandwich street food',
         distance: '240 m',
         priceRange: '€',
         adress: '10 rue de Mayence, 44000 Nantes',
@@ -51,7 +51,7 @@ const restaurantDataBase = [
     {
         name: 'Ichigo',
         miniDescription: 'Ramen comme au Japon, mais aussi de gyozas et edemame',
-        specialities: ['ramen', 'gyozas', 'edemame'],
+        specialities: 'asiatique ramen gyozas edemame',
         distance: '50 m',
         priceRange: '€',
         adress: '31 rue Fouré, 44000, Nantes',
@@ -65,7 +65,7 @@ const restaurantDataBase = [
 
         name: 'Les triplettes',
         miniDescription: 'Petit plats cuisiné, pâtisseries et café de spécialité. Cuisine local et agriculture raisonnée.',
-        specialities: ['Plats cuisinées', 'Pâtisserie', 'café de spécialité'],
+        specialities: 'Plats cuisinées Pâtisserie café de spécialité',
         distance: '400 m',
         priceRange: '€€€',
         adress: '4 BIS Rue Emile Masson, 44000 Nantes',
@@ -76,10 +76,10 @@ const restaurantDataBase = [
     },
 
     {
-        //mettre photo
+
         name: 'Dakoo',
         miniDescription: 'Restaurant coréen, plats traditionnel avec des plats vegan!. Livraison possible.',
-        specialities: ['coréen', 'Streetfood', 'poulet frit', 'veggies', 'livraison'],
+        specialities: 'coréen Streetfood poulet frit veggies livraison',
         distance: '750 m',
         priceRange: '€',
         adress: '17 Rue Bon Secours, 44000 Nantes',
@@ -90,76 +90,76 @@ const restaurantDataBase = [
     },
 
     {
-
+        // a completer
         name: 'Papa pasta',
-        miniDescription: '',
-        specialities: ['', '', ''],
-        distance: '400 m',
-        priceRange: '€€€',
-        adress: '',
-        tel: '+33',
+        miniDescription: 'Des pâtes maison, fait uniquement avec des produits locaux, avec des portion généreuse !',
+        specialities: 'italien',
+        distance: '90 m',
+        priceRange: '€',
+        adress: '27 rue Fouré, 44000 Nantes',
+        tel: '+339 81 30 85 44',
         linkToMaps: '',
         image: './assets/Restaurants/',
-        description: ''
+        description: 'Des pâtes maison, fait uniquement avec des produits locaux, avec des portion généreuse !'
     },
 
     {
-
+        // a completer
         name: 'Virginie\'s café',
-        miniDescription: '',
-        specialities: ['', '', ''],
-        distance: '400 m',
+        miniDescription: 'Cuisine vivante. Cuisine bio. Cantine végétarienne. ',
+        specialities: 'pizza',
+        distance: '85 m',
         priceRange: '€€€',
-        adress: '',
-        tel: '+33',
+        adress: '6 rue de Saverne, 44000 Nantes',
+        tel: '+336 24 20 43 05',
         linkToMaps: '',
-        image: './assets/Restaurants/',
+        image: './assets/Restaurants/virgines.net',
         description: ''
     },
     {
 
         name: 'La machine à crêpes',
-        miniDescription: '',
-        specialities: ['', '', ''],
-        distance: '400 m',
-        priceRange: '€€€',
-        adress: '',
-        tel: '+33',
+        miniDescription: 'Des crêpes et des galettes! Prix abordable et que du fait maison! Une galette veggie est proposée',
+        specialities: 'galettes crepes veggie',
+        distance: '450 m',
+        priceRange: '€',
+        adress: '11 chaussée de la Madeleine, 44000 Nantes',
+        tel: '+332 51 82 71 39',
         linkToMaps: '',
-        image: './assets/Restaurants/',
-        description: ''
+        image: './assets/Restaurants/la-machine-a-crepes.png',
+        description: 'Des crêpes et des galettes! Prix abordable et que du fait maison! Une galette veggie est proposée'
     },
     {
 
         name: 'MATA boulangerie',
-        miniDescription: '',
-        specialities: ['', '', ''],
+        miniDescription: 'Boulangerie de quartier, leurs cookies aux chocolat avec une pointe de gros sel est une tuerie!',
+        specialities: 'sandwich cookies Pâtisserie pains',
         distance: '400 m',
-        priceRange: '€€€',
-        adress: '',
-        tel: '+33',
+        priceRange: '€€',
+        adress: '6 rue de Rieux, 44000 Nantes',
+        tel: '+339 70 66 95 83',
         linkToMaps: '',
-        image: './assets/Restaurants/',
-        description: ''
+        image: './assets/Restaurants/mataboulangerie.png',
+        description: 'Boulangerie de quartier, leurs cookies aux chocolat avec une pointe de gros sel est une tuerie!'
     },
     {
 
         name: 'boulangerie la fourmi',
-        miniDescription: '',
-        specialities: ['', '', ''],
-        distance: '400 m',
-        priceRange: '€€€',
-        adress: '',
-        tel: '+33',
+        miniDescription: 'Blé ancien moulu avec une meule en pierre, viennoiserie XXL, sandwich au mètre, une boulangerie à découvrir!',
+        specialities: 'sandwich Pâtisserie pains',
+        distance: '550 m',
+        priceRange: '€',
+        adress: '1 chaussée de la Madeleine, 44000 Nantes',
+        tel: '+339 86 64 69 43',
         linkToMaps: '',
-        image: './assets/Restaurants/',
-        description: ''
+        image: './assets/Restaurants/boulangerie-la-fourmi.net',
+        description: 'Véritable institution nantaise, le café la Fourmi a pris un nouveau départ pour devenir une boulangerie! Les viennoiseries XXL sont un petit déjeuner à elle seul! Pour le midi, vous pouvez choisir votre Jambon-beurre au mètre!'
     },
     {
 
         name: 'la mangouste',
         miniDescription: '',
-        specialities: ['', '', ''],
+        specialities: "",
         distance: '400 m',
         priceRange: '€€€',
         adress: '',
@@ -172,7 +172,7 @@ const restaurantDataBase = [
 
         name: 'Guindaille',
         miniDescription: '',
-        specialities: ['', '', ''],
+        specialities: "",
         distance: '400 m',
         priceRange: '€€€',
         adress: '',
@@ -185,7 +185,7 @@ const restaurantDataBase = [
 
         name: 'a',
         miniDescription: '',
-        specialities: ['', '', ''],
+        specialities: "",
         distance: '400 m',
         priceRange: '€€€',
         adress: '',
@@ -198,7 +198,7 @@ const restaurantDataBase = [
 
         name: 'la mangouste',
         miniDescription: '',
-        specialities: ['', '', ''],
+        specialities: "",
         distance: '400 m',
         priceRange: '€€€',
         adress: '',
@@ -215,8 +215,8 @@ const BarDataBase = [
     {
         name: 'Napoleone',
         miniDescription: 'le QG des wilder, à boire et à manger',
-        specialities: ["Cocktails, vins,bières,tapas"],
-        distance: '85m',
+        specialities: 'cocktail vin biere tapas',
+        distance: '85 m',
         priceRange: '€€-€€€',
         adress: ' 1 rue baron',
         tel: '02 53 78 40 61',
@@ -228,8 +228,8 @@ const BarDataBase = [
     {
         name: 'Le lovecraft',
         miniDescription: 'le QG des wilder, à boire et à manger',
-        specialities: ['bieres artisanales,vins raffinés,cocktails maison'],
-        distance: '400m',
+        specialities: 'biere artisanales vin cocktails',
+        distance: '400 m',
         priceRange: '€',
         adress: '32 bis Rue Fouré',
         tel: '0228499855',
@@ -241,8 +241,8 @@ const BarDataBase = [
     {
         name: 'Le lieu unique',
         miniDescription: 'bar dans une ancienne biscuiterie',
-        specialities: ['bieres artisanales,vins raffinés,cocktails maison'],
-        distance: '400m',
+        specialities: 'bieres artisanales vins raffinés cocktails maison',
+        distance: '400 m',
         priceRange: '€',
         adress: '32 bis Rue Fouré',
         tel: '0228499855',
@@ -254,8 +254,8 @@ const BarDataBase = [
     {
         name: 'le bain rouge',
         miniDescription: 'Lieu de spectacles et de tenue d’évènements',
-        specialities: ['bieres artisanales,vins raffinés,cocktails maison'],
-        distance: '400m',
+        specialities: 'bieres artisanales vins raffinés cocktails maison',
+        distance: '400 m',
         priceRange: '€',
         adress: '32 bis Rue Fouré',
         tel: '0228499855',
@@ -267,8 +267,8 @@ const BarDataBase = [
     {
         name: 'Coco bandit',
         miniDescription: 'le QG des wilder, à boire et à manger',
-        specialities: ['Bar à cocktails'],
-        distance: '400m',
+        specialities: 'cocktail',
+        distance: '400 m',
         priceRange: '€',
         adress: '15 Rue Crucy ',
         tel: '0640784675',
@@ -280,8 +280,8 @@ const BarDataBase = [
     {
         name: 'Delirium cafe',
         miniDescription: 'sélection de bières pression et soirées musicales ou sportives.',
-        specialities: ['bieres artisanales,vins raffinés,cocktails maison'],
-        distance: '400m',
+        specialities: 'bieres artisanales vins raffinés cocktails maison',
+        distance: '400 m',
         priceRange: '€',
         adress: '32 bis Rue Fouré',
         tel: '0228499855',
@@ -305,6 +305,7 @@ const footstepImg = document.querySelectorAll("#footstep-img");
 const priceFilterImg = document.querySelectorAll("#price-img");
 
 
+
 cuisineSwitch.addEventListener('click', function () {
 
     const darkMode = body.classList.contains("dark-mode");
@@ -316,6 +317,10 @@ cuisineSwitch.addEventListener('click', function () {
         barSwitch.classList.remove("dark-mode");
         body.classList.toggle("light-mode");
         body.classList.remove("dark-mode");
+        placesList.classList.add("light-mode");
+        placesList.classList.remove("dark-mode");
+        primaryFilterMenu.classList.add("light-mode");
+        primaryFilterMenu.classList.remove("dark-mode");
         footer.classList.toggle("light-mode");
         footer.classList.remove("dark-mode");
         distanceMenu.classList.toggle("light-mode");
@@ -334,6 +339,8 @@ cuisineSwitch.addEventListener('click', function () {
         }
         //display restaurants
         displayPlaces(restaurantDataBase);
+        //display food filters
+        displayFoodFilter();
     } else {
         // do nothing, we are already in light mode.
     }
@@ -350,6 +357,10 @@ barSwitch.addEventListener('click', function () {
         barSwitch.classList.remove("light-mode");
         body.classList.toggle("dark-mode");
         body.classList.remove("light-mode");
+        placesList.classList.remove("light-mode");
+        placesList.classList.add("dark-mode");
+        primaryFilterMenu.classList.remove("light-mode");
+        primaryFilterMenu.classList.add("dark-mode");
         footer.classList.toggle("dark-mode");
         footer.classList.remove("light-mode");
         distanceMenu.classList.toggle("dark-mode");
@@ -368,6 +379,9 @@ barSwitch.addEventListener('click', function () {
         }
         //display bars
         displayPlaces(BarDataBase);
+
+        // display drink filters
+        displayDrinkFilter();
     } else {
         // do nothing, we are already in dark mode.
     }
@@ -535,12 +549,16 @@ const priceMenu = document.getElementById("price-range-menu");
 const menuContainer = document.getElementById("mini-menus-container");
 const placesContainer = document.getElementById("places-container");
 const filterBar = document.getElementById("filter-bar");
+const primaryFilterButton = document.getElementById("primary-filter");
+const primaryFilterMenu = document.getElementById("primary-filter-container");
 
+// make primary filter menu appear
+primaryFilterButton.addEventListener("click", function () {
 
-// make distance menu appear
-distanceMenuButton.addEventListener("click", function () {
+    menuContainer.style.zIndex = 3;
+    menuContainer.classList.remove("hidden");
+    sleep(10).then(() => {
 
-    distanceMenu.classList.toggle("collapsed");
 
     ///FUNCTION menusOnTop // function placesOnTop
     menuContainer.style.zIndex = 3;
@@ -548,15 +566,50 @@ distanceMenuButton.addEventListener("click", function () {
     console.log("tu débugge le bon truc");
     // check if another menu is already open
     if (priceMenu.classList.contains("collapsed")) {
+      
+        //conflict
+        //primaryFilterMenu.classList.toggle("collapsed");
 
-        // bring the menu container to the front
 
-    }
+        if (priceMenu.classList.contains("collapsed") === false) { priceMenu.classList.add("collapsed") };
+        if (distanceMenu.classList.contains("collapsed") === false) { distanceMenu.classList.add("collapsed") };
+
+        //if all menus are collapsed, put the container to the background
+        if (distanceMenu.classList.contains("collapsed") && priceMenu.classList.contains("collapsed") && primaryFilterMenu.classList.contains("collapsed")) {
+            // bring the menu container to the front
+            sleep(300).then(() => {
+                menuContainer.style.zIndex = 0;
+                menuContainer.classList.add("hidden")
+            });
+        }
+    });
 });
 
+// make distance menu appear
+distanceMenuButton.addEventListener("click", function () {
+
+    menuContainer.classList.remove("hidden");
+    sleep(10).then(() => {
+        distanceMenu.classList.toggle("collapsed");
+        primaryFilterMenu.classList.add("collapsed");
+
+        menuContainer.style.zIndex = 3;
+
+        console.log("tu débugge le bon truc");
+        //if all menus are collapsed, put the container to the background
+        if (distanceMenu.classList.contains("collapsed") && priceMenu.classList.contains("collapsed") && primaryFilterMenu.classList.contains("collapsed")) {
+            // bring the menu container to the front
+            sleep(300).then(() => {
+                menuContainer.style.zIndex = 0;
+                menuContainer.classList.add("hidden")
+            });
+        }
+    });
+});
 
 // make price menu appear
 priceMenuButton.addEventListener("click", function () {
+
     priceMenu.classList.toggle("collapsed");
 
     menuContainer.style.zIndex = 3;
@@ -567,15 +620,47 @@ priceMenuButton.addEventListener("click", function () {
 
     }
 
+
+    menuContainer.classList.remove("hidden");
+    sleep(10).then(() => {
+        priceMenu.classList.toggle("collapsed");
+        primaryFilterMenu.classList.add("collapsed");
+
+        menuContainer.style.zIndex = 3;
+        //if all menus are collapsed, put the container to the background
+        if (distanceMenu.classList.contains("collapsed") && priceMenu.classList.contains("collapsed") && primaryFilterMenu.classList.contains("collapsed")) {
+            // bring the menu container to the front
+            sleep(300).then(() => {
+                menuContainer.style.zIndex = 0;
+                menuContainer.classList.add("hidden")
+            });
+        }
+    });
 });
 
 //make all menus dissapear when clicking somewhere else
-menuContainer.addEventListener("click", function () {
-    priceMenu.classList.add("collapsed");
-    distanceMenu.classList.add("collapsed");
-    primaryFilterMenu.classList.add("collapsed");
-    menuContainer.style.zIndex = 0;
+
+menuContainer.addEventListener("click", function (event) {
+
+    //if either menu is clicked, do nothing.
+    // the event.target makes us able to knwo wether the user clicked on a menu or somewhere else, it is AMAZING.
+    if (distanceMenu.contains(event.target) || priceMenu.contains(event.target) || primaryFilterMenu.contains(event.target)) {
+        console.log("clic sur un menu");
+    } else {
+        priceMenu.classList.add("collapsed");
+        distanceMenu.classList.add("collapsed");
+        primaryFilterMenu.classList.add("collapsed");
+        sleep(300).then(() => {
+            menuContainer.style.zIndex = 0;;
+            menuContainer.classList.add("hidden")
+        });
+    }
+
 })
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 
 // price menu filtering
@@ -593,7 +678,6 @@ const priceFilterButtonMid = document.getElementById("price-range-mid");
 const priceFilterButtonHigh = document.getElementById("price-range-high");
 
 priceFilterButtonLow.addEventListener("click", function () {
-
     //figure out if we are in light or dark mode. 
     const lightMode = body.classList.contains("light-mode");
 
@@ -642,7 +726,12 @@ priceFilterButtonLow.addEventListener("click", function () {
         else { priceMenuButton.firstChild.src = './icons/price_darkmode.svg' };
     }
 
+    //apply all filters
+    applyFilters();
 
+    // close the menu after a little while
+    sleep(600).then(() => { priceMenu.classList.add("collapsed") });
+    sleep(900).then(() => { menuContainer.style.zIndex = 0; });
 });
 
 
@@ -693,6 +782,12 @@ priceFilterButtonMid.addEventListener("click", function () {
         else { priceMenuButton.firstChild.src = './icons/price_darkmode.svg' };
     }
 
+    //apply all filters
+    applyFilters();
+
+    // close the menu after a little while
+    sleep(600).then(() => { priceMenu.classList.add("collapsed") });
+    sleep(900).then(() => { menuContainer.style.zIndex = 0; });
 
 });
 
@@ -742,7 +837,12 @@ priceFilterButtonHigh.addEventListener("click", function () {
         else { priceMenuButton.firstChild.src = './icons/price_darkmode.svg' };
     }
 
+    //apply all filters
+    applyFilters();
 
+    // close the menu after a little while
+    sleep(600).then(() => { priceMenu.classList.add("collapsed") });
+    sleep(900).then(() => { menuContainer.style.zIndex = 0; });
 });
 
 
@@ -821,7 +921,12 @@ distanceFilterButtonHigh.addEventListener("click", function () {
         distanceMenuButton.firstChild.src = distanceIcon;
     }
 
+    //apply all filters
+    applyFilters();
 
+    // close the menu after a little while
+    sleep(600).then(() => { distanceMenu.classList.add("collapsed") });
+    sleep(900).then(() => { menuContainer.style.zIndex = 0; });
 });
 
 
@@ -877,7 +982,12 @@ distanceFilterButtonMid.addEventListener("click", function () {
         distanceMenuButton.firstChild.src = distanceIcon;
     }
 
+    //apply all filters
+    applyFilters();
 
+    // close the menu after a little while
+    sleep(600).then(() => { distanceMenu.classList.add("collapsed") });
+    sleep(900).then(() => { menuContainer.style.zIndex = 0; });
 });
 
 
@@ -933,72 +1043,114 @@ distanceFilterButtonLow.addEventListener("click", function () {
         distanceMenuButton.firstChild.src = distanceIcon;
     }
 
+    //apply all filters
+    applyFilters();
 
+    // close the menu after a little while
+    sleep(600).then(() => { distanceMenu.classList.add("collapsed") });
+    sleep(900).then(() => { menuContainer.style.zIndex = 0; });
 });
 
 //END OF MINI MENUS BEHAVIOUR
 
 
 //START OF PRIMARY FILTER BEHAVIOUR
-const primaryFilterButton = document.getElementById("primary-filter");
-const primaryFilterMenu = document.getElementById("primary-filter-container");
 
-// make primary filter menu appear
-primaryFilterButton.addEventListener("click", function () {
 
-    menuContainer.style.zIndex = 3;
-
-    primaryFilterMenu.classList.toggle("collapsed");
-
-    if (priceMenu.classList.contains("collapsed") === false) { priceMenu.classList.add("collapsed") };
-    if (distanceMenu.classList.contains("collapsed") === false) { distanceMenu.classList.add("collapsed") };
-
-});
 
 primaryFoodFilters = [
     {
         name: 'italien',
-        icon: './icons/pizza.svg'
-    },
-    {
-        name: 'asiatique',
-        icon: './icons/ramen.svg'
-    },
-    {
-        name: 'burger',
-        icon: './icons/burger.svg'
-    },
-    {
-        name: 'dessert',
-        icon: './icons/cupcake.svg'
+        icon: './icons/pizza.svg',
+        iconPink: './icons/pizza_pink.svg',
+        active: false
     },
     {
         name: 'sandwich',
-        icon: './icons/sandwich.svg'
+        icon: './icons/sandwich.svg',
+        iconPink: './icons/sandwich_pink.svg',
+        active: false
+    },
+    {
+        name: 'asiatique',
+        icon: './icons/ramen.svg',
+        iconPink: './icons/ramen_pink.svg',
+        active: false
+    },
+    {
+        name: 'burger',
+        icon: './icons/burger.svg',
+        iconPink: './icons/burger_pink.svg',
+        active: false
+    },
+    {
+        name: 'dessert',
+        icon: './icons/cupcake.svg',
+        iconPink: './icons/cupcake_pink.svg',
+        active: false
     },
     {
         name: 'salade',
-        icon: './icons/salade.svg'
+        icon: './icons/salade.svg',
+        iconPink: './icons/salade_pink.svg',
+        active: false
     }
 ];
 
 secondaryFoodFilters = [
     {
-        name: 'végan',
-        icon: './icons/vegan.svg'
+        name: 'vegan',
+        icon: './icons/vegan.svg',
+        iconPink: './icons/vegan_pink.svg',
+        active: false
     },
     {
         name: 'halal',
-        icon: './icons/burger.svg'
+        icon: './icons/halal.svg',
+        iconPink: './icons/halal_pink.svg',
+        active: false
     },
     {
         name: 'sans gluten',
-        icon: './icons/glutenfree.svg'
+        icon: './icons/glutenfree.svg',
+        iconPink: './icons/glutenfree_pink.svg',
+        active: false
     }
 ];
 
-function displayPrimaryFilter() {
 
+primaryDrinkFilters = [
+    {
+        name: 'biere',
+        icon: './icons/beer.svg',
+        iconPink: './icons/beer_pink.svg',
+        active: false
+    },
+    {
+        name: 'cafe',
+        icon: './icons/coffee.svg',
+        iconPink: './icons/coffee_pink.svg',
+        active: false
+    },
+    {
+        name: 'vin',
+        icon: './icons/wine.svg',
+        iconPink: './icons/wine_pink.svg',
+        active: false
+    },
+    {
+        name: 'cocktails',
+        icon: './icons/cocktail.svg',
+        iconPink: './icons/cocktail_pink.svg',
+        active: false
+    }
+
+];
+
+///// FILTERS NEED TO ALL BE RESET TO FALSE WHEN SWITCHING MODES !!!!!
+
+function displayFoodFilter() {
+    primaryFilterMenu.innerHTML = "";
 
     /// create the different "cuisines" section
 
@@ -1009,17 +1161,62 @@ function displayPrimaryFilter() {
     let mainFiltersList = document.createElement("ul");
 
     // create one clickable button for each primary filter
-    primaryFoodFilters.forEach(filter => {
-        console.log(filter.name);
-
+    primaryFoodFilters.forEach((filter, index) => {
+        console.log(index)
+        console.log(primaryFoodFilters[index])
         //create a button
         filterButton = document.createElement("button");
 
-        /// TODO : create id based on name
+        filterButton.setAttribute("id", filter.name);
+
+        //add the behaviour to the button.
+        filterButton.addEventListener("click", function () {
+            //maybe these two variables are useless, i can't decide. 
+            let targetFilter = filter.name;
+            let targetIndex = index;
+            // this one sure isn't : removing it prevents the function form target the right button.
+            let targetButton = document.getElementById(targetFilter);
+
+            //toggle primary filter
+            if (primaryFoodFilters[targetIndex].active == false) {
+
+                //deactivate all other primary filters  -> BUG : how to target all of the buttons ? 
+                primaryFoodFilters.forEach(filter => {
+                    filter.active = false;
+                    let targetButton = document.getElementById(filter.name);
+                    targetButton.firstChild.src = filter.icon;
+
+                })
+
+                // activate the one that was clicked
+                primaryFoodFilters[targetIndex].active = true;
+                targetButton.firstChild.src = primaryFoodFilters[targetIndex].iconPink
+
+            } else {
+                console.log("le filtre etait inactif")
+                primaryFoodFilters[targetIndex].active = false;
+                targetButton.firstChild.src = primaryFoodFilters[targetIndex].icon
+            }
+
+            //impact on the primary filter icon
+            if (isPrimaryFilterActive()) {
+                primaryFilterButton.firstChild.src = './icons/cuisine_pink.svg'
+            } else {
+                primaryFilterButton.firstChild.src = './icons/cuisine_icon.svg'
+            };
+
+            //apply all filters
+            applyFilters();
+        });
+
 
         //create and append an image
         buttonIcon = document.createElement("img");
-        buttonIcon.src = filter.icon;
+        if (filter.active == true) {
+            buttonIcon.src = filter.iconPink;
+        } else {
+            buttonIcon.src = filter.icon;
+        }
         buttonIcon.alt = filter.name;
         filterButton.appendChild(buttonIcon);
 
@@ -1037,17 +1234,54 @@ function displayPrimaryFilter() {
     let secondaryFiltersList = document.createElement("ul");
 
     // create one clickable button for each secondary filter
-    secondaryFoodFilters.forEach(filter => {
+    secondaryFoodFilters.forEach((filter, index) => {
         console.log(filter.name);
 
         //create a button
         filterButton = document.createElement("button");
 
-        /// TODO : create id based on name
+        filterButton.setAttribute("id", filter.name);
+
+        //add the behaviour to the button.
+        filterButton.addEventListener("click", function () {
+            //maybe these two variables are useless, i can't decide. 
+            let targetFilter = filter.name;
+            let targetIndex = index;
+            // this one sure isn't : removing it prevents the function form target the right button.
+            let targetButton = document.getElementById(targetFilter);
+
+            //toggle primary filter
+            if (secondaryFoodFilters[targetIndex].active == false) {
+                secondaryFoodFilters[targetIndex].active = true;
+                targetButton.firstChild.src = secondaryFoodFilters[targetIndex].iconPink
+
+            } else {
+                console.log("le filtre etait inactif")
+                secondaryFoodFilters[targetIndex].active = false;
+                targetButton.firstChild.src = secondaryFoodFilters[targetIndex].icon
+            }
+
+            //impact on the primary filter icon
+            if (isPrimaryFilterActive()) {
+                primaryFilterButton.firstChild.src = './icons/cuisine_pink.svg'
+            } else {
+                primaryFilterButton.firstChild.src = './icons/cuisine_icon.svg'
+            };
+
+            //apply all filters
+            applyFilters();
+        });
+
 
         //create and append an image
         buttonIcon = document.createElement("img");
-        buttonIcon.src = filter.icon;
+        //create and append an image
+        buttonIcon = document.createElement("img");
+        if (filter.active == true) {
+            buttonIcon.src = filter.iconPink;
+        } else {
+            buttonIcon.src = filter.icon;
+        }
         buttonIcon.alt = filter.name;
         filterButton.appendChild(buttonIcon);
 
@@ -1058,7 +1292,203 @@ function displayPrimaryFilter() {
 
 }
 
-displayPrimaryFilter();
+function displayDrinkFilter() {
+    primaryFilterMenu.innerHTML = "";
+
+    /// create the different "drinks" section
+
+    let firstLabel = document.createElement("p");
+    firstLabel.innerText = "Catégories"
+    primaryFilterMenu.appendChild(firstLabel);
+
+    let mainFiltersList = document.createElement("ul");
+
+    // create one clickable button for each primary filter
+    primaryDrinkFilters.forEach((filter, index) => {
+
+        //create a button
+        filterButton = document.createElement("button");
+        filterButton.setAttribute("id", filter.name);
+
+        //add the behaviour to the button.
+        filterButton.addEventListener("click", function () {
+            //maybe these two variables are useless, i can't decide. 
+            let targetFilter = filter.name;
+            let targetIndex = index;
+            // this one sure isn't : removing it prevents the function form target the right button.
+            let targetButton = document.getElementById(targetFilter);
+
+            //toggle primary filter
+            if (primaryDrinkFilters[targetIndex].active == false) {
+
+                //deactivate all other primary filters  -> BUG : how to target all of the buttons ? 
+                primaryDrinkFilters.forEach(filter => {
+                    filter.active = false;
+                    let targetButton = document.getElementById(filter.name);
+                    targetButton.firstChild.src = filter.icon;
+
+                })
+
+                primaryDrinkFilters[targetIndex].active = true;
+                targetButton.firstChild.src = primaryDrinkFilters[targetIndex].iconPink
+
+            } else {
+                console.log("le filtre etait inactif")
+                primaryDrinkFilters[targetIndex].active = false;
+                targetButton.firstChild.src = primaryDrinkFilters[targetIndex].icon
+            }
+
+            //impact on the primary filter icon
+            if (isPrimaryFilterActive()) {
+                primaryFilterButton.firstChild.src = './icons/drinks_pink.svg'
+            } else {
+                primaryFilterButton.firstChild.src = './icons/drinks_icon.svg'
+            };
+
+            //apply all filters
+            applyFilters();
+        });
+
+        //create and append an image
+        buttonIcon = document.createElement("img");
+        if (filter.active == true) {
+            buttonIcon.src = filter.iconPink;
+        } else {
+            buttonIcon.src = filter.icon;
+        }
+        buttonIcon.alt = filter.name;
+        filterButton.appendChild(buttonIcon);
+
+        //append the button to the ul
+        mainFiltersList.appendChild(filterButton);
+    });
+
+    primaryFilterMenu.appendChild(mainFiltersList);
+
+}
+
+function isPrimaryFilterActive() {
+
+    let atLeastOneFilterIsActive = false;
+
+    const lightMode = body.classList.contains("light-mode");
+    if (lightMode) {
+        primaryFoodFilters.forEach((filter) => {
+            if (filter.active) { atLeastOneFilterIsActive = true };
+        });
+        secondaryFoodFilters.forEach((filter) => {
+            if (filter.active) { atLeastOneFilterIsActive = true };
+        });
+    } else {
+        primaryDrinkFilters.forEach((filter) => {
+            if (filter.active) { atLeastOneFilterIsActive = true };
+        });
+    }
+
+    return atLeastOneFilterIsActive;
+}
+
+//init with a food filter
+displayFoodFilter();
 
 //END OF PRIMARY FILTER BEHAVIOUR
+
+/// A little animation, a little after the page loads the primary filter button will blink. 
+
+function blink(element) {
+    element.style.transform = 'scale(2)'
+    sleep(310).then(() => {
+        element.style.transform = 'scale(1)'
+        sleep(310).then(() => {
+            element.style.transform = 'scale(2)'
+            sleep(310).then(() => {
+                element.style.transform = 'scale(1)'
+            });
+        });
+    });
+}
+
+sleep(1500).then(() => {
+    blink(primaryFilterButton);
+});
+// sleep(2800).then(() => {
+//     blink(distanceMenuButton);
+// });
+// sleep(3200).then(() => {
+//     blink(priceMenuButton);
+// });
+
+
+
+//// FILTERING "INTELLIGENCE"
+
+function filterByPrimary(originalDataBase, filteringArray) {
+
+    //Make sure there is at least one primary filter activated, otherwise retrun the original DB
+    if (filteringArray.some(filter => filter.active) == false) { return originalDataBase };
+
+    //filter the original database
+    return filteredDataBase = originalDataBase.filter((place) => {
+
+        let atLeastOneMatch = false;
+        // check all of the filters one by one. SUB-OPTIMAL, but it works.
+        filteringArray.forEach(filter => {
+
+            // only for active filters
+            if (filter.active) {
+
+                if (place.specialities.includes(filter.name)) {
+                    atLeastOneMatch = true;
+                };
+
+            }
+        });
+
+        return atLeastOneMatch;
+
+    });
+}
+
+function applyFilters() {
+    let filteredDataBase = [];
+    /// if lightmode
+    const lightMode = body.classList.contains("light-mode");
+    if (lightMode) {
+        filteredDataBase = filterByPrimary(restaurantDataBase, primaryFoodFilters);
+    } else {
+        filteredDataBase = filterByPrimary(BarDataBase, primaryDrinkFilters);
+    }
+    /// if darkmode
+
+    ///then filter by price and by distance
+    filteredDataBase = filterByPrice(filteredDataBase, priceFilter)
+    //filteredDataBase = filterByDistance(filteredDataBase, distanceFilter)
+
+    // check wether empty or not, if so, put an object to inform the user.
+    if (filteredDataBase.length === 0) {
+        filteredDataBase = [{
+            name: 'Pas de résultat',
+            miniDescription: 'Soyez moins exigeant. La vie vous le rendra.',
+            specialities: ['salade', 'sandwich', 'poisson'],
+            distance: '',
+            priceRange: '',
+            adress: '',
+            tel: '',
+            linkToMaps: '',
+            image: './assets/noResult.png',
+            description: ''
+            // manque le prix
+        }]
+    }
+    // adjust display
+    displayPlaces(filteredDataBase);
+}
+
+// Filter the restaurant database by price
+function filterByPrice(dataBase, priceFilter) {
+    if (priceFilter == 0) { return dataBase; };
+    return dataBase.filter(restaurant => {
+        return restaurant.priceRange.length <= priceFilter
+    });
+}
 
