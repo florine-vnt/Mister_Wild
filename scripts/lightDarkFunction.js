@@ -3,9 +3,9 @@ import { primaryFilterButton } from './home.js';
 import { distanceMenu } from './home.js';
 import { priceMenu } from './home.js';
 import { applyFilters } from './filteringFunctions.js';
-import { primaryDrinkFilters } from './filteringFunctions.js';
-import { primaryFoodFilters } from './filteringFunctions.js';
-import { secondaryFoodFilters } from './filteringFunctions.js';
+import { primaryDrinkFilters } from './filters.js';
+import { primaryFoodFilters } from './filters.js';
+import { secondaryFoodFilters } from './filters.js';
 
 
 /* JS switch dark-light mode */

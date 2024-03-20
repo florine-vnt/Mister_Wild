@@ -2,20 +2,29 @@ import { displayPlaces } from './placesFunctions.js';
 import { switchToDarkMode } from './lightDarkFunction.js'
 import { switchToLightMode } from './lightDarkFunction.js'
 import { displayFoodFilter } from './lightDarkFunction.js'
-
-import { restaurantDataBase } from './filteringFunctions.js';
-import { BarDataBase } from './filteringFunctions.js';
+import { restaurantDataBase } from './restaurants.js';
 
 
 /* JS switch dark-light mode */
 const cuisineSwitch = document.querySelector("#cuisine-switch");
 const barSwitch = document.querySelector("#bar-switch");
+const distanceMenuButton = document.getElementById("distance");
+export const distanceMenu = document.getElementById("distance-menu");
+const priceMenuButton = document.getElementById("price-range");
+export const priceMenu = document.getElementById("price-range-menu");
+export const menuContainer = document.getElementById("mini-menus-container");
+export const primaryFilterButton = document.getElementById("primary-filter");
+export const primaryFilterMenu = document.getElementById("primary-filter-container");
+const homeButton = document.getElementById("home");
 
-barSwitch.addEventListener('click', switchToDarkMode)
-cuisineSwitch.addEventListener('click', switchToLightMode)
+barSwitch.addEventListener('click', switchToDarkMode);
+cuisineSwitch.addEventListener('click', switchToLightMode);
+homeButton.addEventListener('click', switchToLightMode);
 
-
+// populate the places list with restaurants at init
 displayPlaces(restaurantDataBase);
+//init with a food filter
+displayFoodFilter();
 
 // ZOOM ON A SELECTED CARD 
 // first card selected. TO DO : select all cards
@@ -36,13 +45,7 @@ selectedCard.addEventListener('click', function () {
 
 //START OF MINI MENUS BEHAVIOUR
 /// Functions to display/hide the mini-menus
-const distanceMenuButton = document.getElementById("distance");
-export const distanceMenu = document.getElementById("distance-menu");
-const priceMenuButton = document.getElementById("price-range");
-export const priceMenu = document.getElementById("price-range-menu");
-export const menuContainer = document.getElementById("mini-menus-container");
-export const primaryFilterButton = document.getElementById("primary-filter");
-export const primaryFilterMenu = document.getElementById("primary-filter-container");
+
 
 // make primary filter menu appear
 primaryFilterButton.addEventListener("click", function () {
@@ -140,8 +143,7 @@ export function sleep(ms) {
 
 
 
-//init with a food filter
-displayFoodFilter();
+
 
 //END OF PRIMARY FILTER BEHAVIOUR
 
