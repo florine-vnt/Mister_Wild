@@ -489,6 +489,7 @@ footer {
     grid-column: span 2;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .card-selected .picto-container img {
@@ -507,6 +508,7 @@ footer {
     width: 40vw;
     height: 20vh;
 }
+
 
 .google-map {
     height: 30vh;

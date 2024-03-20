@@ -451,7 +451,7 @@ function displayPlaces(dataBase) {
 
         //create a clickable tel picto
         let linkableTel = document.createElement('a');
-        linkableTel.href = "tel:${place.tel}"
+        linkableTel.href = `"tel:${place.tel}"`
 
         let telPicto = document.createElement("img");
         telPicto.src = "./icons/tel_icon.png"
