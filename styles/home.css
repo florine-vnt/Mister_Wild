@@ -62,6 +62,8 @@ header>nav>ul>button {
     font-weight: bold;
     font-size: 15px;
     padding: 10px;
+    transition-property: transform;
+    transition-duration: .3s;
 }
 
 #cuisine-switch.light-mode {
@@ -447,10 +449,20 @@ footer {
     display: none;
 }
 
+
 .more-info-container {
     display: none;
 }
 
 .card-selected {
-    height: 72.5vh;
+    /* height: calc(80vh-(40px)); */
+}
+
+.card-selected>div {
+    background-color: pink;
+    display: block;
+}
+
+.card-selected .picto-container {
+    background-color: aqua;
 }

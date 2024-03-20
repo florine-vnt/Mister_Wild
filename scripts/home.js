@@ -477,15 +477,15 @@ displayPlaces(restaurantDataBase);
 let selectedCard = document.querySelector(".card");
 // adding an EventListener when clicking the selected card and adding a new class
 selectedCard.addEventListener('click', function () {
-    selectedCard.classList.add("card-selected");
+    selectedCard.classList.toggle("card-selected");
 
-    // variables had to be re-called since they were declared in the fonction
-    let pictoContainer = document.querySelector(".picto-container");
-    let moreinfoContainer = document.querySelector(".more-info-container");
+    // // variables had to be re-called since they were declared in the fonction
+    // let pictoContainer = document.querySelector(".picto-container");
+    // let moreinfoContainer = document.querySelector(".more-info-container");
 
-    //display hidden container
-    pictoContainer.style.display = "block";
-    moreinfoContainer.style.display = "block";
+    // //display hidden container
+    // pictoContainer.style.display = "block";
+    // moreinfoContainer.style.display = "block";
 })
 
 
