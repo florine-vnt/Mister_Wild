@@ -157,7 +157,7 @@ const restaurantDataBase = [
         miniDescription: 'Blé ancien moulu avec une meule en pierre, viennoiserie XXL, sandwich au mètre, une boulangerie à découvrir!',
         specialities: 'sandwich Pâtisserie pains',
         distance: '550 m',
-        priceRange: '€',
+        priceRange: '€€',
         adress: '1 chaussée de la Madeleine, 44000 Nantes',
         shortAddress: '1 chaussée de la Madeleine',
         tel: '+339 86 64 69 43',
