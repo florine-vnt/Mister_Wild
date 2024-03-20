@@ -1283,6 +1283,7 @@ function filterByPrimary(originalDataBase, filteringArray) {
     if (filteringArray.some(filter => filter.active) == false) { return originalDataBase };
 
     //filter the original database
+    let filteredDataBase=[];
     return filteredDataBase = originalDataBase.filter((place) => {
 
         let atLeastOneMatch = false;
