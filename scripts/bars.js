@@ -1,4 +1,4 @@
-const BarDataBase = [
+export const BarDataBase = [
     {
         name: 'Napoleone',
         miniDescription: 'le QG des wilder, à boire et à manger',
