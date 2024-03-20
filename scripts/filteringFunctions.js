@@ -168,9 +168,6 @@ priceFilterButtonLow.addEventListener("click", function () {
     sleep(900).then(() => { menuContainer.style.zIndex = 0; });
 });
 
-
-
-priceFilterButtonMid.addEventListener("click", handleToastMenuButton(priceMenuButton, priceMenu, priceFilterButtonMid, 2));
 priceFilterButtonMid.addEventListener("click", function () {
 
     //figure out if we are in light or dark mode. 
