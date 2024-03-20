@@ -453,6 +453,8 @@ footer {
     margin-top: 0;
 }
 
+/* Hiding some div on the main menu */
+
 .picto-container {
     display: none;
 }
@@ -461,15 +463,13 @@ footer {
     display: none;
 }
 
+/* Showing these div to the selected card */
+
 .card-selected>div {
-    background-color: pink;
     display: block;
 }
 
-.card-selected .picto-container {
-    background-color: aqua;
-}
-
+/* Hiding short info to the selected card */
 .card-selected .place-distance {
     display: none;
 }
@@ -478,6 +478,18 @@ footer {
     display: none;
 }
 
+/* Style of the selected card*/
+.card-selected .picto-container {
+    display: flex;
+    justify-content: space-around;
+}
+
 .card-selected .picto-container img {
-    height: 4vh;
+    height: 5vh;
+}
+
+.card-selected {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }

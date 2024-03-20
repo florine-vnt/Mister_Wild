@@ -449,16 +449,21 @@ function displayPlaces(dataBase) {
         // pricePicto.innerText = place.priceRange;
         // pictoContainer.appendChild(pricePicto);
 
+        //create a clickable tel picto
+        let linkableTel = document.createElement('a');
+        linkableTel.href = "tel:${place.tel}"
+
         let telPicto = document.createElement("img");
         telPicto.src = "./icons/tel_icon.png"
-        pictoContainer.appendChild(telPicto);
+        linkableTel.appendChild(telPicto);
+        pictoContainer.appendChild(linkableTel);
 
         // let telPicto = document.createElement("p");
         // telPicto.innerText = place.tel;
         // pictoContainer.appendChild(telPicto);
 
 
-        //create a div for full-description and adress
+        //create a div for full-description and address
         let moreinfoContainer = document.createElement("div")
         moreinfoContainer.classList.add("more-info-container")
 
@@ -467,10 +472,10 @@ function displayPlaces(dataBase) {
         fullDescription.innerText = place.description;
         moreinfoContainer.appendChild(fullDescription);
 
-        // create address 
-        let address = document.createElement("p");
-        address.innerText = place.shortAddress;
-        moreinfoContainer.appendChild(address);
+        // create a short address 
+        let shortAddress = document.createElement("p");
+        shortAddress.innerText = place.shortAddress;
+        moreinfoContainer.appendChild(shortAddress);
 
         // TODO : add Gmaps at the bottom of selected card 
 
