@@ -105,7 +105,7 @@ export const restaurantDataBase = [
         shortAddress: '27 rue Fouré',
         tel: '+339 81 30 85 44',
         linkToMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.2452151415787!2d-1.5492575242048436!3d47.21178407115636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805efa3f385f89f%3A0x20f92c9a224db500!2sPap%C3%A0%20Pasta!5e0!3m2!1sfr!2sfr!4v1710970840826!5m2!1sfr!2sfr",
-        image: './assets/Restaurants/',
+        image: './assets/Restaurants/papa-pasta.png',
         description: 'Des pâtes maison, fait uniquement avec des produits locaux, avec des portion généreuse !'
     },
 
@@ -120,8 +120,8 @@ export const restaurantDataBase = [
         shortAddress: '6 rue de Saverne',
         tel: '+336 24 20 43 05',
         linkToMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.2562534461495!2d-1.548899224204885!3d47.21156807115642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671dee021b9a5%3A0x220890b6796361bf!2sVirginie&#39;s%20caf%C3%A9!5e0!3m2!1sfr!2sfr!4v1710970696894!5m2!1sfr!2sfr",
-        image: './assets/Restaurants/virgines.net',
-        description: ''
+        image: './assets/Restaurants/virgines.jpg',
+        description: 'Cuisine détox gourmande, adaptée à tous, innovante, équilibrée, sur mesure, bien-être corporel.'
     },
     {
 
@@ -162,13 +162,13 @@ export const restaurantDataBase = [
         shortAddress: '1 chaussée de la Madeleine',
         tel: '+339 86 64 69 43',
         linkToMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.214067495746!2d-1.555133424204747!3d47.21239357115636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805ef8151adda07%3A0x717b51b38b78a482!2sBoulangerie%20La%20Fourmi!5e0!3m2!1sfr!2sfr!4v1710970536218!5m2!1sfr!2sfr",
-        image: './assets/Restaurants/boulangerie-la-fourmi.net',
+        image: './assets/Restaurants/boulangerie-la-fourmi.jpg',
         description: 'Véritable institution nantaise, le café la Fourmi a pris un nouveau départ pour devenir une boulangerie! Les viennoiseries XXL sont un petit déjeuner à elle seul! Pour le midi, vous pouvez choisir votre Jambon-beurre au mètre!'
     },
     {
 
         name: 'Guindaille',
-        miniDescription: 'Bar à manger',
+        miniDescription: 'Boire, manger, socialiser, festoyer, un lieu convivial et animé.',
         specialities: "",
         distance: '90 m',
         priceRange: '€€€',
@@ -176,7 +176,7 @@ export const restaurantDataBase = [
         shortAddress: '36 Rue Fouré',
         tel: '0240755305',
         linkToMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.2450465005163!2d-1.5495317242048032!3d47.21178737115633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805efbed73c5e01%3A0x187a55601f6097ac!2sGuindaille!5e0!3m2!1sfr!2sfr!4v1710970323186!5m2!1sfr!2sfr",
-        image: './assets/Restaurants/',
+        image: './assets/Restaurants/Guindaille.png',
         description: 'Un style bistro hyper quali le midi. Le soir, des assiettes généreuses à partager.'
     },
     {
@@ -190,7 +190,7 @@ export const restaurantDataBase = [
         shortAddress: '30 Rue Fouré',
         tel: '0251723181',
         linkToMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.223802765004!2d-1.5495078242048335!3d47.21220307115638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805eff0bc571423%3A0x8bc6e8e73d07dae7!2sLa%20Mangouste!5e0!3m2!1sfr!2sfr!4v1710970160455!5m2!1sfr!2sfr",
-        image: './assets/Restaurants/',
+        image: './assets/Restaurants/magnouste3.svg',
         description: 'Cuisine délicate et savoureuse, accompagnée de vins sélectionnés avec passion et de cocktails parfumés.'
     }
 
