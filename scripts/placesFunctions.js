@@ -61,6 +61,16 @@ export function displayPlaces(dataBase) {
         specialityPicto.src = "./icons/cupcake.svg"; //TODO target the speciality.icon
         pictoContainer.appendChild(specialityPicto);
 
+        // // essai fonction icone 
+        // const pizzaPlace = place.name.contains("pizza");
+        // const patesPlace = place.name.contains("pates");
+        // sandwich
+        // salade
+        // asiatique
+        // plat - cuisine
+        // patisserie
+        // cafe
+
         let pricePicto = document.createElement("img");
         pricePicto.src = "./icons/price_icon.svg"; //TODO target the price.icon
         pictoContainer.appendChild(pricePicto);
