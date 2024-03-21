@@ -10,7 +10,7 @@ export const restaurantDataBase = [
 
         name: 'Papill\'',
         miniDescription: 'Plats mijotés, papillotes et brunch',
-        specialities: 'Plats cuisinées Poisson veggie',
+        specialities: 'plat-cuisine Poisson veggie',
         distance: '85 m',
         priceRange: '€€',
         adress: '8 rue de Saverne 44000 Nantes',
@@ -68,7 +68,7 @@ export const restaurantDataBase = [
 
         name: 'Les triplettes',
         miniDescription: 'Petit plats cuisiné, pâtisseries et café de spécialité. Cuisine local et agriculture raisonnée.',
-        specialities: 'Plats cuisinées patisserie cafe',
+        specialities: 'plat-cuisine patisserie cafe',
         distance: '400 m',
         priceRange: '€€€',
         adress: '4 BIS Rue Emile Masson, 44000 Nantes',
