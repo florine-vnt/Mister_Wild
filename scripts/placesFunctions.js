@@ -30,6 +30,7 @@ export function displayPlaces(dataBase) {
         imageFrame.appendChild(image)
         newCard.appendChild(imageFrame);
 
+
         //create a div for the place name, distance and mini-description
         let container = document.createElement("div");
 
@@ -57,20 +58,12 @@ export function displayPlaces(dataBase) {
 
         //create speciality, maps, price, tel picto
         let specialityPicto = document.createElement("img");
-        specialityPicto.src = "./icons/cupcake.svg";
+        specialityPicto.src = "./icons/cupcake.svg"; //TODO target the speciality.icon
         pictoContainer.appendChild(specialityPicto);
 
-        // let specialityPicto = document.createElement("p");
-        // specialityPicto.innerText = place.specialities;
-        // pictoContainer.appendChild(specialityPicto);
-
         let pricePicto = document.createElement("img");
-        pricePicto.src = "./icons/price_icon.svg";
+        pricePicto.src = "./icons/price_icon.svg"; //TODO target the price.icon
         pictoContainer.appendChild(pricePicto);
-
-        // let pricePicto = document.createElement("p");
-        // pricePicto.innerText = place.priceRange;
-        // pictoContainer.appendChild(pricePicto);
 
         //create a clickable tel picto
         let linkableTel = document.createElement('a');
@@ -80,10 +73,6 @@ export function displayPlaces(dataBase) {
         telPicto.src = "./icons/tel_icon.png"
         linkableTel.appendChild(telPicto);
         pictoContainer.appendChild(linkableTel);
-
-        // let telPicto = document.createElement("p");
-        // telPicto.innerText = place.tel;
-        // pictoContainer.appendChild(telPicto);
 
 
         //create a div for full-description and address
@@ -100,13 +89,13 @@ export function displayPlaces(dataBase) {
         shortAddress.innerText = place.shortAddress;
         moreinfoContainer.appendChild(shortAddress);
 
-        // TODO : add Gmaps at the bottom of selected card 
+        // create a div for a Google map at the bottom of the selected card
         let googleMap = document.createElement("div");
         googleMap.innerHTML = `<iframe 
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5420.51167607285!2d-1.5464413!3d47.211576199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805eeb0fd4e831d%3A0xdd6e96d193d8b1c0!2sPapill&#39;!5e0!3m2!1sfr!2sfr!4v1710946394348!5m2!1sfr!2sfr" 
         width="100%" 
         height="100%" 
-        style="border:0;" 
+        style="border:0; border-radius:2vh" 
         allowfullscreen="" 
         loading="lazy" 
         referrerpolicy="no-referrer-when-downgrade">
@@ -114,7 +103,6 @@ export function displayPlaces(dataBase) {
         googleMap.classList.add("google-map");
         moreinfoContainer.appendChild(googleMap);
 
-        /// TODO : add the distance image.inside of a container.
 
         //Append the main info div to the card
         newCard.appendChild(container);

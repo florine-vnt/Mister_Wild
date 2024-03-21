@@ -7,7 +7,7 @@ export const BarDataBase = [
         priceRange: '€€-€€€',
         adress: ' 1 rue baron',
         shortAddress: ' 1 rue baron',
-        tel: '02 53 78 40 61',
+        tel: '0253784061',
         linkToMaps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.2721409788555!2d-1.5495075489104218!3d47.21125717905818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805eeb05311c6ab%3A0x1a10a632301380c9!2s1+Rue+Baron%2C+44000+Nantes!5e0!3m2!1sfr!2sfr!4v1564840539599!5m2!1sfr!2sfr',
         image: "./assets/Bars/Napoleone.png",
         description: 'Cocktails créations, vins et bières locales, Bar a tapas'

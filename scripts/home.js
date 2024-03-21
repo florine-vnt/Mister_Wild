@@ -39,19 +39,10 @@ displayPlaces(restaurantDataBase);
 displayFoodFilter();
 
 // ZOOM ON A SELECTED CARD 
-// first card selected. TO DO : select all cards
 let selectedCard = document.querySelector(".card");
 // adding an EventListener when clicking the selected card and adding a new class
 selectedCard.addEventListener('click', function () {
     selectedCard.classList.toggle("card-selected");
-
-    // // variables had to be re-called since they were declared in the fonction
-    // let pictoContainer = document.querySelector(".picto-container");
-    // let moreinfoContainer = document.querySelector(".more-info-container");
-
-    // //display hidden container
-    // pictoContainer.style.display = "block";
-    // moreinfoContainer.style.display = "block";
 })
 
 
@@ -102,7 +93,7 @@ menuContainer.addEventListener("click", function (event) {
 
 })
 
-function toggleMenu(menu){
+function toggleMenu(menu) {
     return function () {
         menuContainer.classList.remove("hidden");
         sleep(10).then(() => {
@@ -121,7 +112,7 @@ function toggleMenu(menu){
     }
 }
 
-export function collapseAllMenus(){
+export function collapseAllMenus() {
     priceMenu.classList.add("collapsed");
     distanceMenu.classList.add("collapsed");
     primaryFilterMenu.classList.add("collapsed");
