@@ -20,10 +20,6 @@
 }
 
 /* Global Settings*/
-@media-screen and (mmin-width:1024px) {
-.full-width-img 
-
-}
 body {
     margin: 0;
 }
@@ -368,7 +364,6 @@ footer {
 .card {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 0;
     background-color: #f5f5f5;
     border-radius: 10px;
     margin: 0 0 1rem;
@@ -514,4 +509,16 @@ footer {
 .card-selected .google-map {
     width: 80vw;
     height: 40vw;
+}
+@media screen and (min-width: 700px) {
+    header{
+        width: 60%;
+    }
+    footer{
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 40%;
+        bottom: unset;
+    }
 }
