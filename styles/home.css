@@ -20,7 +20,10 @@
 }
 
 /* Global Settings*/
+@media-screen and (mmin-width:1024px) {
+.full-width-img 
 
+}
 body {
     margin: 0;
 }
