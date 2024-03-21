@@ -58,36 +58,39 @@ export function displayPlaces(dataBase) {
 
         //create speciality, maps, price, tel picto
         let specialityPicto = document.createElement("img");
+
+        // function displayIcons(place) {
+        //     const pizzaPlace = place.name.contains("pizza");
+        //     const patesPlace = place.name.contains("pates");
+        //     const sandwichPlace = place.name.contains("sandwich");
+        //     const saladePlace = place.name.contains("salade");
+        //     const asiatiquePlace = place.name.contains("asiatique");
+        //     const platcuisinePlace = place.name.contains("plat-cuisine");
+        //     const patisseriePlace = place.name.contains("patisserie");
+        //     const cafePlace = place.name.contains("cafe");
+
+        //     if (pizzaPlace) {
+        //         specialityPicto.src = "./icons/pizza.svg";
+        //     } else if (patesPlace) {
+        //         specialityPicto.src = "./icons/pates.svg";
+        //     } else if (sandwichPlace) {
+        //         specialityPicto.src = "./icons/sandwich.svg";
+        //     } else if (saladePlace) {
+        //         specialityPicto.src = "./icons/salade.svg";
+        //     } else if (asiatiquePlace) {
+        //         specialityPicto.src = "./icons/ramen.svg";
+        //     } else if (platcuisinePlace) {
+        //         specialityPicto.src = "./icons/plate.svg" // TODO ajouter une icone fait maison
+        //     } else if (patisseriePlace) {
+        //         specialityPicto.src = "./icons/cupcake.svg";
+        //     } else if (cafePlace) {
+        //         specialityPicto.src = "./icons/coffe.svg";
+        //     }
+        // }
+
         specialityPicto.src = "./icons/cupcake.svg";
         pictoContainer.appendChild(specialityPicto);
 
-        // essai fonction icone 
-        // const pizzaPlace = place.name.contains("pizza");
-        // const patesPlace = place.name.contains("pates");
-        // const sandwichPlace = place.name.contains("sandwich");
-        // const saladePlace = place.name.contains("salade");
-        // const asiatiquePlace = place.name.contains("asiatique");
-        // const platcuisinePlace = place.name.contains("plat-cuisine");
-        // const patisseriePlace = place.name.contains("patisserie");
-        // const cafePlace = place.name.contains("cafe");
-
-        // if (pizzaPlace) {
-        //     specialityPicto.src = "./icons/pizza.svg";
-        // } else if (patesPlace) {
-        //     specialityPicto.src = "./icons/pates.svg";
-        // } else if (sandwichPlace) {
-        //     specialityPicto.src = "./icons/sandwich.svg";
-        // } else if (saladePlace) {
-        //     specialityPicto.src = "./icons/salade.svg";
-        // } else if (asiatiquePlace) {
-        //     specialityPicto.src = "./icons/ramen.svg";
-        // } else if (platcuisinePlace) {
-        //     specialityPicto.src = "./icons/" // TODO ajouter une icone fait maison
-        // } else if (patisseriePlace) {
-        //     specialityPicto.src = "./icons/cupcake.svg";
-        // } else if (cafePlace) {
-        //     specialityPicto.src = "./icons/coffe.svg";
-        // }
 
         let pricePicto = document.createElement("img");
         pricePicto.src = "./icons/price_icon.svg"; //TODO target the price.icon
