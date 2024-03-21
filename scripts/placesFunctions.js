@@ -68,7 +68,6 @@ export function displayPlaces(dataBase) {
         //create a clickable tel picto
         let linkableTel = document.createElement('a');
         linkableTel.href = `tel:${place.tel}`;
-        console.log("tel", linkableTel);
 
         let telPicto = document.createElement("img");
         telPicto.src = "./icons/tel_icon.png"
@@ -91,7 +90,6 @@ export function displayPlaces(dataBase) {
         moreinfoContainer.appendChild(shortAddress);
 
         // create a div for a Google map at the bottom of the selected card
-        //TODO update map according to place 
         let googleMap = document.createElement("div");
         googleMap.innerHTML = `<iframe 
         src= ${place.linkToMaps}
