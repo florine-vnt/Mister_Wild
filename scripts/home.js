@@ -3,6 +3,7 @@ import { switchToDarkMode } from './lightDarkFunction.js'
 import { switchToLightMode } from './lightDarkFunction.js'
 import { displayFoodFilter } from './lightDarkFunction.js'
 import { restaurantDataBase } from './restaurants.js';
+import { handleToastMenuButton } from './filteringFunctions.js';
 
 
 /* JS switch dark-light mode */
@@ -16,6 +17,14 @@ export const menuContainer = document.getElementById("mini-menus-container");
 export const primaryFilterButton = document.getElementById("primary-filter");
 export const primaryFilterMenu = document.getElementById("primary-filter-container");
 const homeButton = document.getElementById("home");
+// get HTML elements of the buttons
+const priceFilterButtonLow = document.getElementById("price-range-low");
+const priceFilterButtonMid = document.getElementById("price-range-mid");
+const priceFilterButtonHigh = document.getElementById("price-range-high");
+// declare the three mini-menu buttons
+const distanceFilterButtonLow = document.getElementById("distance-low");
+const distanceFilterButtonMid = document.getElementById("distance-mid");
+const distanceFilterButtonHigh = document.getElementById("distance-high");
 
 
 // Buttons in the header that enable the user to swithch from light to dark and vice-versa
@@ -34,6 +43,17 @@ homeButton.addEventListener('click', () => {
 displayPlaces(restaurantDataBase);
 //init with a food filter
 displayFoodFilter();
+
+
+/// activate toast menu buttons
+// price menu 
+priceFilterButtonLow.addEventListener("click", handleToastMenuButton(priceMenuButton, priceMenu, priceFilterButtonLow, 1));
+priceFilterButtonMid.addEventListener("click", handleToastMenuButton(priceMenuButton, priceMenu, priceFilterButtonMid, 2));
+priceFilterButtonHigh.addEventListener("click", handleToastMenuButton(priceMenuButton, priceMenu, priceFilterButtonHigh, 3));
+// distance menu 
+distanceFilterButtonLow.addEventListener("click", handleToastMenuButton(distanceMenuButton, distanceMenu, distanceFilterButtonLow, 1));
+distanceFilterButtonMid.addEventListener("click", handleToastMenuButton(distanceMenuButton, distanceMenu, distanceFilterButtonMid, 2));
+distanceFilterButtonHigh.addEventListener("click", handleToastMenuButton(distanceMenuButton, distanceMenu, distanceFilterButtonHigh, 3));
 
 // ZOOM ON A SELECTED CARD 
 // first card selected. TO DO : select all cards
