@@ -10,12 +10,12 @@ export const restaurantDataBase = [
 
         name: 'Papill\'',
         miniDescription: 'Plats mijotés, papillotes et brunch',
-        specialities: ['Plats cuisinées', 'Poisson', 'veggie'],
+        specialities: 'Plats cuisinées Poisson veggie',
         distance: '85 m',
         priceRange: '€€',
         adress: '8 rue de Saverne 44000 Nantes',
         shortAddress: '8 rue de Saverne',
-        tel: '+336 03 13 05 04',
+        tel: '+33603130504',
         linkToMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5420.51167607285!2d-1.5464413!3d47.211576199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805eeb0fd4e831d%3A0xdd6e96d193d8b1c0!2sPapill&#39;!5e0!3m2!1sfr!2sfr!4v1710946394348!5m2!1sfr!2sfr",
         image: "./assets/Restaurants/Papill.jpg",
         description: 'Vous allez vous régaler les papilles, cuisine authentique'
@@ -24,7 +24,7 @@ export const restaurantDataBase = [
     {
         name: 'Morse',
         miniDescription: 'Petit bistro de la mer : sandwichs et salades aux crevettes, langoustines, crabe...',
-        specialities: ['salade', 'sandwich', 'poisson'],
+        specialities: 'salade sandwich poisson',
         distance: '400 m',
         priceRange: '€€€€',
         adress: '1 allee de la maison rouge 44000 Nantes',
@@ -33,13 +33,13 @@ export const restaurantDataBase = [
         linkToMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.1923636143792!2d-1.5531711242047563!3d47.2128182711564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805ef428e1c806d%3A0x218171b273c48dba!2sLE%20MORSE%20-%20Bistrot%20Restaurant%20Nantes%20-%20HUITRES%20-%20LANGOUSTINES%20-%20SEAFOOD%20-%20LOBSTERROLL!5e0!3m2!1sfr!2sfr!4v1710971070643!5m2!1sfr!2sfr",
         image: './assets/Restaurants/Morse.png',
         image: './assets/Restaurants/Morse.png',
-        description: 'Restaurant cosz, spécialisé dans les poissons. On retient spécialement leur spécialité, le fish n chips !!'
+        description: 'Restaurant cosy, spécialisé dans les poissons. On retient spécialement leur spécialité, le fish n chips !!'
         // manque le prix
     },
     {
         name: 'La cantine fermière',
         miniDescription: 'Sandwichs, salades et des plats, cuisinés avec des produits de saison et de fermes locales',
-        specialities: 'sandwich street food',
+        specialities: 'sandwich streetfood plat-cuisine',
         distance: '240 m',
         priceRange: '€',
         adress: '10 rue de Mayence, 44000 Nantes',
@@ -58,22 +58,22 @@ export const restaurantDataBase = [
         priceRange: '€',
         adress: '31 rue Fouré, 44000, Nantes',
         shortAddress: '31 rue Fouré',
-        tel: '+332 40 35 34 30',
+        tel: '+33240353430',
         linkToMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.25636076282!2d-1.5493553242048284!3d47.21156597115623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805ef76986fd60f%3A0x4345ef7eb4e55a65!2sIchi-go%20Ichi-e%20Ramen!5e0!3m2!1sfr!2sfr!4v1710970974319!5m2!1sfr!2sfr",
         image: './assets/Restaurants/ichigo.png',
-        description: 'Ramen, un délice des papilles !!'
+        description: 'Ramen, un délice des papilles !! /n Ramen, Gyozas et edemame à dispo'
     },
 
     {
 
         name: 'Les triplettes',
         miniDescription: 'Petit plats cuisiné, pâtisseries et café de spécialité. Cuisine local et agriculture raisonnée.',
-        specialities: 'Plats cuisinées Pâtisserie café de spécialité',
+        specialities: 'Plats cuisinées patisserie cafe',
         distance: '400 m',
         priceRange: '€€€',
         adress: '4 BIS Rue Emile Masson, 44000 Nantes',
         shortAddress: '4 BIS Rue Emile Masson',
-        tel: '+332 28 49 76 01',
+        tel: '+33228497601',
         linkToMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.130828442781!2d-1.5492309242047029!3d47.214022371156545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805ef250c8711ad%3A0xb4a4b31811085b0a!2sLes%20Triplettes!5e0!3m2!1sfr!2sfr!4v1710970935984!5m2!1sfr!2sfr",
         image: './assets/Restaurants/Triplettes.jpg',
         description: 'La seul adresse du quartier pour déguster un café de spécialité !'
@@ -88,7 +88,7 @@ export const restaurantDataBase = [
         priceRange: '€',
         adress: '17 Rue Bon Secours, 44000 Nantes',
         shortAddress: '17 Rue Bon Secours',
-        tel: '+332 72 02 15 96',
+        tel: '+33272021596',
         linkToMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.1607963895162!2d-1.5559148242046967!3d47.2134359711564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805ef5441f247af%3A0x5ceda98305f1d96d!2sDakoo!5e0!3m2!1sfr!2sfr!4v1710970892668!5m2!1sfr!2sfr",
         image: './assets/Restaurants/dakoo.png',
         description: 'Véritable restaurant coréen, avec toutes les spécialités de corée, notament le BIBIMBAP ou le DAK (poulet frit) . Livraison possible.'
@@ -98,12 +98,12 @@ export const restaurantDataBase = [
         // a completer
         name: 'Papa pasta',
         miniDescription: 'Des pâtes maison, fait uniquement avec des produits locaux, avec des portion généreuse !',
-        specialities: 'italien',
+        specialities: 'italien pates',
         distance: '90 m',
         priceRange: '€',
         adress: '27 rue Fouré, 44000 Nantes',
         shortAddress: '27 rue Fouré',
-        tel: '+339 81 30 85 44',
+        tel: '+33981308544',
         linkToMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.2452151415787!2d-1.5492575242048436!3d47.21178407115636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805efa3f385f89f%3A0x20f92c9a224db500!2sPap%C3%A0%20Pasta!5e0!3m2!1sfr!2sfr!4v1710970840826!5m2!1sfr!2sfr",
         image: './assets/Restaurants/papa-pasta.png',
         description: 'Des pâtes maison, fait uniquement avec des produits locaux, avec des portion généreuse !'
@@ -113,12 +113,12 @@ export const restaurantDataBase = [
         // a completer
         name: 'Virginie\'s café',
         miniDescription: 'Cuisine vivante. Cuisine bio. Cantine végétarienne. ',
-        specialities: 'pizza',
+        specialities: 'pizza cafe',
         distance: '85 m',
         priceRange: '€€€',
         adress: '6 rue de Saverne, 44000 Nantes',
         shortAddress: '6 rue de Saverne',
-        tel: '+336 24 20 43 05',
+        tel: '+33624204305',
         linkToMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.2562534461495!2d-1.548899224204885!3d47.21156807115642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671dee021b9a5%3A0x220890b6796361bf!2sVirginie&#39;s%20caf%C3%A9!5e0!3m2!1sfr!2sfr!4v1710970696894!5m2!1sfr!2sfr",
         image: './assets/Restaurants/virgines.jpg',
         description: 'Cuisine détox gourmande, adaptée à tous, innovante, équilibrée, sur mesure, bien-être corporel.'
@@ -132,7 +132,7 @@ export const restaurantDataBase = [
         priceRange: '€',
         adress: '11 chaussée de la Madeleine, 44000 Nantes',
         shortAddress: '11 chaussée de la Madeleine',
-        tel: '+332 51 82 71 39',
+        tel: '+33251827139',
         linkToMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.25978467342!2d-1.5543319242048474!3d47.21149897115633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805eeafaee42f0b%3A0x4d62d78b740f3d97!2sCr%C3%AAperie%20%C3%A0%20emporter%20Nantes%20-%20La%20Machine%20%C3%A0%20Cr%C3%AApes!5e0!3m2!1sfr!2sfr!4v1710970649419!5m2!1sfr!2sfr",
         image: './assets/Restaurants/la-machine-a-crepes.png',
         description: 'Des crêpes et des galettes! Prix abordable et que du fait maison! Une galette veggie est proposée'
@@ -141,12 +141,12 @@ export const restaurantDataBase = [
 
         name: 'MATA boulangerie',
         miniDescription: 'Boulangerie de quartier, leurs cookies aux chocolat avec une pointe de gros sel est une tuerie!',
-        specialities: 'sandwich cookies Pâtisserie pains',
+        specialities: 'sandwich cookies patisserie cafe pains',
         distance: '260 m',
         priceRange: '€€',
         adress: '6 rue de Rieux, 44000 Nantes',
         shortAddress: '6 rue de Rieux',
-        tel: '+339 70 66 95 83',
+        tel: '+33970669583',
         linkToMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.2806857786895!2d-1.5478410242048788!3d47.21108997115634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805ef0606bdccdd%3A0xe0b213f66c3a603!2sMATA%20Boulangerie!5e0!3m2!1sfr!2sfr!4v1710970611472!5m2!1sfr!2sfr",
         image: './assets/Restaurants/mataboulangerie.png',
         description: 'Boulangerie de quartier, leurs cookies aux chocolat avec une pointe de gros sel est une tuerie!'
@@ -155,12 +155,12 @@ export const restaurantDataBase = [
 
         name: 'Boulangerie la Fourmi',
         miniDescription: 'Blé ancien moulu avec une meule en pierre, viennoiserie XXL, sandwich au mètre, une boulangerie à découvrir!',
-        specialities: 'sandwich Pâtisserie pains',
+        specialities: 'sandwich patisserie pains',
         distance: '550 m',
         priceRange: '€€',
         adress: '1 chaussée de la Madeleine, 44000 Nantes',
         shortAddress: '1 chaussée de la Madeleine',
-        tel: '+339 86 64 69 43',
+        tel: '+33986646943',
         linkToMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.214067495746!2d-1.555133424204747!3d47.21239357115636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805ef8151adda07%3A0x717b51b38b78a482!2sBoulangerie%20La%20Fourmi!5e0!3m2!1sfr!2sfr!4v1710970536218!5m2!1sfr!2sfr",
         image: './assets/Restaurants/boulangerie-la-fourmi.jpg',
         description: 'Véritable institution nantaise, le café la Fourmi a pris un nouveau départ pour devenir une boulangerie! Les viennoiseries XXL sont un petit déjeuner à elle seul! Pour le midi, vous pouvez choisir votre Jambon-beurre au mètre!'
@@ -168,8 +168,10 @@ export const restaurantDataBase = [
     {
 
         name: 'Guindaille',
+
         miniDescription: 'Boire, manger, socialiser, festoyer, un lieu convivial et animé.',
-        specialities: "",
+        specialities: "plat-cuisine",
+
         distance: '90 m',
         priceRange: '€€€',
         adress: '36 Rue Fouré, 44000 Nantes',

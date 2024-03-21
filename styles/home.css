@@ -481,6 +481,14 @@ footer {
 }
 
 /* Style of the selected card*/
+.card-selected {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 20px;
+}
+
 .card-selected .picto-container {
     display: flex;
     justify-content: space-around;
@@ -496,14 +504,6 @@ footer {
 
 .card-selected .picto-container img {
     height: 5vh;
-}
-
-.card-selected {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    flex-direction: column;
-    text-align: center;
-    row-gap: 20px;
 }
 
 .card-selected .google-map {
