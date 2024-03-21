@@ -1,8 +1,14 @@
 export const primaryFoodFilters = [
     {
-        name: 'italien',
+        name: 'pizza',
         icon: './icons/pizza.svg',
         iconPink: './icons/pizza_pink.svg',
+        active: false
+    },
+    {
+        name: 'pates',
+        icon: './icons/pates.svg',
+        iconPink: './icons/pates_pink.svg',
         active: false
     },
     {
@@ -12,30 +18,43 @@ export const primaryFoodFilters = [
         active: false
     },
     {
+        name: 'salade',
+        icon: './icons/salade.svg',
+        iconPink: './icons/salade_pink.svg',
+        active: false
+    },
+    {
         name: 'asiatique',
         icon: './icons/ramen.svg',
         iconPink: './icons/ramen_pink.svg',
         active: false
     },
     {
-        name: 'burger',
-        icon: './icons/burger.svg',
-        iconPink: './icons/burger_pink.svg',
+        name: 'plat-cuisine',
+        icon: './icons/plate.svg',
+        iconPink: './icons/plate_pink.svg',
         active: false
     },
     {
-        name: 'dessert',
+        name: 'patisserie',
         icon: './icons/cupcake.svg',
         iconPink: './icons/cupcake_pink.svg',
         active: false
     },
     {
-        name: 'salade',
-        icon: './icons/salade.svg',
-        iconPink: './icons/salade_pink.svg',
+        name: 'cafe',
+        icon: './icons/pizza.svg',
+        iconPink: './icons/pizza_pink.svg',
         active: false
     }
 ];
+
+    // {
+    //     name: 'burger',
+    //     icon: './icons/burger.svg',
+    //     iconPink: './icons/burger_pink.svg',
+    //     active: false
+    // },
 
 
 export const secondaryFoodFilters = [

@@ -10,7 +10,7 @@ export const restaurantDataBase = [
 
         name: 'Papill\'',
         miniDescription: 'Plats mijotés, papillotes et brunch',
-        specialities: ['Plats cuisinés', 'Poisson', 'veggie'],
+        specialities: 'Plats cuisinées Poisson veggie',
         distance: '85 m',
         priceRange: '€€',
         adress: '8 rue de Saverne 44000 Nantes',
@@ -24,7 +24,7 @@ export const restaurantDataBase = [
     {
         name: 'Morse',
         miniDescription: 'Petit bistro de la mer : sandwichs et salades aux crevettes, langoustines, crabe...',
-        specialities: ['salade', 'sandwich', 'poisson'],
+        specialities: 'salade sandwich poisson',
         distance: '400 m',
         priceRange: '€€€€',
         adress: '1 allee de la maison rouge 44000 Nantes',
@@ -39,7 +39,7 @@ export const restaurantDataBase = [
     {
         name: 'La cantine fermière',
         miniDescription: 'Sandwichs, salades et des plats, cuisinés avec des produits de saison et de fermes locales',
-        specialities: 'sandwich street food',
+        specialities: 'sandwich streetfood plat-cuisine',
         distance: '240 m',
         priceRange: '€',
         adress: '10 rue de Mayence, 44000 Nantes',
@@ -61,14 +61,14 @@ export const restaurantDataBase = [
         tel: '+33240353430',
         linkToMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.25636076282!2d-1.5493553242048284!3d47.21156597115623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805ef76986fd60f%3A0x4345ef7eb4e55a65!2sIchi-go%20Ichi-e%20Ramen!5e0!3m2!1sfr!2sfr!4v1710970974319!5m2!1sfr!2sfr",
         image: './assets/Restaurants/ichigo.png',
-        description: 'Ramen, un délice des papilles !!'
+        description: 'Ramen, un délice des papilles !! /n Ramen, Gyozas et edemame à dispo'
     },
 
     {
 
         name: 'Les triplettes',
         miniDescription: 'Petit plats cuisiné, pâtisseries et café de spécialité. Cuisine local et agriculture raisonnée.',
-        specialities: 'Plats cuisinées Pâtisserie café de spécialité',
+        specialities: 'Plats cuisinées patisserie cafe',
         distance: '400 m',
         priceRange: '€€€',
         adress: '4 BIS Rue Emile Masson, 44000 Nantes',
@@ -98,7 +98,7 @@ export const restaurantDataBase = [
         // a completer
         name: 'Papa pasta',
         miniDescription: 'Des pâtes maison, fait uniquement avec des produits locaux, avec des portion généreuse !',
-        specialities: 'italien',
+        specialities: 'italien pates',
         distance: '90 m',
         priceRange: '€',
         adress: '27 rue Fouré, 44000 Nantes',
@@ -113,7 +113,7 @@ export const restaurantDataBase = [
         // a completer
         name: 'Virginie\'s café',
         miniDescription: 'Cuisine vivante. Cuisine bio. Cantine végétarienne. ',
-        specialities: 'pizza',
+        specialities: 'pizza cafe',
         distance: '85 m',
         priceRange: '€€€',
         adress: '6 rue de Saverne, 44000 Nantes',
@@ -141,7 +141,7 @@ export const restaurantDataBase = [
 
         name: 'MATA boulangerie',
         miniDescription: 'Boulangerie de quartier, leurs cookies aux chocolat avec une pointe de gros sel est une tuerie!',
-        specialities: 'sandwich cookies Pâtisserie pains',
+        specialities: 'sandwich cookies patisserie cafe pains',
         distance: '260 m',
         priceRange: '€€',
         adress: '6 rue de Rieux, 44000 Nantes',
@@ -155,7 +155,7 @@ export const restaurantDataBase = [
 
         name: 'Boulangerie la Fourmi',
         miniDescription: 'Blé ancien moulu avec une meule en pierre, viennoiserie XXL, sandwich au mètre, une boulangerie à découvrir!',
-        specialities: 'sandwich Pâtisserie pains',
+        specialities: 'sandwich patisserie pains',
         distance: '550 m',
         priceRange: '€€',
         adress: '1 chaussée de la Madeleine, 44000 Nantes',
@@ -168,8 +168,10 @@ export const restaurantDataBase = [
     {
 
         name: 'Guindaille',
+
         miniDescription: 'Boire, manger, socialiser, festoyer, un lieu convivial et animé.',
-        specialities: "",
+        specialities: "plat-cuisine",
+
         distance: '90 m',
         priceRange: '€€€',
         adress: '36 Rue Fouré, 44000 Nantes',
