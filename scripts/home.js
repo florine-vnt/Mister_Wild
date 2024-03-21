@@ -136,7 +136,8 @@ function toggleMenu(menu) {
                 // bring the menu container to the front
                 sleep(300).then(() => {
                     menu.style.zIndex = 0;
-                    menu.classList.add("hidden")
+                    menu.classList.add("hidden");
+                    menuContainer.classList.add("hidden");
                 });
             }
         });
