@@ -90,9 +90,10 @@ export function displayPlaces(dataBase) {
         moreinfoContainer.appendChild(shortAddress);
 
         // create a div for a Google map at the bottom of the selected card
+        //TODO update map according to place 
         let googleMap = document.createElement("div");
         googleMap.innerHTML = `<iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5420.51167607285!2d-1.5464413!3d47.211576199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805eeb0fd4e831d%3A0xdd6e96d193d8b1c0!2sPapill&#39;!5e0!3m2!1sfr!2sfr!4v1710946394348!5m2!1sfr!2sfr" 
+        src= "place.linkToMaps"
         width="100%" 
         height="100%" 
         style="border:0; border-radius:2vh" 
@@ -103,17 +104,20 @@ export function displayPlaces(dataBase) {
         googleMap.classList.add("google-map");
         moreinfoContainer.appendChild(googleMap);
 
-
         //Append the main info div to the card
         newCard.appendChild(container);
         //Append the picto div to the card
         newCard.appendChild(pictoContainer);
         //Append the more info div to the card
         newCard.appendChild(moreinfoContainer);
-        //Append the Gmaps div to the card
 
         //Append the card to the Places list
         placesList.appendChild(newCard);
+
+        //Zoom on a selected card
+        newCard.addEventListener('click', function () {
+            newCard.classList.toggle("card-selected");
+        });
 
     });
 }

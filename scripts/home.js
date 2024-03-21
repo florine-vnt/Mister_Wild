@@ -38,12 +38,14 @@ displayPlaces(restaurantDataBase);
 //init with a food filter
 displayFoodFilter();
 
-// ZOOM ON A SELECTED CARD 
-let selectedCard = document.querySelector(".card");
-// adding an EventListener when clicking the selected card and adding a new class
-selectedCard.addEventListener('click', function () {
-    selectedCard.classList.toggle("card-selected");
-})
+// // ZOOM ON A SELECTED CARD 
+// let selectedCard = document.querySelector(".card");
+// console.log("avant ajout event");
+// // adding an EventListener when clicking the selected card and adding a new class
+// selectedCard.addEventListener('click', function () {
+//     selectedCard.classList.toggle("card-selected");
+//     console.log("on vient de cliquer");
+// })
 
 
 //START OF MINI MENUS BEHAVIOUR
