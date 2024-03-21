@@ -21,8 +21,8 @@
     <header>
         <nav id="mode-switch">
             <ul>
-                <button id="cuisine-switch">MANGEUR JEKYLL</button>
-                <button id="bar-switch">MISTER WILD</button>
+                <button id="cuisine-switch" class="light-mode">MANGEUR JEKYLL</button>
+                <button id="bar-switch" class="light-mode">MISTER WILD</button>
             </ul>
         </nav>
     </header>
@@ -30,7 +30,7 @@
     <main>
         <div id="showcase"></div>
         <section id="places-container">
-            <ul id="places" class="layer1">
+            <ul id="places" class="layer1 light-mode">
                 <li class="card">
                     <img class="place-picture" src="./assets/papill.jpg" alt="Logo du restaurant">
                     <div>
@@ -44,11 +44,11 @@
 
         <div id="mini-menus-container" class="hidden">
 
-            <div id="primary-filter-container" class="collapsed">
+            <div id="primary-filter-container" class="collapsed light-mode">
 
             </div>
 
-            <ul id="distance-menu" class="toast-mini-menu collapsed">
+            <ul id="distance-menu" class="toast-mini-menu collapsed light-mode">
                 <button class="mini-menu-button" id="distance-high">
                     <img src="./icons/footsteps_light.svg" id="footstep-img" />
                     <img src="./icons/footsteps_light.svg" id="footstep-img" />
@@ -63,7 +63,7 @@
                 </button>
             </ul>
 
-            <ul id="price-range-menu" class="toast-mini-menu collapsed">
+            <ul id="price-range-menu" class="toast-mini-menu collapsed light-mode">
                 <button id="price-range-high"><img src="./icons/price_icon.svg" id="price-img">
                     <img src="./icons/price_icon.svg" id="price-img">
                     <img src="./icons/price_icon.svg" id="price-img"></button>
@@ -82,7 +82,7 @@
     <footer>
 
         <nav id="filter-bar">
-            <ul id="ul-footer">
+            <ul id="ul-footer" class="light-mode">
                 <button id="home"><img src="./icons/home_icon.svg" alt="Retour à l'acceuil" id="home-img" /></button>
                 <button id="primary-filter"><img src="./icons/cuisine_icon.svg" alt="filtrer par type de cuisine"
                         id="primary-filter-img" /></button>
@@ -95,7 +95,12 @@
         </nav>
 
     </footer>
-    <script type="text/javascript" src="./scripts/home.js"></script>
+    <script type="module" src="./scripts/home.js"></script>
+    <script type="module" src="./scripts/placesFunctions.js"></script>
+    <script type="module" src="./scripts/filteringFunctions.js"></script>
+    <script type="module" src="./scripts/restaurants.js"></script>
+    <script type="module" src="./scripts/bars.js"></script>
+    <script type="module" src="./scripts/filters.js"></script>
 </body>
 
 </html>
