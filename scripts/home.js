@@ -167,3 +167,14 @@ sleep(1500).then(() => {
 // sleep(3200).then(() => {
 //     blink(priceMenuButton);
 // });
+
+
+/// BUGFIX CHILDREN DES FAFA. 
+function dipsplayAllSpecialities (dataBase){
+    for (let place in dataBase){
+        console.log(dataBase[place].specialities);
+    }
+
+}
+
+dipsplayAllSpecialities(restaurantDataBase);
