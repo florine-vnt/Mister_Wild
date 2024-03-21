@@ -93,7 +93,7 @@ export function displayPlaces(dataBase) {
         //TODO update map according to place 
         let googleMap = document.createElement("div");
         googleMap.innerHTML = `<iframe 
-        src= "place.linkToMaps"
+        src= ${place.linkToMaps}
         width="100%" 
         height="100%" 
         style="border:0; border-radius:2vh" 
