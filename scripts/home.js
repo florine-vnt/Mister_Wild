@@ -9,9 +9,9 @@ import { handleToastMenuButton } from './filteringFunctions.js';
 /* JS switch dark-light mode */
 const cuisineSwitch = document.querySelector("#cuisine-switch");
 const barSwitch = document.querySelector("#bar-switch");
-const distanceMenuButton = document.getElementById("distance");
+export const distanceMenuButton = document.getElementById("distance");
 export const distanceMenu = document.getElementById("distance-menu");
-const priceMenuButton = document.getElementById("price-range");
+export const priceMenuButton = document.getElementById("price-range");
 export const priceMenu = document.getElementById("price-range-menu");
 export const menuContainer = document.getElementById("mini-menus-container");
 export const primaryFilterButton = document.getElementById("primary-filter");

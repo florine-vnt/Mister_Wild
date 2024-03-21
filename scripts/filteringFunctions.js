@@ -1,7 +1,7 @@
 import { displayPlaces } from './placesFunctions.js';
 import { sleep } from './home.js';
-import { distanceMenu } from './home.js';
-import { priceMenu } from './home.js';
+import { distanceMenuButton } from './home.js';
+import { priceMenuButton } from './home.js';
 //const priceMenu = document.getElementById("price-range-menu");
 import { menuContainer } from './home.js';
 import { restaurantDataBase } from './restaurants.js';
@@ -153,13 +153,12 @@ export function handleToastMenuButton(menuButton, menu, filterButton, filteringV
                 buttonIcon = priceIconLight;
                 targetFilter = priceFilterLight;
             } else {
-                console.log("ouioui is dark");
                 menuIcon = priceIconDark;
                 buttonIcon = priceIconDark;
                 targetFilter = priceFilterDark;
             }
         } else {
-            
+
             menuIconPink = distanceIconPink;
             buttonIconPink = footstepsIconPink;
             if (lightMode) {
@@ -167,7 +166,6 @@ export function handleToastMenuButton(menuButton, menu, filterButton, filteringV
                 buttonIcon = footstepsIconLight;
                 targetFilter = distanceFilterLight;
             } else {
-                console.log("ouioui is dark");
                 menuIcon = distanceIconDark;
                 buttonIcon = footstepsIconDark;
                 targetFilter = distanceFilterDark;
@@ -177,36 +175,11 @@ export function handleToastMenuButton(menuButton, menu, filterButton, filteringV
         // if filter wasn't already activated
         if (targetFilter !== filteringValue) {
             targetFilter = filteringValue;
-
-            // reset the colour of all filterButtons, if any was selected (brute force and unefficient, but it'll work)
-            for (const button of menu.children) {
-                for (const image of button.children) {
-                    // reset the icon to its normal colour (light or dark)
-                    image.src = buttonIcon;
-                }
-            }
-
-            // change the image(s) inside the filterButton to make it/them pink
-            for (const image of filterButton.children) {
-                image.src = buttonIconPink;
-            }
-
-            // make the menu icon appear pink
-            menuButton.firstChild.src = menuIconPink
-
         }
         // if filter already was activated
         else {
             // set the filter to none 
             targetFilter = 0;
-
-            // change the image(s) inside the button to their normal colour (light or dark)
-            for (const image of filterButton.children) {
-                image.src = buttonIcon;
-            }
-
-            // reset the price menu icon to its normal colour (light or dark)
-            menuButton.firstChild.src = menuIcon;
         }
 
         // after the function is exectued,re-impact the filter globally
@@ -226,6 +199,8 @@ export function handleToastMenuButton(menuButton, menu, filterButton, filteringV
             }
         }
 
+        displayToastMenuFilterState(menu);
+
         //apply all filters
         applyFilters();
 
@@ -234,3 +209,127 @@ export function handleToastMenuButton(menuButton, menu, filterButton, filteringV
         sleep(900).then(() => { menuContainer.style.zIndex = 0; });
     };
 };
+
+
+export function displayToastMenuFilterState(menu) {
+    //figure out if we are in light or dark mode. 
+    const lightMode = body.classList.contains("light-mode");
+
+    //detect what menu it is : price or distance, and fetch the right icons.
+    let menuIcon = '';
+    let buttonIcon = '';
+    let menuIconPink = '';
+    let buttonIconPink = '';
+    let targetFilter = '';
+
+    // elements
+    let menuButton = '';
+
+
+    if (menu.id == "price-range-menu") {
+
+        menuIconPink = priceIconPink;
+        buttonIconPink = priceIconPink;
+        menuButton = priceMenuButton;
+
+        if (lightMode) {
+            menuIcon = priceIconLight;
+            buttonIcon = priceIconLight;
+            targetFilter = priceFilterLight;
+        } else {
+            menuIcon = priceIconDark;
+            buttonIcon = priceIconDark;
+            targetFilter = priceFilterDark;
+        }
+    } else {
+
+        menuIconPink = distanceIconPink;
+        buttonIconPink = footstepsIconPink;
+        menuButton = distanceMenuButton;
+
+        if (lightMode) {
+            menuIcon = distanceIconLight;
+            buttonIcon = footstepsIconLight;
+            targetFilter = distanceFilterLight;
+        } else {
+            menuIcon = distanceIconDark;
+            buttonIcon = footstepsIconDark;
+            targetFilter = distanceFilterDark;
+        }
+    }
+
+    /// Check the State of the filter
+    if (targetFilter == 1) {
+        // make the menu icon appear pink
+        menuButton.firstChild.src = menuIconPink;
+
+        // make all buttons appear unselected
+        for (const button of menu.children) {
+            for (const image of button.children) {
+                // reset the icon to its normal colour (light or dark)
+                image.src = buttonIcon;
+            }
+        }
+
+        // light up only the right button
+        for (const image of menu.children[2].children) {
+            image.src = buttonIconPink;
+        }
+
+
+    } else if (targetFilter == 2) {
+        // make the menu icon appear pink
+        menuButton.firstChild.src = menuIconPink;
+
+        // make all buttons appear unselected
+        for (const button of menu.children) {
+            for (const image of button.children) {
+                // reset the icon to its normal colour (light or dark)
+                image.src = buttonIcon;
+            }
+        }
+
+        // light up only the right button
+        for (const image of menu.children[1].children) {
+            image.src = buttonIconPink;
+        }
+
+    } else if (targetFilter == 3) {
+        // make the menu icon appear pink
+        menuButton.firstChild.src = menuIconPink;
+
+        // make all buttons appear unselected
+        for (const button of menu.children) {
+            for (const image of button.children) {
+                // reset the icon to its normal colour (light or dark)
+                image.src = buttonIcon;
+            }
+        }
+
+        // light up only the right button
+        for (const image of menu.children[0].children) {
+            image.src = buttonIconPink;
+        }
+
+    } else {
+
+
+        // make the menu icon appear normal
+        menuButton.firstChild.src = menuIcon;
+
+        // make all buttons appear unselected
+        for (const button of menu.children) {
+            for (const image of button.children) {
+                // reset the icon to its normal colour (light or dark)
+                image.src = buttonIcon;
+            }
+        }
+
+
+    }
+
+    // change the image(s) inside the filterButton to make it/them pink
+
+
+
+}
