@@ -10,7 +10,7 @@ export const restaurantDataBase = [
 
         name: 'Papill\'',
         miniDescription: 'Plats mijotés, papillotes et brunch',
-        specialities: ['Plats cuisinées', 'Poisson', 'veggie'],
+        specialities: ['Plats cuisinés', 'Poisson', 'veggie'],
         distance: '85 m',
         priceRange: '€€',
         adress: '8 rue de Saverne 44000 Nantes',
