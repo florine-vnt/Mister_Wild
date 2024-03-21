@@ -67,7 +67,8 @@ export function displayPlaces(dataBase) {
 
         //create a clickable tel picto
         let linkableTel = document.createElement('a');
-        linkableTel.href = `"tel:${place.tel}"`
+        linkableTel.href = `tel:${place.tel}`;
+        console.log("tel", linkableTel);
 
         let telPicto = document.createElement("img");
         telPicto.src = "./icons/tel_icon.png"
