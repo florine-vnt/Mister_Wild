@@ -20,7 +20,10 @@
 }
 
 /* Global Settings*/
+@media-screen and (mmin-width:1024px) {
+.full-width-img 
 
+}
 body {
     margin: 0;
 }
@@ -218,7 +221,7 @@ footer {
 
     /* part about the overlays : if it's not present, primary filter menu won't overlay */
     position: absolute;
-    z-index :5;
+    z-index: 5;
 
 }
 
@@ -288,12 +291,12 @@ footer {
 
 
 /* FOR DEBUGGING make the mini menu container slightly opaque */
-#mini-menus-container{
+#mini-menus-container {
     background-color: #1E1E1E33;
 }
 
 #mini-menus-container.hidden {
-    display:none;
+    display: none;
 
 }
 
@@ -389,10 +392,10 @@ footer {
 
 /* coter  gauche& droite de la boite card */
 #places {
-    padding-left:1rem;
-    padding-right:1rem;
-    padding-top :1rem;
-    padding-bottom:1px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1px;
     margin: 0;
     position: relative;
     background-color: var(--light-bg-color);
@@ -483,6 +486,14 @@ footer {
 }
 
 /* Style of the selected card*/
+.card-selected {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 20px;
+}
+
 .card-selected .picto-container {
     display: flex;
     justify-content: space-around;
@@ -500,21 +511,7 @@ footer {
     height: 5vh;
 }
 
-.card-selected {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    flex-direction: column;
-    text-align: center;
-    row-gap: 20px;
-}
-
-.card-selected .info-iframe {
-    width: 40vw;
-    height: 20vh;
-}
-
-
-.google-map {
-    height: 30vh;
-    width: 30vh;
+.card-selected .google-map {
+    width: 80vw;
+    height: 40vw;
 }

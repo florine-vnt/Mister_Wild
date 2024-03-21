@@ -6,10 +6,12 @@ import { restaurantDataBase } from './restaurants.js';
 import { handleToastMenuButton } from './filteringFunctions.js';
 
 
+
 /* JS switch dark-light mode */
 const cuisineSwitch = document.querySelector("#cuisine-switch");
 const barSwitch = document.querySelector("#bar-switch");
 export const distanceMenuButton = document.getElementById("distance");
+
 export const distanceMenu = document.getElementById("distance-menu");
 export const priceMenuButton = document.getElementById("price-range");
 export const priceMenu = document.getElementById("price-range-menu");
@@ -39,10 +41,12 @@ homeButton.addEventListener('click', () => {
     // TODO Remove all of the zoomed in classes from the cards
 });
 
+
 // populate the places list with restaurants at init
 displayPlaces(restaurantDataBase);
 //init with a food filter
 displayFoodFilter();
+
 
 
 /// activate toast menu buttons
@@ -70,6 +74,7 @@ selectedCard.addEventListener('click', function () {
     // pictoContainer.style.display = "block";
     // moreinfoContainer.style.display = "block";
 })
+
 
 
 //START OF MINI MENUS BEHAVIOUR
@@ -119,7 +124,7 @@ menuContainer.addEventListener("click", function (event) {
 
 })
 
-function toggleMenu(menu){
+function toggleMenu(menu) {
     return function () {
         menuContainer.classList.remove("hidden");
         sleep(10).then(() => {
@@ -138,7 +143,7 @@ function toggleMenu(menu){
     }
 }
 
-export function collapseAllMenus(){
+export function collapseAllMenus() {
     priceMenu.classList.add("collapsed");
     distanceMenu.classList.add("collapsed");
     primaryFilterMenu.classList.add("collapsed");
