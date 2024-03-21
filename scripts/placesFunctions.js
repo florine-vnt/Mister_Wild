@@ -58,16 +58,18 @@ export function displayPlaces(dataBase) {
 
         //create speciality, maps, price, tel picto
         let specialityPicto = document.createElement("img");
+        specialityPicto.src = "./icons/cupcake.svg";
 
-        // function displayIcons(place) {
-        //     const pizzaPlace = place.name.contains("pizza");
-        //     const patesPlace = place.name.contains("pates");
-        //     const sandwichPlace = place.name.contains("sandwich");
-        //     const saladePlace = place.name.contains("salade");
-        //     const asiatiquePlace = place.name.contains("asiatique");
-        //     const platcuisinePlace = place.name.contains("plat-cuisine");
-        //     const patisseriePlace = place.name.contains("patisserie");
-        //     const cafePlace = place.name.contains("cafe");
+        // display a function that returns a picto regarding speciality contained in database
+        // function displaySpecialityIcon(place) {
+        //     const pizzaPlace = place.specialities.includes("pizza");
+        //     const patesPlace = place.specialities.includes("pates");
+        //     const sandwichPlace = place.specialities.includes("sandwich");
+        //     const saladePlace = place.specialities.includes("salade");
+        //     const asiatiquePlace = place.specialities.includes("asiatique");
+        //     const platcuisinePlace = place.specialities.includes("plat-cuisine");
+        //     const patisseriePlace = place.specialities.includes("patisserie");
+        //     const cafePlace = place.specialities.includes("cafe");
 
         //     if (pizzaPlace) {
         //         specialityPicto.src = "./icons/pizza.svg";
@@ -80,20 +82,31 @@ export function displayPlaces(dataBase) {
         //     } else if (asiatiquePlace) {
         //         specialityPicto.src = "./icons/ramen.svg";
         //     } else if (platcuisinePlace) {
-        //         specialityPicto.src = "./icons/plate.svg" // TODO ajouter une icone fait maison
+        //         specialityPicto.src = "./icons/plate.svg"
         //     } else if (patisseriePlace) {
         //         specialityPicto.src = "./icons/cupcake.svg";
         //     } else if (cafePlace) {
         //         specialityPicto.src = "./icons/coffe.svg";
         //     }
         // }
-
-        specialityPicto.src = "./icons/cupcake.svg";
+        // specialityPicto.src = displaySpecialityIcon;
         pictoContainer.appendChild(specialityPicto);
 
 
         let pricePicto = document.createElement("img");
-        pricePicto.src = "./icons/price_icon.svg"; //TODO target the price.icon
+        pricePicto.src = "./icons/price_icon.svg";
+
+        // display a function that returns a picto regarding price range contained in database
+        // function displayPriceIcon(place) {
+        //     if (place.priceRange === '€') {
+        //         pricePicto.src = "./icons/price_icon.svg";
+        //     } else if (place.priceRange === '€€') {
+        //         pricePicto.src = "./icons/price_icon.svg";
+        //     } else {
+        //         pricePicto.src = "./icons/price_icon.svg";
+        //     }
+
+        //     pricePicto.src = displayPriceIcon;
         pictoContainer.appendChild(pricePicto);
 
         //create a clickable tel picto
