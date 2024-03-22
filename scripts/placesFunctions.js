@@ -79,10 +79,12 @@ export function displayPlaces(dataBase) {
                     pictoContainer.appendChild(dietPicto);
                 }
             });
+            let pricePictoContainer = document.createElement("div");
             for (let i = 0; i < place.priceRange.length; i++) {
                 let pricePicto = document.createElement("img");
                 pricePicto.src = "./icons/price_icon.svg";
-                pictoContainer.appendChild(pricePicto);
+                pricePictoContainer.appendChild(pricePicto);
+                pictoContainer.appendChild(pricePictoContainer);
             }
         } else {
             primaryDrinkFilters.forEach(filter => {
@@ -93,10 +95,12 @@ export function displayPlaces(dataBase) {
                     pictoContainer.appendChild(drinkPicto);
                 }
             });
+            let pricePictoContainer = document.createElement("div");
             for (let i = 0; i < place.priceRange.length; i++) {
                 let pricePicto = document.createElement("img");
                 pricePicto.src = "./icons/price_darkmode.svg";
-                pictoContainer.appendChild(pricePicto);
+                pricePictoContainer.appendChild(pricePicto);
+                pictoContainer.appendChild(pricePictoContainer);
             }
         }
 
