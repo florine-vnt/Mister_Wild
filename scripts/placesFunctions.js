@@ -108,7 +108,7 @@ export function displayPlaces(dataBase) {
         if (newCard.classList.contains("light-mode")) {
             telPicto.src = "./icons/tel_icon.png"
         } else {
-            telPicto.src = "./icons/tel_darkmode.png"
+            telPicto.src = "./icons/tel_icon_darkmode.png"
         }
         linkableTel.appendChild(telPicto);
         pictoContainer.appendChild(linkableTel);
