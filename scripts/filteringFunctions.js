@@ -128,13 +128,10 @@ function filterByDistance(dataBase, distanceFilter) {
     if (distanceFilter == 0 || distanceFilter == 3) { return dataBase; }
     else {
         return dataBase.filter(place => {
-            console.log(place.distance);
-
             if (distanceFilter == 1) {
-
-                return false;
+                return parseInt(place.distance) <= 350;
             } else {
-                return true;
+                return parseInt(place.distance) <= 500;
             }
         })
     };
