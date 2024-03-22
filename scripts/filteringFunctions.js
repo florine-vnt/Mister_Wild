@@ -20,15 +20,14 @@ export function applyFilters() {
     const lightMode = body.classList.contains("light-mode");
     if (lightMode) {
         filteredDataBase = filterByArray(restaurantDataBase, primaryFoodFilters);
+        filteredDataBase = filterByArray(filteredDataBase, secondaryFoodFilters);
+        filteredDataBase = filterByPrice(filteredDataBase, priceFilterLight);
+        filteredDataBase = filterByDistance(filteredDataBase, distanceFilterLight);
     } else {
         filteredDataBase = filterByArray(BarDataBase, primaryDrinkFilters);
+        filteredDataBase = filterByPrice(filteredDataBase, priceFilterDark);
+        filteredDataBase = filterByDistance(filteredDataBase, distanceFilterDark);
     }
-    /// if darkmode
-
-
-    ///then filter by price and by distance
-    filteredDataBase = filterByPrice(filteredDataBase, priceFilter)
-    filteredDataBase = filterByDistance(filteredDataBase, distanceFilter) // changer nom variable?
 
     // check wether empty or not, if so, put an object to inform the user.
     if (filteredDataBase.length === 0) {
