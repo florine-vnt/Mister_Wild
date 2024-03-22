@@ -26,7 +26,7 @@ export const restaurantDataBase = [
         miniDescription: 'Petit bistro de la mer : sandwichs et salades aux crevettes, langoustines, crabe...',
         specialities: 'salade sandwich poisson',
         distance: '400 m',
-        priceRange: '€€€€',
+        priceRange: '€€€',
         adress: '1 allée de la maison rouge 44000 Nantes',
         shortAddress: '1 allée de la maison rouge',
         tel: '+33253786518',

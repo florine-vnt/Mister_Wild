@@ -1,4 +1,7 @@
 import { primaryFoodFilters } from "./filters.js";
+import { primaryDrinkFilters } from "./filters.js";
+import { secondaryFoodFilters } from "./filters.js";
+import { restaurantDataBase } from "./restaurants.js";
 
 export function displayPlaces(dataBase) {
     //redefining placesList within the context of the function
@@ -59,63 +62,53 @@ export function displayPlaces(dataBase) {
         pictoContainer.classList.add("picto-container")
 
         //create speciality, maps, price, tel picto
-        //display a function that returns a picto regarding speciality contained in database
-
-        primaryFoodFilters.forEach(filter => {
-            console.log("nom du filtre", filter.name, " nom du place", place.name, "icone",)
-            if (place.specialities.includes(filter.name)) {
-                // filter.icon;
-                console.log("it's a match")
-                let specialityPicto = document.createElement("img");
-                specialityPicto.src = filter.icon;
-                pictoContainer.appendChild(specialityPicto);
+        //SPECIALITY & PRICE : testing class and return pictos regarding database        
+        if (newCard.classList.contains("light-mode")) {
+            primaryFoodFilters.forEach(filter => {
+                if (place.specialities.includes(filter.name)) {
+                    // filter.icon;
+                    let specialityPicto = document.createElement("img");
+                    specialityPicto.src = filter.icon;
+                    pictoContainer.appendChild(specialityPicto);
+                }
+            });
+            secondaryFoodFilters.forEach(filter => {
+                if (place.specialities.includes(filter.name)) {
+                    let dietPicto = document.createElement("img");
+                    dietPicto.src = filter.icon;
+                    pictoContainer.appendChild(dietPicto);
+                }
+            });
+            for (let i = 0; i < place.priceRange.length; i++) {
+                let pricePicto = document.createElement("img");
+                pricePicto.src = "./icons/price_icon.svg";
+                pictoContainer.appendChild(pricePicto);
             }
-        });
+        } else {
+            primaryDrinkFilters.forEach(filter => {
+                if (place.specialities.includes(filter.name)) {
+                    // filter.icon;
+                    let drinkPicto = document.createElement("img");
+                    drinkPicto.src = filter.icon;
+                    pictoContainer.appendChild(drinkPicto);
+                }
+            });
+            for (let i = 0; i < place.priceRange.length; i++) {
+                let pricePicto = document.createElement("img");
+                pricePicto.src = "./icons/price_darkmode.svg";
+                pictoContainer.appendChild(pricePicto);
+            }
+        }
 
-        // if ( === "light-mode") {
-        //     primaryFoodFilters.forEach(filter => {
-        //         console.log("nom du filtre", filter.name, " nom du place", place.name, "icone",)
-        //         if (place.specialities.includes(filter.name)) {
-        //             // filter.icon;
-        //             console.log("it's a match")
-        //             let specialityPicto = document.createElement("img");
-        //             specialityPicto.src = filter.icon;
-        //             pictoContainer.appendChild(specialityPicto);
-        //         }
-        //     });
-        // } else {
-        //     primaryDrinkFilters.forEach(filter => {
-        //         console.log("nom du filtre", filter.name, " nom du place", place.name, "icone",)
-        //         if (place.specialities.includes(filter.name)) {
-        //             // filter.icon;
-        //             console.log("it's a match")
-        //             let specialityPicto = document.createElement("img");
-        //             specialityPicto.src = filter.icon;
-        //             pictoContainer.appendChild(specialityPicto);
-        //         }
-        //     });
-        // }
+
+        // PRICE : display a function that returns a picto regarding price range contained in database
 
 
 
 
-        let pricePicto = document.createElement("img");
-        pricePicto.src = "./icons/price_icon.svg";
 
-        // display a function that returns a picto regarding price range contained in database
-        // function displayPriceIcon(place) {
-        //     if (place.priceRange === '€') {
-        //         pricePicto.src = "./icons/price_icon.svg";
-        //     } else if (place.priceRange === '€€') {
-        //         pricePicto.src = "./icons/price_icon.svg";
-        //     } else {
-        //         pricePicto.src = "./icons/price_icon.svg";
-        //     }
 
-        //     pricePicto.src = displayPriceIcon;
-        pictoContainer.appendChild(pricePicto);
-
-        //create a clickable tel picto
+        //TEL : create a clickable tel picto
         let linkableTel = document.createElement('a');
         linkableTel.href = `tel:${place.tel}`;
 
@@ -171,17 +164,7 @@ export function displayPlaces(dataBase) {
     });
 }
 
-// function displaySpecialityIcon(dataBase, filters) {
-//     console.log("Début de la nouvelle fonction")
 
-//     let specialityPicto = document.createElement("img");
+function displayPlaceIcon(card, place) {
 
-//     for (place in dataBase) {
-//         for (filter in filters) {
-//             if (place.specialities.includes(filter.name)) {
-//                 filter.icon;
-//             }
-//         }
-//     }
-//     pictoContainer.appendChild(specialityPicto);
-// }
+}

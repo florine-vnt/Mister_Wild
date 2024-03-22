@@ -4,7 +4,7 @@ export const BarDataBase = [
         miniDescription: 'le QG des wilders, à boire et à manger',
         specialities: 'cocktail vin biere tapas',
         distance: '85 m',
-        priceRange: '€€-€€€',
+        priceRange: '€€€',
         adress: ' 1 rue baron',
         shortAddress: ' 1 rue baron',
         tel: '0253784061',
