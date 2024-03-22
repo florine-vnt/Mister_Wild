@@ -100,20 +100,16 @@ export function displayPlaces(dataBase) {
             }
         }
 
-
-        // PRICE : display a function that returns a picto regarding price range contained in database
-
-
-
-
-
-
         //TEL : create a clickable tel picto
         let linkableTel = document.createElement('a');
         linkableTel.href = `tel:${place.tel}`;
 
         let telPicto = document.createElement("img");
-        telPicto.src = "./icons/tel_icon.png"
+        if (newCard.classList.contains("light-mode")) {
+            telPicto.src = "./icons/tel_icon.png"
+        } else {
+            telPicto.src = "./icons/tel_darkmode.png"
+        }
         linkableTel.appendChild(telPicto);
         pictoContainer.appendChild(linkableTel);
 
