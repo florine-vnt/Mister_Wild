@@ -199,13 +199,13 @@ export const restaurantDataBase = [
 
         name: 'Forty 4',
         miniDescription: 'kebab, burgers, tacos, panini et assiettes bien fourni!',
-        specialities: "burger halal kebab panini tacos",
+        specialities: 'burger halal kebab panini tacos',
         distance: '440 m',
         priceRange: '€',
         adress: '25 Chaussée De La Madeleine, 44000 Nantes',
         shortAddress: '25 Chaussée De La Madeleine',
         tel: '+33951339191',
-        linkToMaps: "https://maps.app.goo.gl/vkmwBmt4Wpp9gvRV8",
+        linkToMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.303889212471!2d-1.5536272232950792!3d47.21063591523652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805eeae48d79165%3A0x225eafba3a772011!2sForty%204!5e0!3m2!1sfr!2sfr!4v1711111725982!5m2!1sfr!2sfr",
 
         image: './assets/Restaurants/forty4.jpg',
 
