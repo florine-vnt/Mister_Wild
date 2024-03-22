@@ -1,3 +1,5 @@
+import { primaryFoodFilters } from "./filters.js";
+
 export function displayPlaces(dataBase) {
     //redefining placesList within the context of the function
     const placesList = document.getElementById("places");
@@ -57,12 +59,60 @@ export function displayPlaces(dataBase) {
         pictoContainer.classList.add("picto-container")
 
         //create speciality, maps, price, tel picto
-        let specialityPicto = document.createElement("img");
-        specialityPicto.src = "./icons/cupcake.svg"; //TODO target the speciality.icon
-        pictoContainer.appendChild(specialityPicto);
+        //display a function that returns a picto regarding speciality contained in database
+
+        primaryFoodFilters.forEach(filter => {
+            console.log("nom du filtre", filter.name, " nom du place", place.name, "icone",)
+            if (place.specialities.includes(filter.name)) {
+                // filter.icon;
+                console.log("it's a match")
+                let specialityPicto = document.createElement("img");
+                specialityPicto.src = filter.icon;
+                pictoContainer.appendChild(specialityPicto);
+            }
+        });
+
+        // if ( === "light-mode") {
+        //     primaryFoodFilters.forEach(filter => {
+        //         console.log("nom du filtre", filter.name, " nom du place", place.name, "icone",)
+        //         if (place.specialities.includes(filter.name)) {
+        //             // filter.icon;
+        //             console.log("it's a match")
+        //             let specialityPicto = document.createElement("img");
+        //             specialityPicto.src = filter.icon;
+        //             pictoContainer.appendChild(specialityPicto);
+        //         }
+        //     });
+        // } else {
+        //     primaryDrinkFilters.forEach(filter => {
+        //         console.log("nom du filtre", filter.name, " nom du place", place.name, "icone",)
+        //         if (place.specialities.includes(filter.name)) {
+        //             // filter.icon;
+        //             console.log("it's a match")
+        //             let specialityPicto = document.createElement("img");
+        //             specialityPicto.src = filter.icon;
+        //             pictoContainer.appendChild(specialityPicto);
+        //         }
+        //     });
+        // }
+
+
+
 
         let pricePicto = document.createElement("img");
-        pricePicto.src = "./icons/price_icon.svg"; //TODO target the price.icon
+        pricePicto.src = "./icons/price_icon.svg";
+
+        // display a function that returns a picto regarding price range contained in database
+        // function displayPriceIcon(place) {
+        //     if (place.priceRange === '€') {
+        //         pricePicto.src = "./icons/price_icon.svg";
+        //     } else if (place.priceRange === '€€') {
+        //         pricePicto.src = "./icons/price_icon.svg";
+        //     } else {
+        //         pricePicto.src = "./icons/price_icon.svg";
+        //     }
+
+        //     pricePicto.src = displayPriceIcon;
         pictoContainer.appendChild(pricePicto);
 
         //create a clickable tel picto
@@ -120,3 +170,18 @@ export function displayPlaces(dataBase) {
 
     });
 }
+
+// function displaySpecialityIcon(dataBase, filters) {
+//     console.log("Début de la nouvelle fonction")
+
+//     let specialityPicto = document.createElement("img");
+
+//     for (place in dataBase) {
+//         for (filter in filters) {
+//             if (place.specialities.includes(filter.name)) {
+//                 filter.icon;
+//             }
+//         }
+//     }
+//     pictoContainer.appendChild(specialityPicto);
+// }

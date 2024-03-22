@@ -112,8 +112,8 @@ export function displayFoodFilter() {
 
     // create one clickable button for each primary filter
     primaryFoodFilters.forEach((filter, index) => {
-        console.log(index)
-        console.log(primaryFoodFilters[index])
+        // console.log(index)
+        // console.log(primaryFoodFilters[index])
         //create a button
         const filterButton = document.createElement("button");
 
