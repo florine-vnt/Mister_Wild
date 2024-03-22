@@ -78,17 +78,17 @@ export function displayPlaces(dataBase) {
         //create a div for full-description and address
         let moreinfoContainer = document.createElement("div")
         moreinfoContainer.classList.add("more-info-container")
-
+        
         // create a full-description
         let fullDescription = document.createElement("p");
         fullDescription.innerText = place.description;
         moreinfoContainer.appendChild(fullDescription);
-
+        
         // create a short address 
         let shortAddress = document.createElement("p");
         shortAddress.innerText = place.shortAddress;
         moreinfoContainer.appendChild(shortAddress);
-
+        
         // create a div for a Google map at the bottom of the selected card
         let googleMap = document.createElement("div");
         googleMap.innerHTML = `<iframe 
@@ -102,21 +102,32 @@ export function displayPlaces(dataBase) {
         </iframe>`
         googleMap.classList.add("google-map");
         moreinfoContainer.appendChild(googleMap);
-
+        
         //Append the main info div to the card
         newCard.appendChild(container);
         //Append the picto div to the card
         newCard.appendChild(pictoContainer);
         //Append the more info div to the card
         newCard.appendChild(moreinfoContainer);
-
+        
         //Append the card to the Places list
         placesList.appendChild(newCard);
-
+        
         //Zoom on a selected card
         newCard.addEventListener('click', function () {
             newCard.classList.toggle("card-selected");
+            
+            const mapImage = document.querySelector(".map-desktop")
+            mapImage.innerHTML = `<iframe 
+            src= ${place.linkToMaps}
+            width="100%" 
+            height="100%" 
+            style="border:0; border-radius:2vh" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+            </iframe>`
         });
-
+        
     });
 }

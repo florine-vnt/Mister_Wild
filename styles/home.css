@@ -65,6 +65,14 @@ header>nav>ul>button {
     transition-duration: .3s;
 }
 
+.img-cards-wrapper {
+    display: flex;
+}
+
+.map-desktop {
+    display: none;
+}
+
 #cuisine-switch.light-mode {
     border: solid;
     border-color: var(--light-bg-color);
@@ -387,6 +395,8 @@ footer {
 
 /* coter  gauche& droite de la boite card */
 #places {
+    display: flex;
+    flex-direction: column;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 1rem;
@@ -512,6 +522,10 @@ footer {
 }
 
 @media screen and (min-width: 700px) {
+    body{
+        overflow: hidden;
+    }
+
     header {
         width: 60%;
     }
@@ -522,6 +536,58 @@ footer {
         right: 0;
         width: 40%;
         bottom: unset;
+    }
+
+    .img-cards-wrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        width: 100%;
+    }
+
+    .map-desktop {
+        display: block;
+        width: 40%;
+    }
+
+    #places-container {
+        width: 60%;
+        overflow-y: scroll;
+        height: 90vh;
+        padding: 2rem;
+    }
+
+    #places-container::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    #places-container::-webkit-scrollbar-track {
+        background: white;
+    }
+    
+    #places-container::-webkit-scrollbar-thumb {
+        background-color: #EEEEEE;
+        border-radius: 20px;
+    }
+
+    #places {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .card {
+        grid-template-columns: 4fr 6fr;
+    }
+
+    .card-selected{
+        grid-column: span 2;
+        height: 70vh;
+    }
+
+    .google-map{
+        display: none;
     }
 
     /* Making an overlaying div, containing all mini-menus */
@@ -551,7 +617,8 @@ footer {
         border-radius: 0px 0px 10px 10px;
     }
 
-    .toast-mini-menu.collapsed, #primary-filter-container.collapsed {
+    .toast-mini-menu.collapsed,
+    #primary-filter-container.collapsed {
         transform: translateY(-40vh);
     }
 
@@ -569,9 +636,9 @@ footer {
 
     #price-range-menu {
         grid-column-start: 5;
-    
+
     }
-    
+
     #distance-menu {
         grid-column-start: 4;
     }
