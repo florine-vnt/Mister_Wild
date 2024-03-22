@@ -79,10 +79,12 @@ export function displayPlaces(dataBase) {
                     pictoContainer.appendChild(dietPicto);
                 }
             });
+            let pricePitcoContainer = document.createElement("div");
             for (let i = 0; i < place.priceRange.length; i++) {
                 let pricePicto = document.createElement("img");
                 pricePicto.src = "./icons/price_icon.svg";
-                pictoContainer.appendChild(pricePicto);
+                pricePitcoContainer.appendChild(pricePicto);
+                pictoContainer.appendChild(pricePitcoContainer);
             }
         } else {
             primaryDrinkFilters.forEach(filter => {
@@ -93,10 +95,12 @@ export function displayPlaces(dataBase) {
                     pictoContainer.appendChild(drinkPicto);
                 }
             });
+            let pricePitcoContainer = document.createElement("div");
             for (let i = 0; i < place.priceRange.length; i++) {
                 let pricePicto = document.createElement("img");
                 pricePicto.src = "./icons/price_darkmode.svg";
-                pictoContainer.appendChild(pricePicto);
+                pricePitcoContainer.appendChild(pricePicto);
+                pictoContainer.appendChild(pricePitcoContainer);
             }
         }
 
@@ -108,7 +112,7 @@ export function displayPlaces(dataBase) {
         if (newCard.classList.contains("light-mode")) {
             telPicto.src = "./icons/tel_icon.png"
         } else {
-            telPicto.src = "./icons/tel_darkmode.png"
+            telPicto.src = "./icons/tel_icon_darkmode.png"
         }
         linkableTel.appendChild(telPicto);
         pictoContainer.appendChild(linkableTel);
