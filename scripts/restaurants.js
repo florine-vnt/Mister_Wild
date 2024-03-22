@@ -31,8 +31,7 @@ export const restaurantDataBase = [
         shortAddress: '1 allée de la maison rouge',
         tel: '+33253786518',
         linkToMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.1923636143792!2d-1.5531711242047563!3d47.2128182711564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805ef428e1c806d%3A0x218171b273c48dba!2sLE%20MORSE%20-%20Bistrot%20Restaurant%20Nantes%20-%20HUITRES%20-%20LANGOUSTINES%20-%20SEAFOOD%20-%20LOBSTERROLL!5e0!3m2!1sfr!2sfr!4v1710971070643!5m2!1sfr!2sfr",
-        image: './assets/Restaurants/Morse.png',
-        image: './assets/Restaurants/Morse.png',
+        image: './assets/Restaurants/Morse.jpg',
         description: 'Restaurant cosy, spécialisé dans les poissons. On retient spécialement leur spécialité, le fish n chips !!'
         // manque le prix
     },
@@ -195,6 +194,22 @@ export const restaurantDataBase = [
         image: './assets/Restaurants/le-mangouste.jpg',
 
         description: 'Cuisine délicate et savoureuse, accompagnée de vins sélectionnés avec passion et de cocktails parfumés.'
+    },
+    {
+
+        name: 'Forty 4',
+        miniDescription: 'kebab, burgers, tacos, panini et assiettes bien fourni!',
+        specialities: "burger halal kebab panini tacos",
+        distance: '440 m',
+        priceRange: '€',
+        adress: '25 Chaussée De La Madeleine, 44000 Nantes',
+        shortAddress: '25 Chaussée De La Madeleine',
+        tel: '+33951339191',
+        linkToMaps: "https://maps.app.goo.gl/vkmwBmt4Wpp9gvRV8",
+
+        image: './assets/Restaurants/forty4.jpg',
+
+        description: 'kebab, burgers, tacos, panini et assiettes bien fourni, vous trouverez forcément votre bonheur!'
     }
 
 ]
