@@ -119,8 +119,7 @@ function toggleMenu(menu) {
                 // bring the menu container to the front
                 sleep(300).then(() => {
                     menu.style.zIndex = 0;
-                    menu.classList.add("hidden");
-                    menuContainer.classList.add("hidden");
+                    menu.classList.add("hidden")
                 });
             }
         });
@@ -177,13 +176,3 @@ sleep(1500).then(() => {
 //     blink(priceMenuButton);
 // });
 
-
-/// BUGFIX CHILDREN DES FAFA. 
-function dipsplayAllSpecialities(dataBase) {
-    for (let place in dataBase) {
-        console.log(dataBase[place].specialities);
-    }
-
-}
-
-dipsplayAllSpecialities(restaurantDataBase);
