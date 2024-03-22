@@ -170,8 +170,8 @@ export function displayPlaces(dataBase) {
             const mapImage = document.querySelector(".map-desktop")
             mapImage.innerHTML = `<iframe 
             src= ${place.linkToMaps}
-            width="100%" 
-            height="100%" 
+            width="500px" 
+            height="700px" 
             style="border:0; border-radius:2vh" 
             allowfullscreen="" 
             loading="lazy" 
