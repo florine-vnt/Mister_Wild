@@ -552,13 +552,15 @@ flex-direction:column;
     }
 
     .map-desktop {
-        display: block;
+        display: flex;
+        justify-content: center;
         width: 40%;
     }
 
     #places-container {
         width: 60%;
         overflow-y: scroll;
+        direction:rtl;
         height: 90vh;
         padding: 2rem;
     }
@@ -583,6 +585,7 @@ flex-direction:column;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
+        direction:ltr;
     }
 
     .card {
