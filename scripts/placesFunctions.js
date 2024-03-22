@@ -1,3 +1,5 @@
+import { primaryFoodFilters } from "./filters.js";
+
 export function displayPlaces(dataBase) {
     //redefining placesList within the context of the function
     const placesList = document.getElementById("places");
@@ -55,12 +57,26 @@ export function displayPlaces(dataBase) {
         //create a div for the pictos
         let pictoContainer = document.createElement("div")
         pictoContainer.classList.add("picto-container")
-
         //create speciality, maps, price, tel picto
-        let specialityPicto = document.createElement("img");
-        specialityPicto.src = "./icons/cupcake.svg";
+        //display a function that returns a picto regarding speciality contained in database
 
-        // display a function that returns a picto regarding speciality contained in database
+        // for (place in dataBase) {
+        primaryFoodFilters.forEach(filter => {
+            console.log("nom du filtre", filter.name, " nom du place", place.name, "icone",)
+            if (place.specialities.includes(filter.name)) {
+                // filter.icon;
+                console.log("it's a match")
+                let specialityPicto = document.createElement("img");
+                specialityPicto.src = filter.icon;
+                pictoContainer.appendChild(specialityPicto);
+
+            }
+        });
+        // }
+
+
+
+
         // function displaySpecialityIcon(place) {
         //     const pizzaPlace = place.specialities.includes("pizza");
         //     const patesPlace = place.specialities.includes("pates");
@@ -90,7 +106,8 @@ export function displayPlaces(dataBase) {
         //     }
         // }
         // specialityPicto.src = displaySpecialityIcon;
-        pictoContainer.appendChild(specialityPicto);
+        //specialityPicto.src = "./icons/cupcake.svg";
+
 
 
         let pricePicto = document.createElement("img");
@@ -164,3 +181,18 @@ export function displayPlaces(dataBase) {
 
     });
 }
+
+// function displaySpecialityIcon(dataBase, filters) {
+//     console.log("Début de la nouvelle fonction")
+
+//     let specialityPicto = document.createElement("img");
+
+//     for (place in dataBase) {
+//         for (filter in filters) {
+//             if (place.specialities.includes(filter.name)) {
+//                 filter.icon;
+//             }
+//         }
+//     }
+//     pictoContainer.appendChild(specialityPicto);
+// }
