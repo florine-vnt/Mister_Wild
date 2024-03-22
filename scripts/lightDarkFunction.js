@@ -7,6 +7,7 @@ import { applyFilters } from './filteringFunctions.js';
 import { primaryDrinkFilters } from './filters.js';
 import { primaryFoodFilters } from './filters.js';
 import { secondaryFoodFilters } from './filters.js';
+import { displayToastMenuFilterState } from './filteringFunctions.js';
 
 
 /* JS switch dark-light mode */
@@ -69,6 +70,10 @@ function switchMode() {
     applyFilters();
     //display primary filter
     displayPrimaryFilter();
+
+    //display primary filter
+    displayToastMenuFilterState(priceMenu);
+    displayToastMenuFilterState(distanceMenu);
 }
 
 function displayPrimaryFilter() {
@@ -107,8 +112,8 @@ export function displayFoodFilter() {
 
     // create one clickable button for each primary filter
     primaryFoodFilters.forEach((filter, index) => {
-        console.log(index)
-        console.log(primaryFoodFilters[index])
+        // console.log(index)
+        // console.log(primaryFoodFilters[index])
         //create a button
         const filterButton = document.createElement("button");
 
@@ -293,7 +298,7 @@ function handleButtonBehaviour(filters, filter, index) {
             targetButton.firstChild.src = filters[targetIndex].icon
         }
 
-        
+
 
         //need to know wether we're in light or dark mode 
         const lightMode = body.classList.contains("light-mode");

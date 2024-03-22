@@ -20,7 +20,6 @@
 }
 
 /* Global Settings*/
-
 body {
     margin: 0;
 }
@@ -64,6 +63,14 @@ header>nav>ul>button {
     padding: 10px;
     transition-property: transform;
     transition-duration: .3s;
+}
+
+.img-cards-wrapper {
+    display: flex;
+}
+
+.map-desktop {
+    display: none;
 }
 
 #cuisine-switch.light-mode {
@@ -171,7 +178,7 @@ footer {
     width: 100%;
     height: 80vh;
 
-    position: sticky;
+    position: fixed;
 
     bottom: 10vh;
 
@@ -365,7 +372,6 @@ footer {
 .card {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 0;
     background-color: #f5f5f5;
     border-radius: 10px;
     margin: 0 0 1rem;
@@ -389,6 +395,8 @@ footer {
 
 /* coter  gauche& droite de la boite card */
 #places {
+    display: flex;
+    flex-direction: column;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 1rem;
@@ -483,6 +491,14 @@ footer {
 }
 
 /* Style of the selected card*/
+.card-selected {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 20px;
+}
+
 .card-selected .picto-container {
     display: flex;
     justify-content: space-around;
@@ -500,15 +516,130 @@ footer {
     height: 5vh;
 }
 
-.card-selected {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    flex-direction: column;
-    text-align: center;
-    row-gap: 20px;
-}
-
 .card-selected .google-map {
     width: 80vw;
     height: 40vw;
+}
+
+@media screen and (min-width: 700px) {
+    body{
+        overflow: hidden;
+    }
+
+    header {
+        width: 60%;
+    }
+
+    footer {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 40%;
+        bottom: unset;
+    }
+
+    .img-cards-wrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        width: 100%;
+    }
+
+    .map-desktop {
+        display: block;
+        width: 40%;
+    }
+
+    #places-container {
+        width: 60%;
+        overflow-y: scroll;
+        height: 90vh;
+        padding: 2rem;
+    }
+
+    #places-container::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    #places-container::-webkit-scrollbar-track {
+        background: white;
+    }
+    
+    #places-container::-webkit-scrollbar-thumb {
+        background-color: #EEEEEE;
+        border-radius: 20px;
+    }
+
+    #places {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .card {
+        grid-template-columns: 4fr 6fr;
+    }
+
+    .card-selected{
+        grid-column: span 2;
+        height: 70vh;
+    }
+
+    .google-map{
+        display: none;
+    }
+
+    /* Making an overlaying div, containing all mini-menus */
+    #mini-menus-container {
+        width: 100vw;
+        height: 90vh;
+
+        position: fixed;
+
+        top: 10vh;
+        right: 0px;
+
+        display: grid;
+        grid-template-columns: 6fr 1fr 1fr 1fr 1fr;
+        justify-content: center;
+
+        /* this is used to hide anything that is visually out of the div */
+        overflow: hidden;
+    }
+
+    .toast-mini-menu {
+        width: 10vw;
+
+        /* Part about sizing and align it in the bottom */
+        height: 30vh;
+        align-self: flex-start;
+        border-radius: 0px 0px 10px 10px;
+    }
+
+    .toast-mini-menu.collapsed,
+    #primary-filter-container.collapsed {
+        transform: translateY(-40vh);
+    }
+
+    .toast-mini-menu button img {
+        max-width: 3vw;
+        margin-left: -1vw;
+    }
+
+    #primary-filter-container {
+        align-self: flex-start;
+        grid-column-start: 2;
+        grid-column-end: 6;
+        border-radius: 0px 0px 10px 10px;
+    }
+
+    #price-range-menu {
+        grid-column-start: 5;
+
+    }
+
+    #distance-menu {
+        grid-column-start: 4;
+    }
 }
