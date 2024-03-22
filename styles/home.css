@@ -559,6 +559,8 @@ flex-direction:column;
     #places-container {
         width: 60%;
         overflow-y: scroll;
+        direction:rtl; 
+
         height: 90vh;
         padding: 2rem;
     }
@@ -575,18 +577,23 @@ flex-direction:column;
     #places-container::-webkit-scrollbar-thumb {
         background-color: transparent;
         border-radius: 20px;
+        padding-top:0px;
         
     }
 
     #places {
+        padding-top: 10vh;
         position: relative;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
+        direction:ltr; /* Flip back, scrollbar related */
+        
     }
 
     .card {
         grid-template-columns: 4fr 6fr;
+        margin: 0;
     }
 
     .card-selected{
