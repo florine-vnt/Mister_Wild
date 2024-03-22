@@ -20,6 +20,7 @@ export function applyFilters() {
     const lightMode = body.classList.contains("light-mode");
     if (lightMode) {
         filteredDataBase = filterByArray(restaurantDataBase, primaryFoodFilters);
+        filteredDataBase = filterByArray(filteredDataBase, primaryFoodFilters);
         filteredDataBase = filterByPrice(filteredDataBase, priceFilterLight);
         filteredDataBase = filterByDistance(filteredDataBase, distanceFilterLight);
     } else {
