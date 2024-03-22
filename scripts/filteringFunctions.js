@@ -29,7 +29,7 @@ export function applyFilters() {
 
     ///then filter by price and by distance
     filteredDataBase = filterByPrice(filteredDataBase, priceFilter)
-    //filteredDataBase = filterByDistance(filteredDataBase, distanceFilter)
+    filteredDataBase = filterByDistance(filteredDataBase, distanceFilter) // changer nom variable?
 
     // check wether empty or not, if so, put an object to inform the user.
     if (filteredDataBase.length === 0) {
@@ -86,16 +86,6 @@ function filterByArray(originalDataBase, filteringArray) {
 
 
 
-
-// Filter the restaurant database by price
-function filterByPrice(dataBase, priceFilter) {
-    if (priceFilter == 0) { return dataBase; };
-    return dataBase.filter(restaurant => {
-        return restaurant.priceRange.length <= priceFilter
-    });
-}
-
-
 // price menu filtering
 
 // there are 3 buttons and 4 filter choices : 
@@ -103,6 +93,53 @@ function filterByPrice(dataBase, priceFilter) {
 // "low-range" :1
 // "mid-range":2
 // "high range":3
+
+// Filter the restaurant database by price
+
+function filterByPrice(dataBase, priceFilter) {
+    if (priceFilter == 0 || priceFilter == 3) { return dataBase; };
+    return dataBase.filter(restaurant => {
+        console.log("hello");
+        return restaurant.priceRange.length <= priceFilter
+    });
+
+};
+console.log("hello");
+// Filter the restaurant database by range 
+//  Distance < 350m  = 1
+//  Distance > 350m  = 2
+//  Distance > 500m  = 3
+
+
+// MEMO MIKL ParseInt();  toString();
+
+// Convert distance from database to range 1 or 2 or 3
+
+function convertDistance(dataBase, distance) {
+    //function convertDistance(originalDatabaseFilterDistance){
+    let numberDistance = parseInt(originalDataBase.filter.distance);
+    if (numberDistance < 350) { return 1; }
+    else if (numberDistance > 200 && numberDistance < 500) { return 2; }
+    else { return 3 };
+};
+
+function filterByDistance(dataBase, distanceFilter) {
+
+    if (distanceFilter == 0 || distanceFilter == 3) { return dataBase; }
+    else {
+        return dataBase.filter(place => {
+            console.log(place.distance);
+
+            if (distanceFilter == 1) {
+
+                return false;
+            } else {
+                return true;
+            }
+        })
+    };
+};
+
 // These choices will be set in a global variable that is initialized at 0
 let priceFilter = 0;
 
@@ -505,7 +542,7 @@ function handleToastMenuButton(menuButton, menu, filterButton, filteringValue) {
 
             // reset the colour of all filterButtons, if any was selected (brute force and unefficient, but it'll work)
             console.log('voici ton log maggle ', menu.children)
-            console.log('voila les enfants du bouton',filterButton.children)
+            console.log('voila les enfants du bouton', filterButton.children)
             for (let i = 0; i < menu.children.length; i++) {
                 for (const image of menu.children[i]) {
                     // reset the icon to its normal colour (light or dark)
