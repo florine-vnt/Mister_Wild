@@ -57,10 +57,10 @@ export function displayPlaces(dataBase) {
         //create a div for the pictos
         let pictoContainer = document.createElement("div")
         pictoContainer.classList.add("picto-container")
+
         //create speciality, maps, price, tel picto
         //display a function that returns a picto regarding speciality contained in database
 
-        // for (place in dataBase) {
         primaryFoodFilters.forEach(filter => {
             console.log("nom du filtre", filter.name, " nom du place", place.name, "icone",)
             if (place.specialities.includes(filter.name)) {
@@ -69,44 +69,33 @@ export function displayPlaces(dataBase) {
                 let specialityPicto = document.createElement("img");
                 specialityPicto.src = filter.icon;
                 pictoContainer.appendChild(specialityPicto);
-
             }
         });
+
+        // if ( === "light-mode") {
+        //     primaryFoodFilters.forEach(filter => {
+        //         console.log("nom du filtre", filter.name, " nom du place", place.name, "icone",)
+        //         if (place.specialities.includes(filter.name)) {
+        //             // filter.icon;
+        //             console.log("it's a match")
+        //             let specialityPicto = document.createElement("img");
+        //             specialityPicto.src = filter.icon;
+        //             pictoContainer.appendChild(specialityPicto);
+        //         }
+        //     });
+        // } else {
+        //     primaryDrinkFilters.forEach(filter => {
+        //         console.log("nom du filtre", filter.name, " nom du place", place.name, "icone",)
+        //         if (place.specialities.includes(filter.name)) {
+        //             // filter.icon;
+        //             console.log("it's a match")
+        //             let specialityPicto = document.createElement("img");
+        //             specialityPicto.src = filter.icon;
+        //             pictoContainer.appendChild(specialityPicto);
+        //         }
+        //     });
         // }
 
-
-
-
-        // function displaySpecialityIcon(place) {
-        //     const pizzaPlace = place.specialities.includes("pizza");
-        //     const patesPlace = place.specialities.includes("pates");
-        //     const sandwichPlace = place.specialities.includes("sandwich");
-        //     const saladePlace = place.specialities.includes("salade");
-        //     const asiatiquePlace = place.specialities.includes("asiatique");
-        //     const platcuisinePlace = place.specialities.includes("plat-cuisine");
-        //     const patisseriePlace = place.specialities.includes("patisserie");
-        //     const cafePlace = place.specialities.includes("cafe");
-
-        //     if (pizzaPlace) {
-        //         specialityPicto.src = "./icons/pizza.svg";
-        //     } else if (patesPlace) {
-        //         specialityPicto.src = "./icons/pates.svg";
-        //     } else if (sandwichPlace) {
-        //         specialityPicto.src = "./icons/sandwich.svg";
-        //     } else if (saladePlace) {
-        //         specialityPicto.src = "./icons/salade.svg";
-        //     } else if (asiatiquePlace) {
-        //         specialityPicto.src = "./icons/ramen.svg";
-        //     } else if (platcuisinePlace) {
-        //         specialityPicto.src = "./icons/plate.svg"
-        //     } else if (patisseriePlace) {
-        //         specialityPicto.src = "./icons/cupcake.svg";
-        //     } else if (cafePlace) {
-        //         specialityPicto.src = "./icons/coffe.svg";
-        //     }
-        // }
-        // specialityPicto.src = displaySpecialityIcon;
-        //specialityPicto.src = "./icons/cupcake.svg";
 
 
 
