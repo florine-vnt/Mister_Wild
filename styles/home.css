@@ -199,7 +199,13 @@ footer {
     grid-column-start: 3;
 }
 
+#eastereggs {
+background-color: black;
+border: none;
+display: flex;
+flex-direction:column;
 
+}
 
 /* The little menus that pop up for both distance and budget */
 .toast-mini-menu {
@@ -562,12 +568,14 @@ footer {
     }
 
     #places-container::-webkit-scrollbar-track {
-        background: white;
+        background: transparent;
+
     }
     
     #places-container::-webkit-scrollbar-thumb {
-        background-color: #EEEEEE;
+        background-color: transparent;
         border-radius: 20px;
+        
     }
 
     #places {
