@@ -59,23 +59,6 @@ distanceFilterButtonLow.addEventListener("click", handleToastMenuButton(distance
 distanceFilterButtonMid.addEventListener("click", handleToastMenuButton(distanceMenuButton, distanceMenu, distanceFilterButtonMid, 2));
 distanceFilterButtonHigh.addEventListener("click", handleToastMenuButton(distanceMenuButton, distanceMenu, distanceFilterButtonHigh, 3));
 
-// ZOOM ON A SELECTED CARD 
-// first card selected. TO DO : select all cards
-let selectedCard = document.querySelector(".card");
-// adding an EventListener when clicking the selected card and adding a new class
-selectedCard.addEventListener('click', function () {
-    selectedCard.classList.toggle("card-selected");
-
-    // // variables had to be re-called since they were declared in the fonction
-    // let pictoContainer = document.querySelector(".picto-container");
-    // let moreinfoContainer = document.querySelector(".more-info-container");
-
-    // //display hidden container
-    // pictoContainer.style.display = "block";
-    // moreinfoContainer.style.display = "block";
-})
-
-
 
 //START OF MINI MENUS BEHAVIOUR
 /// Functions to display/hide the mini-menus
@@ -196,8 +179,8 @@ sleep(1500).then(() => {
 
 
 /// BUGFIX CHILDREN DES FAFA. 
-function dipsplayAllSpecialities (dataBase){
-    for (let place in dataBase){
+function dipsplayAllSpecialities(dataBase) {
+    for (let place in dataBase) {
         console.log(dataBase[place].specialities);
     }
 

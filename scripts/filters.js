@@ -43,18 +43,18 @@ export const primaryFoodFilters = [
     },
     {
         name: 'cafe',
-        icon: './icons/pizza.svg',
-        iconPink: './icons/pizza_pink.svg',
+        icon: './icons/coffe.svg',
+        iconPink: './icons/coffee_pink.svg',
         active: false
     }
 ];
 
-    // {
-    //     name: 'burger',
-    //     icon: './icons/burger.svg',
-    //     iconPink: './icons/burger_pink.svg',
-    //     active: false
-    // },
+// {
+//     name: 'burger',
+//     icon: './icons/burger.svg',
+//     iconPink: './icons/burger_pink.svg',
+//     active: false
+// },
 
 
 export const secondaryFoodFilters = [
