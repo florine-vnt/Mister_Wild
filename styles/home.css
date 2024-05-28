@@ -199,14 +199,6 @@ footer {
     grid-column-start: 3;
 }
 
-#eastereggs {
-background-color: black;
-border: none;
-display: flex;
-flex-direction:column;
-
-}
-
 /* The little menus that pop up for both distance and budget */
 .toast-mini-menu {
     background-color: var(--light-filterbar-color);
@@ -528,7 +520,7 @@ flex-direction:column;
 }
 
 @media screen and (min-width: 700px) {
-    body{
+    body {
         overflow: hidden;
     }
 
@@ -560,7 +552,7 @@ flex-direction:column;
     #places-container {
         width: 60%;
         overflow-y: scroll;
-        direction:rtl;
+        direction: rtl;
         height: 90vh;
         padding: 2rem;
     }
@@ -573,11 +565,11 @@ flex-direction:column;
         background: transparent;
 
     }
-    
+
     #places-container::-webkit-scrollbar-thumb {
         background-color: transparent;
         border-radius: 20px;
-        
+
     }
 
     #places {
@@ -585,19 +577,19 @@ flex-direction:column;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
-        direction:ltr;
+        direction: ltr;
     }
 
     .card {
         grid-template-columns: 4fr 6fr;
     }
 
-    .card-selected{
+    .card-selected {
         grid-column: span 2;
         height: 70vh;
     }
 
-    .google-map{
+    .google-map {
         display: none;
     }
 

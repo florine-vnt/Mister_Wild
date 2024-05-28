@@ -2,12 +2,6 @@ export const restaurantDataBase = [
     {
         // Database des restaurants
 
-        // vérifier si besoin de préciser 4400 dans l'adresse
-        // rendre le numero de tel cliquable pour envoie vers un appel
-        // rendre l'adresse cliquable
-
-        //Salade, poisson, sandwitch, patisserie
-
         name: 'Papill\'',
         miniDescription: 'Plats mijotés, papillotes et brunch',
         specialities: 'plat-cuisine Poisson veggie',
@@ -19,7 +13,6 @@ export const restaurantDataBase = [
         linkToMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5420.51167607285!2d-1.5464413!3d47.211576199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805eeb0fd4e831d%3A0xdd6e96d193d8b1c0!2sPapill&#39;!5e0!3m2!1sfr!2sfr!4v1710946394348!5m2!1sfr!2sfr",
         image: "./assets/Restaurants/Papill.jpg",
         description: 'Vous allez vous régaler les papilles, cuisine authentique'
-        // plustot un resto de poisson, changer plats mijotés par poisson?
     },
     {
         name: 'Morse',
@@ -33,7 +26,6 @@ export const restaurantDataBase = [
         linkToMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.1923636143792!2d-1.5531711242047563!3d47.2128182711564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805ef428e1c806d%3A0x218171b273c48dba!2sLE%20MORSE%20-%20Bistrot%20Restaurant%20Nantes%20-%20HUITRES%20-%20LANGOUSTINES%20-%20SEAFOOD%20-%20LOBSTERROLL!5e0!3m2!1sfr!2sfr!4v1710971070643!5m2!1sfr!2sfr",
         image: './assets/Restaurants/Morse.jpg',
         description: 'Restaurant cosy, spécialisé dans les poissons. On retient spécialement leur spécialité, le fish n chips !!'
-        // manque le prix
     },
     {
         name: 'La cantine fermière',
@@ -47,7 +39,6 @@ export const restaurantDataBase = [
         linkToMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.25636076282!2d-1.5493553242048284!3d47.21156597115623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805ef5362ab2627%3A0x44ed9f94968615bd!2zTMOAIENhbnRpbmUgZmVybWnDqHJl!5e0!3m2!1sfr!2sfr!4v1710971027161!5m2!1sfr!2sfr",
         image: './assets/Restaurants/la-cantine-fermiere.png',
         description: 'Vous allez vous régaler les papilles, cuisine authentique'
-        // manque les prix et les types de plat proposé
     },
     {
         name: 'Ichigo',
@@ -94,7 +85,6 @@ export const restaurantDataBase = [
     },
 
     {
-        // a completer
         name: 'Papa pasta',
         miniDescription: 'Des pâtes maison, faites uniquement avec des produits locaux, avec des portions généreuses !',
         specialities: 'italien pates',
@@ -109,7 +99,6 @@ export const restaurantDataBase = [
     },
 
     {
-        // a completer
         name: 'Virginie\'s café',
         miniDescription: 'Cuisine vivante. Cuisine bio. Cantine végétarienne. ',
         specialities: 'pizza cafe',
