@@ -19,7 +19,7 @@ Un système de filtres a été mis en place pour choisir le type de cuisine, le 
 
 ## Auteurs
 
-- Florine VNT
+- Florine Vinet
 - David Le Gall
 - Michaël Couffignal
 - Lucas Aksu
